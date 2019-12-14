@@ -95,6 +95,6 @@
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetPath)" "C:\Users\gamin\OneDrive\DnD Character Sheet Program"
 copy "C:\Users\gamin\Documents\GitHub\DnD-CHaracter-Sheet\Data\Characters" "C:\Users\gamin\OneDrive\DnD Character Sheet Program\Characters"
-copy "$(TargetPath)" "C:\Users\gamin\Documents\GitHub\DnD-CHaracter-Sheet\src\DnD Character Sheet"</PostBuildEvent>
+copy "$(TargetPath)" "C:\Users\gamin\Documents\GitHub\DnD-CHaracter-Sheet"</PostBuildEvent>
   </PropertyGroup>
 </Project>
