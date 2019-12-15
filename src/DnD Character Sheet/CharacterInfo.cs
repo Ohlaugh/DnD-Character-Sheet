@@ -89,19 +89,26 @@ namespace DnD_Character_Sheet
             ChaMod_Label.Text = Library.m_MainCharacterInfo.Attributes.CharismaModifier.ToString();
             ChaSign_Label.Text = Library.m_MainCharacterInfo.Attributes.CharismaSign;
 
-            ProfBonus_TextBox.Text = Library.m_MainCharacterInfo.ProficiencyBonus.ToString();
+            ProfBonus_Label.Text = Library.m_MainCharacterInfo.ProficiencyBonus.ToString();
+            Inspiration_CheckBox.Checked = Library.m_MainCharacterInfo.Inspiration;
+            Perception_Label.Text = Library.m_MainCharacterInfo.Perception.ToString();
+
+            Age_TextBox.Text = Library.m_MainCharacterInfo.Age.ToString();
+            Height_TextBox.Text = Library.m_MainCharacterInfo.Height;
+            Weight_TextBox.Text = Library.m_MainCharacterInfo.Weight.ToString();
+            Eye_TextBox.Text = Library.m_MainCharacterInfo.EyeColor;
+            Skin_TextBox.Text = Library.m_MainCharacterInfo.SkinColor;
+            Hair_TextBox.Text = Library.m_MainCharacterInfo.HairColor;
+
+            textBox1.Text +=
+
+                "PersonalityTraits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
+                "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
+                "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
+                "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
 
             textBox5.Text +=
-                "Age = " + Library.m_MainCharacterInfo.Age + Environment.NewLine +
-                "Height = " + Library.m_MainCharacterInfo.Height + Environment.NewLine +
-                "Weight = " + Library.m_MainCharacterInfo.Weight + Environment.NewLine +
-                "Eye Color = " + Library.m_MainCharacterInfo.EyeColor + Environment.NewLine +
-                "Skin Color = " + Library.m_MainCharacterInfo.SkinColor + Environment.NewLine +
-                "Hair Color = " + Library.m_MainCharacterInfo.HairColor + Environment.NewLine +
 
-                "Inspiration = " + Library.m_MainCharacterInfo.Inspiration + Environment.NewLine +
-
-                "Perception = " + Library.m_MainCharacterInfo.Perception + Environment.NewLine +
                 "ArmorClass = " + Library.m_MainCharacterInfo.ArmorClass + Environment.NewLine +
                 "Initiative = " + Library.m_MainCharacterInfo.Initiative + Environment.NewLine +
                 "Speed = " + Library.m_MainCharacterInfo.Speed + Environment.NewLine +
@@ -115,12 +122,7 @@ namespace DnD_Character_Sheet
                 "Silver = " + Library.m_MainCharacterInfo.Money.Silver + Environment.NewLine +
                 "Electrum = " + Library.m_MainCharacterInfo.Money.Electrum + Environment.NewLine +
                 "Gold = " + Library.m_MainCharacterInfo.Money.Gold + Environment.NewLine +
-                "Platinum = " + Library.m_MainCharacterInfo.Money.Platinum + Environment.NewLine +
-
-                "PersonalityTraits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
-                "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
-                "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
-                "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
+                "Platinum = " + Library.m_MainCharacterInfo.Money.Platinum + Environment.NewLine;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -194,6 +196,46 @@ namespace DnD_Character_Sheet
         {
             Skills_CheckList.ClearSelected();
         }
+
+        private void Saves_CheckList_ItemCheck(object sender, EventArgs e)
+        {
+            CheckedListBox box = (CheckedListBox)sender;
+            ItemCheckEventArgs eventArgs = (ItemCheckEventArgs)e;
+            if (box.SelectedIndex == -1)
+            {
+                return;
+            }
+            int bonus = int.Parse(box.SelectedItem.ToString().Split()[1]);
+            string sign = box.SelectedItem.ToString().Split()[0] + " ";
+            bool check = false;
+            if (eventArgs.NewValue == CheckState.Checked)
+            {
+                bonus += Library.m_MainCharacterInfo.ProficiencyBonus;
+                check = true;
+            }
+            else if (eventArgs.NewValue == CheckState.Unchecked)
+            {
+                bonus -= Library.m_MainCharacterInfo.ProficiencyBonus;
+                check = false;
+            }
+            if (bonus < 0 && sign != "- ")
+            {
+                bonus *= -1;
+                sign = "- ";
+            }
+            string attributeBonus = sign + bonus;
+            string[] numbers = new string[] { "10", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            string attributeName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
+
+            Saves_CheckList.Items[box.SelectedIndex] = attributeBonus + " " + attributeName;
+            Library.UpdateLibrary(attributeName, attributeBonus, check);
+        }
+
+        private void Saves_CheckList_LostFocus(object sender, EventArgs e)
+        {
+            Saves_CheckList.ClearSelected();
+        }
+
 
         private void XP_Spin_ValueChanged(object sender, EventArgs e)
         {

@@ -32,9 +32,24 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.Character_Panel = new System.Windows.Forms.Panel();
+            this.Hair_Label = new System.Windows.Forms.Label();
+            this.Skin_Label = new System.Windows.Forms.Label();
+            this.Eye_Label = new System.Windows.Forms.Label();
+            this.Weight_Label = new System.Windows.Forms.Label();
+            this.Height_Label = new System.Windows.Forms.Label();
+            this.Age_Label = new System.Windows.Forms.Label();
+            this.Hair_TextBox = new System.Windows.Forms.TextBox();
+            this.Skin_TextBox = new System.Windows.Forms.TextBox();
+            this.Eye_TextBox = new System.Windows.Forms.TextBox();
+            this.Weight_TextBox = new System.Windows.Forms.TextBox();
+            this.Height_TextBox = new System.Windows.Forms.TextBox();
+            this.Age_TextBox = new System.Windows.Forms.TextBox();
+            this.ProfBonus_Label = new System.Windows.Forms.Label();
+            this.Perception_Title = new System.Windows.Forms.Label();
+            this.Inspiration_CheckBox = new System.Windows.Forms.CheckBox();
             this.XP_Spin = new System.Windows.Forms.NumericUpDown();
             this.Skills_Label = new System.Windows.Forms.Label();
-            this.ProfBonus_Label = new System.Windows.Forms.Label();
+            this.ProfBonus_Title = new System.Windows.Forms.Label();
             this.Race_Label = new System.Windows.Forms.Label();
             this.Subrace_Label = new System.Windows.Forms.Label();
             this.Background_Label = new System.Windows.Forms.Label();
@@ -45,7 +60,6 @@
             this.Character_Label = new System.Windows.Forms.Label();
             this.SavingThrows_Label = new System.Windows.Forms.Label();
             this.Class_Label = new System.Windows.Forms.Label();
-            this.ProfBonus_TextBox = new System.Windows.Forms.TextBox();
             this.Saves_CheckList = new System.Windows.Forms.CheckedListBox();
             this.Skills_CheckList = new System.Windows.Forms.CheckedListBox();
             this.Con_TextBox = new System.Windows.Forms.TextBox();
@@ -87,7 +101,9 @@
             this.StrMod_Label = new System.Windows.Forms.Label();
             this.Str_Label = new System.Windows.Forms.Label();
             this.ProfBonusSign_Label = new System.Windows.Forms.Label();
+            this.Perception_Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Character_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.XP_Spin)).BeginInit();
             this.Con_Group.SuspendLayout();
@@ -130,9 +146,25 @@
             // 
             // Character_Panel
             // 
+            this.Character_Panel.Controls.Add(this.textBox1);
+            this.Character_Panel.Controls.Add(this.Hair_Label);
+            this.Character_Panel.Controls.Add(this.Skin_Label);
+            this.Character_Panel.Controls.Add(this.Eye_Label);
+            this.Character_Panel.Controls.Add(this.Weight_Label);
+            this.Character_Panel.Controls.Add(this.Height_Label);
+            this.Character_Panel.Controls.Add(this.Age_Label);
+            this.Character_Panel.Controls.Add(this.Hair_TextBox);
+            this.Character_Panel.Controls.Add(this.Skin_TextBox);
+            this.Character_Panel.Controls.Add(this.Eye_TextBox);
+            this.Character_Panel.Controls.Add(this.Weight_TextBox);
+            this.Character_Panel.Controls.Add(this.Height_TextBox);
+            this.Character_Panel.Controls.Add(this.Age_TextBox);
+            this.Character_Panel.Controls.Add(this.ProfBonus_Label);
+            this.Character_Panel.Controls.Add(this.Perception_Title);
+            this.Character_Panel.Controls.Add(this.Inspiration_CheckBox);
             this.Character_Panel.Controls.Add(this.XP_Spin);
             this.Character_Panel.Controls.Add(this.Skills_Label);
-            this.Character_Panel.Controls.Add(this.ProfBonus_Label);
+            this.Character_Panel.Controls.Add(this.ProfBonus_Title);
             this.Character_Panel.Controls.Add(this.Race_Label);
             this.Character_Panel.Controls.Add(this.Subrace_Label);
             this.Character_Panel.Controls.Add(this.Background_Label);
@@ -143,7 +175,6 @@
             this.Character_Panel.Controls.Add(this.Character_Label);
             this.Character_Panel.Controls.Add(this.SavingThrows_Label);
             this.Character_Panel.Controls.Add(this.Class_Label);
-            this.Character_Panel.Controls.Add(this.ProfBonus_TextBox);
             this.Character_Panel.Controls.Add(this.Saves_CheckList);
             this.Character_Panel.Controls.Add(this.Skills_CheckList);
             this.Character_Panel.Controls.Add(this.Con_TextBox);
@@ -167,10 +198,169 @@
             this.Character_Panel.Controls.Add(this.CharName_TextBox);
             this.Character_Panel.Controls.Add(this.Str_Group);
             this.Character_Panel.Controls.Add(this.ProfBonusSign_Label);
+            this.Character_Panel.Controls.Add(this.Perception_Label);
             this.Character_Panel.Location = new System.Drawing.Point(0, 0);
             this.Character_Panel.Name = "Character_Panel";
             this.Character_Panel.Size = new System.Drawing.Size(2056, 1150);
             this.Character_Panel.TabIndex = 23;
+            // 
+            // Hair_Label
+            // 
+            this.Hair_Label.AutoSize = true;
+            this.Hair_Label.Location = new System.Drawing.Point(1475, 131);
+            this.Hair_Label.Name = "Hair_Label";
+            this.Hair_Label.Size = new System.Drawing.Size(79, 20);
+            this.Hair_Label.TabIndex = 121;
+            this.Hair_Label.Text = "Hair Color";
+            // 
+            // Skin_Label
+            // 
+            this.Skin_Label.AutoSize = true;
+            this.Skin_Label.Location = new System.Drawing.Point(1276, 131);
+            this.Skin_Label.Name = "Skin_Label";
+            this.Skin_Label.Size = new System.Drawing.Size(81, 20);
+            this.Skin_Label.TabIndex = 120;
+            this.Skin_Label.Text = "Skin Color";
+            // 
+            // Eye_Label
+            // 
+            this.Eye_Label.AutoSize = true;
+            this.Eye_Label.Location = new System.Drawing.Point(1076, 131);
+            this.Eye_Label.Name = "Eye_Label";
+            this.Eye_Label.Size = new System.Drawing.Size(77, 20);
+            this.Eye_Label.TabIndex = 119;
+            this.Eye_Label.Text = "Eye Color";
+            // 
+            // Weight_Label
+            // 
+            this.Weight_Label.AutoSize = true;
+            this.Weight_Label.Location = new System.Drawing.Point(990, 131);
+            this.Weight_Label.Name = "Weight_Label";
+            this.Weight_Label.Size = new System.Drawing.Size(59, 20);
+            this.Weight_Label.TabIndex = 118;
+            this.Weight_Label.Text = "Weight";
+            // 
+            // Height_Label
+            // 
+            this.Height_Label.AutoSize = true;
+            this.Height_Label.Location = new System.Drawing.Point(864, 131);
+            this.Height_Label.Name = "Height_Label";
+            this.Height_Label.Size = new System.Drawing.Size(56, 20);
+            this.Height_Label.TabIndex = 117;
+            this.Height_Label.Text = "Height";
+            // 
+            // Age_Label
+            // 
+            this.Age_Label.AutoSize = true;
+            this.Age_Label.Location = new System.Drawing.Point(759, 131);
+            this.Age_Label.Name = "Age_Label";
+            this.Age_Label.Size = new System.Drawing.Size(38, 20);
+            this.Age_Label.TabIndex = 116;
+            this.Age_Label.Text = "Age";
+            // 
+            // Hair_TextBox
+            // 
+            this.Hair_TextBox.Enabled = false;
+            this.Hair_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hair_TextBox.Location = new System.Drawing.Point(1470, 84);
+            this.Hair_TextBox.Name = "Hair_TextBox";
+            this.Hair_TextBox.ReadOnly = true;
+            this.Hair_TextBox.Size = new System.Drawing.Size(188, 41);
+            this.Hair_TextBox.TabIndex = 115;
+            this.Hair_TextBox.Text = "Bright Purple";
+            this.Hair_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Skin_TextBox
+            // 
+            this.Skin_TextBox.Enabled = false;
+            this.Skin_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Skin_TextBox.Location = new System.Drawing.Point(1271, 84);
+            this.Skin_TextBox.Name = "Skin_TextBox";
+            this.Skin_TextBox.ReadOnly = true;
+            this.Skin_TextBox.Size = new System.Drawing.Size(188, 41);
+            this.Skin_TextBox.TabIndex = 114;
+            this.Skin_TextBox.Text = "Bright Purple";
+            this.Skin_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Eye_TextBox
+            // 
+            this.Eye_TextBox.Enabled = false;
+            this.Eye_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eye_TextBox.Location = new System.Drawing.Point(1072, 84);
+            this.Eye_TextBox.Name = "Eye_TextBox";
+            this.Eye_TextBox.ReadOnly = true;
+            this.Eye_TextBox.Size = new System.Drawing.Size(188, 41);
+            this.Eye_TextBox.TabIndex = 113;
+            this.Eye_TextBox.Text = "Bright Purple";
+            this.Eye_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Weight_TextBox
+            // 
+            this.Weight_TextBox.Enabled = false;
+            this.Weight_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Weight_TextBox.Location = new System.Drawing.Point(985, 84);
+            this.Weight_TextBox.Name = "Weight_TextBox";
+            this.Weight_TextBox.ReadOnly = true;
+            this.Weight_TextBox.Size = new System.Drawing.Size(76, 41);
+            this.Weight_TextBox.TabIndex = 112;
+            this.Weight_TextBox.Text = "124";
+            this.Weight_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Height_TextBox
+            // 
+            this.Height_TextBox.Enabled = false;
+            this.Height_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Height_TextBox.Location = new System.Drawing.Point(858, 83);
+            this.Height_TextBox.Name = "Height_TextBox";
+            this.Height_TextBox.ReadOnly = true;
+            this.Height_TextBox.Size = new System.Drawing.Size(113, 41);
+            this.Height_TextBox.TabIndex = 111;
+            this.Height_TextBox.Text = "10\' 12\"";
+            this.Height_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Age_TextBox
+            // 
+            this.Age_TextBox.Enabled = false;
+            this.Age_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Age_TextBox.Location = new System.Drawing.Point(755, 84);
+            this.Age_TextBox.Name = "Age_TextBox";
+            this.Age_TextBox.ReadOnly = true;
+            this.Age_TextBox.Size = new System.Drawing.Size(81, 41);
+            this.Age_TextBox.TabIndex = 110;
+            this.Age_TextBox.Text = "1000";
+            this.Age_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ProfBonus_Label
+            // 
+            this.ProfBonus_Label.AutoSize = true;
+            this.ProfBonus_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.ProfBonus_Label.Location = new System.Drawing.Point(283, 146);
+            this.ProfBonus_Label.Name = "ProfBonus_Label";
+            this.ProfBonus_Label.Size = new System.Drawing.Size(26, 29);
+            this.ProfBonus_Label.TabIndex = 108;
+            this.ProfBonus_Label.Text = "0";
+            this.ProfBonus_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Perception_Title
+            // 
+            this.Perception_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Perception_Title.Location = new System.Drawing.Point(308, 183);
+            this.Perception_Title.Name = "Perception_Title";
+            this.Perception_Title.Size = new System.Drawing.Size(168, 54);
+            this.Perception_Title.TabIndex = 107;
+            this.Perception_Title.Text = "Passive Wisdom (Perception)";
+            this.Perception_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Inspiration_CheckBox
+            // 
+            this.Inspiration_CheckBox.AutoSize = true;
+            this.Inspiration_CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Inspiration_CheckBox.Location = new System.Drawing.Point(307, 101);
+            this.Inspiration_CheckBox.Name = "Inspiration_CheckBox";
+            this.Inspiration_CheckBox.Size = new System.Drawing.Size(127, 29);
+            this.Inspiration_CheckBox.TabIndex = 25;
+            this.Inspiration_CheckBox.Text = "Inspiration";
+            this.Inspiration_CheckBox.UseVisualStyleBackColor = true;
             // 
             // XP_Spin
             // 
@@ -202,15 +392,16 @@
             this.Skills_Label.TabIndex = 103;
             this.Skills_Label.Text = "Skills";
             // 
-            // ProfBonus_Label
+            // ProfBonus_Title
             // 
-            this.ProfBonus_Label.AutoSize = true;
-            this.ProfBonus_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ProfBonus_Label.Location = new System.Drawing.Point(328, 218);
-            this.ProfBonus_Label.Name = "ProfBonus_Label";
-            this.ProfBonus_Label.Size = new System.Drawing.Size(168, 25);
-            this.ProfBonus_Label.TabIndex = 102;
-            this.ProfBonus_Label.Text = "Proficiency Bonus";
+            this.ProfBonus_Title.AutoSize = true;
+            this.ProfBonus_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ProfBonus_Title.Location = new System.Drawing.Point(307, 146);
+            this.ProfBonus_Title.Name = "ProfBonus_Title";
+            this.ProfBonus_Title.Size = new System.Drawing.Size(168, 25);
+            this.ProfBonus_Title.TabIndex = 102;
+            this.ProfBonus_Title.Text = "Proficiency Bonus";
+            this.ProfBonus_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Race_Label
             // 
@@ -288,9 +479,9 @@
             // SavingThrows_Label
             // 
             this.SavingThrows_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.SavingThrows_Label.Location = new System.Drawing.Point(272, 255);
+            this.SavingThrows_Label.Location = new System.Drawing.Point(272, 254);
             this.SavingThrows_Label.Name = "SavingThrows_Label";
-            this.SavingThrows_Label.Size = new System.Drawing.Size(233, 25);
+            this.SavingThrows_Label.Size = new System.Drawing.Size(233, 27);
             this.SavingThrows_Label.TabIndex = 87;
             this.SavingThrows_Label.Text = "Saving Throws";
             this.SavingThrows_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,20 +495,6 @@
             this.Class_Label.TabIndex = 86;
             this.Class_Label.Text = "Class";
             // 
-            // ProfBonus_TextBox
-            // 
-            this.ProfBonus_TextBox.BackColor = System.Drawing.SystemColors.Control;
-            this.ProfBonus_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ProfBonus_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProfBonus_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ProfBonus_TextBox.Location = new System.Drawing.Point(305, 216);
-            this.ProfBonus_TextBox.Name = "ProfBonus_TextBox";
-            this.ProfBonus_TextBox.ReadOnly = true;
-            this.ProfBonus_TextBox.Size = new System.Drawing.Size(21, 28);
-            this.ProfBonus_TextBox.TabIndex = 25;
-            this.ProfBonus_TextBox.Text = "0";
-            this.ProfBonus_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Saves_CheckList
             // 
             this.Saves_CheckList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,6 +503,8 @@
             this.Saves_CheckList.Name = "Saves_CheckList";
             this.Saves_CheckList.Size = new System.Drawing.Size(233, 193);
             this.Saves_CheckList.TabIndex = 83;
+            this.Saves_CheckList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.Saves_CheckList_ItemCheck);
+            this.Saves_CheckList.LostFocus += new System.EventHandler(this.Saves_CheckList_LostFocus);
             // 
             // Skills_CheckList
             // 
@@ -463,7 +642,7 @@
             this.Int_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Int_Label.Location = new System.Drawing.Point(1, 0);
             this.Int_Label.Name = "Int_Label";
-            this.Int_Label.Size = new System.Drawing.Size(235, 36);
+            this.Int_Label.Size = new System.Drawing.Size(235, 44);
             this.Int_Label.TabIndex = 105;
             this.Int_Label.Text = "Intelligence";
             this.Int_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -775,7 +954,7 @@
             this.Str_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Str_Label.Location = new System.Drawing.Point(1, -1);
             this.Str_Label.Name = "Str_Label";
-            this.Str_Label.Size = new System.Drawing.Size(235, 36);
+            this.Str_Label.Size = new System.Drawing.Size(235, 46);
             this.Str_Label.TabIndex = 104;
             this.Str_Label.Text = "Strength";
             this.Str_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -784,12 +963,23 @@
             // 
             this.ProfBonusSign_Label.AutoSize = true;
             this.ProfBonusSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ProfBonusSign_Label.Location = new System.Drawing.Point(286, 217);
+            this.ProfBonusSign_Label.Location = new System.Drawing.Point(265, 145);
             this.ProfBonusSign_Label.Name = "ProfBonusSign_Label";
             this.ProfBonusSign_Label.Size = new System.Drawing.Size(27, 29);
             this.ProfBonusSign_Label.TabIndex = 100;
             this.ProfBonusSign_Label.Text = "+";
             this.ProfBonusSign_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Perception_Label
+            // 
+            this.Perception_Label.AutoSize = true;
+            this.Perception_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Perception_Label.Location = new System.Drawing.Point(273, 195);
+            this.Perception_Label.Name = "Perception_Label";
+            this.Perception_Label.Size = new System.Drawing.Size(26, 29);
+            this.Perception_Label.TabIndex = 109;
+            this.Perception_Label.Text = "0";
+            this.Perception_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -800,6 +990,14 @@
             this.button1.Text = "Test";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(902, 425);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(895, 414);
+            this.textBox1.TabIndex = 122;
             // 
             // CharacterInfo
             // 
@@ -864,7 +1062,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckedListBox Skills_CheckList;
         private System.Windows.Forms.CheckedListBox Saves_CheckList;
-        private System.Windows.Forms.TextBox ProfBonus_TextBox;
         private System.Windows.Forms.Label Race_Label;
         private System.Windows.Forms.Label Subrace_Label;
         private System.Windows.Forms.Label Background_Label;
@@ -876,7 +1073,7 @@
         private System.Windows.Forms.Label SavingThrows_Label;
         private System.Windows.Forms.Label Class_Label;
         private System.Windows.Forms.Label Skills_Label;
-        private System.Windows.Forms.Label ProfBonus_Label;
+        private System.Windows.Forms.Label ProfBonus_Title;
         private System.Windows.Forms.Label ProfBonusSign_Label;
         private System.Windows.Forms.Label Con_Label;
         private System.Windows.Forms.Label Int_Label;
@@ -897,6 +1094,23 @@
         private System.Windows.Forms.Label DexSign_Label;
         private System.Windows.Forms.Label StrSign_Label;
         private System.Windows.Forms.NumericUpDown XP_Spin;
+        private System.Windows.Forms.Label Perception_Title;
+        private System.Windows.Forms.CheckBox Inspiration_CheckBox;
+        private System.Windows.Forms.Label ProfBonus_Label;
+        private System.Windows.Forms.Label Perception_Label;
+        private System.Windows.Forms.TextBox Weight_TextBox;
+        private System.Windows.Forms.TextBox Height_TextBox;
+        private System.Windows.Forms.TextBox Age_TextBox;
+        private System.Windows.Forms.Label Age_Label;
+        private System.Windows.Forms.TextBox Hair_TextBox;
+        private System.Windows.Forms.TextBox Skin_TextBox;
+        private System.Windows.Forms.TextBox Eye_TextBox;
+        private System.Windows.Forms.Label Hair_Label;
+        private System.Windows.Forms.Label Skin_Label;
+        private System.Windows.Forms.Label Eye_Label;
+        private System.Windows.Forms.Label Weight_Label;
+        private System.Windows.Forms.Label Height_Label;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

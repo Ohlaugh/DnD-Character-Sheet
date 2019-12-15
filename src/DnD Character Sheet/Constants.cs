@@ -124,12 +124,12 @@ namespace DnD_Character_Sheet
         public static readonly string Inspiration = "Inspiration";
 
         // Attributes
-        public static readonly string Strength = "Strength";
-        public static readonly string Dexterity = "Dexterity";
-        public static readonly string Constitution = "Constitution";
-        public static readonly string Intelligence = "Intelligence";
-        public static readonly string Wisdom = "Wisdom";
-        public static readonly string Charisma = "Charisma";
+        public const string Strength = "Strength";
+        public const string Dexterity = "Dexterity";
+        public const string Constitution = "Constitution";
+        public const string Intelligence = "Intelligence";
+        public const string Wisdom = "Wisdom";
+        public const string Charisma = "Charisma";
 
         // Skills
         public const string Acrobatics = "Acrobatics";

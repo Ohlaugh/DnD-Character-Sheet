@@ -202,6 +202,42 @@ namespace DnD_Character_Sheet
                         m_MainCharacterInfo.Skills._Survival = check;
                         break;
                     }
+                case (LC.Strength):
+                    {
+                        m_MainCharacterInfo.SavingThrows.Strength = skillBonus;
+                        m_MainCharacterInfo.SavingThrows._Strength = check;
+                        break;
+                    }
+                case (LC.Dexterity):
+                    {
+                        m_MainCharacterInfo.SavingThrows.Dexterity = skillBonus;
+                        m_MainCharacterInfo.SavingThrows._Dexterity = check;
+                        break;
+                    }
+                case (LC.Constitution):
+                    {
+                        m_MainCharacterInfo.SavingThrows.Constitution = skillBonus;
+                        m_MainCharacterInfo.SavingThrows._Constitution = check;
+                        break;
+                    }
+                case (LC.Intelligence):
+                    {
+                        m_MainCharacterInfo.SavingThrows.Intelligence = skillBonus;
+                        m_MainCharacterInfo.SavingThrows._Intelligence = check;
+                        break;
+                    }
+                case (LC.Wisdom):
+                    {
+                        m_MainCharacterInfo.SavingThrows.Wisdom = skillBonus;
+                        m_MainCharacterInfo.SavingThrows._Wisdom = check;
+                        break;
+                    }
+                case (LC.Charisma):
+                    {
+                        m_MainCharacterInfo.SavingThrows.Charisma = skillBonus;
+                        m_MainCharacterInfo.SavingThrows._Charisma = check;
+                        break;
+                    }
                 default:
                     break;
             }
