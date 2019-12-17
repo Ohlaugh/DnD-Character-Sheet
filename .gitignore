@@ -17,3 +17,9 @@ src/DnD Character Sheet/bin/Debug/DnD Character Sheet.pdb
 src/DnD Character Sheet/obj/Debug/DnD Character Sheet.csproj.FileListAbsolute.txt
 src/DnD Character Sheet/obj/Debug/DnD Character Sheet.csproj.GenerateResource.cache
 src/DnD Character Sheet/obj/Debug/DnD Character Sheet.pdb
+
+src/.vs/
+
+src/DnD Character Sheet/bin/
+
+src/DnD Character Sheet/obj/
