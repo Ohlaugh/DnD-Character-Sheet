@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using DnD_Character_Sheet;
 using static DnD_Character_Sheet.Constants;
-using LC = DnD_Character_Sheet.Player_Handbook.PHB_Constants;
+using LC = DnD_Character_Sheet.Books.Player_Handbook.PHB_Constants;
 
-namespace DnD_Character_Sheet.Player_Handbook
+namespace DnD_Character_Sheet.Books.Player_Handbook
 {
     class PHB_DataObject : Library
     {

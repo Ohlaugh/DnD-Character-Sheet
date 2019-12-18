@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DnD_Character_Sheet.Player_Handbook
+namespace DnD_Character_Sheet.Books.Player_Handbook
 {
     class PHB_Constants
     {

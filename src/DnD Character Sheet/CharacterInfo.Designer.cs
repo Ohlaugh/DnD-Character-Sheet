@@ -32,6 +32,22 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.Character_Panel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.HPTemp_Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.HPMax_Label = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.HPTemp_TextBox = new System.Windows.Forms.TextBox();
+            this.HPCurrent_TextBox = new System.Windows.Forms.TextBox();
+            this.HPMax_TextBox = new System.Windows.Forms.TextBox();
+            this.Speed_Label = new System.Windows.Forms.Label();
+            this.Initiative_Label = new System.Windows.Forms.Label();
+            this.AC_Label = new System.Windows.Forms.Label();
+            this.Speed_TextBox = new System.Windows.Forms.TextBox();
+            this.Initiative_TextBox = new System.Windows.Forms.TextBox();
+            this.AC_TextBox = new System.Windows.Forms.TextBox();
+            this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.Hair_Label = new System.Windows.Forms.Label();
             this.Skin_Label = new System.Windows.Forms.Label();
             this.Eye_Label = new System.Windows.Forms.Label();
@@ -103,7 +119,6 @@
             this.ProfBonusSign_Label = new System.Windows.Forms.Label();
             this.Perception_Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Character_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.XP_Spin)).BeginInit();
             this.Con_Group.SuspendLayout();
@@ -146,7 +161,22 @@
             // 
             // Character_Panel
             // 
-            this.Character_Panel.Controls.Add(this.textBox1);
+            this.Character_Panel.Controls.Add(this.label2);
+            this.Character_Panel.Controls.Add(this.HPTemp_Label);
+            this.Character_Panel.Controls.Add(this.label1);
+            this.Character_Panel.Controls.Add(this.HPMax_Label);
+            this.Character_Panel.Controls.Add(this.textBox8);
+            this.Character_Panel.Controls.Add(this.textBox7);
+            this.Character_Panel.Controls.Add(this.HPTemp_TextBox);
+            this.Character_Panel.Controls.Add(this.HPCurrent_TextBox);
+            this.Character_Panel.Controls.Add(this.HPMax_TextBox);
+            this.Character_Panel.Controls.Add(this.Speed_Label);
+            this.Character_Panel.Controls.Add(this.Initiative_Label);
+            this.Character_Panel.Controls.Add(this.AC_Label);
+            this.Character_Panel.Controls.Add(this.Speed_TextBox);
+            this.Character_Panel.Controls.Add(this.Initiative_TextBox);
+            this.Character_Panel.Controls.Add(this.AC_TextBox);
+            this.Character_Panel.Controls.Add(this.Info_TextBox);
             this.Character_Panel.Controls.Add(this.Hair_Label);
             this.Character_Panel.Controls.Add(this.Skin_Label);
             this.Character_Panel.Controls.Add(this.Eye_Label);
@@ -203,6 +233,158 @@
             this.Character_Panel.Name = "Character_Panel";
             this.Character_Panel.Size = new System.Drawing.Size(2056, 1150);
             this.Character_Panel.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1239, 231);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 138;
+            this.label2.Text = "Hit Dice";
+            // 
+            // HPTemp_Label
+            // 
+            this.HPTemp_Label.AutoSize = true;
+            this.HPTemp_Label.Location = new System.Drawing.Point(1118, 231);
+            this.HPTemp_Label.Name = "HPTemp_Label";
+            this.HPTemp_Label.Size = new System.Drawing.Size(75, 20);
+            this.HPTemp_Label.TabIndex = 137;
+            this.HPTemp_Label.Text = "HP Temp";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(993, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.TabIndex = 136;
+            this.label1.Text = "HP Current";
+            // 
+            // HPMax_Label
+            // 
+            this.HPMax_Label.AutoSize = true;
+            this.HPMax_Label.Location = new System.Drawing.Point(887, 231);
+            this.HPMax_Label.Name = "HPMax_Label";
+            this.HPMax_Label.Size = new System.Drawing.Size(64, 20);
+            this.HPMax_Label.TabIndex = 135;
+            this.HPMax_Label.Text = "HP Max";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.textBox8.Location = new System.Drawing.Point(1233, 161);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(82, 64);
+            this.textBox8.TabIndex = 134;
+            this.textBox8.Text = "30";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.textBox7.Location = new System.Drawing.Point(1351, 160);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(82, 64);
+            this.textBox7.TabIndex = 133;
+            this.textBox7.Text = "30";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // HPTemp_TextBox
+            // 
+            this.HPTemp_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.HPTemp_TextBox.Location = new System.Drawing.Point(1115, 161);
+            this.HPTemp_TextBox.Name = "HPTemp_TextBox";
+            this.HPTemp_TextBox.Size = new System.Drawing.Size(82, 64);
+            this.HPTemp_TextBox.TabIndex = 132;
+            this.HPTemp_TextBox.Text = "30";
+            this.HPTemp_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // HPCurrent_TextBox
+            // 
+            this.HPCurrent_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.HPCurrent_TextBox.Location = new System.Drawing.Point(997, 161);
+            this.HPCurrent_TextBox.Name = "HPCurrent_TextBox";
+            this.HPCurrent_TextBox.Size = new System.Drawing.Size(82, 64);
+            this.HPCurrent_TextBox.TabIndex = 131;
+            this.HPCurrent_TextBox.Text = "30";
+            this.HPCurrent_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // HPMax_TextBox
+            // 
+            this.HPMax_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.HPMax_TextBox.Location = new System.Drawing.Point(879, 160);
+            this.HPMax_TextBox.Name = "HPMax_TextBox";
+            this.HPMax_TextBox.Size = new System.Drawing.Size(82, 64);
+            this.HPMax_TextBox.TabIndex = 130;
+            this.HPMax_TextBox.Text = "30";
+            this.HPMax_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Speed_Label
+            // 
+            this.Speed_Label.AutoSize = true;
+            this.Speed_Label.Location = new System.Drawing.Point(773, 231);
+            this.Speed_Label.Name = "Speed_Label";
+            this.Speed_Label.Size = new System.Drawing.Size(56, 20);
+            this.Speed_Label.TabIndex = 129;
+            this.Speed_Label.Text = "Speed";
+            // 
+            // Initiative_Label
+            // 
+            this.Initiative_Label.AutoSize = true;
+            this.Initiative_Label.Location = new System.Drawing.Point(649, 231);
+            this.Initiative_Label.Name = "Initiative_Label";
+            this.Initiative_Label.Size = new System.Drawing.Size(67, 20);
+            this.Initiative_Label.TabIndex = 128;
+            this.Initiative_Label.Text = "Initiative";
+            // 
+            // AC_Label
+            // 
+            this.AC_Label.AutoSize = true;
+            this.AC_Label.Location = new System.Drawing.Point(516, 231);
+            this.AC_Label.Name = "AC_Label";
+            this.AC_Label.Size = new System.Drawing.Size(95, 20);
+            this.AC_Label.TabIndex = 127;
+            this.AC_Label.Text = "Armor Class";
+            // 
+            // Speed_TextBox
+            // 
+            this.Speed_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Speed_TextBox.Location = new System.Drawing.Point(761, 160);
+            this.Speed_TextBox.Name = "Speed_TextBox";
+            this.Speed_TextBox.Size = new System.Drawing.Size(82, 64);
+            this.Speed_TextBox.TabIndex = 126;
+            this.Speed_TextBox.Text = "30";
+            this.Speed_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Initiative_TextBox
+            // 
+            this.Initiative_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Initiative_TextBox.Location = new System.Drawing.Point(643, 160);
+            this.Initiative_TextBox.Name = "Initiative_TextBox";
+            this.Initiative_TextBox.Size = new System.Drawing.Size(82, 64);
+            this.Initiative_TextBox.TabIndex = 125;
+            this.Initiative_TextBox.Text = "30";
+            this.Initiative_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // AC_TextBox
+            // 
+            this.AC_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.AC_TextBox.Location = new System.Drawing.Point(525, 161);
+            this.AC_TextBox.Name = "AC_TextBox";
+            this.AC_TextBox.Size = new System.Drawing.Size(82, 64);
+            this.AC_TextBox.TabIndex = 123;
+            this.AC_TextBox.Text = "30";
+            this.AC_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Info_TextBox
+            // 
+            this.Info_TextBox.Location = new System.Drawing.Point(1494, 161);
+            this.Info_TextBox.Multiline = true;
+            this.Info_TextBox.Name = "Info_TextBox";
+            this.Info_TextBox.ReadOnly = true;
+            this.Info_TextBox.Size = new System.Drawing.Size(559, 240);
+            this.Info_TextBox.TabIndex = 122;
             // 
             // Hair_Label
             // 
@@ -991,14 +1173,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(902, 425);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(895, 414);
-            this.textBox1.TabIndex = 122;
-            // 
             // CharacterInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1110,7 +1284,22 @@
         private System.Windows.Forms.Label Eye_Label;
         private System.Windows.Forms.Label Weight_Label;
         private System.Windows.Forms.Label Height_Label;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Info_TextBox;
+        private System.Windows.Forms.TextBox HPCurrent_TextBox;
+        private System.Windows.Forms.Label Speed_Label;
+        private System.Windows.Forms.Label Initiative_Label;
+        private System.Windows.Forms.Label AC_Label;
+        private System.Windows.Forms.TextBox Speed_TextBox;
+        private System.Windows.Forms.TextBox Initiative_TextBox;
+        private System.Windows.Forms.TextBox AC_TextBox;
+        private System.Windows.Forms.Label HPMax_Label;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox HPTemp_TextBox;
+        private System.Windows.Forms.TextBox HPMax_TextBox;
+        private System.Windows.Forms.Label HPTemp_Label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

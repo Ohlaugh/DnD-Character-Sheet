@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using DnD_Character_Sheet;
 using LC = DnD_Character_Sheet.Constants;
-using PHBDO = DnD_Character_Sheet.Player_Handbook.PHB_DataObject;
+using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
 
 namespace DnD_Character_Sheet
 {
@@ -30,9 +30,9 @@ namespace DnD_Character_Sheet
             bool result = Library.m_BookUtilization[LC.Using_PHB];
             if (result)
             {
-                PHBDO.AddRaces();
-                PHBDO.AddArmor();
-                PHBDO.AddWeapons();
+                PHB_DO.AddRaces();
+                PHB_DO.AddArmor();
+                PHB_DO.AddWeapons();
             }
         }
 
@@ -100,7 +100,15 @@ namespace DnD_Character_Sheet
             Skin_TextBox.Text = Library.m_MainCharacterInfo.SkinColor;
             Hair_TextBox.Text = Library.m_MainCharacterInfo.HairColor;
 
-            textBox1.Text +=
+            AC_TextBox.Text = Library.m_MainCharacterInfo.ArmorClass.ToString();
+            Initiative_TextBox.Text = Library.m_MainCharacterInfo.Initiative.ToString();
+            Speed_TextBox.Text = Library.m_MainCharacterInfo.Speed.ToString();
+            HPMax_TextBox.Text = Library.m_MainCharacterInfo.HP_Max.ToString();
+            HPCurrent_TextBox.Text = Library.m_MainCharacterInfo.HP_Current.ToString();
+            HPTemp_TextBox.Text = Library.m_MainCharacterInfo.HP_Temp.ToString();
+            
+
+            Info_TextBox.Text +=
 
                 "PersonalityTraits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
                 "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
@@ -109,13 +117,7 @@ namespace DnD_Character_Sheet
 
             textBox5.Text +=
 
-                "ArmorClass = " + Library.m_MainCharacterInfo.ArmorClass + Environment.NewLine +
-                "Initiative = " + Library.m_MainCharacterInfo.Initiative + Environment.NewLine +
-                "Speed = " + Library.m_MainCharacterInfo.Speed + Environment.NewLine +
-                "HP_Max = " + Library.m_MainCharacterInfo.HP_Max + Environment.NewLine +
-                "HP_Current = " + Library.m_MainCharacterInfo.HP_Current + Environment.NewLine +
-                "HP_Temp = " + Library.m_MainCharacterInfo.HP_Temp + Environment.NewLine +
-                "HitDice = " + Library.m_MainCharacterInfo.Age + Environment.NewLine +
+                "HitDice = " + Library.m_MainCharacterInfo.HitDice + Environment.NewLine +
                 "HitDiceTotal = " + Library.m_MainCharacterInfo.HitDiceTotal + Environment.NewLine +
 
                 "Copper = " + Library.m_MainCharacterInfo.Money.Copper + Environment.NewLine +

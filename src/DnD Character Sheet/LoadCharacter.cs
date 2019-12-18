@@ -34,6 +34,7 @@ namespace DnD_Character_Sheet
                 PopulateCharData(xDoc);
                 PopulateProfData(xDoc);
                 PopulateBookData(xDoc);
+                PopulateBackgroundData(xDoc);
                 stream.Close();
                 PopulateCharacterInformation();
                 m_CharacterLoaded = true;
@@ -46,11 +47,11 @@ namespace DnD_Character_Sheet
         {
             m_CharData.Add(m_CharacterName, new Dictionary<string, string>());
 
-            XmlNodeList dataNodeList = xDoc.GetElementsByTagName("Data");
-            foreach (XmlNode dataNode in dataNodeList)
+            XmlNodeList nodeList = xDoc.GetElementsByTagName("Data");
+            foreach (XmlNode node in nodeList)
             {
-                string key = dataNode.SelectSingleNode("Key").InnerText;
-                string value = dataNode.SelectSingleNode("Value").InnerText;
+                string key = node.SelectSingleNode("Key").InnerText;
+                string value = node.SelectSingleNode("Value").InnerText;
                 m_CharData[m_CharacterName].Add(key, value);
             }
         }
@@ -58,23 +59,34 @@ namespace DnD_Character_Sheet
         private void PopulateProfData(XmlDocument xDoc)
         {
             m_ProficientData.Add(m_CharacterName, new Dictionary<string, bool>());
-            XmlNodeList proficientNodeList = xDoc.GetElementsByTagName("Proficient");
-            foreach (XmlNode profNode in proficientNodeList)
+            XmlNodeList nodeList = xDoc.GetElementsByTagName("Proficient");
+            foreach (XmlNode node in nodeList)
             {
-                string key = profNode.SelectSingleNode("Key").InnerText;
-                bool value = Convert.ToBoolean(profNode.SelectSingleNode("Value").InnerText);
+                string key = node.SelectSingleNode("Key").InnerText;
+                bool value = Convert.ToBoolean(node.SelectSingleNode("Value").InnerText);
                 m_ProficientData[m_CharacterName].Add(key, value);
             }
         }
 
         private void PopulateBookData(XmlDocument xDoc)
         {
-            XmlNodeList bookNodeList = xDoc.GetElementsByTagName("Book");
-            foreach (XmlNode bookNode in bookNodeList)
+            XmlNodeList nodeList = xDoc.GetElementsByTagName("Book");
+            foreach (XmlNode node in nodeList)
             {
-                string key = bookNode.SelectSingleNode("Key").InnerText;
-                bool value = Convert.ToBoolean(bookNode.SelectSingleNode("Value").InnerText);
+                string key = node.SelectSingleNode("Key").InnerText;
+                bool value = Convert.ToBoolean(node.SelectSingleNode("Value").InnerText);
                 m_BookUtilization.Add(key, value);
+            }
+        }
+
+        private void PopulateBackgroundData(XmlDocument xDoc)
+        {
+            XmlNodeList nodeList = xDoc.GetElementsByTagName("BackgroundInfo");
+            foreach (XmlNode node in nodeList)
+            {
+                string key = node.SelectSingleNode("Key").InnerText;
+                string value = node.SelectSingleNode("Value").InnerText;
+                m_CharData[m_CharacterName].Add(key, value);
             }
         }
 
@@ -173,8 +185,8 @@ namespace DnD_Character_Sheet
                 Ideals = characterInfo[LC.Ideals],
                 Bonds = characterInfo[LC.Bonds],
                 Flaws = characterInfo[LC.Flaws],
-                // Features
-                // Traits
+
+                Backstory = characterInfo[LC.Backstory]
 
             };
 

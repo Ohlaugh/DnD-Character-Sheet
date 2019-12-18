@@ -61,6 +61,8 @@ namespace DnD_Character_Sheet
         public List<string> Features { get; set; }
         public List<string> Traits { get; set; }
 
+        public string Backstory { get; set; }
+
         public void Calculate()
         {
             SetLevel();

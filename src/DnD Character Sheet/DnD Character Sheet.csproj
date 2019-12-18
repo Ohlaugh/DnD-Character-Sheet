@@ -52,8 +52,8 @@
     <Compile Include="LoadCharacter.cs" />
     <Compile Include="MainCharacterInfo.cs" />
     <Compile Include="Money.cs" />
-    <Compile Include="Player Handbook\PHB_Constants.cs" />
-    <Compile Include="Player Handbook\PHB_DataObject.cs" />
+    <Compile Include="Books\Player Handbook\PHB_Constants.cs" />
+    <Compile Include="Books\Player Handbook\PHB_DataObject.cs" />
     <Compile Include="SavingThrows.cs" />
     <Compile Include="CharacterInfo.cs">
       <SubType>Form</SubType>
