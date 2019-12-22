@@ -4,36 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DnD_Character_Sheet;
-using static DnD_Character_Sheet.Constants;
-using LC = DnD_Character_Sheet.Books.Player_Handbook.PHB_Constants;
+using LC = DnD_Character_Sheet.Constants;
+using PHBC = DnD_Character_Sheet.Books.Player_Handbook.PHB_Constants;
+using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
+using LIB = DnD_Character_Sheet.Library;
 
 namespace DnD_Character_Sheet.Books.Player_Handbook
 {
-    class PHB_DataObject : Library
+    class PHB_DataObject
     {
         /// <summary>
         /// Adds all Player Handbook Races to the Master Race Library
         /// </summary>
         public static void AddRaces()
         {
-            foreach (string race in LC.Races)
+            foreach (string race in PHBC.Races)
             {
-                m_RaceLibrary.Add(race, new List<string>());
+                LIB.m_RaceLibrary.Add(race, new List<string>());
                 List<string> subraces = new List<string>();
-                foreach (string subrace in LC.Subraces)
+                foreach (string subrace in PHBC.Subraces)
                 {
                     if (subrace.Split(':')[0] == race)
                     {
                         subraces.Add(subrace.Split(':')[1]);
                     }
                 }
-                m_RaceLibrary[race] = subraces;
+                LIB.m_RaceLibrary[race] = subraces;
             }
         }
 
         public static void AddClasses()
         {
-            
+
         }
 
         /// <summary>
@@ -41,11 +43,11 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         /// </summary>
         public static void AddArmor()
         {
-            #region Light Armor
-            m_ArmorLibrary.Add("Padded",
-                new Armor_Class
+            #region LC.Light Armor
+            LIB.m_ArmorLibrary.Add("Padded",
+                new CLIB.Armor_Class
                 {
-                    Style = LightArmor,
+                    Style = LC.LightArmor,
                     Cost = "5 gp",
                     ArmorClass = "11 + Dex",
                     StrengthReq = 0,
@@ -53,10 +55,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 8
                 });
 
-            m_ArmorLibrary.Add("Leather",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Leather",
+                new CLIB.Armor_Class
                 {
-                    Style = LightArmor,
+                    Style = LC.LightArmor,
                     Cost = "10 gp",
                     ArmorClass = "11 + Dex",
                     StrengthReq = 0,
@@ -64,10 +66,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 10
                 });
 
-            m_ArmorLibrary.Add("Studded Leather",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Studded Leather",
+                new CLIB.Armor_Class
                 {
-                    Style = LightArmor,
+                    Style = LC.LightArmor,
                     Cost = "45 gp",
                     ArmorClass = "12 + Dex",
                     StrengthReq = 0,
@@ -77,10 +79,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #endregion
 
             #region Medium Armor
-            m_ArmorLibrary.Add("Hide",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Hide",
+                new CLIB.Armor_Class
                 {
-                    Style = MediumArmor,
+                    Style = LC.MediumArmor,
                     Cost = "10 gp",
                     ArmorClass = "12 + Dex(Max 2)",
                     StrengthReq = 0,
@@ -88,10 +90,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 12
                 });
 
-            m_ArmorLibrary.Add("Chain Shirt",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Chain Shirt",
+                new CLIB.Armor_Class
                 {
-                    Style = MediumArmor,
+                    Style = LC.MediumArmor,
                     Cost = "50 gp",
                     ArmorClass = "13 + Dex(Max 2)",
                     StrengthReq = 0,
@@ -99,10 +101,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 20
                 });
 
-            m_ArmorLibrary.Add("Scale Mail",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Scale Mail",
+                new CLIB.Armor_Class
                 {
-                    Style = MediumArmor,
+                    Style = LC.MediumArmor,
                     Cost = "50 gp",
                     ArmorClass = "14 + Dex(Max 2)",
                     StrengthReq = 0,
@@ -110,10 +112,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 45
                 });
 
-            m_ArmorLibrary.Add("Breastplate",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Breastplate",
+                new CLIB.Armor_Class
                 {
-                    Style = MediumArmor,
+                    Style = LC.MediumArmor,
                     Cost = "400 gp",
                     ArmorClass = "14 + Dex(Max 2)",
                     StrengthReq = 0,
@@ -121,10 +123,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 20
                 });
 
-            m_ArmorLibrary.Add("Half Plate",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Half Plate",
+                new CLIB.Armor_Class
                 {
-                    Style = MediumArmor,
+                    Style = LC.MediumArmor,
                     Cost = "750 gp",
                     ArmorClass = "15 + Dex(Max 2)",
                     StrengthReq = 0,
@@ -133,11 +135,11 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
             #endregion
 
-            #region Heavy Armor
-            m_ArmorLibrary.Add("Ring Mail",
-                new Armor_Class
+            #region LC.Heavy Armor
+            LIB.m_ArmorLibrary.Add("Ring Mail",
+                new CLIB.Armor_Class
                 {
-                    Style = HeavyArmor,
+                    Style = LC.HeavyArmor,
                     Cost = "30 gp",
                     ArmorClass = "14",
                     StrengthReq = 0,
@@ -145,10 +147,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 40
                 });
 
-            m_ArmorLibrary.Add("Chain Mail",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Chain Mail",
+                new CLIB.Armor_Class
                 {
-                    Style = HeavyArmor,
+                    Style = LC.HeavyArmor,
                     Cost = "75 gp",
                     ArmorClass = "16",
                     StrengthReq = 13,
@@ -156,10 +158,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 55
                 });
 
-            m_ArmorLibrary.Add("Splint",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Splint",
+                new CLIB.Armor_Class
                 {
-                    Style = HeavyArmor,
+                    Style = LC.HeavyArmor,
                     Cost = "200 gp",
                     ArmorClass = "17",
                     StrengthReq = 15,
@@ -167,10 +169,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 60
                 });
 
-            m_ArmorLibrary.Add("Plate",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Plate",
+                new CLIB.Armor_Class
                 {
-                    Style = HeavyArmor,
+                    Style = LC.HeavyArmor,
                     Cost = "1500 gp",
                     ArmorClass = "18",
                     StrengthReq = 15,
@@ -178,10 +180,10 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 65
                 });
 
-            m_ArmorLibrary.Add("Shield",
-                new Armor_Class
+            LIB.m_ArmorLibrary.Add("Shield",
+                new CLIB.Armor_Class
                 {
-                    Style = Shield,
+                    Style = LC.Shield,
                     Cost = "10 gp",
                     ArmorClass = "+2",
                     StrengthReq = 0,
@@ -197,493 +199,493 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         public static void AddWeapons()
         {
             #region Melee Weapons
-            m_WeaponLibrary.Add("Club",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Club",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "1 sp",
-                    Damage = string.Format(Bludgeoning, "1d4"),
+                    Damage = string.Format(LC.Bludgeoning, "1d4"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        Light
+                        LC.Light
                     }
                 });
 
-            m_WeaponLibrary.Add("Dagger",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Dagger",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "2 gp",
-                    Damage = string.Format(Piercing, "1d4"),
+                    Damage = string.Format(LC.Piercing, "1d4"),
                     Weight = 1,
                     Properties = new List<string>
                     {
-                        Finesse,
-                        Light,
-                        string.Format(Thrown,20,60)
+                        LC.Finesse,
+                        LC.Light,
+                        string.Format(LC.Thrown,20,60)
                     }
                 });
 
-            m_WeaponLibrary.Add("Greatclub",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Greatclub",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "2 sp",
-                    Damage = string.Format(Bludgeoning, "1d8"),
+                    Damage = string.Format(LC.Bludgeoning, "1d8"),
                     Weight = 10,
                     Properties = new List<string>
                     {
-                        Two_Handed
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Handaxe",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Handaxe",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "5 gp",
-                    Damage = string.Format(Slashing, "1d6"),
+                    Damage = string.Format(LC.Slashing, "1d6"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        Light,
-                        string.Format(Thrown,20,60)
+                        LC.Light,
+                        string.Format(LC.Thrown,20,60)
                     }
                 });
 
-            m_WeaponLibrary.Add("Light hammer",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("LC.Light hammer",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "2 gp",
-                    Damage = string.Format(Bludgeoning, "1d4"),
+                    Damage = string.Format(LC.Bludgeoning, "1d4"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        Light,
-                        string.Format(Thrown,20,60)
+                        LC.Light,
+                        string.Format(LC.Thrown,20,60)
                     }
                 });
 
-            m_WeaponLibrary.Add("Mace",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Mace",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "5 gp",
-                    Damage = string.Format(Bludgeoning, "1d6"),
+                    Damage = string.Format(LC.Bludgeoning, "1d6"),
                     Weight = 4,
                     Properties = new List<string>()
                 });
 
-            m_WeaponLibrary.Add("Quarterstaff",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Quarterstaff",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "2 sp",
-                    Damage = string.Format(Bludgeoning, "1d6"),
+                    Damage = string.Format(LC.Bludgeoning, "1d6"),
                     Weight = 4,
                     Properties = new List<string>
                     {
-                        string.Format(Versatile, "1d8")
+                        string.Format(LC.Versatile, "1d8")
                     }
                 });
 
-            m_WeaponLibrary.Add("Sickle",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Sickle",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "1 gp",
-                    Damage = string.Format(Slashing, "1d4"),
+                    Damage = string.Format(LC.Slashing, "1d4"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        Light
+                        LC.Light
                     }
                 });
 
-            m_WeaponLibrary.Add("Spear",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Spear",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeSimple,
+                    Style = LC.MeleeSimple,
                     Cost = "1 gp",
-                    Damage = string.Format(Piercing, "1d6"),
+                    Damage = string.Format(LC.Piercing, "1d6"),
                     Weight = 3,
                     Properties = new List<string>
                     {
-                        string.Format(Thrown,20,60),
-                        string.Format(Versatile, "1d8")
+                        string.Format(LC.Thrown,20,60),
+                        string.Format(LC.Versatile, "1d8")
                     }
                 });
 
-            m_WeaponLibrary.Add("Battleaxe",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Battleaxe",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "10 gp",
-                    Damage = string.Format(Slashing, "1d8"),
+                    Damage = string.Format(LC.Slashing, "1d8"),
                     Weight = 4,
                     Properties = new List<string>
                     {
-                        string.Format(Versatile, "1d10")
+                        string.Format(LC.Versatile, "1d10")
                     }
                 });
 
-            m_WeaponLibrary.Add("Flail",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Flail",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "10 gp",
-                    Damage = string.Format(Bludgeoning, "1d8"),
+                    Damage = string.Format(LC.Bludgeoning, "1d8"),
                     Weight = 2,
                     Properties = new List<string>()
                 });
 
-            m_WeaponLibrary.Add("Glaive",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Glaive",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "20 gp",
-                    Damage = string.Format(Slashing, "1d10"),
+                    Damage = string.Format(LC.Slashing, "1d10"),
                     Weight = 6,
                     Properties = new List<string>
                     {
-                        Heavy,
-                        Reach,
-                        Two_Handed
+                        LC.Heavy,
+                        LC.Reach,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Greataxe",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Greataxe",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "30 gp",
-                    Damage = string.Format(Slashing, "1d12"),
+                    Damage = string.Format(LC.Slashing, "1d12"),
                     Weight = 7,
                     Properties = new List<string>
                     {
-                        Heavy,
-                        Two_Handed
+                        LC.Heavy,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Greatsword",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Greatsword",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "50 gp",
-                    Damage = string.Format(Slashing, "2d6"),
+                    Damage = string.Format(LC.Slashing, "2d6"),
                     Weight = 6,
                     Properties = new List<string>
                     {
-                        Heavy,
-                        Two_Handed
+                        LC.Heavy,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Halberd",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Halberd",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "20 gp",
-                    Damage = string.Format(Slashing, "1d10"),
+                    Damage = string.Format(LC.Slashing, "1d10"),
                     Weight = 6,
                     Properties = new List<string>
                     {
-                        Heavy,
-                        Reach,
-                        Two_Handed
+                        LC.Heavy,
+                        LC.Reach,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Lance",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Lance",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "10 gp",
-                    Damage = string.Format(Piercing, "1d12"),
+                    Damage = string.Format(LC.Piercing, "1d12"),
                     Weight = 6,
                     Properties = new List<string>
                     {
-                        Reach,
-                        Special
+                        LC.Reach,
+                        LC.Special
                     }
                 });
 
-            m_WeaponLibrary.Add("Longsword",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Longsword",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "15 gp",
-                    Damage = string.Format(Slashing, "1d8"),
+                    Damage = string.Format(LC.Slashing, "1d8"),
                     Weight = 3,
                     Properties = new List<string>
                     {
-                        string.Format(Versatile, "1d10")
+                        string.Format(LC.Versatile, "1d10")
                     }
                 });
 
-            m_WeaponLibrary.Add("Maul",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Maul",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "10 gp",
-                    Damage = string.Format(Bludgeoning, "2d6"),
+                    Damage = string.Format(LC.Bludgeoning, "2d6"),
                     Weight = 10,
                     Properties = new List<string>
                     {
-                        Heavy,
-                        Two_Handed
+                        LC.Heavy,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Morningstar",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Morningstar",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "15 gp",
-                    Damage = string.Format(Piercing, "1d8"),
+                    Damage = string.Format(LC.Piercing, "1d8"),
                     Weight = 4,
                     Properties = new List<string>()
                 });
 
-            m_WeaponLibrary.Add("Pike",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Pike",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "5 gp",
-                    Damage = string.Format(Piercing, "1d10"),
+                    Damage = string.Format(LC.Piercing, "1d10"),
                     Weight = 18,
                     Properties = new List<string>
                     {
-                        Heavy,
-                        Reach,
-                        Two_Handed
+                        LC.Heavy,
+                        LC.Reach,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Rapier",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Rapier",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "25 gp",
-                    Damage = string.Format(Piercing, "1d8"),
+                    Damage = string.Format(LC.Piercing, "1d8"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        Finesse
+                        LC.Finesse
                     }
                 });
 
-            m_WeaponLibrary.Add("Scimitar",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Scimitar",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "25 gp",
-                    Damage = string.Format(Slashing, "1d6"),
+                    Damage = string.Format(LC.Slashing, "1d6"),
                     Weight = 3,
                     Properties = new List<string>
                     {
-                        Finesse,
-                        Light
+                        LC.Finesse,
+                        LC.Light
                     }
                 });
 
-            m_WeaponLibrary.Add("Shortsword",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Shortsword",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "10 gp",
-                    Damage = string.Format(Piercing, "1d6"),
+                    Damage = string.Format(LC.Piercing, "1d6"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        Finesse,
-                        Light
+                        LC.Finesse,
+                        LC.Light
                     }
                 });
 
-            m_WeaponLibrary.Add("Trident",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Trident",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "5 gp",
-                    Damage = string.Format(Piercing, "1d6"),
+                    Damage = string.Format(LC.Piercing, "1d6"),
                     Weight = 4,
                     Properties = new List<string>
                     {
-                        string.Format(Thrown,20,60),
-                        string.Format(Versatile, "1d18")
+                        string.Format(LC.Thrown,20,60),
+                        string.Format(LC.Versatile, "1d18")
                     }
                 });
 
-            m_WeaponLibrary.Add("War Pick",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("War Pick",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "5 gp",
-                    Damage = string.Format(Piercing, "1d8"),
+                    Damage = string.Format(LC.Piercing, "1d8"),
                     Weight = 2,
                     Properties = new List<string>()
                 });
 
-            m_WeaponLibrary.Add("Warhammer",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Warhammer",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "15 gp",
-                    Damage = string.Format(Bludgeoning, "1d8"),
+                    Damage = string.Format(LC.Bludgeoning, "1d8"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        string.Format(Versatile, "1d10")
+                        string.Format(LC.Versatile, "1d10")
                     }
                 });
 
-            m_WeaponLibrary.Add("Whip",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Whip",
+                new CLIB.Weapon_Class
                 {
-                    Style = MeleeMartial,
+                    Style = LC.MeleeMartial,
                     Cost = "2 gp",
-                    Damage = string.Format(Slashing, "1d4"),
+                    Damage = string.Format(LC.Slashing, "1d4"),
                     Weight = 3,
                     Properties = new List<string>
                     {
-                        Finesse,
-                        Reach
+                        LC.Finesse,
+                        LC.Reach
                     }
                 });
             #endregion
 
             #region Ranged Weapons
-            m_WeaponLibrary.Add("Crossbow, light",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Crossbow, LC.Light",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedSimple,
+                    Style = LC.RangedSimple,
                     Cost = "25 sp",
-                    Damage = string.Format(Piercing, "1d8"),
+                    Damage = string.Format(LC.Piercing, "1d8"),
                     Weight = 5,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,80,320),
-                        Loading,
-                        Two_Handed
+                        string.Format(LC.Ammunition,80,320),
+                        LC.Loading,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Dart",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Dart",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedSimple,
+                    Style = LC.RangedSimple,
                     Cost = "5 cp",
-                    Damage = string.Format(Piercing, "1d4"),
+                    Damage = string.Format(LC.Piercing, "1d4"),
                     Weight = .25,
                     Properties = new List<string>
                     {
-                        Finesse,
-                        string.Format(Thrown,20,60)
+                        LC.Finesse,
+                        string.Format(LC.Thrown,20,60)
                     }
                 });
 
-            m_WeaponLibrary.Add("Shortbow",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Shortbow",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedSimple,
+                    Style = LC.RangedSimple,
                     Cost = "25 gp",
-                    Damage = string.Format(Piercing, "1d6"),
+                    Damage = string.Format(LC.Piercing, "1d6"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,80,320),
-                        Two_Handed
+                        string.Format(LC.Ammunition,80,320),
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Sling",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Sling",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedSimple,
+                    Style = LC.RangedSimple,
                     Cost = "1 sp",
-                    Damage = string.Format(Bludgeoning, "1d4"),
+                    Damage = string.Format(LC.Bludgeoning, "1d4"),
                     Weight = 0,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,30,120)
+                        string.Format(LC.Ammunition,30,120)
                     }
                 });
 
-            m_WeaponLibrary.Add("Blowgun",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Blowgun",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedMartial,
+                    Style = LC.RangedMartial,
                     Cost = "10 gp",
-                    Damage = string.Format(Piercing, "1"),
+                    Damage = string.Format(LC.Piercing, "1"),
                     Weight = 1,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,25,100),
-                        Loading
+                        string.Format(LC.Ammunition,25,100),
+                        LC.Loading
                     }
                 });
 
-            m_WeaponLibrary.Add("Crossbow, hand",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Crossbow, hand",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedMartial,
+                    Style = LC.RangedMartial,
                     Cost = "75 gp",
-                    Damage = string.Format(Piercing, "1d6"),
+                    Damage = string.Format(LC.Piercing, "1d6"),
                     Weight = 3,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,30,120),
-                        Light,
-                        Loading
+                        string.Format(LC.Ammunition,30,120),
+                        LC.Light,
+                        LC.Loading
                     }
                 });
 
-            m_WeaponLibrary.Add("Crossbow, heavy",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Crossbow, LC.Heavy",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedMartial,
+                    Style = LC.RangedMartial,
                     Cost = "50 gp",
-                    Damage = string.Format(Piercing, "1d10"),
+                    Damage = string.Format(LC.Piercing, "1d10"),
                     Weight = 18,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,100,400),
-                        Heavy,
-                        Loading,
-                        Two_Handed
+                        string.Format(LC.Ammunition,100,400),
+                        LC.Heavy,
+                        LC.Loading,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Longbow",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Longbow",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedMartial,
+                    Style = LC.RangedMartial,
                     Cost = "50 gp",
-                    Damage = string.Format(Piercing, "1d8"),
+                    Damage = string.Format(LC.Piercing, "1d8"),
                     Weight = 2,
                     Properties = new List<string>
                     {
-                        string.Format(Ammunition,100,400),
-                        Heavy,
-                        Two_Handed
+                        string.Format(LC.Ammunition,100,400),
+                        LC.Heavy,
+                        LC.Two_Handed
                     }
                 });
 
-            m_WeaponLibrary.Add("Net",
-                new Weapon_Class
+            LIB.m_WeaponLibrary.Add("Net",
+                new CLIB.Weapon_Class
                 {
-                    Style = RangedMartial,
+                    Style = LC.RangedMartial,
                     Cost = "1 gp",
                     Damage = "0",
                     Weight = 3,
                     Properties = new List<string>
                     {
-                        Special,
-                        string.Format(Thrown,5,15)
+                        LC.Special,
+                        string.Format(LC.Thrown,5,15)
                     }
                 });
             #endregion

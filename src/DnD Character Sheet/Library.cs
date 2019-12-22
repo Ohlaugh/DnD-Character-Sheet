@@ -11,11 +11,14 @@ using System.Windows.Forms;
 using System.IO;
 using DnD_Character_Sheet;
 using LC = DnD_Character_Sheet.Constants;
+using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
     class Library
     {
+        #region Read in Data
+
         /// <summary>
         /// This holds all information read in from the character sheet
         ///     Key: Character Data
@@ -35,21 +38,25 @@ namespace DnD_Character_Sheet
         ///     Key: Item Name
         ///     Value: New Item
         /// </summary>
-        public static Dictionary<string, LC.Item_Class> m_ItemData = new Dictionary<string, LC.Item_Class>();
+        public static Dictionary<string, CLIB.Item_Class> m_ItemData = new Dictionary<string, CLIB.Item_Class>();
 
         /// <summary>
         /// This contains all Weapons the current character has
         ///     Key: Weapon Name
         ///     Value: New Weapon
         /// </summary>
-        public static Dictionary<string, LC.Weapon_Class> m_WeaponData = new Dictionary<string, LC.Weapon_Class>();
+        public static Dictionary<string, CLIB.Weapon_Class> m_WeaponData = new Dictionary<string, CLIB.Weapon_Class>();
 
         /// <summary>
         /// This contains all Armor the current character has
         ///     Key: Armor Name
         ///     Value: New Armor
         /// </summary>
-        public static Dictionary<string, LC.Armor_Class> m_ArmorData = new Dictionary<string, LC.Armor_Class>();
+        public static Dictionary<string, CLIB.Armor_Class> m_ArmorData = new Dictionary<string, CLIB.Armor_Class>();
+
+        #endregion
+
+        #region Main Libraries
 
         /// <summary>
         /// This holds the current characters name
@@ -80,17 +87,26 @@ namespace DnD_Character_Sheet
         /// Key: Armor Name
         /// Value: New Armor
         /// </summary>
-        public static Dictionary<string, LC.Armor_Class> m_ArmorLibrary = new Dictionary<string, LC.Armor_Class>();
+        public static Dictionary<string, CLIB.Armor_Class> m_ArmorLibrary = new Dictionary<string, CLIB.Armor_Class>();
 
         /// <summary>
         /// This dictionary holds all information on Weapons from selected manuals
         /// Key: Weapon Name
         /// Value: New Weapon
         /// </summary>
-        public static Dictionary<string, LC.Weapon_Class> m_WeaponLibrary = new Dictionary<string, LC.Weapon_Class>();
+        public static Dictionary<string, CLIB.Weapon_Class> m_WeaponLibrary = new Dictionary<string, CLIB.Weapon_Class>();
 
+        /// <summary>
+        /// This bool indicates if a character has been loaded
+        /// </summary>
         public static bool m_CharacterLoaded = false;
 
+        #endregion
+
+        /// <summary>
+        /// This method clears all Libraries
+        /// USE ONLY WHEN NEW CHARACTER IS LOADED/CREATED
+        /// </summary>
         public static void ClearLibrary()
         {
             m_CharData.Clear();
@@ -105,7 +121,7 @@ namespace DnD_Character_Sheet
         }
 
         /// <summary>
-        /// Update the skills for the main character
+        /// Update the Skills for the main character
         /// </summary>
         /// <param name="skillName">Name of the Changed Skill</param>
         /// <param name="skillBonus">New value for the skill</param>

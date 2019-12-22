@@ -12,21 +12,23 @@ using System.IO;
 using DnD_Character_Sheet;
 using LC = DnD_Character_Sheet.Constants;
 using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
+using CALC = DnD_Character_Sheet.Calculations;
+using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
+    /// <summary>
+    /// This class contains all helper methods for the UIEventHandler
+    /// </summary>
     public partial class CharacterInfo : Form
     {
-
-        public List<string> m_Classes = new List<string>();
-
         public CharacterInfo()
         {
             InitializeComponent();
             Character_Panel.Hide();
         }
 
-        private void CreateMasterList()
+        private void CreateMasterLibrary()
         {
             bool result = Library.m_BookUtilization[LC.Using_PlayerHB];
             if (result)
@@ -37,29 +39,22 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void LoadButton_Click(object sender, EventArgs e)
-        {
-            LoadCharacter characterLoader = new LoadCharacter();
-            if (characterLoader.Load())
-            {
-                CreateMasterList();
-                Reload();
-                Character_Panel.Show();
-            }
-        }
-
-        private void Reload()
-        {
-            PopulateCharacterUI();
-            UpdateSkillsList();
-            UpdateSavesList();
-        }
-
+        /// <summary>
+        /// This method populates every UI Element with the loaded character information
+        /// </summary>
         private void PopulateCharacterUI()
         {
             CharName_TextBox.Text = Library.m_MainCharacterInfo.CharacterName;
-            Class_TextBox.Text = Library.m_MainCharacterInfo.Class;
-            Level_TextBox.Text = Library.m_MainCharacterInfo.Level.ToString();
+            if (Library.m_MainCharacterInfo.Multiclass)
+            {
+                Class_TextBox.Text = Library.m_MainCharacterInfo.Class1 + " / " + Library.m_MainCharacterInfo.Class2;
+                Level_TextBox.Text = Library.m_MainCharacterInfo.Level1 + " / " + Library.m_MainCharacterInfo.Level2;
+            }
+            else
+            {
+                Class_TextBox.Text = Library.m_MainCharacterInfo.Class1;
+                Level_TextBox.Text = Library.m_MainCharacterInfo.TotalLevel.ToString();
+            }
             Race_TextBox.Text = Library.m_MainCharacterInfo.Race;
             Subrace_TextBox.Text = Library.m_MainCharacterInfo.Subrace;
             Background_TextBox.Text = Library.m_MainCharacterInfo.Background;
@@ -113,7 +108,7 @@ namespace DnD_Character_Sheet
             DiceType_TextBox.Text = Library.m_MainCharacterInfo.HitDice;
 
             Info_TextBox.Text +=
-                "PersonalityTraits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
+                "Personality Traits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
                 "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
                 "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
                 "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
@@ -126,21 +121,27 @@ namespace DnD_Character_Sheet
             GP_Spin.Value = Library.m_MainCharacterInfo.Money.Gold;
             PP_Spin.Value = Library.m_MainCharacterInfo.Money.Platinum;
 
+            UpdateLists();
             UpdateGrids();
         }
 
+        /// <summary>
+        /// This Method updates the Equipment and Items Grids
+        /// </summary>
         private void UpdateGrids()
         {
+            Item_Grid.Rows.Clear();
+            Equipment_Grid.Rows.Clear();
             foreach (var key in Library.m_MainCharacterInfo.Item_List)
             {
-                LC.Item_Class item = Library.m_MainCharacterInfo.Items[key];
+                CLIB.Item_Class item = Library.m_MainCharacterInfo.Items[key];
                 object[] param = { key, item.Cost, item.Weight, item.Description };
                 Item_Grid.Rows.Add(param);
             }
 
             foreach (var key in Library.m_MainCharacterInfo.Weapon_List)
             {
-                LC.Weapon_Class weapon = Library.m_MainCharacterInfo.Weapons[key];
+                CLIB.Weapon_Class weapon = Library.m_MainCharacterInfo.Weapons[key];
 
                 string properties = string.Join(", ", weapon.Properties.ToArray());
 
@@ -150,26 +151,17 @@ namespace DnD_Character_Sheet
 
             foreach (var key in Library.m_MainCharacterInfo.Armor_List)
             {
-                LC.Armor_Class armor = Library.m_MainCharacterInfo.Armor[key];
+                CLIB.Armor_Class armor = Library.m_MainCharacterInfo.Armor[key];
                 string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
                 object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
                 Equipment_Grid.Rows.Add(param);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (Character_Panel.Visible)
-            {
-                Character_Panel.Hide();
-            }
-            else
-            {
-                Character_Panel.Show();
-            }
-        }
-
-        private void UpdateSkillsList()
+        /// <summary>
+        /// This method updates the Skills/Saves checkbox lists
+        /// </summary>
+        private void UpdateLists()
         {
             Skills_CheckList.Items.Clear();
             List<Tuple<string, bool>> skills = Library.m_MainCharacterInfo.GetSkills();
@@ -177,111 +169,13 @@ namespace DnD_Character_Sheet
             {
                 Skills_CheckList.Items.Add(skill.Item1, skill.Item2);
             }
-        }
 
-        private void UpdateSavesList()
-        {
             Saves_CheckList.Items.Clear();
             List<Tuple<string, bool>> saves = Library.m_MainCharacterInfo.GetSaves();
 
             foreach (Tuple<string, bool> save in saves)
             {
                 Saves_CheckList.Items.Add(save.Item1, save.Item2);
-            }
-        }
-
-        private void Skills_CheckList_ItemCheck(object sender, EventArgs e)
-        {
-            CheckedListBox box = (CheckedListBox)sender;
-            ItemCheckEventArgs eventArgs = (ItemCheckEventArgs)e;
-            if (box.SelectedIndex == -1)
-            {
-                return;
-            }
-            int bonus = int.Parse(box.SelectedItem.ToString().Split()[1]);
-            string sign = box.SelectedItem.ToString().Split()[0] + " ";
-            bool check = false;
-            if (eventArgs.NewValue == CheckState.Checked)
-            {
-                bonus += Library.m_MainCharacterInfo.ProficiencyBonus;
-                check = true;
-            }
-            else if (eventArgs.NewValue == CheckState.Unchecked)
-            {
-                bonus -= Library.m_MainCharacterInfo.ProficiencyBonus;
-                check = false;
-            }
-            if (bonus < 0 && sign != "- ")
-            {
-                bonus *= -1;
-                sign = "- ";
-            }
-            string skillBonus = sign + bonus;
-            string[] numbers = new string[] { "10", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-            string skillName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
-
-            Skills_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
-            Library.UpdateLibrary(skillName, skillBonus, check);
-        }
-
-        private void Skills_CheckList_LostFocus(object sender, EventArgs e)
-        {
-            Skills_CheckList.ClearSelected();
-        }
-
-        private void Saves_CheckList_ItemCheck(object sender, EventArgs e)
-        {
-            CheckedListBox box = (CheckedListBox)sender;
-            ItemCheckEventArgs eventArgs = (ItemCheckEventArgs)e;
-            if (box.SelectedIndex == -1)
-            {
-                return;
-            }
-            int bonus = int.Parse(box.SelectedItem.ToString().Split()[1]);
-            string sign = box.SelectedItem.ToString().Split()[0] + " ";
-            bool check = false;
-            if (eventArgs.NewValue == CheckState.Checked)
-            {
-                bonus += Library.m_MainCharacterInfo.ProficiencyBonus;
-                check = true;
-            }
-            else if (eventArgs.NewValue == CheckState.Unchecked)
-            {
-                bonus -= Library.m_MainCharacterInfo.ProficiencyBonus;
-                check = false;
-            }
-            if (bonus < 0 && sign != "- ")
-            {
-                bonus *= -1;
-                sign = "- ";
-            }
-            string attributeBonus = sign + bonus;
-            string[] numbers = new string[] { "10", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-            string attributeName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
-
-            Saves_CheckList.Items[box.SelectedIndex] = attributeBonus + " " + attributeName;
-            Library.UpdateLibrary(attributeName, attributeBonus, check);
-        }
-
-        private void Saves_CheckList_LostFocus(object sender, EventArgs e)
-        {
-            Saves_CheckList.ClearSelected();
-        }
-
-
-        private void XP_Spin_ValueChanged(object sender, EventArgs e)
-        {
-            NumericUpDown xpBox = (NumericUpDown)sender;
-            if (Library.m_CharacterLoaded)
-            {
-                Library.m_MainCharacterInfo.ExperiencePoints = (int)xpBox.Value;
-                int previousLevel = Library.m_MainCharacterInfo.Level;
-                Library.m_MainCharacterInfo.Calculate();
-                int newLevel = Library.m_MainCharacterInfo.Level;
-                if (previousLevel != newLevel)
-                {
-                    Reload();
-                }
             }
         }
     }

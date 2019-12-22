@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CharacterSheet CharacterName="Criella">
   <Data>
-    <Key>Class</Key>
+    <Key>Class1</Key>
     <Value>Warlock</Value>
+  </Data>
+  <Data>
+    <Key>Class2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>Level1</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>Level2</Key>
+    <Value>0</Value>
   </Data>
   <Data>
     <Key>Background</Key>

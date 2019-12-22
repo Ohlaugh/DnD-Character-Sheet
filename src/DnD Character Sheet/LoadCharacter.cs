@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using DnD_Character_Sheet;
 using LC = DnD_Character_Sheet.Constants;
+using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
@@ -76,7 +77,7 @@ namespace DnD_Character_Sheet
             foreach (XmlNode itemNode in items)
             {
                 string name = itemNode.SelectSingleNode(LC.Name).InnerText;
-                LC.Item_Class item = new LC.Item_Class
+                CLIB.Item_Class item = new CLIB.Item_Class
                 {
                     Cost = itemNode.SelectSingleNode(LC.Cost).InnerText,
                     Weight = Convert.ToDouble(itemNode.SelectSingleNode(LC.Weight).InnerText),
@@ -103,7 +104,7 @@ namespace DnD_Character_Sheet
                     properties.Add(property.InnerText);
                 }
 
-                LC.Weapon_Class weapon = new LC.Weapon_Class
+                CLIB.Weapon_Class weapon = new CLIB.Weapon_Class
                 {
                     Cost = weaponNode.SelectSingleNode(LC.Cost).InnerText,
                     Damage = weaponNode.SelectSingleNode(LC.Damage).InnerText,
@@ -125,7 +126,7 @@ namespace DnD_Character_Sheet
             foreach (XmlNode armorNode in armor)
             {
                 string name = armorNode.SelectSingleNode(LC.Name).InnerText;
-                LC.Armor_Class item = new LC.Armor_Class
+                CLIB.Armor_Class item = new CLIB.Armor_Class
                 {
                     Cost = armorNode.SelectSingleNode(LC.Cost).InnerText,
                     Weight = Convert.ToDouble(armorNode.SelectSingleNode(LC.Weight).InnerText),
@@ -167,7 +168,10 @@ namespace DnD_Character_Sheet
             {
                 // Top Level Info
                 CharacterName = m_CharacterName,
-                Class = m_CharData[LC.Class],
+                Class1 = m_CharData[LC.Class1],
+                Class2 = m_CharData[LC.Class2],
+                Level1 = Convert.ToInt32(m_CharData[LC.Level1]),
+                Level2 = Convert.ToInt32(m_CharData[LC.Level2]),
                 Background = m_CharData[LC.Background],
                 PlayerName = m_CharData[LC.PlayerName],
                 Race = m_CharData[LC.Race],
@@ -182,7 +186,7 @@ namespace DnD_Character_Sheet
                 HairColor = m_CharData[LC.HairColor],
 
                 // Left Column Info
-                Attributes = new Attributes
+                Attributes = new CLIB.Attributes
                 {
                     Strength = Convert.ToInt32(m_CharData[LC.Strength]),
                     Dexterity = Convert.ToInt32(m_CharData[LC.Dexterity]),
@@ -191,7 +195,7 @@ namespace DnD_Character_Sheet
                     Wisdom = Convert.ToInt32(m_CharData[LC.Wisdom]),
                     Charisma = Convert.ToInt32(m_CharData[LC.Charisma])
                 },
-                Skills = new Skills()
+                Skills = new CLIB.Skills()
                 {
                     _Acrobatics = m_ProficientData[LC.Acrobatics],
                     _AnimalHandling = m_ProficientData[LC.AnimalHandling],
@@ -214,7 +218,7 @@ namespace DnD_Character_Sheet
                 },
                 Inspiration = Convert.ToBoolean(m_CharData[LC.Inspiration]),
                 // ProficiencyBonus is Calculated
-                SavingThrows = new SavingThrows()
+                SavingThrows = new CLIB.SavingThrows()
                 {
                     _Strength = m_ProficientData[LC.StrengthSave],
                     _Dexterity = m_ProficientData[LC.DexteritySave],
@@ -236,7 +240,7 @@ namespace DnD_Character_Sheet
                 HP_Temp = Convert.ToInt32(m_CharData[LC.HP_Temp]),
                 HitDice = m_CharData[LC.HitDice],
                 HitDiceTotal = Convert.ToInt32(m_CharData[LC.HitDiceTotal]),
-                Money = new Money()
+                Money = new CLIB.Money()
                 {
                     Copper = Convert.ToInt32(m_CharData[LC.Copper]),
                     Silver = Convert.ToInt32(m_CharData[LC.Silver]),

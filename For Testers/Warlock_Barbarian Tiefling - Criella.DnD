@@ -6,7 +6,7 @@
   </Data>
   <Data>
     <Key>Class2</Key>
-    <Value></Value>
+    <Value>Barbarian</Value>
   </Data>
   <Data>
     <Key>Level1</Key>
@@ -14,7 +14,7 @@
   </Data>
   <Data>
     <Key>Level2</Key>
-    <Value>0</Value>
+    <Value>1</Value>
   </Data>
   <Data>
     <Key>Background</Key>

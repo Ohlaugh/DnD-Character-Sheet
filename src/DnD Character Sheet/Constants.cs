@@ -13,7 +13,7 @@ namespace DnD_Character_Sheet
         /// List of all weapon properties
         /// (Property, Description)
         /// </summary>
-        List<Tuple<string, string>> WeaponProperties = new List<Tuple<string, string>>
+        readonly List<Tuple<string, string>> WeaponProperties = new List<Tuple<string, string>>
         {
             new Tuple<string, string>(Ammunition,
                 "You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to " +
@@ -105,8 +105,12 @@ namespace DnD_Character_Sheet
         #endregion
 
         #region Config File Constants
+
         // Top Level
-        public static readonly string Class = "Class";
+        public static readonly string Class1 = "Class1";
+        public static readonly string Class2 = "Class2";
+        public static readonly string Level1 = "Level1";
+        public static readonly string Level2 = "Level2";
         public static readonly string Background = "Background";
         public static readonly string PlayerName = "PlayerName";
         public static readonly string Race = "Race";
@@ -119,9 +123,15 @@ namespace DnD_Character_Sheet
         public static readonly string EyeColor = "EyeColor";
         public static readonly string SkinColor = "SkinColor";
         public static readonly string HairColor = "HairColor";
-
-        // Left Column
         public static readonly string Inspiration = "Inspiration";
+        public static readonly string ArmorClass = "ArmorClass";
+        public static readonly string Initiative = "Initiative";
+        public static readonly string Speed = "Speed";
+        public static readonly string HP_Max = "HP_Max";
+        public static readonly string HP_Current = "HP_Current";
+        public static readonly string HP_Temp = "HP_Temp";
+        public static readonly string HitDice = "HitDice";
+        public static readonly string HitDiceTotal = "HitDiceTotal";
 
         // Attributes
         public const string Strength = "Strength";
@@ -161,30 +171,21 @@ namespace DnD_Character_Sheet
         public static readonly string WisdomSave = "WisdomSave";
         public static readonly string CharismaSave = "CharismaSave";
 
-
-        // Middle Column
-        public static readonly string ArmorClass = "ArmorClass";
-        public static readonly string Initiative = "Initiative";
-        public static readonly string Speed = "Speed";
-        public static readonly string HP_Max = "HP_Max";
-        public static readonly string HP_Current = "HP_Current";
-        public static readonly string HP_Temp = "HP_Temp";
-        public static readonly string HitDice = "HitDice";
-        public static readonly string HitDiceTotal = "HitDiceTotal";
+        // Money
         public static readonly string Copper = "Copper";
         public static readonly string Silver = "Silver";
         public static readonly string Electrum = "Electrum";
         public static readonly string Gold = "Gold";
         public static readonly string Platinum = "Platinum";
 
-
-        // Right Column
+        // Backstory
         public static readonly string PersonalityTraits = "PersonalityTraits";
         public static readonly string Ideals = "Ideals";
         public static readonly string Bonds = "Bonds";
         public static readonly string Flaws = "Flaws";
         public static readonly string Backstory = "Backstory";
 
+        // Weapons and Items
         public static readonly string CharacterSheet = "CharacterSheet";
         public static readonly string Data = "Data";
         public static readonly string Key = "Key";
@@ -207,41 +208,17 @@ namespace DnD_Character_Sheet
         public static readonly string Book = "Book";
         public static readonly string BackgroundInfo = "BackgroundInfo";
 
-
+        // Books
         public static readonly string Using_PlayerHB = "PlayerHandbook";
         public static readonly string Using_Xanathar = "XanatharsGuide";
-        /*
-        public static readonly string PLACEHOLDER = "";
-        public static readonly string PLACEHOLDER = "";
-        */
+
         #endregion
 
-        public class Item_Class
-        {
-            public string Cost;
-            public double Weight;
-            public string Description;
-        }
+        #region UI Elements
 
-        public class Weapon_Class
-        {
-            public string Style;
-            public string Cost;
-            public string Damage;
-            public double Weight;
-            public List<string> Properties;
-            public bool Equipped;
-        }
+        public static readonly string SkillsCheckList = "Skills_CheckList";
+        public static readonly string SavesCheckList = "Saves_CheckList";
 
-        public class Armor_Class
-        {
-            public string Style;
-            public string Cost;
-            public string ArmorClass;
-            public int StrengthReq;
-            public bool Disadvantage;
-            public double Weight;
-            public bool Equipped;
-        }
+        #endregion
     }
 }
