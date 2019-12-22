@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CharacterSheet CharacterName="Criella">
+  <Data>
+    <Key>Class</Key>
+    <Value>Warlock</Value>
+  </Data>
+  <Data>
+    <Key>Background</Key>
+    <Value>Hermit</Value>
+  </Data>
+  <Data>
+    <Key>PlayerName</Key>
+    <Value>Chase</Value>
+  </Data>
+  <Data>
+    <Key>Race</Key>
+    <Value>Tiefling</Value>
+  </Data>
+  <Data>
+    <Key>Subrace</Key>
+    <Value>None</Value>
+  </Data>
+  <Data>
+    <Key>Alignment</Key>
+    <Value>Choatic Neutral</Value>
+  </Data>
+  <Data>
+    <Key>ExperiencePoints</Key>
+    <Value>5000</Value>
+  </Data>
+  <Data>
+    <Key>Age</Key>
+    <Value>17</Value>
+  </Data>
+  <Data>
+    <Key>Height</Key>
+    <Value>5'11"</Value>
+  </Data>
+  <Data>
+    <Key>Weight</Key>
+    <Value>120</Value>
+  </Data>
+  <Data>
+    <Key>EyeColor</Key>
+    <Value>Black</Value>
+  </Data>
+  <Data>
+    <Key>SkinColor</Key>
+    <Value>Pinkish Red</Value>
+  </Data>
+  <Data>
+    <Key>HairColor</Key>
+    <Value>Bright Purple</Value>
+  </Data>
+  <Data>
+    <Key>Strength</Key>
+    <Value>9</Value>
+  </Data>
+  <Data>
+    <Key>Dexterity</Key>
+    <Value>12</Value>
+  </Data>
+  <Data>
+    <Key>Constitution</Key>
+    <Value>17</Value>
+  </Data>
+  <Data>
+    <Key>Intelligence</Key>
+    <Value>14</Value>
+  </Data>
+  <Data>
+    <Key>Wisdom</Key>
+    <Value>14</Value>
+  </Data>
+  <Data>
+    <Key>Charisma</Key>
+    <Value>19</Value>
+  </Data>
+  <Data>
+    <Key>Speed</Key>
+    <Value>30</Value>
+  </Data>
+  <Data>
+    <Key>ArmorClass</Key>
+    <Value>12</Value>
+  </Data>
+  <Data>
+    <Key>Initiative</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>HP_Max</Key>
+    <Value>11</Value>
+  </Data>
+  <Data>
+    <Key>HP_Current</Key>
+    <Value>11</Value>
+  </Data>
+  <Data>
+    <Key>HP_Temp</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>HitDice</Key>
+    <Value>1d8</Value>
+  </Data>
+  <Data>
+    <Key>HitDiceTotal</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>Copper</Key>
+    <Value>10</Value>
+  </Data>
+  <Data>
+    <Key>Silver</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Electrum</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Gold</Key>
+    <Value>5</Value>
+  </Data>
+  <Data>
+    <Key>Platinum</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>PersonalityTraits</Key>
+    <Value>I’ve been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.</Value>
+  </Data>
+  <Data>
+    <Key>Ideals</Key>
+    <Value>Inquiry and curiosity are the pillars of progress. Solitude and contemplation are paths toward mystical or magical power.</Value>
+  </Data>
+  <Data>
+    <Key>Bonds</Key>
+    <Value>I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them.</Value>
+  </Data>
+  <Data>
+    <Key>Flaws</Key>
+    <Value>I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell.</Value>
+  </Data>
+  <Proficient>
+    <Key>Acrobatics</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>AnimalHandling</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Arcana</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Athletics</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Deception</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>History</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Insight</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Intimidation</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Investigation</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Medicine</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Nature</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Perception</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Performance</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Persuassion</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Religion</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>SlightOfHand</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Stealth</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Survival</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Data>
+    <Key>Inspiration</Key>
+    <Value>false</Value>
+  </Data>
+  <Proficient>
+    <Key>StrengthSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>DexteritySave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>ConstitutionSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>IntelligenceSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>WisdomSave</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>CharismaSave</Key>
+    <Value>true</Value>
+  </Proficient>
+
+  <Items>
+    <Item>
+      <Name>Acid (vial)</Name>
+      <Cost>25 gp</Cost>
+      <Weight>1</Weight>
+      <Description>As an action, you can splash the contents of this vial onto a creature within 5 feet or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</Description>
+    </Item>
+    
+    <Weapon>
+      <Name>Crossbow, Light</Name>
+      <Cost>25 gp</Cost>
+      <Damage>1d8</Damage>
+      <Weight>5</Weight>
+      <Style>Simple Ranged Weapon</Style>
+      <Properties>
+        <Property>Ammunition (range 80/320)</Property>
+        <Property>Loading</Property>
+        <Property>Two-Handed</Property>
+      </Properties>
+      <Equipped>True</Equipped>
+    </Weapon>
+    
+    <Armor>
+      <Name>Padded</Name>
+      <Style>Light Armor</Style>
+      <Cost>5 gp</Cost>
+      <ArmorClass>11 + Dex</ArmorClass>
+      <StrengthReq>0</StrengthReq>
+      <Disadvantage>true</Disadvantage>
+      <Weight>8</Weight>
+      <Equipped>False</Equipped>
+    </Armor>
+  </Items>
+  
+  
+  
+  <Book>
+    <Key>PlayerHandbook</Key>
+    <Value>True</Value>
+  </Book>
+  <Book>
+    <Key>XanatharsGuide</Key>
+    <Value>True</Value>
+  </Book>
+
+  <BackgroundInfo>
+    <Key>Backstory</Key>
+    <Value>
+      You lived in a small town just outside a major city where your parents were farmers. The towns people merely tolerated your family’s existence, being Tielfings they did not treat you with any kindness. Your parents did their best to pay no attention to the others in the town and mostly kept to themselves. You and your family had been called many things, most of which you did not understand but knew that the words were hurtful. Your mother would read to you every night to help you sleep, and you still remember her gentle voice as if she was there speaking to you.
+      This was your life for six years, but everything changed during a particularly harsh harvest the largest farm in the towns crops had withered and died the week before harvest. Angry and looking for answers, they towns people started to head toward your home. Your mother hid you behind a secret door where she kept hers and your fathers’ diary. You heard lots of angry words and then suddenly your mother screamed out on horror. They towns people took your parents to the middle of town and you were left inside. You waited and waited but your parents did not return. You left your hiding spot and ventured out into the town, you heard a large commotion within the center of town, so you head towards it. Within the center of a large mob are your parents, their hands are bound and everyone around them is yelling a word, “kill” you did not fully understand this word until later, but it still haunts your dreams. The local sheriff showed up with a large sword, he made a spectacle of the whole thing and without warning you watch this man swing the blade over his shoulder and free your parents head from their shoulders. You cry out from where you were hiding behind the crowd, some nearby townspeople hear you and shout to the others that they found the “demon spawn”. You run as quickly as you could back to your hiding spot and hope they never find you. You pray that this is all a horrible nightmare and that there is something someone can do to fix it. The commotion in your house grows silent as you hear a voice whisper to you, it’s a deep and evil sounding voice that tells you there is something you can do to “help”. The voice tells you to pray to a greater lord, The Demogorgan and he would be able to help. Unknowing of this lord you decide he must be able to bring your parents back. As you pray the voice answers back, he is willing to help you, all you must do is sign your name in blood. A piece of paper appears before you and you sign your name the best you can. The Demogorgan thanks you and suddenly you feel a mystical presence around you, you are filled with anger and the urge to kill all of those that have wronged you and your family. Suddenly the hidden door is pulled open and it’s the sheriff. Thinking of what he did to your parents your vision turns red as you put your hands out to keep him away, the sheriff is then engulfed with flames. He cries out “The demon child, kill the demon child!”. The flames cannot be extinguished no matter what the towns people do. As more people come for you scream out and are surrounded by mystical flames, your vision goes completely dark and all you can hear are screams of the people in your town.
+      You wake to find the charred bodies of the townspeople, you angrily cry out to The Demogorgan and he tells you, “Gather what you can carry mortal, head into the woods to a hidden cabin. Your training has just begone, young warlock.” All sense of joy and happiness have been replaced by anger and hatred, and you are compelled to obey. You gather the books from your hiding spot and a few things from around the house and flee into the woods. You find a small cabin hidden within the deeps of the woods, far from civilization. You do as The Demogorgan commands and begin your training. This is now your life, and for the next eight years you do as The Demogorgan commands and live within the wilds, never speaking and always obeying. Until your 14th birthday, when The Demogorgan says you have completed your training and tells you to go forth and spread his name with your newfound powers. On this day he presents you with a gift, a twisted tree branch made of obsidian imbued with his power. You carry it with you always as you realize it not only helps you cast new spells but makes your spells more powerful.
+      Finally feeling a sense of freedom, you decide to stay in the woods and live on your own and continue your training. During this time of “freedom” you finally get to go through your parent’s diaries and you learn about the demon lords they worshiped. Your mother was a worshiper of Malcanthet, the Queen of Succubi to alter her form to seduce a man she liked (your father). Within your mother’s diary you find a unique single gold piece that seems to have some sort of magical power. Your father was not able to select his own lord to worship but was instead forced to worship The Demogorgan. With this knowledge comes the realization of why The Demogorgan spoke to you all those years ago. You find that your mothers worship of Malcanthet passed on her seductive features to you, so you cover yourself with a hooded black cloak, to not only hide your features from others but to hide your identity as a Tiefling.
+      You stay hidden in the woods for another three years, during this time you learn how to use the plants around you as medicine and potions becoming proficient in herbalism. After many years you decide it is time to venture back into society in order to greater strengthen your powers.
+
+      ______________________ Unknown to me as of yet __________________________
+      Malcanthet few allies include the Prince of Demons Demogorgon, with whom she birthed Pazuzu, from whom she mothered the succubus Red Shroud. My mother was a worshiper of Malcanthet, and my father of Demorgorgon, and I share the same place as Pazuzu.
+    </Value>    
+  </BackgroundInfo>
+</CharacterSheet>

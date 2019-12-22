@@ -93,6 +93,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetPath)" "C:\Users\gamin\Desktop\Code\DnD-Character-Sheet"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)..\For Testers\"
+copy "$(SolutionDir)..\Data\Characters\" "$(SolutionDir)..\For Testers\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

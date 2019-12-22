@@ -1,4 +1,3 @@
 # DnD-Character-Sheet
 
-Just grab the .exe from the top level to try it out.
-Example Character is in the data folder.
+The 'For Testers' folder contains the main application as well the most up to date character file.
