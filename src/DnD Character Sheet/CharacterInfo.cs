@@ -23,6 +23,7 @@ namespace DnD_Character_Sheet
         public CharacterInfo()
         {
             InitializeComponent();
+            Character_Panel.Hide();
         }
 
         private void CreateMasterList()
@@ -43,6 +44,7 @@ namespace DnD_Character_Sheet
             {
                 CreateMasterList();
                 Reload();
+                Character_Panel.Show();
             }
         }
 
@@ -110,60 +112,49 @@ namespace DnD_Character_Sheet
             HitDiceRemain_Spin.Value = Library.m_MainCharacterInfo.HitDiceTotal;
             DiceType_TextBox.Text = Library.m_MainCharacterInfo.HitDice;
 
-
             Info_TextBox.Text +=
-
                 "PersonalityTraits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
                 "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
                 "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
                 "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
 
-            Backstory_TextBox.Text +=
-                Library.m_MainCharacterInfo.Backstory;
+            Backstory_TextBox.Text += Library.m_MainCharacterInfo.Backstory;
 
+            CP_Spin.Value = Library.m_MainCharacterInfo.Money.Copper;
+            SP_Spin.Value = Library.m_MainCharacterInfo.Money.Silver;
+            EP_Spin.Value = Library.m_MainCharacterInfo.Money.Electrum;
+            GP_Spin.Value = Library.m_MainCharacterInfo.Money.Gold;
+            PP_Spin.Value = Library.m_MainCharacterInfo.Money.Platinum;
 
+            UpdateGrids();
+        }
 
-            textBox5.Text +=
-
-                "Copper = " + Library.m_MainCharacterInfo.Money.Copper + Environment.NewLine +
-                "Silver = " + Library.m_MainCharacterInfo.Money.Silver + Environment.NewLine +
-                "Electrum = " + Library.m_MainCharacterInfo.Money.Electrum + Environment.NewLine +
-                "Gold = " + Library.m_MainCharacterInfo.Money.Gold + Environment.NewLine +
-                "Platinum = " + Library.m_MainCharacterInfo.Money.Platinum + Environment.NewLine;
-
-            var keys_Item = Library.m_MainCharacterInfo.Items.Keys;
-            foreach (var key in keys_Item)
+        private void UpdateGrids()
+        {
+            foreach (var key in Library.m_MainCharacterInfo.Item_List)
             {
                 LC.Item_Class item = Library.m_MainCharacterInfo.Items[key];
                 object[] param = { key, item.Cost, item.Weight, item.Description };
                 Item_Grid.Rows.Add(param);
             }
 
-            var keys_Weapon = Library.m_MainCharacterInfo.Weapons.Keys;
-            foreach (var key in keys_Weapon)
+            foreach (var key in Library.m_MainCharacterInfo.Weapon_List)
             {
                 LC.Weapon_Class weapon = Library.m_MainCharacterInfo.Weapons[key];
 
                 string properties = string.Join(", ", weapon.Properties.ToArray());
 
-                object[] param = { weapon.Equipped, key, weapon.Cost, weapon.Damage, weapon.Weight, properties };
-                Weapon_Grid.Rows.Add(param);
+                object[] param = { weapon.Equipped, "Weapon", key, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
+                Equipment_Grid.Rows.Add(param);
             }
 
-            var keys_Armor = Library.m_MainCharacterInfo.Armor.Keys;
-            foreach (var key in keys_Armor)
+            foreach (var key in Library.m_MainCharacterInfo.Armor_List)
             {
                 LC.Armor_Class armor = Library.m_MainCharacterInfo.Armor[key];
-                string properties = "";
-
-                properties += "Strength Required " + armor.StrengthReq + " ,";
-                properties += "Stealth Disadvantage " + armor.Disadvantage;
-                object[] param = { armor.Equipped, key, armor.Cost, armor.ArmorClass, armor.Weight, properties };
-                Armor_Grid.Rows.Add(param);
+                string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
+                object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
+                Equipment_Grid.Rows.Add(param);
             }
-
-            //object[] param = {"Acid", "25 gp", "1 lb.", "."};
-            //dataGridView1.Rows.Add(param);
         }
 
         private void button1_Click(object sender, EventArgs e)

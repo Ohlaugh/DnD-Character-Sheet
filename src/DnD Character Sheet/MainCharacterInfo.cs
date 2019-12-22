@@ -62,6 +62,10 @@ namespace DnD_Character_Sheet
         public List<string> Features { get; set; }
         public List<string> Traits { get; set; }
 
+        public List<string> Item_List { get => Items.Keys.ToList(); }
+        public List<string> Weapon_List { get => Weapons.Keys.ToList(); }
+        public List<string> Armor_List { get => Armor.Keys.ToList(); }
+
         public Dictionary<string, LC.Item_Class> Items { get; set; }
         public Dictionary<string, LC.Weapon_Class> Weapons { get; set; }
         public Dictionary<string, LC.Armor_Class> Armor { get; set; }
@@ -236,7 +240,7 @@ namespace DnD_Character_Sheet
             };
         }
 
-        public List<Tuple<string,bool>> GetSaves()
+        public List<Tuple<string, bool>> GetSaves()
         {
             return new List<Tuple<string, bool>>
             {
