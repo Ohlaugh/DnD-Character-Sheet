@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DnD_Character_Sheet;
+using LC = DnD_Character_Sheet.Constants;
 
 namespace DnD_Character_Sheet
 {
-    public partial class MainCharacterInfo
+    public class MainCharacterInfo
     {
         // Top Level Info
         public string CharacterName { get; set; }
@@ -60,6 +61,10 @@ namespace DnD_Character_Sheet
         public string Flaws { get; set; }
         public List<string> Features { get; set; }
         public List<string> Traits { get; set; }
+
+        public Dictionary<string, LC.Item_Class> Items { get; set; }
+        public Dictionary<string, LC.Weapon_Class> Weapons { get; set; }
+        public Dictionary<string, LC.Armor_Class> Armor { get; set; }
 
         public string Backstory { get; set; }
 

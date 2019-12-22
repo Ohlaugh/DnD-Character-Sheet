@@ -18,21 +18,38 @@ namespace DnD_Character_Sheet
     {
         /// <summary>
         /// This holds all information read in from the character sheet
-        /// Key: Character Name
-        /// Value: New Dictionary
         ///     Key: Character Data
         ///     Value: Character Value
         /// </summary>
-        public static Dictionary<string, Dictionary<string, string>> m_CharData = new Dictionary<string, Dictionary<string, string>>();
+        public static Dictionary<string, string> m_CharData = new Dictionary<string, string>();
 
         /// <summary>
         /// This contains all skills the current character is proficient in
-        /// Key: Character Name
-        /// Value: New Dictionary
         ///     Key: Character Data
         ///     Value: Character Value
         /// </summary>
-        public static Dictionary<string, Dictionary<string, bool>> m_ProficientData = new Dictionary<string, Dictionary<string, bool>>();
+        public static Dictionary<string, bool> m_ProficientData = new Dictionary<string, bool>();
+
+        /// <summary>
+        /// This contains all Items the current character has
+        ///     Key: Item Name
+        ///     Value: New Item
+        /// </summary>
+        public static Dictionary<string, LC.Item_Class> m_ItemData = new Dictionary<string, LC.Item_Class>();
+
+        /// <summary>
+        /// This contains all Weapons the current character has
+        ///     Key: Weapon Name
+        ///     Value: New Weapon
+        /// </summary>
+        public static Dictionary<string, LC.Weapon_Class> m_WeaponData = new Dictionary<string, LC.Weapon_Class>();
+
+        /// <summary>
+        /// This contains all Armor the current character has
+        ///     Key: Armor Name
+        ///     Value: New Armor
+        /// </summary>
+        public static Dictionary<string, LC.Armor_Class> m_ArmorData = new Dictionary<string, LC.Armor_Class>();
 
         /// <summary>
         /// This holds the current characters name
@@ -63,14 +80,14 @@ namespace DnD_Character_Sheet
         /// Key: Armor Name
         /// Value: New Armor
         /// </summary>
-        public static Dictionary<string, LC.Armor> m_ArmorLibrary = new Dictionary<string, LC.Armor>();
+        public static Dictionary<string, LC.Armor_Class> m_ArmorLibrary = new Dictionary<string, LC.Armor_Class>();
 
         /// <summary>
         /// This dictionary holds all information on Weapons from selected manuals
         /// Key: Weapon Name
         /// Value: New Weapon
         /// </summary>
-        public static Dictionary<string, LC.Weapon> m_WeaponLibrary = new Dictionary<string, LC.Weapon>();
+        public static Dictionary<string, LC.Weapon_Class> m_WeaponLibrary = new Dictionary<string, LC.Weapon_Class>();
 
         public static bool m_CharacterLoaded = false;
 
@@ -78,6 +95,9 @@ namespace DnD_Character_Sheet
         {
             m_CharData.Clear();
             m_ProficientData.Clear();
+            m_ItemData.Clear();
+            m_WeaponData.Clear();
+            m_ArmorData.Clear();
             m_BookUtilization.Clear();
             m_ArmorLibrary.Clear();
             m_RaceLibrary.Clear();

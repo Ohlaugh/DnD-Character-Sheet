@@ -43,7 +43,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         {
             #region Light Armor
             m_ArmorLibrary.Add("Padded",
-                new Armor
+                new Armor_Class
                 {
                     Style = LightArmor,
                     Cost = "5 gp",
@@ -54,7 +54,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Leather",
-                new Armor
+                new Armor_Class
                 {
                     Style = LightArmor,
                     Cost = "10 gp",
@@ -65,7 +65,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Studded Leather",
-                new Armor
+                new Armor_Class
                 {
                     Style = LightArmor,
                     Cost = "45 gp",
@@ -78,7 +78,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #region Medium Armor
             m_ArmorLibrary.Add("Hide",
-                new Armor
+                new Armor_Class
                 {
                     Style = MediumArmor,
                     Cost = "10 gp",
@@ -89,7 +89,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Chain Shirt",
-                new Armor
+                new Armor_Class
                 {
                     Style = MediumArmor,
                     Cost = "50 gp",
@@ -100,7 +100,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Scale Mail",
-                new Armor
+                new Armor_Class
                 {
                     Style = MediumArmor,
                     Cost = "50 gp",
@@ -111,7 +111,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Breastplate",
-                new Armor
+                new Armor_Class
                 {
                     Style = MediumArmor,
                     Cost = "400 gp",
@@ -122,7 +122,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Half Plate",
-                new Armor
+                new Armor_Class
                 {
                     Style = MediumArmor,
                     Cost = "750 gp",
@@ -135,7 +135,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #region Heavy Armor
             m_ArmorLibrary.Add("Ring Mail",
-                new Armor
+                new Armor_Class
                 {
                     Style = HeavyArmor,
                     Cost = "30 gp",
@@ -146,7 +146,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Chain Mail",
-                new Armor
+                new Armor_Class
                 {
                     Style = HeavyArmor,
                     Cost = "75 gp",
@@ -157,7 +157,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Splint",
-                new Armor
+                new Armor_Class
                 {
                     Style = HeavyArmor,
                     Cost = "200 gp",
@@ -168,7 +168,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Plate",
-                new Armor
+                new Armor_Class
                 {
                     Style = HeavyArmor,
                     Cost = "1500 gp",
@@ -179,7 +179,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_ArmorLibrary.Add("Shield",
-                new Armor
+                new Armor_Class
                 {
                     Style = Shield,
                     Cost = "10 gp",
@@ -198,7 +198,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         {
             #region Melee Weapons
             m_WeaponLibrary.Add("Club",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "1 sp",
@@ -211,7 +211,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Dagger",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "2 gp",
@@ -226,7 +226,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Greatclub",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "2 sp",
@@ -239,7 +239,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Handaxe",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "5 gp",
@@ -253,7 +253,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Light hammer",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "2 gp",
@@ -267,7 +267,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Mace",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "5 gp",
@@ -277,7 +277,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Quarterstaff",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "2 sp",
@@ -290,7 +290,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Sickle",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "1 gp",
@@ -303,7 +303,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Spear",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeSimple,
                     Cost = "1 gp",
@@ -317,7 +317,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Battleaxe",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "10 gp",
@@ -330,7 +330,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Flail",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "10 gp",
@@ -340,7 +340,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Glaive",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "20 gp",
@@ -355,7 +355,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Greataxe",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "30 gp",
@@ -369,7 +369,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Greatsword",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "50 gp",
@@ -383,7 +383,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Halberd",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "20 gp",
@@ -398,7 +398,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Lance",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "10 gp",
@@ -412,7 +412,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Longsword",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "15 gp",
@@ -425,7 +425,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Maul",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "10 gp",
@@ -439,7 +439,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Morningstar",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "15 gp",
@@ -449,7 +449,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Pike",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "5 gp",
@@ -464,7 +464,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Rapier",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "25 gp",
@@ -477,7 +477,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Scimitar",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "25 gp",
@@ -491,7 +491,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Shortsword",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "10 gp",
@@ -505,7 +505,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Trident",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "5 gp",
@@ -519,7 +519,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("War Pick",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "5 gp",
@@ -529,7 +529,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Warhammer",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "15 gp",
@@ -542,7 +542,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Whip",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = MeleeMartial,
                     Cost = "2 gp",
@@ -558,7 +558,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #region Ranged Weapons
             m_WeaponLibrary.Add("Crossbow, light",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedSimple,
                     Cost = "25 sp",
@@ -573,7 +573,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Dart",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedSimple,
                     Cost = "5 cp",
@@ -587,7 +587,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Shortbow",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedSimple,
                     Cost = "25 gp",
@@ -601,7 +601,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Sling",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedSimple,
                     Cost = "1 sp",
@@ -614,7 +614,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Blowgun",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedMartial,
                     Cost = "10 gp",
@@ -628,7 +628,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Crossbow, hand",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedMartial,
                     Cost = "75 gp",
@@ -643,7 +643,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Crossbow, heavy",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedMartial,
                     Cost = "50 gp",
@@ -659,7 +659,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Longbow",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedMartial,
                     Cost = "50 gp",
@@ -674,7 +674,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             m_WeaponLibrary.Add("Net",
-                new Weapon
+                new Weapon_Class
                 {
                     Style = RangedMartial,
                     Cost = "1 gp",

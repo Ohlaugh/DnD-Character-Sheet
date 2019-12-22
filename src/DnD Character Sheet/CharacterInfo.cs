@@ -101,12 +101,15 @@ namespace DnD_Character_Sheet
             Hair_TextBox.Text = Library.m_MainCharacterInfo.HairColor;
 
             AC_TextBox.Text = Library.m_MainCharacterInfo.ArmorClass.ToString();
-            Initiative_TextBox.Text = Library.m_MainCharacterInfo.Initiative.ToString();
+            Initiative_Spin.Value = Library.m_MainCharacterInfo.Initiative;
             Speed_TextBox.Text = Library.m_MainCharacterInfo.Speed.ToString();
             HPMax_TextBox.Text = Library.m_MainCharacterInfo.HP_Max.ToString();
-            HPCurrent_TextBox.Text = Library.m_MainCharacterInfo.HP_Current.ToString();
-            HPTemp_TextBox.Text = Library.m_MainCharacterInfo.HP_Temp.ToString();
-            
+            HPCurrent_Spin.Value = Library.m_MainCharacterInfo.HP_Current;
+            HPCurrent_Spin.Maximum = Library.m_MainCharacterInfo.HP_Max;
+            HPTemp_Spin.Value = Library.m_MainCharacterInfo.HP_Temp;
+            HitDiceRemain_Spin.Value = Library.m_MainCharacterInfo.HitDiceTotal;
+            DiceType_TextBox.Text = Library.m_MainCharacterInfo.HitDice;
+
 
             Info_TextBox.Text +=
 
@@ -115,16 +118,52 @@ namespace DnD_Character_Sheet
                 "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
                 "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
 
-            textBox5.Text +=
+            Backstory_TextBox.Text +=
+                Library.m_MainCharacterInfo.Backstory;
 
-                "HitDice = " + Library.m_MainCharacterInfo.HitDice + Environment.NewLine +
-                "HitDiceTotal = " + Library.m_MainCharacterInfo.HitDiceTotal + Environment.NewLine +
+
+
+            textBox5.Text +=
 
                 "Copper = " + Library.m_MainCharacterInfo.Money.Copper + Environment.NewLine +
                 "Silver = " + Library.m_MainCharacterInfo.Money.Silver + Environment.NewLine +
                 "Electrum = " + Library.m_MainCharacterInfo.Money.Electrum + Environment.NewLine +
                 "Gold = " + Library.m_MainCharacterInfo.Money.Gold + Environment.NewLine +
                 "Platinum = " + Library.m_MainCharacterInfo.Money.Platinum + Environment.NewLine;
+
+            var keys_Item = Library.m_MainCharacterInfo.Items.Keys;
+            foreach (var key in keys_Item)
+            {
+                LC.Item_Class item = Library.m_MainCharacterInfo.Items[key];
+                object[] param = { key, item.Cost, item.Weight, item.Description };
+                Item_Grid.Rows.Add(param);
+            }
+
+            var keys_Weapon = Library.m_MainCharacterInfo.Weapons.Keys;
+            foreach (var key in keys_Weapon)
+            {
+                LC.Weapon_Class weapon = Library.m_MainCharacterInfo.Weapons[key];
+
+                string properties = string.Join(", ", weapon.Properties.ToArray());
+
+                object[] param = { weapon.Equipped, key, weapon.Cost, weapon.Damage, weapon.Weight, properties };
+                Weapon_Grid.Rows.Add(param);
+            }
+
+            var keys_Armor = Library.m_MainCharacterInfo.Armor.Keys;
+            foreach (var key in keys_Armor)
+            {
+                LC.Armor_Class armor = Library.m_MainCharacterInfo.Armor[key];
+                string properties = "";
+
+                properties += "Strength Required " + armor.StrengthReq + " ,";
+                properties += "Stealth Disadvantage " + armor.Disadvantage;
+                object[] param = { armor.Equipped, key, armor.Cost, armor.ArmorClass, armor.Weight, properties };
+                Armor_Grid.Rows.Add(param);
+            }
+
+            //object[] param = {"Acid", "25 gp", "1 lb.", "."};
+            //dataGridView1.Rows.Add(param);
         }
 
         private void button1_Click(object sender, EventArgs e)

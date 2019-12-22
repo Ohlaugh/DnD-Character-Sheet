@@ -29,10 +29,13 @@ namespace DnD_Character_Sheet
                 FileStream stream = new FileStream(filePath, FileMode.Open);
                 xDoc.Load(stream);
                 ClearLibrary();
-                m_CharacterName = xDoc.GetElementsByTagName("CharacterSheet")[0].Attributes[0].Value;
+                m_CharacterName = xDoc.GetElementsByTagName(LC.CharacterSheet)[0].Attributes[0].Value;
 
                 PopulateCharData(xDoc);
                 PopulateProfData(xDoc);
+                PopulateItems(xDoc);
+                PopulateWeapons(xDoc);
+                PopulateArmor(xDoc);
                 PopulateBookData(xDoc);
                 PopulateBackgroundData(xDoc);
                 stream.Close();
@@ -45,148 +48,216 @@ namespace DnD_Character_Sheet
 
         private void PopulateCharData(XmlDocument xDoc)
         {
-            m_CharData.Add(m_CharacterName, new Dictionary<string, string>());
-
-            XmlNodeList nodeList = xDoc.GetElementsByTagName("Data");
+            XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Data);
             foreach (XmlNode node in nodeList)
             {
-                string key = node.SelectSingleNode("Key").InnerText;
-                string value = node.SelectSingleNode("Value").InnerText;
-                m_CharData[m_CharacterName].Add(key, value);
+                string key = node.SelectSingleNode(LC.Key).InnerText;
+                string value = node.SelectSingleNode(LC.Value).InnerText;
+                m_CharData.Add(key, value);
             }
         }
 
         private void PopulateProfData(XmlDocument xDoc)
         {
-            m_ProficientData.Add(m_CharacterName, new Dictionary<string, bool>());
-            XmlNodeList nodeList = xDoc.GetElementsByTagName("Proficient");
+            XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Proficient);
             foreach (XmlNode node in nodeList)
             {
-                string key = node.SelectSingleNode("Key").InnerText;
-                bool value = Convert.ToBoolean(node.SelectSingleNode("Value").InnerText);
-                m_ProficientData[m_CharacterName].Add(key, value);
+                string key = node.SelectSingleNode(LC.Key).InnerText;
+                bool value = Convert.ToBoolean(node.SelectSingleNode(LC.Value).InnerText);
+                m_ProficientData.Add(key, value);
+            }
+        }
+
+        private void PopulateItems(XmlDocument xDoc)
+        {
+            XmlNode itemsNode = xDoc.GetElementsByTagName(LC.Items)[0];
+            XmlNodeList items = itemsNode.SelectNodes(LC.Item);
+
+            foreach (XmlNode itemNode in items)
+            {
+                string name = itemNode.SelectSingleNode(LC.Name).InnerText;
+                LC.Item_Class item = new LC.Item_Class
+                {
+                    Cost = itemNode.SelectSingleNode(LC.Cost).InnerText,
+                    Weight = Convert.ToDouble(itemNode.SelectSingleNode(LC.Weight).InnerText),
+                    Description = itemNode.SelectSingleNode(LC.Description).InnerText
+                };
+                m_ItemData.Add(name, item);
+            }
+        }
+
+        private void PopulateWeapons(XmlDocument xDoc)
+        {
+            XmlNode itemsNode = xDoc.GetElementsByTagName(LC.Items)[0];
+            XmlNodeList weapons = itemsNode.SelectNodes(LC.Weapon);
+
+            foreach (XmlNode weaponNode in weapons)
+            {
+                string name = weaponNode.SelectSingleNode(LC.Name).InnerText;
+                XmlNode propertiesNode = weaponNode.SelectNodes(LC.Properties)[0];
+                XmlNodeList propertyNodes = propertiesNode.SelectNodes(LC.Property);
+
+                List<string> properties = new List<string>();
+                foreach (XmlNode property in propertyNodes)
+                {
+                    properties.Add(property.InnerText);
+                }
+
+                LC.Weapon_Class weapon = new LC.Weapon_Class
+                {
+                    Cost = weaponNode.SelectSingleNode(LC.Cost).InnerText,
+                    Damage = weaponNode.SelectSingleNode(LC.Damage).InnerText,
+                    Weight = Convert.ToDouble(weaponNode.SelectSingleNode(LC.Weight).InnerText),
+                    Style = weaponNode.SelectSingleNode(LC.Style).InnerText,
+                    Properties = properties,
+                    Equipped = Convert.ToBoolean(weaponNode.SelectSingleNode(LC.Equipped).InnerText)
+                };                
+
+                m_WeaponData.Add(name, weapon);
+            }
+        }
+
+        private void PopulateArmor(XmlDocument xDoc)
+        {
+            XmlNode itemsNode = xDoc.GetElementsByTagName(LC.Items)[0];
+            XmlNodeList armor = itemsNode.SelectNodes(LC.Armor);
+
+            foreach (XmlNode armorNode in armor)
+            {
+                string name = armorNode.SelectSingleNode(LC.Name).InnerText;
+                LC.Armor_Class item = new LC.Armor_Class
+                {
+                    Cost = armorNode.SelectSingleNode(LC.Cost).InnerText,
+                    Weight = Convert.ToDouble(armorNode.SelectSingleNode(LC.Weight).InnerText),
+                    Style = armorNode.SelectSingleNode(LC.Style).InnerText,
+                    Equipped = Convert.ToBoolean(armorNode.SelectSingleNode(LC.Equipped).InnerText),
+                    ArmorClass = armorNode.SelectSingleNode(LC.ArmorClass).InnerText,
+                    StrengthReq = Convert.ToInt32(armorNode.SelectSingleNode(LC.StrengthReq).InnerText),
+                    Disadvantage = Convert.ToBoolean(armorNode.SelectSingleNode(LC.Disadvantage).InnerText)
+                };
+                m_ArmorData.Add(name, item);
             }
         }
 
         private void PopulateBookData(XmlDocument xDoc)
         {
-            XmlNodeList nodeList = xDoc.GetElementsByTagName("Book");
+            XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Book);
             foreach (XmlNode node in nodeList)
             {
-                string key = node.SelectSingleNode("Key").InnerText;
-                bool value = Convert.ToBoolean(node.SelectSingleNode("Value").InnerText);
+                string key = node.SelectSingleNode(LC.Key).InnerText;
+                bool value = Convert.ToBoolean(node.SelectSingleNode(LC.Value).InnerText);
                 m_BookUtilization.Add(key, value);
             }
         }
 
         private void PopulateBackgroundData(XmlDocument xDoc)
         {
-            XmlNodeList nodeList = xDoc.GetElementsByTagName("BackgroundInfo");
+            XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.BackgroundInfo);
             foreach (XmlNode node in nodeList)
             {
-                string key = node.SelectSingleNode("Key").InnerText;
-                string value = node.SelectSingleNode("Value").InnerText;
-                m_CharData[m_CharacterName].Add(key, value);
+                string key = node.SelectSingleNode(LC.Key).InnerText;
+                string value = node.SelectSingleNode(LC.Value).InnerText;
+                m_CharData.Add(key, value);
             }
         }
 
         private void PopulateCharacterInformation()
         {
-            Dictionary<string, string> characterInfo = m_CharData[m_CharacterName];
-            Dictionary<string, bool> proficiencyInfo = m_ProficientData[m_CharacterName];
-
             m_MainCharacterInfo = new MainCharacterInfo
             {
                 // Top Level Info
                 CharacterName = m_CharacterName,
-                Class = characterInfo[LC.Class],
-                Background = characterInfo[LC.Background],
-                PlayerName = characterInfo[LC.PlayerName],
-                Race = characterInfo[LC.Race],
-                Subrace = characterInfo[LC.Subrace],
-                Alignment = characterInfo[LC.Alignment],
-                ExperiencePoints = Convert.ToInt32(characterInfo[LC.ExperiencePoints]),
-                Age = Convert.ToInt32(characterInfo[LC.Age]),
-                Height = characterInfo[LC.Height],
-                Weight = Convert.ToInt32(characterInfo[LC.Weight]),
-                EyeColor = characterInfo[LC.EyeColor],
-                SkinColor = characterInfo[LC.SkinColor],
-                HairColor = characterInfo[LC.HairColor],
+                Class = m_CharData[LC.Class],
+                Background = m_CharData[LC.Background],
+                PlayerName = m_CharData[LC.PlayerName],
+                Race = m_CharData[LC.Race],
+                Subrace = m_CharData[LC.Subrace],
+                Alignment = m_CharData[LC.Alignment],
+                ExperiencePoints = Convert.ToInt32(m_CharData[LC.ExperiencePoints]),
+                Age = Convert.ToInt32(m_CharData[LC.Age]),
+                Height = m_CharData[LC.Height],
+                Weight = Convert.ToInt32(m_CharData[LC.Weight]),
+                EyeColor = m_CharData[LC.EyeColor],
+                SkinColor = m_CharData[LC.SkinColor],
+                HairColor = m_CharData[LC.HairColor],
 
                 // Left Column Info
                 Attributes = new Attributes
                 {
-                    Strength = Convert.ToInt32(characterInfo[LC.Strength]),
-                    Dexterity = Convert.ToInt32(characterInfo[LC.Dexterity]),
-                    Constitution = Convert.ToInt32(characterInfo[LC.Constitution]),
-                    Intelligence = Convert.ToInt32(characterInfo[LC.Intelligence]),
-                    Wisdom = Convert.ToInt32(characterInfo[LC.Wisdom]),
-                    Charisma = Convert.ToInt32(characterInfo[LC.Charisma])
+                    Strength = Convert.ToInt32(m_CharData[LC.Strength]),
+                    Dexterity = Convert.ToInt32(m_CharData[LC.Dexterity]),
+                    Constitution = Convert.ToInt32(m_CharData[LC.Constitution]),
+                    Intelligence = Convert.ToInt32(m_CharData[LC.Intelligence]),
+                    Wisdom = Convert.ToInt32(m_CharData[LC.Wisdom]),
+                    Charisma = Convert.ToInt32(m_CharData[LC.Charisma])
                 },
                 Skills = new Skills()
                 {
-                    _Acrobatics = proficiencyInfo[LC.Acrobatics],
-                    _AnimalHandling = proficiencyInfo[LC.AnimalHandling],
-                    _Arcana = proficiencyInfo[LC.Arcana],
-                    _Athletics = proficiencyInfo[LC.Athletics],
-                    _Deception = proficiencyInfo[LC.Deception],
-                    _History = proficiencyInfo[LC.History],
-                    _Insight = proficiencyInfo[LC.Insight],
-                    _Intimidation = proficiencyInfo[LC.Intimidation],
-                    _Investigation = proficiencyInfo[LC.Investigation],
-                    _Medicine = proficiencyInfo[LC.Medicine],
-                    _Nature = proficiencyInfo[LC.Nature],
-                    _Perception = proficiencyInfo[LC.Perception],
-                    _Performance = proficiencyInfo[LC.Performance],
-                    _Persuassion = proficiencyInfo[LC.Persuassion],
-                    _Religion = proficiencyInfo[LC.Religion],
-                    _SlightOfHand = proficiencyInfo[LC.SlightOfHand],
-                    _Stealth = proficiencyInfo[LC.Stealth],
-                    _Survival = proficiencyInfo[LC.Survival]
+                    _Acrobatics = m_ProficientData[LC.Acrobatics],
+                    _AnimalHandling = m_ProficientData[LC.AnimalHandling],
+                    _Arcana = m_ProficientData[LC.Arcana],
+                    _Athletics = m_ProficientData[LC.Athletics],
+                    _Deception = m_ProficientData[LC.Deception],
+                    _History = m_ProficientData[LC.History],
+                    _Insight = m_ProficientData[LC.Insight],
+                    _Intimidation = m_ProficientData[LC.Intimidation],
+                    _Investigation = m_ProficientData[LC.Investigation],
+                    _Medicine = m_ProficientData[LC.Medicine],
+                    _Nature = m_ProficientData[LC.Nature],
+                    _Perception = m_ProficientData[LC.Perception],
+                    _Performance = m_ProficientData[LC.Performance],
+                    _Persuassion = m_ProficientData[LC.Persuassion],
+                    _Religion = m_ProficientData[LC.Religion],
+                    _SlightOfHand = m_ProficientData[LC.SlightOfHand],
+                    _Stealth = m_ProficientData[LC.Stealth],
+                    _Survival = m_ProficientData[LC.Survival]
                 },
-                Inspiration = Convert.ToBoolean(characterInfo[LC.Inspiration]),
+                Inspiration = Convert.ToBoolean(m_CharData[LC.Inspiration]),
                 // ProficiencyBonus is Calculated
                 SavingThrows = new SavingThrows()
                 {
-                    _Strength = proficiencyInfo[LC.StrengthSave],
-                    _Dexterity = proficiencyInfo[LC.DexteritySave],
-                    _Constitution = proficiencyInfo[LC.ConstitutionSave],
-                    _Intelligence = proficiencyInfo[LC.IntelligenceSave],
-                    _Wisdom = proficiencyInfo[LC.WisdomSave],
-                    _Charisma = proficiencyInfo[LC.CharismaSave]
+                    _Strength = m_ProficientData[LC.StrengthSave],
+                    _Dexterity = m_ProficientData[LC.DexteritySave],
+                    _Constitution = m_ProficientData[LC.ConstitutionSave],
+                    _Intelligence = m_ProficientData[LC.IntelligenceSave],
+                    _Wisdom = m_ProficientData[LC.WisdomSave],
+                    _Charisma = m_ProficientData[LC.CharismaSave]
                 },
                 // Perception is Calculated
                 // Proficiencies
                 // Languages
 
                 // Middle Column Info
-                ArmorClass = Convert.ToInt32(characterInfo[LC.ArmorClass]),
-                Initiative = Convert.ToInt32(characterInfo[LC.Initiative]),
-                Speed = Convert.ToInt32(characterInfo[LC.Speed]),
-                HP_Max = Convert.ToInt32(characterInfo[LC.HP_Max]),
-                HP_Current = Convert.ToInt32(characterInfo[LC.HP_Current]),
-                HP_Temp = Convert.ToInt32(characterInfo[LC.HP_Temp]),
-                HitDice = characterInfo[LC.HitDice],
-                HitDiceTotal = Convert.ToInt32(characterInfo[LC.HitDiceTotal]),
+                ArmorClass = Convert.ToInt32(m_CharData[LC.ArmorClass]),
+                Initiative = Convert.ToInt32(m_CharData[LC.Initiative]),
+                Speed = Convert.ToInt32(m_CharData[LC.Speed]),
+                HP_Max = Convert.ToInt32(m_CharData[LC.HP_Max]),
+                HP_Current = Convert.ToInt32(m_CharData[LC.HP_Current]),
+                HP_Temp = Convert.ToInt32(m_CharData[LC.HP_Temp]),
+                HitDice = m_CharData[LC.HitDice],
+                HitDiceTotal = Convert.ToInt32(m_CharData[LC.HitDiceTotal]),
                 Money = new Money()
                 {
-                    Copper = Convert.ToInt32(characterInfo[LC.Copper]),
-                    Silver = Convert.ToInt32(characterInfo[LC.Silver]),
-                    Electrum = Convert.ToInt32(characterInfo[LC.Electrum]),
-                    Gold = Convert.ToInt32(characterInfo[LC.Gold]),
-                    Platinum = Convert.ToInt32(characterInfo[LC.Platinum]),
+                    Copper = Convert.ToInt32(m_CharData[LC.Copper]),
+                    Silver = Convert.ToInt32(m_CharData[LC.Silver]),
+                    Electrum = Convert.ToInt32(m_CharData[LC.Electrum]),
+                    Gold = Convert.ToInt32(m_CharData[LC.Gold]),
+                    Platinum = Convert.ToInt32(m_CharData[LC.Platinum]),
                 },
                 // Death Saves
                 // Attacks and spellcasting
-                // Equipment
 
                 // Right Column Info
-                PersonalityTraits = characterInfo[LC.PersonalityTraits],
-                Ideals = characterInfo[LC.Ideals],
-                Bonds = characterInfo[LC.Bonds],
-                Flaws = characterInfo[LC.Flaws],
+                PersonalityTraits = m_CharData[LC.PersonalityTraits],
+                Ideals = m_CharData[LC.Ideals],
+                Bonds = m_CharData[LC.Bonds],
+                Flaws = m_CharData[LC.Flaws],
 
-                Backstory = characterInfo[LC.Backstory]
+                Backstory = m_CharData[LC.Backstory],
+
+                Items = m_ItemData,
+                Weapons = m_WeaponData,
+                Armor = m_ArmorData
 
             };
 

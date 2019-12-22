@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnD_Character_Sheet
 {
-    class Constants
+    public class Constants
     {
         #region Weapon/Armor Properties
         /// <summary>
@@ -183,41 +183,64 @@ namespace DnD_Character_Sheet
         public static readonly string Ideals = "Ideals";
         public static readonly string Bonds = "Bonds";
         public static readonly string Flaws = "Flaws";
+        public static readonly string Backstory = "Backstory";
+
+        public static readonly string CharacterSheet = "CharacterSheet";
+        public static readonly string Data = "Data";
+        public static readonly string Key = "Key";
+        public static readonly string Value = "Value";
+        public static readonly string Proficient = "Proficient";
+        public static readonly string Items = "Items";
+        public static readonly string Item = "Item";
+        public static readonly string Name = "Name";
+        public static readonly string Cost = "Cost";
+        public static readonly string Description = "Description";
+        public static readonly string Weapon = "Weapon";
+        public static readonly string Properties = "Properties";
+        public static readonly string Property = "Property";
+        public static readonly string Damage = "Damage";
+        public static readonly string Style = "Style";
+        public static readonly string Equipped = "Equipped";
+        public static readonly string Armor = "Armor";
+        public static readonly string StrengthReq = "StrengthReq";
+        public static readonly string Disadvantage = "Disadvantage";
+        public static readonly string Book = "Book";
+        public static readonly string BackgroundInfo = "BackgroundInfo";
+
+
+        public static readonly string Using_PHB = "UsingPlayerHandbook";
         /*
         public static readonly string PLACEHOLDER = "";
         public static readonly string PLACEHOLDER = "";
         */
-        public static readonly string Using_PHB = "UsingPlayerHandbook";
-
-
-        public static readonly string Backstory = "Backstory";
         #endregion
 
-        public class Item
+        public class Item_Class
         {
-            public string Name;
-            public string Weight;
-            public Money Cost;
-            public string Type; // Weapon / armor
+            public string Cost;
+            public double Weight;
+            public string Description;
         }
 
-        public class Weapon
+        public class Weapon_Class
         {
             public string Style;
             public string Cost;
             public string Damage;
             public double Weight;
             public List<string> Properties;
+            public bool Equipped;
         }
 
-        public class Armor
+        public class Armor_Class
         {
             public string Style;
             public string Cost;
             public string ArmorClass;
             public int StrengthReq;
             public bool Disadvantage;
-            public int Weight;
+            public double Weight;
+            public bool Equipped;
         }
     }
 }

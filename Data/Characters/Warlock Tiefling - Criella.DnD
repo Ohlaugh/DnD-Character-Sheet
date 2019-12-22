@@ -245,6 +245,42 @@
     <Value>true</Value>
   </Proficient>
 
+  <Items>
+    <Item>
+      <Name>Acid (vial)</Name>
+      <Cost>25 gp</Cost>
+      <Weight>1</Weight>
+      <Description>As an action, you can splash the contents of this vial onto a creature within 5 feet or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</Description>
+    </Item>
+    
+    <Weapon>
+      <Name>Crossbow, Light</Name>
+      <Cost>25 gp</Cost>
+      <Damage>1d8</Damage>
+      <Weight>5</Weight>
+      <Style>Simple Ranged Weapon</Style>
+      <Properties>
+        <Property>Ammunition (range 80/320)</Property>
+        <Property>Loading</Property>
+        <Property>Two-Handed</Property>
+      </Properties>
+      <Equipped>True</Equipped>
+    </Weapon>
+    
+    <Armor>
+      <Name>Padded</Name>
+      <Style>Light Armor</Style>
+      <Cost>5 gp</Cost>
+      <ArmorClass>11 + Dex</ArmorClass>
+      <StrengthReq>0</StrengthReq>
+      <Disadvantage>true</Disadvantage>
+      <Weight>8</Weight>
+      <Equipped>False</Equipped>
+    </Armor>
+  </Items>
+  
+  
+  
   <Book>
     <Key>UsingPlayerHandbook</Key>
     <Value>True</Value>
