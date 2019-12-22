@@ -282,7 +282,11 @@
   
   
   <Book>
-    <Key>UsingPlayerHandbook</Key>
+    <Key>PlayerHandbook</Key>
+    <Value>True</Value>
+  </Book>
+  <Book>
+    <Key>XanatharsGuide</Key>
     <Value>True</Value>
   </Book>
 

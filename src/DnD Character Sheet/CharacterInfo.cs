@@ -28,7 +28,7 @@ namespace DnD_Character_Sheet
 
         private void CreateMasterList()
         {
-            bool result = Library.m_BookUtilization[LC.Using_PHB];
+            bool result = Library.m_BookUtilization[LC.Using_PlayerHB];
             if (result)
             {
                 PHB_DO.AddRaces();

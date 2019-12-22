@@ -208,7 +208,8 @@ namespace DnD_Character_Sheet
         public static readonly string BackgroundInfo = "BackgroundInfo";
 
 
-        public static readonly string Using_PHB = "UsingPlayerHandbook";
+        public static readonly string Using_PlayerHB = "PlayerHandbook";
+        public static readonly string Using_Xanathar = "XanatharsGuide";
         /*
         public static readonly string PLACEHOLDER = "";
         public static readonly string PLACEHOLDER = "";
