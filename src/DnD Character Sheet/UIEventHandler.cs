@@ -13,6 +13,7 @@ using DnD_Character_Sheet;
 using LC = DnD_Character_Sheet.Constants;
 using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
 using CALC = DnD_Character_Sheet.Calculations;
+using LIB = DnD_Character_Sheet.Library;
 
 namespace DnD_Character_Sheet
 {
@@ -72,12 +73,12 @@ namespace DnD_Character_Sheet
             bool check = false;
             if (eventArgs.NewValue == CheckState.Checked)
             {
-                bonus += Library.m_MainCharacterInfo.ProficiencyBonus;
+                bonus += LIB.m_MainCharacterInfo.ProficiencyBonus;
                 check = true;
             }
             else if (eventArgs.NewValue == CheckState.Unchecked)
             {
-                bonus -= Library.m_MainCharacterInfo.ProficiencyBonus;
+                bonus -= LIB.m_MainCharacterInfo.ProficiencyBonus;
                 check = false;
             }
             if (bonus < 0 && sign != "- ")
@@ -98,7 +99,7 @@ namespace DnD_Character_Sheet
             {
                 Saves_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
             }
-            Library.UpdateLibrary(skillName, skillBonus, check);
+            LIB.UpdateLibrary(skillName, skillBonus, check);
         }
 
         /// <summary>
@@ -129,23 +130,66 @@ namespace DnD_Character_Sheet
         private void XP_Spin_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown xpBox = (NumericUpDown)sender;
-            if (Library.m_CharacterLoaded)
+            if (LIB.m_CharacterLoaded)
             {
-                Library.m_MainCharacterInfo.ExperiencePoints = (int)xpBox.Value;
-                int previousLevel = Library.m_MainCharacterInfo.TotalLevel;
-                int newLevel = CALC.CalcLevel();
+                int oldXP = LIB.m_MainCharacterInfo.ExperiencePoints;
+                int oldLevel1 = LIB.m_MainCharacterInfo.Level1;
+                int oldLevel2 = LIB.m_MainCharacterInfo.Level2;
+                int oldTotalLevel = LIB.m_MainCharacterInfo.TotalLevel;
 
-                if (previousLevel != newLevel)
+                LIB.m_MainCharacterInfo.ExperiencePoints = (int)xpBox.Value;
+                int newTotalLevel = CALC.CalcLevel();
+
+                if (oldTotalLevel != newTotalLevel)
                 {
-                    if (Library.m_MainCharacterInfo.Multiclass)
+                    for (; oldTotalLevel < newTotalLevel; oldTotalLevel++)
                     {
-                        // set levels correctly
+                        if (LIB.m_MainCharacterInfo.Multiclass)
+                        {
+                            MulticlassLevelUpForm multiclassLevelUpForm = new MulticlassLevelUpForm(
+                            LIB.m_MainCharacterInfo.Class1,
+                            LIB.m_MainCharacterInfo.Class2,
+                            LIB.m_MainCharacterInfo.Level1,
+                            LIB.m_MainCharacterInfo.Level2);
+
+                            var result = multiclassLevelUpForm.ShowDialog();
+                            if (result == DialogResult.OK)
+                            {
+                                string value = multiclassLevelUpForm.ClassSelection;
+                                if (value == "Class1")
+                                {
+                                    LIB.m_MainCharacterInfo.Level1 += 1;
+                                    // Need to show level up for Class 1
+                                }
+                                else
+                                {
+                                    LIB.m_MainCharacterInfo.Level2 += 1;
+                                    // Need to show level up for Class 2
+                                }
+                            }
+                            else
+                            {
+                                // User has canceled the level up, therefore need to reset to previous levels
+                                LIB.m_MainCharacterInfo.ExperiencePoints = oldXP;
+                                LIB.m_MainCharacterInfo.Level1 = oldLevel1;
+                                LIB.m_MainCharacterInfo.Level2 = oldLevel2;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            // Need to show level up for Class 1
+                            var result = MessageBox.Show("Congrats on level: " + (oldTotalLevel + 1), "Level UP", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                            if (result == DialogResult.Cancel)
+                            {
+                                LIB.m_MainCharacterInfo.ExperiencePoints = oldXP;
+                                LIB.m_MainCharacterInfo.Level1 = oldLevel1;
+                                break;
+                            }
+                            LIB.m_MainCharacterInfo.Level1 = newTotalLevel;
+                        }
                     }
-                    else
-                    {
-                        Library.m_MainCharacterInfo.Level1 = newLevel;
-                    }
-                    Library.m_MainCharacterInfo.Calculate();
+                    LIB.m_MainCharacterInfo.Calculate();
                     PopulateCharacterUI();
                 }
             }

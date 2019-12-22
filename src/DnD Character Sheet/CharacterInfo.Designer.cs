@@ -164,6 +164,8 @@
             this.Backstory_TextBox = new System.Windows.Forms.TextBox();
             this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.EquipBuy_Button = new System.Windows.Forms.Button();
+            this.EquipSell_Button = new System.Windows.Forms.Button();
             this.Character_Panel.SuspendLayout();
             this.CharacterTabCtrl.SuspendLayout();
             this.Stats_Tab.SuspendLayout();
@@ -236,7 +238,7 @@
             this.CharacterTabCtrl.Location = new System.Drawing.Point(0, 0);
             this.CharacterTabCtrl.Name = "CharacterTabCtrl";
             this.CharacterTabCtrl.SelectedIndex = 0;
-            this.CharacterTabCtrl.Size = new System.Drawing.Size(2053, 1122);
+            this.CharacterTabCtrl.Size = new System.Drawing.Size(2053, 1152);
             this.CharacterTabCtrl.TabIndex = 0;
             // 
             // Stats_Tab
@@ -1387,11 +1389,13 @@
             // 
             // Equipment_Tab
             // 
+            this.Equipment_Tab.Controls.Add(this.EquipSell_Button);
+            this.Equipment_Tab.Controls.Add(this.EquipBuy_Button);
             this.Equipment_Tab.Controls.Add(this.Item_Grid);
             this.Equipment_Tab.Controls.Add(this.Equipment_Grid);
             this.Equipment_Tab.Location = new System.Drawing.Point(4, 29);
             this.Equipment_Tab.Name = "Equipment_Tab";
-            this.Equipment_Tab.Size = new System.Drawing.Size(2045, 1089);
+            this.Equipment_Tab.Size = new System.Drawing.Size(2045, 1119);
             this.Equipment_Tab.TabIndex = 2;
             this.Equipment_Tab.Text = "Equipment";
             this.Equipment_Tab.UseVisualStyleBackColor = true;
@@ -1414,7 +1418,7 @@
             this.Item_Grid.RowHeadersWidth = 62;
             this.Item_Grid.RowTemplate.Height = 28;
             this.Item_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Item_Grid.Size = new System.Drawing.Size(1028, 1071);
+            this.Item_Grid.Size = new System.Drawing.Size(1028, 1004);
             this.Item_Grid.TabIndex = 216;
             // 
             // ItemName
@@ -1490,7 +1494,7 @@
             this.Equipment_Grid.RowHeadersWidth = 62;
             this.Equipment_Grid.RowTemplate.Height = 28;
             this.Equipment_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Equipment_Grid.Size = new System.Drawing.Size(1008, 1071);
+            this.Equipment_Grid.Size = new System.Drawing.Size(1008, 1004);
             this.Equipment_Grid.TabIndex = 215;
             // 
             // Equipped
@@ -1635,6 +1639,26 @@
             this.button1.Text = "Test";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // EquipBuy_Button
+            // 
+            this.EquipBuy_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquipBuy_Button.Location = new System.Drawing.Point(45, 1035);
+            this.EquipBuy_Button.Name = "EquipBuy_Button";
+            this.EquipBuy_Button.Size = new System.Drawing.Size(139, 61);
+            this.EquipBuy_Button.TabIndex = 217;
+            this.EquipBuy_Button.Text = "Buy";
+            this.EquipBuy_Button.UseVisualStyleBackColor = true;
+            // 
+            // EquipSell_Button
+            // 
+            this.EquipSell_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquipSell_Button.Location = new System.Drawing.Point(481, 1035);
+            this.EquipSell_Button.Name = "EquipSell_Button";
+            this.EquipSell_Button.Size = new System.Drawing.Size(139, 61);
+            this.EquipSell_Button.TabIndex = 218;
+            this.EquipSell_Button.Text = "Sell";
+            this.EquipSell_Button.UseVisualStyleBackColor = true;
             // 
             // CharacterInfo
             // 
@@ -1812,6 +1836,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button EquipSell_Button;
+        private System.Windows.Forms.Button EquipBuy_Button;
     }
 }
 

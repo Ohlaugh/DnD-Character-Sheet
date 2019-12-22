@@ -28,14 +28,19 @@ namespace DnD_Character_Sheet
             Character_Panel.Hide();
         }
 
+        /// <summary>
+        /// This method creates the master library of Races, Armor and Weapons
+        /// based on which books the user has selected
+        /// </summary>
         private void CreateMasterLibrary()
         {
-            bool result = Library.m_BookUtilization[LC.Using_PlayerHB];
-            if (result)
+            if (Library.m_BookUtilization[LC.Using_PlayerHB])
             {
-                PHB_DO.AddRaces();
-                PHB_DO.AddArmor();
-                PHB_DO.AddWeapons();
+                PHB_DO.AddData();
+            }
+            if (Library.m_BookUtilization[LC.Using_Xanathar])
+            {
+
             }
         }
 
@@ -107,13 +112,13 @@ namespace DnD_Character_Sheet
             HitDiceRemain_Spin.Value = Library.m_MainCharacterInfo.HitDiceTotal;
             DiceType_TextBox.Text = Library.m_MainCharacterInfo.HitDice;
 
-            Info_TextBox.Text +=
+            Info_TextBox.Text =
                 "Personality Traits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
                 "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
                 "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
                 "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
 
-            Backstory_TextBox.Text += Library.m_MainCharacterInfo.Backstory;
+            Backstory_TextBox.Text = Library.m_MainCharacterInfo.Backstory;
 
             CP_Spin.Value = Library.m_MainCharacterInfo.Money.Copper;
             SP_Spin.Value = Library.m_MainCharacterInfo.Money.Silver;

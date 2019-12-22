@@ -14,9 +14,20 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
     class PHB_DataObject
     {
         /// <summary>
+        /// This method adds all Player Handbook information to the master Libraries
+        /// </summary>
+        public static void AddData()
+        {
+            AddRaces();
+            AddClasses();
+            AddArmor();
+            AddWeapons();
+        }
+
+        /// <summary>
         /// Adds all Player Handbook Races to the Master Race Library
         /// </summary>
-        public static void AddRaces()
+        private static void AddRaces()
         {
             foreach (string race in PHBC.Races)
             {
@@ -33,7 +44,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             }
         }
 
-        public static void AddClasses()
+        private static void AddClasses()
         {
 
         }
@@ -41,7 +52,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         /// <summary>
         /// Adds all Player Handbook Pieces of Armor to the Master Armor Library
         /// </summary>
-        public static void AddArmor()
+        private static void AddArmor()
         {
             #region LC.Light Armor
             LIB.m_ArmorLibrary.Add("Padded",
@@ -196,7 +207,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         /// <summary>
         /// Adds all Player Handbook Weapons to the Master Weapon Library
         /// </summary>
-        public static void AddWeapons()
+        private static void AddWeapons()
         {
             #region Melee Weapons
             LIB.m_WeaponLibrary.Add("Club",

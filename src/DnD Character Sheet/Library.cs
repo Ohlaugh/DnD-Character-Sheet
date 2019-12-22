@@ -78,7 +78,9 @@ namespace DnD_Character_Sheet
         public static Dictionary<string, List<string>> m_RaceLibrary = new Dictionary<string, List<string>>();
 
         /// <summary>
-        /// Is the character using the Player Hand Book
+        /// This dictionary holds all information on which book the user has selected
+        /// Key: Book Name
+        /// Value: True = Using / False = Not Using
         /// </summary>
         public static Dictionary<string, bool> m_BookUtilization = new Dictionary<string, bool>();
 
