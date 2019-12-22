@@ -13,12 +13,12 @@ using DnD_Character_Sheet;
 using LC = DnD_Character_Sheet.Constants;
 using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
 using CALC = DnD_Character_Sheet.Calculations;
-using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
+using LIB = DnD_Character_Sheet.Library;
 
 namespace DnD_Character_Sheet
 {
     /// <summary>
-    /// This class contains all helper methods for the UIEventHandler
+    /// This class contains all possible events
     /// </summary>
     public partial class CharacterInfo : Form
     {
@@ -29,159 +29,149 @@ namespace DnD_Character_Sheet
         }
 
         /// <summary>
-        /// This method creates the master library of Races, Armor and Weapons
-        /// based on which books the user has selected
+        /// This method handles all button click events from the UI
         /// </summary>
-        private void CreateMasterLibrary()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, EventArgs e)
         {
-            if (Library.m_BookUtilization[LC.Using_PlayerHB])
-            {
-                PHB_DO.AddData();
-            }
-            if (Library.m_BookUtilization[LC.Using_Xanathar])
-            {
+            Button button = (Button)sender;
 
+            switch (button.Name)
+            {
+                case (LC.LoadButton):
+                    {
+                        LoadCharacter characterLoader = new LoadCharacter();
+                        if (characterLoader.Load())
+                        {
+                            CreateMasterLibrary();
+                            PopulateCharacterUI();
+                            Character_Panel.Show();
+                        }
+                        break;
+                    }
+                case (LC.button1):
+                    {
+                        if (Character_Panel.Visible)
+                        {
+                            Character_Panel.Hide();
+                        }
+                        else
+                        {
+                            Character_Panel.Show();
+                        }
+                        break;
+                    }
+                default:
+                    break;
             }
         }
 
         /// <summary>
-        /// This method populates every UI Element with the loaded character information
+        /// This method handles whenever the user checks/unchecks an item from the checkbox list
         /// </summary>
-        private void PopulateCharacterUI()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckList_ItemCheck(object sender, EventArgs e)
         {
-            CharName_TextBox.Text = Library.m_MainCharacterInfo.CharacterName;
-            if (Library.m_MainCharacterInfo.Multiclass)
+            CheckedListBox box = (CheckedListBox)sender;
+            ItemCheckEventArgs eventArgs = (ItemCheckEventArgs)e;
+            if (box.SelectedIndex == -1)
             {
-                Class_TextBox.Text = Library.m_MainCharacterInfo.Class1 + " / " + Library.m_MainCharacterInfo.Class2;
-                Level_TextBox.Text = Library.m_MainCharacterInfo.Level1 + " / " + Library.m_MainCharacterInfo.Level2;
+                return;
             }
-            else
+            int bonus = int.Parse(box.SelectedItem.ToString().Split()[1]);
+            string sign = box.SelectedItem.ToString().Split()[0] + " ";
+            bool check = false;
+            if (eventArgs.NewValue == CheckState.Checked)
             {
-                Class_TextBox.Text = Library.m_MainCharacterInfo.Class1;
-                Level_TextBox.Text = Library.m_MainCharacterInfo.TotalLevel.ToString();
+                bonus += LIB.m_MainCharacterInfo.ProficiencyBonus;
+                check = true;
             }
-            Race_TextBox.Text = Library.m_MainCharacterInfo.Race;
-            Subrace_TextBox.Text = Library.m_MainCharacterInfo.Subrace;
-            Background_TextBox.Text = Library.m_MainCharacterInfo.Background;
-            Alignment_TextBox.Text = Library.m_MainCharacterInfo.Alignment;
-            PlayerName_TextBox.Text = Library.m_MainCharacterInfo.PlayerName;
-            XP_Spin.Value = Library.m_MainCharacterInfo.ExperiencePoints;
+            else if (eventArgs.NewValue == CheckState.Unchecked)
+            {
+                bonus -= LIB.m_MainCharacterInfo.ProficiencyBonus;
+                check = false;
+            }
+            if (bonus < 0 && sign != "- ")
+            {
+                bonus *= -1;
+                sign = "- ";
+            }
+            string skillBonus = sign + bonus;
+            string[] numbers = new string[] { "10", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            string skillName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
 
-            Str_TextBox.Text = Library.m_MainCharacterInfo.Attributes.Strength.ToString();
-            StrMod_Label.Text = Library.m_MainCharacterInfo.Attributes.StrengthModifier.ToString();
-            StrSign_Label.Text = Library.m_MainCharacterInfo.Attributes.StrengthSign;
 
-            Dex_TextBox.Text = Library.m_MainCharacterInfo.Attributes.Dexterity.ToString();
-            DexMod_Label.Text = Library.m_MainCharacterInfo.Attributes.DexterityModifier.ToString();
-            DexSign_Label.Text = Library.m_MainCharacterInfo.Attributes.DexteritySign;
-
-            Con_TextBox.Text = Library.m_MainCharacterInfo.Attributes.Constitution.ToString();
-            ConMod_Label.Text = Library.m_MainCharacterInfo.Attributes.ConstitutionModifier.ToString();
-            ConSign_Label.Text = Library.m_MainCharacterInfo.Attributes.ConstitutionSign;
-
-            Int_TextBox.Text = Library.m_MainCharacterInfo.Attributes.Intelligence.ToString();
-            IntMod_Label.Text = Library.m_MainCharacterInfo.Attributes.IntelligenceModifier.ToString();
-            IntSign_Label.Text = Library.m_MainCharacterInfo.Attributes.IntelligenceSign;
-
-            Wis_TextBox.Text = Library.m_MainCharacterInfo.Attributes.Wisdom.ToString();
-            WisMod_Label.Text = Library.m_MainCharacterInfo.Attributes.WisdomModifier.ToString();
-            WisSign_Label.Text = Library.m_MainCharacterInfo.Attributes.WisdomSign;
-
-            Cha_TextBox.Text = Library.m_MainCharacterInfo.Attributes.Charisma.ToString();
-            ChaMod_Label.Text = Library.m_MainCharacterInfo.Attributes.CharismaModifier.ToString();
-            ChaSign_Label.Text = Library.m_MainCharacterInfo.Attributes.CharismaSign;
-
-            ProfBonus_Label.Text = Library.m_MainCharacterInfo.ProficiencyBonus.ToString();
-            Inspiration_CheckBox.Checked = Library.m_MainCharacterInfo.Inspiration;
-            Perception_Label.Text = Library.m_MainCharacterInfo.Perception.ToString();
-
-            Age_TextBox.Text = Library.m_MainCharacterInfo.Age.ToString();
-            Height_TextBox.Text = Library.m_MainCharacterInfo.Height;
-            Weight_TextBox.Text = Library.m_MainCharacterInfo.Weight.ToString();
-            Eye_TextBox.Text = Library.m_MainCharacterInfo.EyeColor;
-            Skin_TextBox.Text = Library.m_MainCharacterInfo.SkinColor;
-            Hair_TextBox.Text = Library.m_MainCharacterInfo.HairColor;
-
-            AC_TextBox.Text = Library.m_MainCharacterInfo.ArmorClass.ToString();
-            Initiative_Spin.Value = Library.m_MainCharacterInfo.Initiative;
-            Speed_TextBox.Text = Library.m_MainCharacterInfo.Speed.ToString();
-            HPMax_TextBox.Text = Library.m_MainCharacterInfo.HP_Max.ToString();
-            HPCurrent_Spin.Value = Library.m_MainCharacterInfo.HP_Current;
-            HPCurrent_Spin.Maximum = Library.m_MainCharacterInfo.HP_Max;
-            HPTemp_Spin.Value = Library.m_MainCharacterInfo.HP_Temp;
-            HitDiceRemain_Spin.Value = Library.m_MainCharacterInfo.HitDiceTotal;
-            DiceType_TextBox.Text = Library.m_MainCharacterInfo.HitDice;
-
-            Info_TextBox.Text =
-                "Personality Traits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
-                "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
-                "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
-                "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
-
-            Backstory_TextBox.Text = Library.m_MainCharacterInfo.Backstory;
-
-            CP_Spin.Value = Library.m_MainCharacterInfo.Money.Copper;
-            SP_Spin.Value = Library.m_MainCharacterInfo.Money.Silver;
-            EP_Spin.Value = Library.m_MainCharacterInfo.Money.Electrum;
-            GP_Spin.Value = Library.m_MainCharacterInfo.Money.Gold;
-            PP_Spin.Value = Library.m_MainCharacterInfo.Money.Platinum;
-
-            UpdateLists();
-            UpdateGrids();
+            if (box.Name == LC.SkillsCheckList)
+            {
+                Skills_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
+            }
+            else if (box.Name == LC.SavesCheckList)
+            {
+                Saves_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
+            }
+            LIB.UpdateLibrary(skillName, skillBonus, check);
         }
 
         /// <summary>
-        /// This Method updates the Equipment and Items Grids
+        /// This method removes the blue highlight from the checkbox list
+        /// when focus is lost
         /// </summary>
-        private void UpdateGrids()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckList_LostFocus(object sender, EventArgs e)
         {
-            Item_Grid.Rows.Clear();
-            Equipment_Grid.Rows.Clear();
-            foreach (var key in Library.m_MainCharacterInfo.Item_List)
+            CheckedListBox box = (CheckedListBox)sender;
+            if (box.Name == LC.SkillsCheckList)
             {
-                CLIB.Item_Class item = Library.m_MainCharacterInfo.Items[key];
-                object[] param = { key, item.Cost, item.Weight, item.Description };
-                Item_Grid.Rows.Add(param);
+                Skills_CheckList.ClearSelected();
             }
-
-            foreach (var key in Library.m_MainCharacterInfo.Weapon_List)
+            else if (box.Name == LC.SavesCheckList)
             {
-                CLIB.Weapon_Class weapon = Library.m_MainCharacterInfo.Weapons[key];
-
-                string properties = string.Join(", ", weapon.Properties.ToArray());
-
-                object[] param = { weapon.Equipped, "Weapon", key, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
-                Equipment_Grid.Rows.Add(param);
-            }
-
-            foreach (var key in Library.m_MainCharacterInfo.Armor_List)
-            {
-                CLIB.Armor_Class armor = Library.m_MainCharacterInfo.Armor[key];
-                string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
-                object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
-                Equipment_Grid.Rows.Add(param);
+                Saves_CheckList.ClearSelected();
             }
         }
 
         /// <summary>
-        /// This method updates the Skills/Saves checkbox lists
+        /// This method handles all Spin Control Changes
         /// </summary>
-        private void UpdateLists()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Spin_ValueChanged(object sender, EventArgs e)
         {
-            Skills_CheckList.Items.Clear();
-            List<Tuple<string, bool>> skills = Library.m_MainCharacterInfo.GetSkills();
-            foreach (Tuple<string, bool> skill in skills)
+            NumericUpDown spinCtrl = (NumericUpDown)sender;
+            switch (spinCtrl.Name)
             {
-                Skills_CheckList.Items.Add(skill.Item1, skill.Item2);
+                case (LC.XP_Spin):
+                    {
+                        XP_ValueChanged(spinCtrl);
+                        break;
+                    }
+                case (LC.HitDiceRemain_Spin):
+                    {
+                        HitDice_ValueChanged(spinCtrl);
+                        break;
+                    }
+                case (LC.Initiative_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Initiative = Convert.ToInt32(spinCtrl.Value);
+                        break;
+                    }
+                case (LC.HPCurrent_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.HP_Current = Convert.ToInt32(spinCtrl.Value);
+                        break;
+                    }
+                case (LC.HPTemp_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.HP_Temp = Convert.ToInt32(spinCtrl.Value);
+                        break;
+                    }
+                default:
+                    break;
             }
 
-            Saves_CheckList.Items.Clear();
-            List<Tuple<string, bool>> saves = Library.m_MainCharacterInfo.GetSaves();
-
-            foreach (Tuple<string, bool> save in saves)
-            {
-                Saves_CheckList.Items.Add(save.Item1, save.Item2);
-            }
         }
     }
 }

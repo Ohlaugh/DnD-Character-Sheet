@@ -218,6 +218,13 @@ namespace DnD_Character_Sheet
 
         public static readonly string SkillsCheckList = "Skills_CheckList";
         public static readonly string SavesCheckList = "Saves_CheckList";
+        public const string LoadButton = "LoadButton";
+        public const string button1 = "button1";
+        public const string XP_Spin = "XP_Spin";
+        public const string HitDiceRemain_Spin = "HitDiceRemain_Spin";
+        public const string Initiative_Spin = "Initiative_Spin";
+        public const string HPCurrent_Spin = "HPCurrent_Spin";
+        public const string HPTemp_Spin = "HPTemp_Spin";
 
         #endregion
     }

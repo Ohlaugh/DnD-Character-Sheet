@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterInfo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LoadButton = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -105,33 +105,32 @@
             this.Class_Label = new System.Windows.Forms.Label();
             this.Saves_CheckList = new System.Windows.Forms.CheckedListBox();
             this.Skills_CheckList = new System.Windows.Forms.CheckedListBox();
-            this.Con_TextBox = new System.Windows.Forms.TextBox();
             this.Con_Group = new System.Windows.Forms.GroupBox();
             this.ConSign_Label = new System.Windows.Forms.Label();
             this.ConMod_Label = new System.Windows.Forms.Label();
             this.Con_Label = new System.Windows.Forms.Label();
-            this.Int_TextBox = new System.Windows.Forms.TextBox();
-            this.Cha_TextBox = new System.Windows.Forms.TextBox();
+            this.Con_Spin = new System.Windows.Forms.NumericUpDown();
             this.Int_Group = new System.Windows.Forms.GroupBox();
             this.IntSign_Label = new System.Windows.Forms.Label();
             this.IntMod_Label = new System.Windows.Forms.Label();
+            this.Int_Spin = new System.Windows.Forms.NumericUpDown();
             this.Int_Label = new System.Windows.Forms.Label();
             this.Cha_Group = new System.Windows.Forms.GroupBox();
+            this.Cha_Spin = new System.Windows.Forms.NumericUpDown();
             this.ChaSign_Label = new System.Windows.Forms.Label();
             this.ChaMod_Label = new System.Windows.Forms.Label();
             this.Cha_Label = new System.Windows.Forms.Label();
-            this.Wis_TextBox = new System.Windows.Forms.TextBox();
             this.Wis_Group = new System.Windows.Forms.GroupBox();
             this.WisSign_Label = new System.Windows.Forms.Label();
+            this.Wis_Spin = new System.Windows.Forms.NumericUpDown();
             this.WisMod_Label = new System.Windows.Forms.Label();
             this.Wis_Label = new System.Windows.Forms.Label();
             this.PlayerName_TextBox = new System.Windows.Forms.TextBox();
-            this.Dex_TextBox = new System.Windows.Forms.TextBox();
             this.Dex_Group = new System.Windows.Forms.GroupBox();
             this.DexSign_Label = new System.Windows.Forms.Label();
             this.DexMod_Label = new System.Windows.Forms.Label();
             this.Dex_Label = new System.Windows.Forms.Label();
-            this.Str_TextBox = new System.Windows.Forms.TextBox();
+            this.Dex_Spin = new System.Windows.Forms.NumericUpDown();
             this.Level_TextBox = new System.Windows.Forms.TextBox();
             this.Alignment_TextBox = new System.Windows.Forms.TextBox();
             this.Background_TextBox = new System.Windows.Forms.TextBox();
@@ -140,12 +139,15 @@
             this.Class_TextBox = new System.Windows.Forms.TextBox();
             this.CharName_TextBox = new System.Windows.Forms.TextBox();
             this.Str_Group = new System.Windows.Forms.GroupBox();
+            this.Str_Spin = new System.Windows.Forms.NumericUpDown();
             this.StrSign_Label = new System.Windows.Forms.Label();
             this.StrMod_Label = new System.Windows.Forms.Label();
             this.Str_Label = new System.Windows.Forms.Label();
             this.ProfBonusSign_Label = new System.Windows.Forms.Label();
             this.Perception_Label = new System.Windows.Forms.Label();
             this.Equipment_Tab = new System.Windows.Forms.TabPage();
+            this.EquipSell_Button = new System.Windows.Forms.Button();
+            this.EquipBuy_Button = new System.Windows.Forms.Button();
             this.Item_Grid = new System.Windows.Forms.DataGridView();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,8 +166,6 @@
             this.Backstory_TextBox = new System.Windows.Forms.TextBox();
             this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.EquipBuy_Button = new System.Windows.Forms.Button();
-            this.EquipSell_Button = new System.Windows.Forms.Button();
             this.Character_Panel.SuspendLayout();
             this.CharacterTabCtrl.SuspendLayout();
             this.Stats_Tab.SuspendLayout();
@@ -181,11 +181,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.Initiative_Spin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XP_Spin)).BeginInit();
             this.Con_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Con_Spin)).BeginInit();
             this.Int_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Int_Spin)).BeginInit();
             this.Cha_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cha_Spin)).BeginInit();
             this.Wis_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Wis_Spin)).BeginInit();
             this.Dex_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dex_Spin)).BeginInit();
             this.Str_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Str_Spin)).BeginInit();
             this.Equipment_Tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Equipment_Grid)).BeginInit();
@@ -200,7 +206,7 @@
             this.LoadButton.TabIndex = 2;
             this.LoadButton.Text = "Load";
             this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            this.LoadButton.Click += new System.EventHandler(this.Button_Click);
             // 
             // textBox4
             // 
@@ -301,18 +307,12 @@
             this.Stats_Tab.Controls.Add(this.Class_Label);
             this.Stats_Tab.Controls.Add(this.Saves_CheckList);
             this.Stats_Tab.Controls.Add(this.Skills_CheckList);
-            this.Stats_Tab.Controls.Add(this.Con_TextBox);
             this.Stats_Tab.Controls.Add(this.Con_Group);
-            this.Stats_Tab.Controls.Add(this.Int_TextBox);
-            this.Stats_Tab.Controls.Add(this.Cha_TextBox);
             this.Stats_Tab.Controls.Add(this.Int_Group);
             this.Stats_Tab.Controls.Add(this.Cha_Group);
-            this.Stats_Tab.Controls.Add(this.Wis_TextBox);
             this.Stats_Tab.Controls.Add(this.Wis_Group);
             this.Stats_Tab.Controls.Add(this.PlayerName_TextBox);
-            this.Stats_Tab.Controls.Add(this.Dex_TextBox);
             this.Stats_Tab.Controls.Add(this.Dex_Group);
-            this.Stats_Tab.Controls.Add(this.Str_TextBox);
             this.Stats_Tab.Controls.Add(this.Level_TextBox);
             this.Stats_Tab.Controls.Add(this.Alignment_TextBox);
             this.Stats_Tab.Controls.Add(this.Background_TextBox);
@@ -326,7 +326,7 @@
             this.Stats_Tab.Location = new System.Drawing.Point(4, 29);
             this.Stats_Tab.Name = "Stats_Tab";
             this.Stats_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Stats_Tab.Size = new System.Drawing.Size(2045, 1089);
+            this.Stats_Tab.Size = new System.Drawing.Size(2045, 1119);
             this.Stats_Tab.TabIndex = 0;
             this.Stats_Tab.Text = "Character Stats";
             this.Stats_Tab.UseVisualStyleBackColor = true;
@@ -486,6 +486,7 @@
             this.HitDiceRemain_Spin.Name = "HitDiceRemain_Spin";
             this.HitDiceRemain_Spin.Size = new System.Drawing.Size(87, 64);
             this.HitDiceRemain_Spin.TabIndex = 210;
+            this.HitDiceRemain_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // HPTemp_Spin
             // 
@@ -494,6 +495,7 @@
             this.HPTemp_Spin.Name = "HPTemp_Spin";
             this.HPTemp_Spin.Size = new System.Drawing.Size(117, 64);
             this.HPTemp_Spin.TabIndex = 209;
+            this.HPTemp_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // HPCurrent_Spin
             // 
@@ -507,6 +509,7 @@
             this.HPCurrent_Spin.Name = "HPCurrent_Spin";
             this.HPCurrent_Spin.Size = new System.Drawing.Size(120, 64);
             this.HPCurrent_Spin.TabIndex = 208;
+            this.HPCurrent_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // Initiative_Spin
             // 
@@ -520,6 +523,7 @@
             this.Initiative_Spin.Name = "Initiative_Spin";
             this.Initiative_Spin.Size = new System.Drawing.Size(92, 64);
             this.Initiative_Spin.TabIndex = 207;
+            this.Initiative_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // HitDiceRemaining1_Label
             // 
@@ -789,9 +793,10 @@
             0,
             0});
             this.XP_Spin.Name = "XP_Spin";
-            this.XP_Spin.Size = new System.Drawing.Size(141, 41);
+            this.XP_Spin.Size = new System.Drawing.Size(149, 41);
             this.XP_Spin.TabIndex = 175;
-            this.XP_Spin.ValueChanged += new System.EventHandler(this.XP_Spin_ValueChanged);
+            this.XP_Spin.ThousandsSeparator = true;
+            this.XP_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // Skills_Label
             // 
@@ -928,24 +933,13 @@
             this.Skills_CheckList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CheckList_ItemCheck);
             this.Skills_CheckList.LostFocus += new System.EventHandler(this.CheckList_LostFocus);
             // 
-            // Con_TextBox
-            // 
-            this.Con_TextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Con_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Con_TextBox.Location = new System.Drawing.Point(73, 494);
-            this.Con_TextBox.Name = "Con_TextBox";
-            this.Con_TextBox.ReadOnly = true;
-            this.Con_TextBox.Size = new System.Drawing.Size(86, 41);
-            this.Con_TextBox.TabIndex = 154;
-            this.Con_TextBox.Text = "10";
-            this.Con_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Con_Group
             // 
-            this.Con_Group.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Con_Group.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Con_Group.Controls.Add(this.ConSign_Label);
             this.Con_Group.Controls.Add(this.ConMod_Label);
             this.Con_Group.Controls.Add(this.Con_Label);
+            this.Con_Group.Controls.Add(this.Con_Spin);
             this.Con_Group.Location = new System.Drawing.Point(6, 399);
             this.Con_Group.Name = "Con_Group";
             this.Con_Group.Size = new System.Drawing.Size(237, 147);
@@ -955,7 +949,7 @@
             // ConSign_Label
             // 
             this.ConSign_Label.AutoSize = true;
-            this.ConSign_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ConSign_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ConSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.ConSign_Label.Location = new System.Drawing.Point(62, 45);
             this.ConSign_Label.Name = "ConSign_Label";
@@ -967,7 +961,7 @@
             // ConMod_Label
             // 
             this.ConMod_Label.AutoSize = true;
-            this.ConMod_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ConMod_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ConMod_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.ConMod_Label.Location = new System.Drawing.Point(98, 45);
             this.ConMod_Label.Name = "ConMod_Label";
@@ -978,7 +972,7 @@
             // 
             // Con_Label
             // 
-            this.Con_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Con_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Con_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Con_Label.Location = new System.Drawing.Point(0, 0);
             this.Con_Label.Name = "Con_Label";
@@ -987,35 +981,33 @@
             this.Con_Label.Text = "Constitution";
             this.Con_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Int_TextBox
+            // Con_Spin
             // 
-            this.Int_TextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Int_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Int_TextBox.Location = new System.Drawing.Point(72, 646);
-            this.Int_TextBox.Name = "Int_TextBox";
-            this.Int_TextBox.ReadOnly = true;
-            this.Int_TextBox.Size = new System.Drawing.Size(86, 41);
-            this.Int_TextBox.TabIndex = 155;
-            this.Int_TextBox.Text = "10";
-            this.Int_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Cha_TextBox
-            // 
-            this.Cha_TextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Cha_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cha_TextBox.Location = new System.Drawing.Point(71, 952);
-            this.Cha_TextBox.Name = "Cha_TextBox";
-            this.Cha_TextBox.ReadOnly = true;
-            this.Cha_TextBox.Size = new System.Drawing.Size(86, 41);
-            this.Cha_TextBox.TabIndex = 156;
-            this.Cha_TextBox.Text = "10";
-            this.Cha_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Con_Spin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Con_Spin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Con_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Con_Spin.Location = new System.Drawing.Point(74, 95);
+            this.Con_Spin.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.Con_Spin.Name = "Con_Spin";
+            this.Con_Spin.Size = new System.Drawing.Size(66, 37);
+            this.Con_Spin.TabIndex = 227;
+            this.Con_Spin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Con_Spin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // Int_Group
             // 
-            this.Int_Group.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Int_Group.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Int_Group.Controls.Add(this.IntSign_Label);
             this.Int_Group.Controls.Add(this.IntMod_Label);
+            this.Int_Group.Controls.Add(this.Int_Spin);
             this.Int_Group.Controls.Add(this.Int_Label);
             this.Int_Group.Location = new System.Drawing.Point(5, 552);
             this.Int_Group.Name = "Int_Group";
@@ -1026,7 +1018,7 @@
             // IntSign_Label
             // 
             this.IntSign_Label.AutoSize = true;
-            this.IntSign_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.IntSign_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.IntSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.IntSign_Label.Location = new System.Drawing.Point(63, 44);
             this.IntSign_Label.Name = "IntSign_Label";
@@ -1038,7 +1030,7 @@
             // IntMod_Label
             // 
             this.IntMod_Label.AutoSize = true;
-            this.IntMod_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.IntMod_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.IntMod_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.IntMod_Label.Location = new System.Drawing.Point(99, 43);
             this.IntMod_Label.Name = "IntMod_Label";
@@ -1047,9 +1039,30 @@
             this.IntMod_Label.Text = "0";
             this.IntMod_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Int_Spin
+            // 
+            this.Int_Spin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Int_Spin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Int_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Int_Spin.Location = new System.Drawing.Point(75, 95);
+            this.Int_Spin.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.Int_Spin.Name = "Int_Spin";
+            this.Int_Spin.Size = new System.Drawing.Size(66, 37);
+            this.Int_Spin.TabIndex = 228;
+            this.Int_Spin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Int_Spin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
             // Int_Label
             // 
-            this.Int_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Int_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Int_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Int_Label.Location = new System.Drawing.Point(1, 0);
             this.Int_Label.Name = "Int_Label";
@@ -1060,7 +1073,8 @@
             // 
             // Cha_Group
             // 
-            this.Cha_Group.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Cha_Group.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Cha_Group.Controls.Add(this.Cha_Spin);
             this.Cha_Group.Controls.Add(this.ChaSign_Label);
             this.Cha_Group.Controls.Add(this.ChaMod_Label);
             this.Cha_Group.Controls.Add(this.Cha_Label);
@@ -1070,10 +1084,31 @@
             this.Cha_Group.TabIndex = 158;
             this.Cha_Group.TabStop = false;
             // 
+            // Cha_Spin
+            // 
+            this.Cha_Spin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Cha_Spin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Cha_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Cha_Spin.Location = new System.Drawing.Point(76, 95);
+            this.Cha_Spin.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.Cha_Spin.Name = "Cha_Spin";
+            this.Cha_Spin.Size = new System.Drawing.Size(66, 37);
+            this.Cha_Spin.TabIndex = 230;
+            this.Cha_Spin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Cha_Spin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
             // ChaSign_Label
             // 
             this.ChaSign_Label.AutoSize = true;
-            this.ChaSign_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ChaSign_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ChaSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.ChaSign_Label.Location = new System.Drawing.Point(64, 44);
             this.ChaSign_Label.Name = "ChaSign_Label";
@@ -1085,7 +1120,7 @@
             // ChaMod_Label
             // 
             this.ChaMod_Label.AutoSize = true;
-            this.ChaMod_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ChaMod_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ChaMod_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.ChaMod_Label.Location = new System.Drawing.Point(100, 43);
             this.ChaMod_Label.Name = "ChaMod_Label";
@@ -1096,7 +1131,7 @@
             // 
             // Cha_Label
             // 
-            this.Cha_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Cha_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Cha_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Cha_Label.Location = new System.Drawing.Point(1, 0);
             this.Cha_Label.Name = "Cha_Label";
@@ -1105,22 +1140,11 @@
             this.Cha_Label.Text = "Charisma";
             this.Cha_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Wis_TextBox
-            // 
-            this.Wis_TextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Wis_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Wis_TextBox.Location = new System.Drawing.Point(72, 800);
-            this.Wis_TextBox.Name = "Wis_TextBox";
-            this.Wis_TextBox.ReadOnly = true;
-            this.Wis_TextBox.Size = new System.Drawing.Size(86, 41);
-            this.Wis_TextBox.TabIndex = 152;
-            this.Wis_TextBox.Text = "10";
-            this.Wis_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Wis_Group
             // 
-            this.Wis_Group.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Wis_Group.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Wis_Group.Controls.Add(this.WisSign_Label);
+            this.Wis_Group.Controls.Add(this.Wis_Spin);
             this.Wis_Group.Controls.Add(this.WisMod_Label);
             this.Wis_Group.Controls.Add(this.Wis_Label);
             this.Wis_Group.Location = new System.Drawing.Point(5, 705);
@@ -1132,7 +1156,7 @@
             // WisSign_Label
             // 
             this.WisSign_Label.AutoSize = true;
-            this.WisSign_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.WisSign_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.WisSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.WisSign_Label.Location = new System.Drawing.Point(63, 45);
             this.WisSign_Label.Name = "WisSign_Label";
@@ -1141,10 +1165,31 @@
             this.WisSign_Label.Text = "+";
             this.WisSign_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Wis_Spin
+            // 
+            this.Wis_Spin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Wis_Spin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Wis_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Wis_Spin.Location = new System.Drawing.Point(75, 95);
+            this.Wis_Spin.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.Wis_Spin.Name = "Wis_Spin";
+            this.Wis_Spin.Size = new System.Drawing.Size(66, 37);
+            this.Wis_Spin.TabIndex = 229;
+            this.Wis_Spin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Wis_Spin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
             // WisMod_Label
             // 
             this.WisMod_Label.AutoSize = true;
-            this.WisMod_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.WisMod_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.WisMod_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.WisMod_Label.Location = new System.Drawing.Point(99, 45);
             this.WisMod_Label.Name = "WisMod_Label";
@@ -1155,7 +1200,7 @@
             // 
             // Wis_Label
             // 
-            this.Wis_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Wis_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Wis_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Wis_Label.Location = new System.Drawing.Point(1, 0);
             this.Wis_Label.Name = "Wis_Label";
@@ -1173,24 +1218,13 @@
             this.PlayerName_TextBox.Size = new System.Drawing.Size(246, 41);
             this.PlayerName_TextBox.TabIndex = 151;
             // 
-            // Dex_TextBox
-            // 
-            this.Dex_TextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Dex_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dex_TextBox.Location = new System.Drawing.Point(73, 340);
-            this.Dex_TextBox.Name = "Dex_TextBox";
-            this.Dex_TextBox.ReadOnly = true;
-            this.Dex_TextBox.Size = new System.Drawing.Size(86, 41);
-            this.Dex_TextBox.TabIndex = 149;
-            this.Dex_TextBox.Text = "10";
-            this.Dex_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Dex_Group
             // 
-            this.Dex_Group.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Dex_Group.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Dex_Group.Controls.Add(this.DexSign_Label);
             this.Dex_Group.Controls.Add(this.DexMod_Label);
             this.Dex_Group.Controls.Add(this.Dex_Label);
+            this.Dex_Group.Controls.Add(this.Dex_Spin);
             this.Dex_Group.Location = new System.Drawing.Point(6, 246);
             this.Dex_Group.Name = "Dex_Group";
             this.Dex_Group.Size = new System.Drawing.Size(237, 147);
@@ -1200,7 +1234,7 @@
             // DexSign_Label
             // 
             this.DexSign_Label.AutoSize = true;
-            this.DexSign_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DexSign_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.DexSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.DexSign_Label.Location = new System.Drawing.Point(62, 45);
             this.DexSign_Label.Name = "DexSign_Label";
@@ -1212,7 +1246,7 @@
             // DexMod_Label
             // 
             this.DexMod_Label.AutoSize = true;
-            this.DexMod_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DexMod_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.DexMod_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.DexMod_Label.Location = new System.Drawing.Point(98, 44);
             this.DexMod_Label.Name = "DexMod_Label";
@@ -1223,7 +1257,7 @@
             // 
             // Dex_Label
             // 
-            this.Dex_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Dex_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Dex_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Dex_Label.Location = new System.Drawing.Point(1, 0);
             this.Dex_Label.Name = "Dex_Label";
@@ -1232,17 +1266,26 @@
             this.Dex_Label.Text = "Dexterity";
             this.Dex_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Str_TextBox
+            // Dex_Spin
             // 
-            this.Str_TextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Str_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Str_TextBox.Location = new System.Drawing.Point(73, 188);
-            this.Str_TextBox.Name = "Str_TextBox";
-            this.Str_TextBox.ReadOnly = true;
-            this.Str_TextBox.Size = new System.Drawing.Size(86, 41);
-            this.Str_TextBox.TabIndex = 147;
-            this.Str_TextBox.Text = "10";
-            this.Str_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Dex_Spin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Dex_Spin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dex_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Dex_Spin.Location = new System.Drawing.Point(74, 95);
+            this.Dex_Spin.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.Dex_Spin.Name = "Dex_Spin";
+            this.Dex_Spin.Size = new System.Drawing.Size(66, 37);
+            this.Dex_Spin.TabIndex = 226;
+            this.Dex_Spin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Dex_Spin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // Level_TextBox
             // 
@@ -1320,7 +1363,8 @@
             // 
             // Str_Group
             // 
-            this.Str_Group.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Str_Group.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Str_Group.Controls.Add(this.Str_Spin);
             this.Str_Group.Controls.Add(this.StrSign_Label);
             this.Str_Group.Controls.Add(this.StrMod_Label);
             this.Str_Group.Controls.Add(this.Str_Label);
@@ -1330,10 +1374,31 @@
             this.Str_Group.TabIndex = 148;
             this.Str_Group.TabStop = false;
             // 
+            // Str_Spin
+            // 
+            this.Str_Spin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Str_Spin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Str_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.Str_Spin.Location = new System.Drawing.Point(74, 95);
+            this.Str_Spin.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.Str_Spin.Name = "Str_Spin";
+            this.Str_Spin.Size = new System.Drawing.Size(66, 37);
+            this.Str_Spin.TabIndex = 225;
+            this.Str_Spin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Str_Spin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
             // StrSign_Label
             // 
             this.StrSign_Label.AutoSize = true;
-            this.StrSign_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.StrSign_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.StrSign_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.StrSign_Label.Location = new System.Drawing.Point(62, 45);
             this.StrSign_Label.Name = "StrSign_Label";
@@ -1345,7 +1410,7 @@
             // StrMod_Label
             // 
             this.StrMod_Label.AutoSize = true;
-            this.StrMod_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.StrMod_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.StrMod_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.StrMod_Label.Location = new System.Drawing.Point(98, 45);
             this.StrMod_Label.Name = "StrMod_Label";
@@ -1356,7 +1421,7 @@
             // 
             // Str_Label
             // 
-            this.Str_Label.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Str_Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Str_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.Str_Label.Location = new System.Drawing.Point(1, -1);
             this.Str_Label.Name = "Str_Label";
@@ -1400,6 +1465,26 @@
             this.Equipment_Tab.Text = "Equipment";
             this.Equipment_Tab.UseVisualStyleBackColor = true;
             // 
+            // EquipSell_Button
+            // 
+            this.EquipSell_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquipSell_Button.Location = new System.Drawing.Point(481, 1035);
+            this.EquipSell_Button.Name = "EquipSell_Button";
+            this.EquipSell_Button.Size = new System.Drawing.Size(139, 61);
+            this.EquipSell_Button.TabIndex = 218;
+            this.EquipSell_Button.Text = "Sell";
+            this.EquipSell_Button.UseVisualStyleBackColor = true;
+            // 
+            // EquipBuy_Button
+            // 
+            this.EquipBuy_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EquipBuy_Button.Location = new System.Drawing.Point(45, 1035);
+            this.EquipBuy_Button.Name = "EquipBuy_Button";
+            this.EquipBuy_Button.Size = new System.Drawing.Size(139, 61);
+            this.EquipBuy_Button.TabIndex = 217;
+            this.EquipBuy_Button.Text = "Buy";
+            this.EquipBuy_Button.UseVisualStyleBackColor = true;
+            // 
             // Item_Grid
             // 
             this.Item_Grid.AllowUserToAddRows = false;
@@ -1424,10 +1509,10 @@
             // ItemName
             // 
             this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemName.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemName.DefaultCellStyle = dataGridViewCellStyle13;
             this.ItemName.HeaderText = "Name";
             this.ItemName.MinimumWidth = 8;
             this.ItemName.Name = "ItemName";
@@ -1437,10 +1522,10 @@
             // Cost
             // 
             this.Cost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cost.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cost.DefaultCellStyle = dataGridViewCellStyle14;
             this.Cost.HeaderText = "Cost";
             this.Cost.MinimumWidth = 8;
             this.Cost.Name = "Cost";
@@ -1450,10 +1535,10 @@
             // Weight
             // 
             this.Weight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle15;
             this.Weight.HeaderText = "Weight";
             this.Weight.MinimumWidth = 8;
             this.Weight.Name = "Weight";
@@ -1463,10 +1548,10 @@
             // Description
             // 
             this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Description.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Description.DefaultCellStyle = dataGridViewCellStyle16;
             this.Description.HeaderText = "Description";
             this.Description.MinimumWidth = 300;
             this.Description.Name = "Description";
@@ -1500,11 +1585,11 @@
             // Equipped
             // 
             this.Equipped.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = false;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.Equipped.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.NullValue = false;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            this.Equipped.DefaultCellStyle = dataGridViewCellStyle17;
             this.Equipped.HeaderText = "Equpped";
             this.Equipped.MinimumWidth = 8;
             this.Equipped.Name = "Equipped";
@@ -1513,10 +1598,10 @@
             // Type
             // 
             this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Type.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Type.DefaultCellStyle = dataGridViewCellStyle18;
             this.Type.HeaderText = "Type";
             this.Type.MinimumWidth = 8;
             this.Type.Name = "Type";
@@ -1526,10 +1611,10 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewTextBoxColumn1.HeaderText = "Name";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -1539,10 +1624,10 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewTextBoxColumn2.HeaderText = "Cost";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -1552,10 +1637,10 @@
             // Damage
             // 
             this.Damage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Damage.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Damage.DefaultCellStyle = dataGridViewCellStyle21;
             this.Damage.HeaderText = "Damage";
             this.Damage.MinimumWidth = 8;
             this.Damage.Name = "Damage";
@@ -1565,10 +1650,10 @@
             // ArmorClass
             // 
             this.ArmorClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ArmorClass.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ArmorClass.DefaultCellStyle = dataGridViewCellStyle22;
             this.ArmorClass.HeaderText = "Armor Class";
             this.ArmorClass.MinimumWidth = 8;
             this.ArmorClass.Name = "ArmorClass";
@@ -1578,10 +1663,10 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewTextBoxColumn3.HeaderText = "Weight";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -1591,10 +1676,10 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewTextBoxColumn4.HeaderText = "Properties";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 150;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -1607,7 +1692,7 @@
             this.Backstory_Tab.Location = new System.Drawing.Point(4, 29);
             this.Backstory_Tab.Name = "Backstory_Tab";
             this.Backstory_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Backstory_Tab.Size = new System.Drawing.Size(2045, 1089);
+            this.Backstory_Tab.Size = new System.Drawing.Size(2045, 1119);
             this.Backstory_Tab.TabIndex = 1;
             this.Backstory_Tab.Text = "Backstory";
             this.Backstory_Tab.UseVisualStyleBackColor = true;
@@ -1638,27 +1723,7 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Test";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // EquipBuy_Button
-            // 
-            this.EquipBuy_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquipBuy_Button.Location = new System.Drawing.Point(45, 1035);
-            this.EquipBuy_Button.Name = "EquipBuy_Button";
-            this.EquipBuy_Button.Size = new System.Drawing.Size(139, 61);
-            this.EquipBuy_Button.TabIndex = 217;
-            this.EquipBuy_Button.Text = "Buy";
-            this.EquipBuy_Button.UseVisualStyleBackColor = true;
-            // 
-            // EquipSell_Button
-            // 
-            this.EquipSell_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquipSell_Button.Location = new System.Drawing.Point(481, 1035);
-            this.EquipSell_Button.Name = "EquipSell_Button";
-            this.EquipSell_Button.Size = new System.Drawing.Size(139, 61);
-            this.EquipSell_Button.TabIndex = 218;
-            this.EquipSell_Button.Text = "Sell";
-            this.EquipSell_Button.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button_Click);
             // 
             // CharacterInfo
             // 
@@ -1692,16 +1757,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.XP_Spin)).EndInit();
             this.Con_Group.ResumeLayout(false);
             this.Con_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Con_Spin)).EndInit();
             this.Int_Group.ResumeLayout(false);
             this.Int_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Int_Spin)).EndInit();
             this.Cha_Group.ResumeLayout(false);
             this.Cha_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Cha_Spin)).EndInit();
             this.Wis_Group.ResumeLayout(false);
             this.Wis_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Wis_Spin)).EndInit();
             this.Dex_Group.ResumeLayout(false);
             this.Dex_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dex_Spin)).EndInit();
             this.Str_Group.ResumeLayout(false);
             this.Str_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Str_Spin)).EndInit();
             this.Equipment_Tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Item_Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Equipment_Grid)).EndInit();
@@ -1761,13 +1832,10 @@
         private System.Windows.Forms.Label Class_Label;
         private System.Windows.Forms.CheckedListBox Saves_CheckList;
         private System.Windows.Forms.CheckedListBox Skills_CheckList;
-        private System.Windows.Forms.TextBox Con_TextBox;
         private System.Windows.Forms.GroupBox Con_Group;
         private System.Windows.Forms.Label ConSign_Label;
         private System.Windows.Forms.Label ConMod_Label;
         private System.Windows.Forms.Label Con_Label;
-        private System.Windows.Forms.TextBox Int_TextBox;
-        private System.Windows.Forms.TextBox Cha_TextBox;
         private System.Windows.Forms.GroupBox Int_Group;
         private System.Windows.Forms.Label IntSign_Label;
         private System.Windows.Forms.Label IntMod_Label;
@@ -1776,18 +1844,15 @@
         private System.Windows.Forms.Label ChaSign_Label;
         private System.Windows.Forms.Label ChaMod_Label;
         private System.Windows.Forms.Label Cha_Label;
-        private System.Windows.Forms.TextBox Wis_TextBox;
         private System.Windows.Forms.GroupBox Wis_Group;
         private System.Windows.Forms.Label WisSign_Label;
         private System.Windows.Forms.Label WisMod_Label;
         private System.Windows.Forms.Label Wis_Label;
         private System.Windows.Forms.TextBox PlayerName_TextBox;
-        private System.Windows.Forms.TextBox Dex_TextBox;
         private System.Windows.Forms.GroupBox Dex_Group;
         private System.Windows.Forms.Label DexSign_Label;
         private System.Windows.Forms.Label DexMod_Label;
         private System.Windows.Forms.Label Dex_Label;
-        private System.Windows.Forms.TextBox Str_TextBox;
         private System.Windows.Forms.TextBox Level_TextBox;
         private System.Windows.Forms.TextBox Alignment_TextBox;
         private System.Windows.Forms.TextBox Background_TextBox;
@@ -1838,6 +1903,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EquipSell_Button;
         private System.Windows.Forms.Button EquipBuy_Button;
+        private System.Windows.Forms.NumericUpDown Con_Spin;
+        private System.Windows.Forms.NumericUpDown Int_Spin;
+        private System.Windows.Forms.NumericUpDown Cha_Spin;
+        private System.Windows.Forms.NumericUpDown Wis_Spin;
+        private System.Windows.Forms.NumericUpDown Dex_Spin;
+        private System.Windows.Forms.NumericUpDown Str_Spin;
     }
 }
 
