@@ -29,11 +29,11 @@ namespace DnD_Character_Sheet
         /// </summary>
         private void CreateMasterLibrary()
         {
-            if (Library.m_BookUtilization[LC.Using_PlayerHB])
+            if (LIB.m_BookUtilization[LC.Using_PlayerHB])
             {
                 PHB_DO.AddData();
             }
-            if (Library.m_BookUtilization[LC.Using_Xanathar])
+            if (LIB.m_BookUtilization[LC.Using_Xanathar])
             {
 
             }
@@ -44,83 +44,83 @@ namespace DnD_Character_Sheet
         /// </summary>
         private void PopulateCharacterUI()
         {
-            CharName_TextBox.Text = Library.m_MainCharacterInfo.CharacterName;
-            if (Library.m_MainCharacterInfo.Multiclass)
+            CharName_TextBox.Text = LIB.m_MainCharacterInfo.CharacterName;
+            if (LIB.m_MainCharacterInfo.Multiclass)
             {
-                Class_TextBox.Text = Library.m_MainCharacterInfo.Class1 + " / " + Library.m_MainCharacterInfo.Class2;
-                Level_TextBox.Text = Library.m_MainCharacterInfo.Level1 + " / " + Library.m_MainCharacterInfo.Level2;
+                Class_TextBox.Text = LIB.m_MainCharacterInfo.Class1 + " / " + LIB.m_MainCharacterInfo.Class2;
+                Level_TextBox.Text = LIB.m_MainCharacterInfo.Level1 + " / " + LIB.m_MainCharacterInfo.Level2;
             }
             else
             {
-                Class_TextBox.Text = Library.m_MainCharacterInfo.Class1;
-                Level_TextBox.Text = Library.m_MainCharacterInfo.TotalLevel.ToString();
+                Class_TextBox.Text = LIB.m_MainCharacterInfo.Class1;
+                Level_TextBox.Text = LIB.m_MainCharacterInfo.TotalLevel.ToString();
             }
-            Race_TextBox.Text = Library.m_MainCharacterInfo.Race;
-            Subrace_TextBox.Text = Library.m_MainCharacterInfo.Subrace;
-            Background_TextBox.Text = Library.m_MainCharacterInfo.Background;
-            Alignment_TextBox.Text = Library.m_MainCharacterInfo.Alignment;
-            PlayerName_TextBox.Text = Library.m_MainCharacterInfo.PlayerName;
-            XP_Spin.Value = Library.m_MainCharacterInfo.ExperiencePoints;
+            Race_TextBox.Text = LIB.m_MainCharacterInfo.Race;
+            Subrace_TextBox.Text = LIB.m_MainCharacterInfo.Subrace;
+            Background_TextBox.Text = LIB.m_MainCharacterInfo.Background;
+            Alignment_TextBox.Text = LIB.m_MainCharacterInfo.Alignment;
+            PlayerName_TextBox.Text = LIB.m_MainCharacterInfo.PlayerName;
+            XP_Spin.Value = LIB.m_MainCharacterInfo.ExperiencePoints;
 
-            Str_Spin.Value = Library.m_MainCharacterInfo.Attributes.Strength;
-            StrMod_Label.Text = Library.m_MainCharacterInfo.Attributes.StrengthModifier.ToString();
-            StrSign_Label.Text = Library.m_MainCharacterInfo.Attributes.StrengthSign;
+            Str_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Strength;
+            StrMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.StrengthModifier.ToString();
+            StrSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.StrengthSign;
 
-            Dex_Spin.Value = Library.m_MainCharacterInfo.Attributes.Dexterity;
-            DexMod_Label.Text = Library.m_MainCharacterInfo.Attributes.DexterityModifier.ToString();
-            DexSign_Label.Text = Library.m_MainCharacterInfo.Attributes.DexteritySign;
+            Dex_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Dexterity;
+            DexMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.DexterityModifier.ToString();
+            DexSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.DexteritySign;
 
-            Con_Spin.Value = Library.m_MainCharacterInfo.Attributes.Constitution;
-            ConMod_Label.Text = Library.m_MainCharacterInfo.Attributes.ConstitutionModifier.ToString();
-            ConSign_Label.Text = Library.m_MainCharacterInfo.Attributes.ConstitutionSign;
+            Con_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Constitution;
+            ConMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.ConstitutionModifier.ToString();
+            ConSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.ConstitutionSign;
 
-            Int_Spin.Value = Library.m_MainCharacterInfo.Attributes.Intelligence;
-            IntMod_Label.Text = Library.m_MainCharacterInfo.Attributes.IntelligenceModifier.ToString();
-            IntSign_Label.Text = Library.m_MainCharacterInfo.Attributes.IntelligenceSign;
+            Int_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Intelligence;
+            IntMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.IntelligenceModifier.ToString();
+            IntSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.IntelligenceSign;
 
-            Wis_Spin.Value = Library.m_MainCharacterInfo.Attributes.Wisdom;
-            WisMod_Label.Text = Library.m_MainCharacterInfo.Attributes.WisdomModifier.ToString();
-            WisSign_Label.Text = Library.m_MainCharacterInfo.Attributes.WisdomSign;
+            Wis_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Wisdom;
+            WisMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.WisdomModifier.ToString();
+            WisSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.WisdomSign;
 
-            Cha_Spin.Value = Library.m_MainCharacterInfo.Attributes.Charisma;
-            ChaMod_Label.Text = Library.m_MainCharacterInfo.Attributes.CharismaModifier.ToString();
-            ChaSign_Label.Text = Library.m_MainCharacterInfo.Attributes.CharismaSign;
+            Cha_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Charisma;
+            ChaMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.CharismaModifier.ToString();
+            ChaSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.CharismaSign;
 
-            ProfBonus_Label.Text = Library.m_MainCharacterInfo.ProficiencyBonus.ToString();
-            Inspiration_CheckBox.Checked = Library.m_MainCharacterInfo.Inspiration;
-            Perception_Label.Text = Library.m_MainCharacterInfo.Perception.ToString();
+            ProfBonus_Label.Text = LIB.m_MainCharacterInfo.ProficiencyBonus.ToString();
+            Inspiration_CheckBox.Checked = LIB.m_MainCharacterInfo.Inspiration;
+            Perception_Label.Text = LIB.m_MainCharacterInfo.Perception.ToString();
 
-            Age_TextBox.Text = Library.m_MainCharacterInfo.Age.ToString();
-            Height_TextBox.Text = Library.m_MainCharacterInfo.Height;
-            Weight_TextBox.Text = Library.m_MainCharacterInfo.Weight.ToString();
-            Eye_TextBox.Text = Library.m_MainCharacterInfo.EyeColor;
-            Skin_TextBox.Text = Library.m_MainCharacterInfo.SkinColor;
-            Hair_TextBox.Text = Library.m_MainCharacterInfo.HairColor;
+            Age_TextBox.Text = LIB.m_MainCharacterInfo.Age.ToString();
+            Height_TextBox.Text = LIB.m_MainCharacterInfo.Height;
+            Weight_TextBox.Text = LIB.m_MainCharacterInfo.Weight.ToString();
+            Eye_TextBox.Text = LIB.m_MainCharacterInfo.EyeColor;
+            Skin_TextBox.Text = LIB.m_MainCharacterInfo.SkinColor;
+            Hair_TextBox.Text = LIB.m_MainCharacterInfo.HairColor;
 
-            AC_TextBox.Text = Library.m_MainCharacterInfo.ArmorClass.ToString();
-            Initiative_Spin.Value = Library.m_MainCharacterInfo.Initiative;
-            Speed_TextBox.Text = Library.m_MainCharacterInfo.Speed.ToString();
-            HPMax_TextBox.Text = Library.m_MainCharacterInfo.HP_Max.ToString();
-            HPCurrent_Spin.Maximum = Library.m_MainCharacterInfo.HP_Max;
-            HPCurrent_Spin.Value = Library.m_MainCharacterInfo.HP_Current;
-            HPTemp_Spin.Value = Library.m_MainCharacterInfo.HP_Temp;
-            HitDiceRemain_Spin.Maximum = Library.m_MainCharacterInfo.TotalLevel;
-            HitDiceRemain_Spin.Value = Library.m_MainCharacterInfo.HitDiceTotal;
-            DiceType_TextBox.Text = Library.m_MainCharacterInfo.HitDice;
+            AC_TextBox.Text = LIB.m_MainCharacterInfo.ArmorClass.ToString();
+            Initiative_Spin.Value = LIB.m_MainCharacterInfo.Initiative;
+            Speed_TextBox.Text = LIB.m_MainCharacterInfo.Speed.ToString();
+            HPMax_TextBox.Text = LIB.m_MainCharacterInfo.HP_Max.ToString();
+            HPCurrent_Spin.Maximum = LIB.m_MainCharacterInfo.HP_Max;
+            HPCurrent_Spin.Value = LIB.m_MainCharacterInfo.HP_Current;
+            HPTemp_Spin.Value = LIB.m_MainCharacterInfo.HP_Temp;
+            HitDiceRemain_Spin.Maximum = LIB.m_MainCharacterInfo.TotalLevel;
+            HitDiceRemain_Spin.Value = LIB.m_MainCharacterInfo.HitDiceTotal;
+            DiceType_TextBox.Text = LIB.m_MainCharacterInfo.HitDice;
 
             Info_TextBox.Text =
-                "Personality Traits = " + Library.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
-                "Ideals = " + Library.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
-                "Bonds = " + Library.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
-                "Flaws = " + Library.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
+                "Personality Traits = " + LIB.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
+                "Ideals = " + LIB.m_MainCharacterInfo.Ideals + Environment.NewLine + Environment.NewLine +
+                "Bonds = " + LIB.m_MainCharacterInfo.Bonds + Environment.NewLine + Environment.NewLine +
+                "Flaws = " + LIB.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
 
-            Backstory_TextBox.Text = Library.m_MainCharacterInfo.Backstory;
+            Backstory_TextBox.Text = LIB.m_MainCharacterInfo.Backstory;
 
-            CP_Spin.Value = Library.m_MainCharacterInfo.Money.Copper;
-            SP_Spin.Value = Library.m_MainCharacterInfo.Money.Silver;
-            EP_Spin.Value = Library.m_MainCharacterInfo.Money.Electrum;
-            GP_Spin.Value = Library.m_MainCharacterInfo.Money.Gold;
-            PP_Spin.Value = Library.m_MainCharacterInfo.Money.Platinum;
+            CP_Spin.Value = LIB.m_MainCharacterInfo.Money.Copper;
+            SP_Spin.Value = LIB.m_MainCharacterInfo.Money.Silver;
+            EP_Spin.Value = LIB.m_MainCharacterInfo.Money.Electrum;
+            GP_Spin.Value = LIB.m_MainCharacterInfo.Money.Gold;
+            PP_Spin.Value = LIB.m_MainCharacterInfo.Money.Platinum;
 
             UpdateLists();
             UpdateGrids();
@@ -133,16 +133,16 @@ namespace DnD_Character_Sheet
         {
             Item_Grid.Rows.Clear();
             Equipment_Grid.Rows.Clear();
-            foreach (var key in Library.m_MainCharacterInfo.Item_List)
+            foreach (var key in LIB.m_MainCharacterInfo.Item_List)
             {
-                CLIB.Item_Class item = Library.m_MainCharacterInfo.Items[key];
+                CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
                 object[] param = { key, item.Cost, item.Weight, item.Description };
                 Item_Grid.Rows.Add(param);
             }
 
-            foreach (var key in Library.m_MainCharacterInfo.Weapon_List)
+            foreach (var key in LIB.m_MainCharacterInfo.Weapon_List)
             {
-                CLIB.Weapon_Class weapon = Library.m_MainCharacterInfo.Weapons[key];
+                CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
 
                 string properties = string.Join(", ", weapon.Properties.ToArray());
 
@@ -150,9 +150,9 @@ namespace DnD_Character_Sheet
                 Equipment_Grid.Rows.Add(param);
             }
 
-            foreach (var key in Library.m_MainCharacterInfo.Armor_List)
+            foreach (var key in LIB.m_MainCharacterInfo.Armor_List)
             {
-                CLIB.Armor_Class armor = Library.m_MainCharacterInfo.Armor[key];
+                CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
                 string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
                 object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
                 Equipment_Grid.Rows.Add(param);
@@ -165,14 +165,14 @@ namespace DnD_Character_Sheet
         private void UpdateLists()
         {
             Skills_CheckList.Items.Clear();
-            List<Tuple<string, bool>> skills = Library.m_MainCharacterInfo.GetSkills();
+            List<Tuple<string, bool>> skills = LIB.m_MainCharacterInfo.GetSkills();
             foreach (Tuple<string, bool> skill in skills)
             {
                 Skills_CheckList.Items.Add(skill.Item1, skill.Item2);
             }
 
             Saves_CheckList.Items.Clear();
-            List<Tuple<string, bool>> saves = Library.m_MainCharacterInfo.GetSaves();
+            List<Tuple<string, bool>> saves = LIB.m_MainCharacterInfo.GetSaves();
 
             foreach (Tuple<string, bool> save in saves)
             {
