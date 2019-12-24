@@ -49,6 +49,12 @@
     <Compile Include="Calculations.cs" />
     <Compile Include="Classes\ClassLibrary.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Forms\LevelUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelUpForm.Designer.cs">
+      <DependentUpon>LevelUpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadCharacter.cs" />
     <Compile Include="Classes\MainCharacterInfo.cs" />
     <Compile Include="Books\Player Handbook\PHB_Constants.cs" />
@@ -61,10 +67,10 @@
     </Compile>
     <Compile Include="Library.cs" />
     <Compile Include="MainProgram.cs" />
-    <Compile Include="MulticlassLevelUpForm.cs">
+    <Compile Include="Forms\MulticlassLevelUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MulticlassLevelUpForm.Designer.cs">
+    <Compile Include="Forms\MulticlassLevelUpForm.Designer.cs">
       <DependentUpon>MulticlassLevelUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,7 +78,10 @@
     <EmbeddedResource Include="CharacterInfo.resx">
       <DependentUpon>CharacterInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MulticlassLevelUpForm.resx">
+    <EmbeddedResource Include="Forms\LevelUpForm.resx">
+      <DependentUpon>LevelUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MulticlassLevelUpForm.resx">
       <DependentUpon>MulticlassLevelUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

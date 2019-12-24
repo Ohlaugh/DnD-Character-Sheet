@@ -23,6 +23,8 @@ namespace DnD_Character_Sheet
     /// </summary>
     public partial class CharacterInfo
     {
+        #region Private Helper Methods
+
         /// <summary>
         /// This method creates the master library of Races, Armor and Weapons
         /// based on which books the user has selected
@@ -49,11 +51,22 @@ namespace DnD_Character_Sheet
             {
                 Class_TextBox.Text = LIB.m_MainCharacterInfo.Class1 + " / " + LIB.m_MainCharacterInfo.Class2;
                 Level_TextBox.Text = LIB.m_MainCharacterInfo.Level1 + " / " + LIB.m_MainCharacterInfo.Level2;
+                SubClass_TextBox.Text = LIB.m_MainCharacterInfo.SubClass1 + " / " + LIB.m_MainCharacterInfo.SubClass2;
+                if (LIB.m_MainCharacterInfo.HitDice1 == LIB.m_MainCharacterInfo.HitDice2)
+                {
+                    DiceType_TextBox.Text = LIB.m_MainCharacterInfo.HitDice1;
+                }
+                else
+                {
+                    DiceType_TextBox.Text = LIB.m_MainCharacterInfo.HitDice1 + " / " + LIB.m_MainCharacterInfo.HitDice2;
+                }
             }
             else
             {
                 Class_TextBox.Text = LIB.m_MainCharacterInfo.Class1;
                 Level_TextBox.Text = LIB.m_MainCharacterInfo.TotalLevel.ToString();
+                SubClass_TextBox.Text = LIB.m_MainCharacterInfo.SubClass1;
+                DiceType_TextBox.Text = LIB.m_MainCharacterInfo.HitDice1;
             }
             Race_TextBox.Text = LIB.m_MainCharacterInfo.Race;
             Subrace_TextBox.Text = LIB.m_MainCharacterInfo.Subrace;
@@ -105,8 +118,7 @@ namespace DnD_Character_Sheet
             HPCurrent_Spin.Value = LIB.m_MainCharacterInfo.HP_Current;
             HPTemp_Spin.Value = LIB.m_MainCharacterInfo.HP_Temp;
             HitDiceRemain_Spin.Maximum = LIB.m_MainCharacterInfo.TotalLevel;
-            HitDiceRemain_Spin.Value = LIB.m_MainCharacterInfo.HitDiceTotal;
-            DiceType_TextBox.Text = LIB.m_MainCharacterInfo.HitDice;
+            HitDiceRemain_Spin.Value = LIB.m_MainCharacterInfo.HitDiceTotal1 + LIB.m_MainCharacterInfo.HitDiceTotal2;
 
             Info_TextBox.Text =
                 "Personality Traits = " + LIB.m_MainCharacterInfo.PersonalityTraits + Environment.NewLine + Environment.NewLine +
@@ -116,47 +128,23 @@ namespace DnD_Character_Sheet
 
             Backstory_TextBox.Text = LIB.m_MainCharacterInfo.Backstory;
 
+            UpdateMoney();
+            UpdateLists();
+            UpdateGrids();
+            Carry_TextBox.Text = LIB.m_MainCharacterInfo.CarryingWeight + " / " + LIB.m_MainCharacterInfo.CarryingCapacity + " lb.";
+        }
+
+        /// <summary>
+        /// This method updates the Money Numeric spin controls
+        /// </summary>
+        private void UpdateMoney()
+        {
+
             CP_Spin.Value = LIB.m_MainCharacterInfo.Money.Copper;
             SP_Spin.Value = LIB.m_MainCharacterInfo.Money.Silver;
             EP_Spin.Value = LIB.m_MainCharacterInfo.Money.Electrum;
             GP_Spin.Value = LIB.m_MainCharacterInfo.Money.Gold;
             PP_Spin.Value = LIB.m_MainCharacterInfo.Money.Platinum;
-
-            UpdateLists();
-            UpdateGrids();
-        }
-
-        /// <summary>
-        /// This Method updates the Equipment and Items Grids
-        /// </summary>
-        private void UpdateGrids()
-        {
-            Item_Grid.Rows.Clear();
-            Equipment_Grid.Rows.Clear();
-            foreach (var key in LIB.m_MainCharacterInfo.Item_List)
-            {
-                CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
-                object[] param = { key, item.Cost, item.Weight, item.Description };
-                Item_Grid.Rows.Add(param);
-            }
-
-            foreach (var key in LIB.m_MainCharacterInfo.Weapon_List)
-            {
-                CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
-
-                string properties = string.Join(", ", weapon.Properties.ToArray());
-
-                object[] param = { weapon.Equipped, "Weapon", key, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
-                Equipment_Grid.Rows.Add(param);
-            }
-
-            foreach (var key in LIB.m_MainCharacterInfo.Armor_List)
-            {
-                CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
-                string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
-                object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
-                Equipment_Grid.Rows.Add(param);
-            }
         }
 
         /// <summary>
@@ -181,6 +169,46 @@ namespace DnD_Character_Sheet
         }
 
         /// <summary>
+        /// This Method updates the Equipment and Items Grids
+        /// </summary>
+        private void UpdateGrids()
+        {
+            Item_Grid.Rows.Clear();
+            Equipment_Grid.Rows.Clear();
+            foreach (var key in LIB.m_MainCharacterInfo.Item_List)
+            {
+                CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
+                object[] param = { key, item.Cost, item.Weight + " lb.", item.Description };
+                LIB.m_MainCharacterInfo.CarryingWeight += item.Weight;
+                Item_Grid.Rows.Add(param);
+            }
+
+            foreach (var key in LIB.m_MainCharacterInfo.Weapon_List)
+            {
+                CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
+
+                string properties = string.Join(", ", weapon.Properties.ToArray());
+
+                object[] param = { weapon.Equipped, "Weapon", key, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
+                LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight;
+                Equipment_Grid.Rows.Add(param);
+            }
+
+            foreach (var key in LIB.m_MainCharacterInfo.Armor_List)
+            {
+                CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
+                string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
+                object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
+                LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight;
+                Equipment_Grid.Rows.Add(param);
+            }
+        }
+
+        #endregion
+
+        #region UI Events
+
+        /// <summary>
         /// This method sets the level based on the xp the user inputs into the spin control
         /// </summary>
         /// <param name="sender"></param>
@@ -193,10 +221,17 @@ namespace DnD_Character_Sheet
                 int oldLevel1 = LIB.m_MainCharacterInfo.Level1;
                 int oldLevel2 = LIB.m_MainCharacterInfo.Level2;
                 int oldTotalLevel = LIB.m_MainCharacterInfo.TotalLevel;
+                int oldHitDice1 = LIB.m_MainCharacterInfo.HitDiceTotal1;
+                int oldHitDice2 = LIB.m_MainCharacterInfo.HitDiceTotal2;
 
                 LIB.m_MainCharacterInfo.ExperiencePoints = (int)xpSpin.Value;
                 int newTotalLevel = CALC.CalcLevel();
-
+                if (oldTotalLevel > newTotalLevel)
+                {
+                    XP_Spin.Value = oldXP;
+                    LIB.m_MainCharacterInfo.ExperiencePoints = oldXP;
+                    return;
+                }
                 if (oldTotalLevel != newTotalLevel)
                 {
                     for (; oldTotalLevel < newTotalLevel; oldTotalLevel++)
@@ -216,11 +251,15 @@ namespace DnD_Character_Sheet
                                 if (value == "Class1")
                                 {
                                     LIB.m_MainCharacterInfo.Level1 += 1;
+                                    LIB.m_MainCharacterInfo.HitDiceTotal1 = LIB.m_MainCharacterInfo.Level1;
+                                    MessageBox.Show("Will soon add a new form for level up.", "Future Implimentation", MessageBoxButtons.OK);
                                     // Need to show level up for Class 1
                                 }
                                 else
                                 {
                                     LIB.m_MainCharacterInfo.Level2 += 1;
+                                    LIB.m_MainCharacterInfo.HitDiceTotal2 = LIB.m_MainCharacterInfo.Level2;
+                                    MessageBox.Show("Will soon add a new form for level up.", "Future Implimentation", MessageBoxButtons.OK);
                                     // Need to show level up for Class 2
                                 }
                             }
@@ -230,6 +269,8 @@ namespace DnD_Character_Sheet
                                 LIB.m_MainCharacterInfo.ExperiencePoints = oldXP;
                                 LIB.m_MainCharacterInfo.Level1 = oldLevel1;
                                 LIB.m_MainCharacterInfo.Level2 = oldLevel2;
+                                LIB.m_MainCharacterInfo.HitDiceTotal1 = oldHitDice1;
+                                LIB.m_MainCharacterInfo.HitDiceTotal2 = oldHitDice2;
                                 break;
                             }
                         }
@@ -241,9 +282,12 @@ namespace DnD_Character_Sheet
                             {
                                 LIB.m_MainCharacterInfo.ExperiencePoints = oldXP;
                                 LIB.m_MainCharacterInfo.Level1 = oldLevel1;
+                                LIB.m_MainCharacterInfo.HitDiceTotal1 = oldHitDice1;
                                 break;
                             }
-                            LIB.m_MainCharacterInfo.Level1 = newTotalLevel;
+                            MessageBox.Show("Will soon add a new form for level up instead of the previous message box.", "Future Implimentation", MessageBoxButtons.OK);
+                            LIB.m_MainCharacterInfo.HitDiceTotal1 += 1;
+                            LIB.m_MainCharacterInfo.Level1 += 1;
                         }
                     }
                     LIB.m_MainCharacterInfo.Calculate();
@@ -258,7 +302,7 @@ namespace DnD_Character_Sheet
         /// <param name="hitDiceSpin"></param>
         private void HitDice_ValueChanged(NumericUpDown hitDiceSpin)
         {
-            int oldTotal = LIB.m_MainCharacterInfo.HitDiceTotal;
+            int oldTotal = LIB.m_MainCharacterInfo.HitDiceTotal1;
             int newTotal = Convert.ToInt32(hitDiceSpin.Value);
             if (oldTotal != newTotal)
             {
@@ -267,24 +311,26 @@ namespace DnD_Character_Sheet
                     int maxHP = LIB.m_MainCharacterInfo.HP_Max;
                     for (; newTotal < oldTotal; newTotal++)
                     {
-                        var result = MessageBox.Show("Please roll a " + LIB.m_MainCharacterInfo.HitDice + " and record the value below.", "Roll Hit Dice", MessageBoxButtons.OKCancel);
+                        var result = MessageBox.Show("Please roll a " + LIB.m_MainCharacterInfo.HitDice1 + " and record the value below.", "Roll Hit Dice", MessageBoxButtons.OKCancel);
                         if (result == DialogResult.OK)
                         {
-                            LIB.m_MainCharacterInfo.HitDiceTotal = newTotal;
+                            LIB.m_MainCharacterInfo.HitDiceTotal1 -= 1;
                         }
                         else
                         {
                             HitDiceRemain_Spin.Value = oldTotal;
-                            LIB.m_MainCharacterInfo.HitDiceTotal = oldTotal;
+                            LIB.m_MainCharacterInfo.HitDiceTotal1 = oldTotal;
                             break;
                         }
                     }
                 }
                 else
                 {
-                    LIB.m_MainCharacterInfo.HitDiceTotal = newTotal;
+                    LIB.m_MainCharacterInfo.HitDiceTotal1 = newTotal;
                 }
             }
         }
+
+        #endregion
     }
 }

@@ -41,12 +41,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.LoadButton = new System.Windows.Forms.Button();
+            this.Load_Button = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.Character_Panel = new System.Windows.Forms.Panel();
             this.CharacterTabCtrl = new System.Windows.Forms.TabControl();
             this.Stats_Tab = new System.Windows.Forms.TabPage();
+            this.CurrencyExchange_Button = new System.Windows.Forms.Button();
+            this.SubClass_Label = new System.Windows.Forms.Label();
+            this.SubClass_TextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PP_Spin = new System.Windows.Forms.NumericUpDown();
             this.GP_Spin = new System.Windows.Forms.NumericUpDown();
@@ -75,18 +78,6 @@
             this.AC_Label = new System.Windows.Forms.Label();
             this.Speed_TextBox = new System.Windows.Forms.TextBox();
             this.AC_TextBox = new System.Windows.Forms.TextBox();
-            this.Hair_Label = new System.Windows.Forms.Label();
-            this.Skin_Label = new System.Windows.Forms.Label();
-            this.Eye_Label = new System.Windows.Forms.Label();
-            this.Weight_Label = new System.Windows.Forms.Label();
-            this.Height_Label = new System.Windows.Forms.Label();
-            this.Age_Label = new System.Windows.Forms.Label();
-            this.Hair_TextBox = new System.Windows.Forms.TextBox();
-            this.Skin_TextBox = new System.Windows.Forms.TextBox();
-            this.Eye_TextBox = new System.Windows.Forms.TextBox();
-            this.Weight_TextBox = new System.Windows.Forms.TextBox();
-            this.Height_TextBox = new System.Windows.Forms.TextBox();
-            this.Age_TextBox = new System.Windows.Forms.TextBox();
             this.ProfBonus_Label = new System.Windows.Forms.Label();
             this.Perception_Title = new System.Windows.Forms.Label();
             this.Inspiration_CheckBox = new System.Windows.Forms.CheckBox();
@@ -146,6 +137,8 @@
             this.ProfBonusSign_Label = new System.Windows.Forms.Label();
             this.Perception_Label = new System.Windows.Forms.Label();
             this.Equipment_Tab = new System.Windows.Forms.TabPage();
+            this.Carry_Label = new System.Windows.Forms.Label();
+            this.Carry_TextBox = new System.Windows.Forms.TextBox();
             this.EquipSell_Button = new System.Windows.Forms.Button();
             this.EquipBuy_Button = new System.Windows.Forms.Button();
             this.Item_Grid = new System.Windows.Forms.DataGridView();
@@ -163,6 +156,18 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Backstory_Tab = new System.Windows.Forms.TabPage();
+            this.Hair_Label = new System.Windows.Forms.Label();
+            this.Skin_Label = new System.Windows.Forms.Label();
+            this.Eye_Label = new System.Windows.Forms.Label();
+            this.Weight_Label = new System.Windows.Forms.Label();
+            this.Height_Label = new System.Windows.Forms.Label();
+            this.Age_Label = new System.Windows.Forms.Label();
+            this.Hair_TextBox = new System.Windows.Forms.TextBox();
+            this.Skin_TextBox = new System.Windows.Forms.TextBox();
+            this.Eye_TextBox = new System.Windows.Forms.TextBox();
+            this.Weight_TextBox = new System.Windows.Forms.TextBox();
+            this.Height_TextBox = new System.Windows.Forms.TextBox();
+            this.Age_TextBox = new System.Windows.Forms.TextBox();
             this.Backstory_TextBox = new System.Windows.Forms.TextBox();
             this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -198,15 +203,15 @@
             this.Backstory_Tab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LoadButton
+            // Load_Button
             // 
-            this.LoadButton.Location = new System.Drawing.Point(12, 1202);
-            this.LoadButton.Name = "LoadButton";
-            this.LoadButton.Size = new System.Drawing.Size(144, 80);
-            this.LoadButton.TabIndex = 2;
-            this.LoadButton.Text = "Load";
-            this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new System.EventHandler(this.Button_Click);
+            this.Load_Button.Location = new System.Drawing.Point(12, 1202);
+            this.Load_Button.Name = "Load_Button";
+            this.Load_Button.Size = new System.Drawing.Size(144, 80);
+            this.Load_Button.TabIndex = 2;
+            this.Load_Button.Text = "Load";
+            this.Load_Button.UseVisualStyleBackColor = true;
+            this.Load_Button.Click += new System.EventHandler(this.Button_Click);
             // 
             // textBox4
             // 
@@ -249,6 +254,9 @@
             // 
             // Stats_Tab
             // 
+            this.Stats_Tab.Controls.Add(this.CurrencyExchange_Button);
+            this.Stats_Tab.Controls.Add(this.SubClass_Label);
+            this.Stats_Tab.Controls.Add(this.SubClass_TextBox);
             this.Stats_Tab.Controls.Add(this.pictureBox1);
             this.Stats_Tab.Controls.Add(this.PP_Spin);
             this.Stats_Tab.Controls.Add(this.GP_Spin);
@@ -277,18 +285,6 @@
             this.Stats_Tab.Controls.Add(this.AC_Label);
             this.Stats_Tab.Controls.Add(this.Speed_TextBox);
             this.Stats_Tab.Controls.Add(this.AC_TextBox);
-            this.Stats_Tab.Controls.Add(this.Hair_Label);
-            this.Stats_Tab.Controls.Add(this.Skin_Label);
-            this.Stats_Tab.Controls.Add(this.Eye_Label);
-            this.Stats_Tab.Controls.Add(this.Weight_Label);
-            this.Stats_Tab.Controls.Add(this.Height_Label);
-            this.Stats_Tab.Controls.Add(this.Age_Label);
-            this.Stats_Tab.Controls.Add(this.Hair_TextBox);
-            this.Stats_Tab.Controls.Add(this.Skin_TextBox);
-            this.Stats_Tab.Controls.Add(this.Eye_TextBox);
-            this.Stats_Tab.Controls.Add(this.Weight_TextBox);
-            this.Stats_Tab.Controls.Add(this.Height_TextBox);
-            this.Stats_Tab.Controls.Add(this.Age_TextBox);
             this.Stats_Tab.Controls.Add(this.ProfBonus_Label);
             this.Stats_Tab.Controls.Add(this.Perception_Title);
             this.Stats_Tab.Controls.Add(this.Inspiration_CheckBox);
@@ -331,6 +327,35 @@
             this.Stats_Tab.Text = "Character Stats";
             this.Stats_Tab.UseVisualStyleBackColor = true;
             // 
+            // CurrencyExchange_Button
+            // 
+            this.CurrencyExchange_Button.Location = new System.Drawing.Point(1895, 461);
+            this.CurrencyExchange_Button.Name = "CurrencyExchange_Button";
+            this.CurrencyExchange_Button.Size = new System.Drawing.Size(120, 55);
+            this.CurrencyExchange_Button.TabIndex = 228;
+            this.CurrencyExchange_Button.Text = "Currency Exchange";
+            this.CurrencyExchange_Button.UseVisualStyleBackColor = true;
+            this.CurrencyExchange_Button.Click += new System.EventHandler(this.Button_Click);
+            // 
+            // SubClass_Label
+            // 
+            this.SubClass_Label.AutoSize = true;
+            this.SubClass_Label.Location = new System.Drawing.Point(538, 132);
+            this.SubClass_Label.Name = "SubClass_Label";
+            this.SubClass_Label.Size = new System.Drawing.Size(74, 20);
+            this.SubClass_Label.TabIndex = 227;
+            this.SubClass_Label.Text = "Subclass";
+            // 
+            // SubClass_TextBox
+            // 
+            this.SubClass_TextBox.Enabled = false;
+            this.SubClass_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubClass_TextBox.Location = new System.Drawing.Point(515, 85);
+            this.SubClass_TextBox.Name = "SubClass_TextBox";
+            this.SubClass_TextBox.ReadOnly = true;
+            this.SubClass_TextBox.Size = new System.Drawing.Size(707, 41);
+            this.SubClass_TextBox.TabIndex = 226;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -353,6 +378,7 @@
             this.PP_Spin.Name = "PP_Spin";
             this.PP_Spin.Size = new System.Drawing.Size(120, 41);
             this.PP_Spin.TabIndex = 223;
+            this.PP_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // GP_Spin
             // 
@@ -366,6 +392,7 @@
             this.GP_Spin.Name = "GP_Spin";
             this.GP_Spin.Size = new System.Drawing.Size(120, 41);
             this.GP_Spin.TabIndex = 222;
+            this.GP_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // EP_Spin
             // 
@@ -379,6 +406,7 @@
             this.EP_Spin.Name = "EP_Spin";
             this.EP_Spin.Size = new System.Drawing.Size(120, 41);
             this.EP_Spin.TabIndex = 221;
+            this.EP_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // SP_Spin
             // 
@@ -392,6 +420,7 @@
             this.SP_Spin.Name = "SP_Spin";
             this.SP_Spin.Size = new System.Drawing.Size(120, 41);
             this.SP_Spin.TabIndex = 220;
+            this.SP_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // CP_Spin
             // 
@@ -405,6 +434,7 @@
             this.CP_Spin.Name = "CP_Spin";
             this.CP_Spin.Size = new System.Drawing.Size(120, 41);
             this.CP_Spin.TabIndex = 219;
+            this.CP_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // PP_Label
             // 
@@ -459,7 +489,7 @@
             // HitDiceRemaining2_Label
             // 
             this.HitDiceRemaining2_Label.AutoSize = true;
-            this.HitDiceRemaining2_Label.Location = new System.Drawing.Point(833, 251);
+            this.HitDiceRemaining2_Label.Location = new System.Drawing.Point(1517, 153);
             this.HitDiceRemaining2_Label.Name = "HitDiceRemaining2_Label";
             this.HitDiceRemaining2_Label.Size = new System.Drawing.Size(85, 20);
             this.HitDiceRemaining2_Label.TabIndex = 212;
@@ -468,7 +498,7 @@
             // DiceType_Label
             // 
             this.DiceType_Label.AutoSize = true;
-            this.DiceType_Label.Location = new System.Drawing.Point(988, 231);
+            this.DiceType_Label.Location = new System.Drawing.Point(1658, 133);
             this.DiceType_Label.Name = "DiceType_Label";
             this.DiceType_Label.Size = new System.Drawing.Size(103, 20);
             this.DiceType_Label.TabIndex = 211;
@@ -476,22 +506,22 @@
             // 
             // HitDiceRemain_Spin
             // 
-            this.HitDiceRemain_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.HitDiceRemain_Spin.Location = new System.Drawing.Point(837, 158);
+            this.HitDiceRemain_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.HitDiceRemain_Spin.Location = new System.Drawing.Point(1530, 85);
             this.HitDiceRemain_Spin.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
             this.HitDiceRemain_Spin.Name = "HitDiceRemain_Spin";
-            this.HitDiceRemain_Spin.Size = new System.Drawing.Size(87, 64);
+            this.HitDiceRemain_Spin.Size = new System.Drawing.Size(87, 41);
             this.HitDiceRemain_Spin.TabIndex = 210;
             this.HitDiceRemain_Spin.ValueChanged += new System.EventHandler(this.Spin_ValueChanged);
             // 
             // HPTemp_Spin
             // 
             this.HPTemp_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.HPTemp_Spin.Location = new System.Drawing.Point(1435, 162);
+            this.HPTemp_Spin.Location = new System.Drawing.Point(1110, 161);
             this.HPTemp_Spin.Name = "HPTemp_Spin";
             this.HPTemp_Spin.Size = new System.Drawing.Size(117, 64);
             this.HPTemp_Spin.TabIndex = 209;
@@ -500,7 +530,7 @@
             // HPCurrent_Spin
             // 
             this.HPCurrent_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.HPCurrent_Spin.Location = new System.Drawing.Point(1286, 162);
+            this.HPCurrent_Spin.Location = new System.Drawing.Point(961, 161);
             this.HPCurrent_Spin.Maximum = new decimal(new int[] {
             999,
             0,
@@ -528,7 +558,7 @@
             // HitDiceRemaining1_Label
             // 
             this.HitDiceRemaining1_Label.AutoSize = true;
-            this.HitDiceRemaining1_Label.Location = new System.Drawing.Point(842, 231);
+            this.HitDiceRemaining1_Label.Location = new System.Drawing.Point(1526, 133);
             this.HitDiceRemaining1_Label.Name = "HitDiceRemaining1_Label";
             this.HitDiceRemaining1_Label.Size = new System.Drawing.Size(65, 20);
             this.HitDiceRemaining1_Label.TabIndex = 206;
@@ -537,7 +567,7 @@
             // HPTemp_Label
             // 
             this.HPTemp_Label.AutoSize = true;
-            this.HPTemp_Label.Location = new System.Drawing.Point(1450, 234);
+            this.HPTemp_Label.Location = new System.Drawing.Point(1125, 233);
             this.HPTemp_Label.Name = "HPTemp_Label";
             this.HPTemp_Label.Size = new System.Drawing.Size(75, 20);
             this.HPTemp_Label.TabIndex = 205;
@@ -546,7 +576,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1297, 234);
+            this.label1.Location = new System.Drawing.Point(972, 233);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 204;
@@ -555,7 +585,7 @@
             // HPMax_Label
             // 
             this.HPMax_Label.AutoSize = true;
-            this.HPMax_Label.Location = new System.Drawing.Point(1179, 234);
+            this.HPMax_Label.Location = new System.Drawing.Point(854, 233);
             this.HPMax_Label.Name = "HPMax_Label";
             this.HPMax_Label.Size = new System.Drawing.Size(64, 20);
             this.HPMax_Label.TabIndex = 203;
@@ -564,19 +594,18 @@
             // DiceType_TextBox
             // 
             this.DiceType_TextBox.Enabled = false;
-            this.DiceType_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.DiceType_TextBox.Location = new System.Drawing.Point(960, 160);
+            this.DiceType_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.DiceType_TextBox.Location = new System.Drawing.Point(1634, 85);
             this.DiceType_TextBox.Name = "DiceType_TextBox";
             this.DiceType_TextBox.ReadOnly = true;
-            this.DiceType_TextBox.Size = new System.Drawing.Size(172, 64);
+            this.DiceType_TextBox.Size = new System.Drawing.Size(147, 41);
             this.DiceType_TextBox.TabIndex = 201;
-            this.DiceType_TextBox.Text = "0d0";
             this.DiceType_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HPMax_TextBox
             // 
             this.HPMax_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.HPMax_TextBox.Location = new System.Drawing.Point(1171, 161);
+            this.HPMax_TextBox.Location = new System.Drawing.Point(846, 160);
             this.HPMax_TextBox.Name = "HPMax_TextBox";
             this.HPMax_TextBox.Size = new System.Drawing.Size(82, 64);
             this.HPMax_TextBox.TabIndex = 198;
@@ -630,126 +659,6 @@
             this.AC_TextBox.TabIndex = 192;
             this.AC_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Hair_Label
-            // 
-            this.Hair_Label.AutoSize = true;
-            this.Hair_Label.Location = new System.Drawing.Point(1549, 133);
-            this.Hair_Label.Name = "Hair_Label";
-            this.Hair_Label.Size = new System.Drawing.Size(79, 20);
-            this.Hair_Label.TabIndex = 190;
-            this.Hair_Label.Text = "Hair Color";
-            // 
-            // Skin_Label
-            // 
-            this.Skin_Label.AutoSize = true;
-            this.Skin_Label.Location = new System.Drawing.Point(1359, 133);
-            this.Skin_Label.Name = "Skin_Label";
-            this.Skin_Label.Size = new System.Drawing.Size(81, 20);
-            this.Skin_Label.TabIndex = 189;
-            this.Skin_Label.Text = "Skin Color";
-            // 
-            // Eye_Label
-            // 
-            this.Eye_Label.AutoSize = true;
-            this.Eye_Label.Location = new System.Drawing.Point(1129, 133);
-            this.Eye_Label.Name = "Eye_Label";
-            this.Eye_Label.Size = new System.Drawing.Size(77, 20);
-            this.Eye_Label.TabIndex = 188;
-            this.Eye_Label.Text = "Eye Color";
-            // 
-            // Weight_Label
-            // 
-            this.Weight_Label.AutoSize = true;
-            this.Weight_Label.Location = new System.Drawing.Point(1022, 133);
-            this.Weight_Label.Name = "Weight_Label";
-            this.Weight_Label.Size = new System.Drawing.Size(59, 20);
-            this.Weight_Label.TabIndex = 187;
-            this.Weight_Label.Text = "Weight";
-            // 
-            // Height_Label
-            // 
-            this.Height_Label.AutoSize = true;
-            this.Height_Label.Location = new System.Drawing.Point(901, 133);
-            this.Height_Label.Name = "Height_Label";
-            this.Height_Label.Size = new System.Drawing.Size(56, 20);
-            this.Height_Label.TabIndex = 186;
-            this.Height_Label.Text = "Height";
-            // 
-            // Age_Label
-            // 
-            this.Age_Label.AutoSize = true;
-            this.Age_Label.Location = new System.Drawing.Point(807, 131);
-            this.Age_Label.Name = "Age_Label";
-            this.Age_Label.Size = new System.Drawing.Size(38, 20);
-            this.Age_Label.TabIndex = 185;
-            this.Age_Label.Text = "Age";
-            // 
-            // Hair_TextBox
-            // 
-            this.Hair_TextBox.Enabled = false;
-            this.Hair_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hair_TextBox.Location = new System.Drawing.Point(1502, 84);
-            this.Hair_TextBox.Name = "Hair_TextBox";
-            this.Hair_TextBox.ReadOnly = true;
-            this.Hair_TextBox.Size = new System.Drawing.Size(188, 41);
-            this.Hair_TextBox.TabIndex = 184;
-            this.Hair_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Skin_TextBox
-            // 
-            this.Skin_TextBox.Enabled = false;
-            this.Skin_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Skin_TextBox.Location = new System.Drawing.Point(1303, 84);
-            this.Skin_TextBox.Name = "Skin_TextBox";
-            this.Skin_TextBox.ReadOnly = true;
-            this.Skin_TextBox.Size = new System.Drawing.Size(188, 41);
-            this.Skin_TextBox.TabIndex = 183;
-            this.Skin_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Eye_TextBox
-            // 
-            this.Eye_TextBox.Enabled = false;
-            this.Eye_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eye_TextBox.Location = new System.Drawing.Point(1104, 84);
-            this.Eye_TextBox.Name = "Eye_TextBox";
-            this.Eye_TextBox.ReadOnly = true;
-            this.Eye_TextBox.Size = new System.Drawing.Size(188, 41);
-            this.Eye_TextBox.TabIndex = 182;
-            this.Eye_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Weight_TextBox
-            // 
-            this.Weight_TextBox.Enabled = false;
-            this.Weight_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Weight_TextBox.Location = new System.Drawing.Point(1017, 84);
-            this.Weight_TextBox.Name = "Weight_TextBox";
-            this.Weight_TextBox.ReadOnly = true;
-            this.Weight_TextBox.Size = new System.Drawing.Size(76, 41);
-            this.Weight_TextBox.TabIndex = 181;
-            this.Weight_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Height_TextBox
-            // 
-            this.Height_TextBox.Enabled = false;
-            this.Height_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Height_TextBox.Location = new System.Drawing.Point(890, 83);
-            this.Height_TextBox.Name = "Height_TextBox";
-            this.Height_TextBox.ReadOnly = true;
-            this.Height_TextBox.Size = new System.Drawing.Size(113, 41);
-            this.Height_TextBox.TabIndex = 180;
-            this.Height_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Age_TextBox
-            // 
-            this.Age_TextBox.Enabled = false;
-            this.Age_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Age_TextBox.Location = new System.Drawing.Point(798, 82);
-            this.Age_TextBox.Name = "Age_TextBox";
-            this.Age_TextBox.ReadOnly = true;
-            this.Age_TextBox.Size = new System.Drawing.Size(81, 41);
-            this.Age_TextBox.TabIndex = 179;
-            this.Age_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // ProfBonus_Label
             // 
             this.ProfBonus_Label.AutoSize = true;
@@ -786,7 +695,7 @@
             // 
             this.XP_Spin.AutoSize = true;
             this.XP_Spin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.XP_Spin.Location = new System.Drawing.Point(515, 81);
+            this.XP_Spin.Location = new System.Drawing.Point(1228, 86);
             this.XP_Spin.Maximum = new decimal(new int[] {
             500000,
             0,
@@ -822,7 +731,7 @@
             // Race_Label
             // 
             this.Race_Label.AutoSize = true;
-            this.Race_Label.Location = new System.Drawing.Point(906, 54);
+            this.Race_Label.Location = new System.Drawing.Point(899, 54);
             this.Race_Label.Name = "Race_Label";
             this.Race_Label.Size = new System.Drawing.Size(47, 20);
             this.Race_Label.TabIndex = 171;
@@ -831,7 +740,7 @@
             // Subrace_Label
             // 
             this.Subrace_Label.AutoSize = true;
-            this.Subrace_Label.Location = new System.Drawing.Point(1137, 54);
+            this.Subrace_Label.Location = new System.Drawing.Point(1149, 54);
             this.Subrace_Label.Name = "Subrace_Label";
             this.Subrace_Label.Size = new System.Drawing.Size(69, 20);
             this.Subrace_Label.TabIndex = 170;
@@ -840,7 +749,7 @@
             // Background_Label
             // 
             this.Background_Label.AutoSize = true;
-            this.Background_Label.Location = new System.Drawing.Point(1359, 54);
+            this.Background_Label.Location = new System.Drawing.Point(1451, 55);
             this.Background_Label.Name = "Background_Label";
             this.Background_Label.Size = new System.Drawing.Size(95, 20);
             this.Background_Label.TabIndex = 169;
@@ -849,7 +758,7 @@
             // Alignment_label
             // 
             this.Alignment_label.AutoSize = true;
-            this.Alignment_label.Location = new System.Drawing.Point(1743, 54);
+            this.Alignment_label.Location = new System.Drawing.Point(1835, 55);
             this.Alignment_label.Name = "Alignment_label";
             this.Alignment_label.Size = new System.Drawing.Size(80, 20);
             this.Alignment_label.TabIndex = 168;
@@ -858,7 +767,7 @@
             // XP_Label
             // 
             this.XP_Label.AutoSize = true;
-            this.XP_Label.Location = new System.Drawing.Point(520, 130);
+            this.XP_Label.Location = new System.Drawing.Point(1233, 135);
             this.XP_Label.Name = "XP_Label";
             this.XP_Label.Size = new System.Drawing.Size(136, 20);
             this.XP_Label.TabIndex = 167;
@@ -867,7 +776,7 @@
             // Lavel_Label
             // 
             this.Lavel_Label.AutoSize = true;
-            this.Lavel_Label.Location = new System.Drawing.Point(686, 130);
+            this.Lavel_Label.Location = new System.Drawing.Point(1430, 132);
             this.Lavel_Label.Name = "Lavel_Label";
             this.Lavel_Label.Size = new System.Drawing.Size(46, 20);
             this.Lavel_Label.TabIndex = 166;
@@ -876,7 +785,7 @@
             // Player_Label
             // 
             this.Player_Label.AutoSize = true;
-            this.Player_Label.Location = new System.Drawing.Point(1743, 137);
+            this.Player_Label.Location = new System.Drawing.Point(1817, 132);
             this.Player_Label.Name = "Player_Label";
             this.Player_Label.Size = new System.Drawing.Size(98, 20);
             this.Player_Label.TabIndex = 165;
@@ -1212,7 +1121,7 @@
             // PlayerName_TextBox
             // 
             this.PlayerName_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerName_TextBox.Location = new System.Drawing.Point(1701, 85);
+            this.PlayerName_TextBox.Location = new System.Drawing.Point(1791, 83);
             this.PlayerName_TextBox.Name = "PlayerName_TextBox";
             this.PlayerName_TextBox.ReadOnly = true;
             this.PlayerName_TextBox.Size = new System.Drawing.Size(246, 41);
@@ -1291,19 +1200,18 @@
             // 
             this.Level_TextBox.Enabled = false;
             this.Level_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Level_TextBox.Location = new System.Drawing.Point(681, 81);
+            this.Level_TextBox.Location = new System.Drawing.Point(1388, 84);
             this.Level_TextBox.Name = "Level_TextBox";
             this.Level_TextBox.ReadOnly = true;
-            this.Level_TextBox.Size = new System.Drawing.Size(106, 41);
+            this.Level_TextBox.Size = new System.Drawing.Size(127, 41);
             this.Level_TextBox.TabIndex = 146;
-            this.Level_TextBox.Text = "20 / 20";
             this.Level_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Alignment_TextBox
             // 
             this.Alignment_TextBox.Enabled = false;
             this.Alignment_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Alignment_TextBox.Location = new System.Drawing.Point(1700, 3);
+            this.Alignment_TextBox.Location = new System.Drawing.Point(1790, 4);
             this.Alignment_TextBox.Name = "Alignment_TextBox";
             this.Alignment_TextBox.ReadOnly = true;
             this.Alignment_TextBox.Size = new System.Drawing.Size(247, 41);
@@ -1313,30 +1221,30 @@
             // 
             this.Background_TextBox.Enabled = false;
             this.Background_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Background_TextBox.Location = new System.Drawing.Point(1303, 3);
+            this.Background_TextBox.Location = new System.Drawing.Point(1388, 4);
             this.Background_TextBox.Name = "Background_TextBox";
             this.Background_TextBox.ReadOnly = true;
-            this.Background_TextBox.Size = new System.Drawing.Size(386, 41);
+            this.Background_TextBox.Size = new System.Drawing.Size(393, 41);
             this.Background_TextBox.TabIndex = 144;
             // 
             // Subrace_TextBox
             // 
             this.Subrace_TextBox.Enabled = false;
             this.Subrace_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subrace_TextBox.Location = new System.Drawing.Point(1076, 3);
+            this.Subrace_TextBox.Location = new System.Drawing.Point(1122, 4);
             this.Subrace_TextBox.Name = "Subrace_TextBox";
             this.Subrace_TextBox.ReadOnly = true;
-            this.Subrace_TextBox.Size = new System.Drawing.Size(216, 41);
+            this.Subrace_TextBox.Size = new System.Drawing.Size(255, 41);
             this.Subrace_TextBox.TabIndex = 143;
             // 
             // Race_TextBox
             // 
             this.Race_TextBox.Enabled = false;
             this.Race_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Race_TextBox.Location = new System.Drawing.Point(846, 3);
+            this.Race_TextBox.Location = new System.Drawing.Point(866, 4);
             this.Race_TextBox.Name = "Race_TextBox";
             this.Race_TextBox.ReadOnly = true;
-            this.Race_TextBox.Size = new System.Drawing.Size(219, 41);
+            this.Race_TextBox.Size = new System.Drawing.Size(245, 41);
             this.Race_TextBox.TabIndex = 142;
             // 
             // Class_TextBox
@@ -1346,9 +1254,8 @@
             this.Class_TextBox.Location = new System.Drawing.Point(515, 4);
             this.Class_TextBox.Name = "Class_TextBox";
             this.Class_TextBox.ReadOnly = true;
-            this.Class_TextBox.Size = new System.Drawing.Size(311, 41);
+            this.Class_TextBox.Size = new System.Drawing.Size(340, 41);
             this.Class_TextBox.TabIndex = 141;
-            this.Class_TextBox.Text = "Barbarian / Barbarian";
             // 
             // CharName_TextBox
             // 
@@ -1454,6 +1361,8 @@
             // 
             // Equipment_Tab
             // 
+            this.Equipment_Tab.Controls.Add(this.Carry_Label);
+            this.Equipment_Tab.Controls.Add(this.Carry_TextBox);
             this.Equipment_Tab.Controls.Add(this.EquipSell_Button);
             this.Equipment_Tab.Controls.Add(this.EquipBuy_Button);
             this.Equipment_Tab.Controls.Add(this.Item_Grid);
@@ -1465,6 +1374,26 @@
             this.Equipment_Tab.Text = "Equipment";
             this.Equipment_Tab.UseVisualStyleBackColor = true;
             // 
+            // Carry_Label
+            // 
+            this.Carry_Label.AutoSize = true;
+            this.Carry_Label.Location = new System.Drawing.Point(749, 1083);
+            this.Carry_Label.Name = "Carry_Label";
+            this.Carry_Label.Size = new System.Drawing.Size(132, 20);
+            this.Carry_Label.TabIndex = 220;
+            this.Carry_Label.Text = "Carrying Capacity";
+            // 
+            // Carry_TextBox
+            // 
+            this.Carry_TextBox.Enabled = false;
+            this.Carry_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Carry_TextBox.Location = new System.Drawing.Point(730, 1035);
+            this.Carry_TextBox.Name = "Carry_TextBox";
+            this.Carry_TextBox.ReadOnly = true;
+            this.Carry_TextBox.Size = new System.Drawing.Size(191, 41);
+            this.Carry_TextBox.TabIndex = 219;
+            this.Carry_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // EquipSell_Button
             // 
             this.EquipSell_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1474,6 +1403,7 @@
             this.EquipSell_Button.TabIndex = 218;
             this.EquipSell_Button.Text = "Sell";
             this.EquipSell_Button.UseVisualStyleBackColor = true;
+            this.EquipSell_Button.Click += new System.EventHandler(this.Button_Click);
             // 
             // EquipBuy_Button
             // 
@@ -1484,6 +1414,7 @@
             this.EquipBuy_Button.TabIndex = 217;
             this.EquipBuy_Button.Text = "Buy";
             this.EquipBuy_Button.UseVisualStyleBackColor = true;
+            this.EquipBuy_Button.Click += new System.EventHandler(this.Button_Click);
             // 
             // Item_Grid
             // 
@@ -1687,6 +1618,18 @@
             // 
             // Backstory_Tab
             // 
+            this.Backstory_Tab.Controls.Add(this.Hair_Label);
+            this.Backstory_Tab.Controls.Add(this.Skin_Label);
+            this.Backstory_Tab.Controls.Add(this.Eye_Label);
+            this.Backstory_Tab.Controls.Add(this.Weight_Label);
+            this.Backstory_Tab.Controls.Add(this.Height_Label);
+            this.Backstory_Tab.Controls.Add(this.Age_Label);
+            this.Backstory_Tab.Controls.Add(this.Hair_TextBox);
+            this.Backstory_Tab.Controls.Add(this.Skin_TextBox);
+            this.Backstory_Tab.Controls.Add(this.Eye_TextBox);
+            this.Backstory_Tab.Controls.Add(this.Weight_TextBox);
+            this.Backstory_Tab.Controls.Add(this.Height_TextBox);
+            this.Backstory_Tab.Controls.Add(this.Age_TextBox);
             this.Backstory_Tab.Controls.Add(this.Backstory_TextBox);
             this.Backstory_Tab.Controls.Add(this.Info_TextBox);
             this.Backstory_Tab.Location = new System.Drawing.Point(4, 29);
@@ -1697,22 +1640,142 @@
             this.Backstory_Tab.Text = "Backstory";
             this.Backstory_Tab.UseVisualStyleBackColor = true;
             // 
+            // Hair_Label
+            // 
+            this.Hair_Label.AutoSize = true;
+            this.Hair_Label.Location = new System.Drawing.Point(759, 57);
+            this.Hair_Label.Name = "Hair_Label";
+            this.Hair_Label.Size = new System.Drawing.Size(79, 20);
+            this.Hair_Label.TabIndex = 205;
+            this.Hair_Label.Text = "Hair Color";
+            // 
+            // Skin_Label
+            // 
+            this.Skin_Label.AutoSize = true;
+            this.Skin_Label.Location = new System.Drawing.Point(569, 57);
+            this.Skin_Label.Name = "Skin_Label";
+            this.Skin_Label.Size = new System.Drawing.Size(81, 20);
+            this.Skin_Label.TabIndex = 204;
+            this.Skin_Label.Text = "Skin Color";
+            // 
+            // Eye_Label
+            // 
+            this.Eye_Label.AutoSize = true;
+            this.Eye_Label.Location = new System.Drawing.Point(339, 57);
+            this.Eye_Label.Name = "Eye_Label";
+            this.Eye_Label.Size = new System.Drawing.Size(77, 20);
+            this.Eye_Label.TabIndex = 203;
+            this.Eye_Label.Text = "Eye Color";
+            // 
+            // Weight_Label
+            // 
+            this.Weight_Label.AutoSize = true;
+            this.Weight_Label.Location = new System.Drawing.Point(232, 57);
+            this.Weight_Label.Name = "Weight_Label";
+            this.Weight_Label.Size = new System.Drawing.Size(59, 20);
+            this.Weight_Label.TabIndex = 202;
+            this.Weight_Label.Text = "Weight";
+            // 
+            // Height_Label
+            // 
+            this.Height_Label.AutoSize = true;
+            this.Height_Label.Location = new System.Drawing.Point(111, 57);
+            this.Height_Label.Name = "Height_Label";
+            this.Height_Label.Size = new System.Drawing.Size(56, 20);
+            this.Height_Label.TabIndex = 201;
+            this.Height_Label.Text = "Height";
+            // 
+            // Age_Label
+            // 
+            this.Age_Label.AutoSize = true;
+            this.Age_Label.Location = new System.Drawing.Point(17, 55);
+            this.Age_Label.Name = "Age_Label";
+            this.Age_Label.Size = new System.Drawing.Size(38, 20);
+            this.Age_Label.TabIndex = 200;
+            this.Age_Label.Text = "Age";
+            // 
+            // Hair_TextBox
+            // 
+            this.Hair_TextBox.Enabled = false;
+            this.Hair_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hair_TextBox.Location = new System.Drawing.Point(712, 8);
+            this.Hair_TextBox.Name = "Hair_TextBox";
+            this.Hair_TextBox.ReadOnly = true;
+            this.Hair_TextBox.Size = new System.Drawing.Size(188, 41);
+            this.Hair_TextBox.TabIndex = 199;
+            this.Hair_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Skin_TextBox
+            // 
+            this.Skin_TextBox.Enabled = false;
+            this.Skin_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Skin_TextBox.Location = new System.Drawing.Point(513, 8);
+            this.Skin_TextBox.Name = "Skin_TextBox";
+            this.Skin_TextBox.ReadOnly = true;
+            this.Skin_TextBox.Size = new System.Drawing.Size(188, 41);
+            this.Skin_TextBox.TabIndex = 198;
+            this.Skin_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Eye_TextBox
+            // 
+            this.Eye_TextBox.Enabled = false;
+            this.Eye_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eye_TextBox.Location = new System.Drawing.Point(314, 8);
+            this.Eye_TextBox.Name = "Eye_TextBox";
+            this.Eye_TextBox.ReadOnly = true;
+            this.Eye_TextBox.Size = new System.Drawing.Size(188, 41);
+            this.Eye_TextBox.TabIndex = 197;
+            this.Eye_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Weight_TextBox
+            // 
+            this.Weight_TextBox.Enabled = false;
+            this.Weight_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Weight_TextBox.Location = new System.Drawing.Point(227, 8);
+            this.Weight_TextBox.Name = "Weight_TextBox";
+            this.Weight_TextBox.ReadOnly = true;
+            this.Weight_TextBox.Size = new System.Drawing.Size(76, 41);
+            this.Weight_TextBox.TabIndex = 196;
+            this.Weight_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Height_TextBox
+            // 
+            this.Height_TextBox.Enabled = false;
+            this.Height_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Height_TextBox.Location = new System.Drawing.Point(100, 7);
+            this.Height_TextBox.Name = "Height_TextBox";
+            this.Height_TextBox.ReadOnly = true;
+            this.Height_TextBox.Size = new System.Drawing.Size(113, 41);
+            this.Height_TextBox.TabIndex = 195;
+            this.Height_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Age_TextBox
+            // 
+            this.Age_TextBox.Enabled = false;
+            this.Age_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Age_TextBox.Location = new System.Drawing.Point(8, 6);
+            this.Age_TextBox.Name = "Age_TextBox";
+            this.Age_TextBox.ReadOnly = true;
+            this.Age_TextBox.Size = new System.Drawing.Size(81, 41);
+            this.Age_TextBox.TabIndex = 194;
+            this.Age_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Backstory_TextBox
             // 
-            this.Backstory_TextBox.Location = new System.Drawing.Point(8, 6);
+            this.Backstory_TextBox.Location = new System.Drawing.Point(8, 87);
             this.Backstory_TextBox.Multiline = true;
             this.Backstory_TextBox.Name = "Backstory_TextBox";
             this.Backstory_TextBox.ReadOnly = true;
-            this.Backstory_TextBox.Size = new System.Drawing.Size(1437, 1057);
+            this.Backstory_TextBox.Size = new System.Drawing.Size(1437, 976);
             this.Backstory_TextBox.TabIndex = 193;
             // 
             // Info_TextBox
             // 
-            this.Info_TextBox.Location = new System.Drawing.Point(1469, 6);
+            this.Info_TextBox.Location = new System.Drawing.Point(1469, 87);
             this.Info_TextBox.Multiline = true;
             this.Info_TextBox.Name = "Info_TextBox";
             this.Info_TextBox.ReadOnly = true;
-            this.Info_TextBox.Size = new System.Drawing.Size(559, 473);
+            this.Info_TextBox.Size = new System.Drawing.Size(559, 392);
             this.Info_TextBox.TabIndex = 192;
             // 
             // button1
@@ -1735,7 +1798,7 @@
             this.Controls.Add(this.Character_Panel);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.LoadButton);
+            this.Controls.Add(this.Load_Button);
             this.MaximumSize = new System.Drawing.Size(2080, 1343);
             this.Name = "CharacterInfo";
             this.Text = "Main Character Information";
@@ -1774,6 +1837,7 @@
             this.Str_Group.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Str_Spin)).EndInit();
             this.Equipment_Tab.ResumeLayout(false);
+            this.Equipment_Tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Equipment_Grid)).EndInit();
             this.Backstory_Tab.ResumeLayout(false);
@@ -1784,7 +1848,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button LoadButton;
+        private System.Windows.Forms.Button Load_Button;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel Character_Panel;
@@ -1802,18 +1866,6 @@
         private System.Windows.Forms.Label AC_Label;
         private System.Windows.Forms.TextBox Speed_TextBox;
         private System.Windows.Forms.TextBox AC_TextBox;
-        private System.Windows.Forms.Label Hair_Label;
-        private System.Windows.Forms.Label Skin_Label;
-        private System.Windows.Forms.Label Eye_Label;
-        private System.Windows.Forms.Label Weight_Label;
-        private System.Windows.Forms.Label Height_Label;
-        private System.Windows.Forms.Label Age_Label;
-        private System.Windows.Forms.TextBox Hair_TextBox;
-        private System.Windows.Forms.TextBox Skin_TextBox;
-        private System.Windows.Forms.TextBox Eye_TextBox;
-        private System.Windows.Forms.TextBox Weight_TextBox;
-        private System.Windows.Forms.TextBox Height_TextBox;
-        private System.Windows.Forms.TextBox Age_TextBox;
         private System.Windows.Forms.Label ProfBonus_Label;
         private System.Windows.Forms.Label Perception_Title;
         private System.Windows.Forms.CheckBox Inspiration_CheckBox;
@@ -1909,6 +1961,23 @@
         private System.Windows.Forms.NumericUpDown Wis_Spin;
         private System.Windows.Forms.NumericUpDown Dex_Spin;
         private System.Windows.Forms.NumericUpDown Str_Spin;
+        private System.Windows.Forms.Label SubClass_Label;
+        private System.Windows.Forms.TextBox SubClass_TextBox;
+        private System.Windows.Forms.Label Hair_Label;
+        private System.Windows.Forms.Label Skin_Label;
+        private System.Windows.Forms.Label Eye_Label;
+        private System.Windows.Forms.Label Weight_Label;
+        private System.Windows.Forms.Label Height_Label;
+        private System.Windows.Forms.Label Age_Label;
+        private System.Windows.Forms.TextBox Hair_TextBox;
+        private System.Windows.Forms.TextBox Skin_TextBox;
+        private System.Windows.Forms.TextBox Eye_TextBox;
+        private System.Windows.Forms.TextBox Weight_TextBox;
+        private System.Windows.Forms.TextBox Height_TextBox;
+        private System.Windows.Forms.TextBox Age_TextBox;
+        private System.Windows.Forms.Label Carry_Label;
+        private System.Windows.Forms.TextBox Carry_TextBox;
+        private System.Windows.Forms.Button CurrencyExchange_Button;
     }
 }
 

@@ -109,6 +109,8 @@ namespace DnD_Character_Sheet
         // Top Level
         public static readonly string Class1 = "Class1";
         public static readonly string Class2 = "Class2";
+        public static readonly string SubClass1 = "SubClass1";
+        public static readonly string SubClass2 = "SubClass2";
         public static readonly string Level1 = "Level1";
         public static readonly string Level2 = "Level2";
         public static readonly string Background = "Background";
@@ -117,12 +119,6 @@ namespace DnD_Character_Sheet
         public static readonly string Subrace = "Subrace";
         public static readonly string Alignment = "Alignment";
         public static readonly string ExperiencePoints = "ExperiencePoints";
-        public static readonly string Age = "Age";
-        public static readonly string Height = "Height";
-        public static readonly string Weight = "Weight";
-        public static readonly string EyeColor = "EyeColor";
-        public static readonly string SkinColor = "SkinColor";
-        public static readonly string HairColor = "HairColor";
         public static readonly string Inspiration = "Inspiration";
         public static readonly string ArmorClass = "ArmorClass";
         public static readonly string Initiative = "Initiative";
@@ -130,8 +126,10 @@ namespace DnD_Character_Sheet
         public static readonly string HP_Max = "HP_Max";
         public static readonly string HP_Current = "HP_Current";
         public static readonly string HP_Temp = "HP_Temp";
-        public static readonly string HitDice = "HitDice";
-        public static readonly string HitDiceTotal = "HitDiceTotal";
+        public static readonly string HitDice1 = "HitDice1";
+        public static readonly string HitDice2 = "HitDice2";
+        public static readonly string HitDiceTotal1 = "HitDiceTotal1";
+        public static readonly string HitDiceTotal2 = "HitDiceTotal2";
 
         // Attributes
         public const string Strength = "Strength";
@@ -172,13 +170,19 @@ namespace DnD_Character_Sheet
         public static readonly string CharismaSave = "CharismaSave";
 
         // Money
-        public static readonly string Copper = "Copper";
-        public static readonly string Silver = "Silver";
-        public static readonly string Electrum = "Electrum";
-        public static readonly string Gold = "Gold";
-        public static readonly string Platinum = "Platinum";
+        public const string Copper = "Copper";
+        public const string Silver = "Silver";
+        public const string Electrum = "Electrum";
+        public const string Gold = "Gold";
+        public const string Platinum = "Platinum";
 
         // Backstory
+        public static readonly string Age = "Age";
+        public static readonly string Height = "Height";
+        public static readonly string Weight = "Weight";
+        public static readonly string EyeColor = "EyeColor";
+        public static readonly string SkinColor = "SkinColor";
+        public static readonly string HairColor = "HairColor";
         public static readonly string PersonalityTraits = "PersonalityTraits";
         public static readonly string Ideals = "Ideals";
         public static readonly string Bonds = "Bonds";
@@ -216,15 +220,28 @@ namespace DnD_Character_Sheet
 
         #region UI Elements
 
-        public static readonly string SkillsCheckList = "Skills_CheckList";
-        public static readonly string SavesCheckList = "Saves_CheckList";
-        public const string LoadButton = "LoadButton";
+        // Check Lists
+        public static readonly string Skills_CheckList = "Skills_CheckList";
+        public static readonly string Saves_CheckList = "Saves_CheckList";
+
+        // Buttons
+        public const string Load_Button = "Load_Button";
         public const string button1 = "button1";
+        public const string EquipBuy_Button = "EquipBuy_Button";
+        public const string EquipSell_Button = "EquipSell_Button";
+        public const string CurrencyExchange_Button = "CurrencyExchange_Button";
+
+        // Numeric Spins
         public const string XP_Spin = "XP_Spin";
         public const string HitDiceRemain_Spin = "HitDiceRemain_Spin";
         public const string Initiative_Spin = "Initiative_Spin";
         public const string HPCurrent_Spin = "HPCurrent_Spin";
         public const string HPTemp_Spin = "HPTemp_Spin";
+        public const string CP_Spin = "CP_Spin";
+        public const string SP_Spin = "SP_Spin";
+        public const string EP_Spin = "EP_Spin";
+        public const string GP_Spin = "GP_Spin";
+        public const string PP_Spin = "PP_Spin";
 
         #endregion
     }

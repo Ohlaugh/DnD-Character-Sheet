@@ -14,6 +14,7 @@ using LC = DnD_Character_Sheet.Constants;
 using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
 using CALC = DnD_Character_Sheet.Calculations;
 using LIB = DnD_Character_Sheet.Library;
+using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
@@ -39,7 +40,7 @@ namespace DnD_Character_Sheet
 
             switch (button.Name)
             {
-                case (LC.LoadButton):
+                case (LC.Load_Button):
                     {
                         LoadCharacter characterLoader = new LoadCharacter();
                         if (characterLoader.Load())
@@ -60,6 +61,31 @@ namespace DnD_Character_Sheet
                         {
                             Character_Panel.Show();
                         }
+                        break;
+                    }
+                case (LC.EquipBuy_Button):
+                    {
+                        MessageBox.Show("Will soon add a new form for buying Gear.", "Future Implimentation", MessageBoxButtons.OK);
+                        break;
+                    }
+                case (LC.EquipSell_Button):
+                    {
+                        MessageBox.Show("Will soon add a new form for selling Gear.", "Future Implimentation", MessageBoxButtons.OK);
+                        break;
+                    }
+                case (LC.CurrencyExchange_Button):
+                    {
+                        MessageBox.Show("Will soon add a new form for the user to decide what they want to convert. " +
+                            "For now all this does is convert gold to silver or silver to gold.", "Future Implimentation", MessageBoxButtons.OK);
+                        if (LIB.m_MainCharacterInfo.Money.Gold != 0)
+                        {
+                            CLIB.Money.Convert(LC.Gold, LC.Silver, LIB.m_MainCharacterInfo.Money.Gold);
+                        }
+                        else if (LIB.m_MainCharacterInfo.Money.Silver != 0)
+                        {
+                            CLIB.Money.Convert(LC.Silver, LC.Gold, LIB.m_MainCharacterInfo.Money.Silver);
+                        }
+                        UpdateMoney();
                         break;
                     }
                 default:
@@ -103,11 +129,11 @@ namespace DnD_Character_Sheet
             string skillName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
 
 
-            if (box.Name == LC.SkillsCheckList)
+            if (box.Name == LC.Skills_CheckList)
             {
                 Skills_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
             }
-            else if (box.Name == LC.SavesCheckList)
+            else if (box.Name == LC.Saves_CheckList)
             {
                 Saves_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
             }
@@ -123,11 +149,11 @@ namespace DnD_Character_Sheet
         private void CheckList_LostFocus(object sender, EventArgs e)
         {
             CheckedListBox box = (CheckedListBox)sender;
-            if (box.Name == LC.SkillsCheckList)
+            if (box.Name == LC.Skills_CheckList)
             {
                 Skills_CheckList.ClearSelected();
             }
-            else if (box.Name == LC.SavesCheckList)
+            else if (box.Name == LC.Saves_CheckList)
             {
                 Saves_CheckList.ClearSelected();
             }
@@ -141,6 +167,7 @@ namespace DnD_Character_Sheet
         private void Spin_ValueChanged(object sender, EventArgs e)
         {
             NumericUpDown spinCtrl = (NumericUpDown)sender;
+            int spinValue = Convert.ToInt32(spinCtrl.Value);
             switch (spinCtrl.Name)
             {
                 case (LC.XP_Spin):
@@ -155,17 +182,42 @@ namespace DnD_Character_Sheet
                     }
                 case (LC.Initiative_Spin):
                     {
-                        LIB.m_MainCharacterInfo.Initiative = Convert.ToInt32(spinCtrl.Value);
+                        LIB.m_MainCharacterInfo.Initiative = spinValue;
                         break;
                     }
                 case (LC.HPCurrent_Spin):
                     {
-                        LIB.m_MainCharacterInfo.HP_Current = Convert.ToInt32(spinCtrl.Value);
+                        LIB.m_MainCharacterInfo.HP_Current = spinValue;
                         break;
                     }
                 case (LC.HPTemp_Spin):
                     {
-                        LIB.m_MainCharacterInfo.HP_Temp = Convert.ToInt32(spinCtrl.Value);
+                        LIB.m_MainCharacterInfo.HP_Temp = spinValue;
+                        break;
+                    }
+                case (LC.CP_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Money.Copper = spinValue;
+                        break;
+                    }
+                case (LC.SP_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Money.Silver = spinValue;
+                        break;
+                    }
+                case (LC.EP_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Money.Electrum = spinValue;
+                        break;
+                    }
+                case (LC.GP_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Money.Gold = spinValue;
+                        break;
+                    }
+                case (LC.PP_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Money.Platinum = spinValue;
                         break;
                     }
                 default:

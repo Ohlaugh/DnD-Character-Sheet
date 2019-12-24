@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LC = DnD_Character_Sheet.Constants;
 using CALC = DnD_Character_Sheet.Calculations;
+using LIB = DnD_Character_Sheet.Library;
 
 namespace DnD_Character_Sheet.Classes
 {
@@ -119,6 +120,184 @@ namespace DnD_Character_Sheet.Classes
             public int Electrum { get; set; }
             public int Gold { get; set; }
             public int Platinum { get; set; }
+
+            /// <summary>
+            /// This method converts the currency provided
+            /// </summary>
+            /// <param name="CurrencyFrom">Currency Converting From</param>
+            /// <param name="CurrencyTo">Currency Converting To</param>
+            /// <param name="value">Value of Currency that is being converted</param>
+            public static void Convert(string CurrencyFrom, string CurrencyTo, int value)
+            {
+                switch (CurrencyFrom)
+                {
+                    case (LC.Copper):
+                        {
+                            LIB.m_MainCharacterInfo.Money.Copper -= value;
+                            switch (CurrencyTo)
+                            {
+                                case (LC.Silver):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Silver += value / 10;
+                                        LIB.m_MainCharacterInfo.Money.Copper += value % 10;
+                                        break;
+                                    }
+                                case (LC.Electrum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Electrum += value / 50;
+                                        LIB.m_MainCharacterInfo.Money.Copper += value % 50;
+                                        break;
+                                    }
+                                case (LC.Gold):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Gold += value / 100;
+                                        LIB.m_MainCharacterInfo.Money.Copper += value % 100;
+                                        break;
+                                    }
+                                case (LC.Platinum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Platinum += value / 1000;
+                                        LIB.m_MainCharacterInfo.Money.Copper += value % 1000;
+                                        break;
+                                    }
+                                default:
+                                    LIB.m_MainCharacterInfo.Money.Copper += value;
+                                    break;
+                            }
+                            break;
+                        }
+                    case (LC.Silver):
+                        {
+                            LIB.m_MainCharacterInfo.Money.Silver -= value;
+                            switch (CurrencyTo)
+                            {
+                                case (LC.Copper):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Copper += value * 10;
+                                        break;
+                                    }
+                                case (LC.Electrum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Electrum += value / 5;
+                                        LIB.m_MainCharacterInfo.Money.Silver += value % 5;
+                                        break;
+                                    }
+                                case (LC.Gold):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Gold += value / 10;
+                                        LIB.m_MainCharacterInfo.Money.Silver += value % 10;
+                                        break;
+                                    }
+                                case (LC.Platinum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Platinum += value / 100;
+                                        LIB.m_MainCharacterInfo.Money.Silver += value % 100;
+                                        break;
+                                    }
+                                default:
+                                    LIB.m_MainCharacterInfo.Money.Silver += value;
+                                    break;
+                            }
+                            break;
+                        }
+                    case (LC.Electrum):
+                        {
+                            LIB.m_MainCharacterInfo.Money.Electrum -= value;
+                            switch (CurrencyTo)
+                            {
+                                case (LC.Copper):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Copper += value * 50;
+                                        break;
+                                    }
+                                case (LC.Silver):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Silver += value * 5;
+                                        break;
+                                    }
+                                case (LC.Gold):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Gold += value / 2;
+                                        LIB.m_MainCharacterInfo.Money.Electrum += value % 2;
+                                        break;
+                                    }
+                                case (LC.Platinum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Platinum += value / 20;
+                                        LIB.m_MainCharacterInfo.Money.Electrum += value % 20;
+                                        break;
+                                    }
+                                default:
+                                    LIB.m_MainCharacterInfo.Money.Electrum += value;
+                                    break;
+                            }
+                            break;
+                        }
+                    case (LC.Gold):
+                        {
+                            LIB.m_MainCharacterInfo.Money.Gold -= value;
+                            switch (CurrencyTo)
+                            {
+                                case (LC.Copper):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Copper += value * 100;
+                                        break;
+                                    }
+                                case (LC.Silver):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Silver += value * 10;
+                                        break;
+                                    }
+                                case (LC.Electrum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Electrum += value * 2;
+                                        break;
+                                    }
+                                case (LC.Platinum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Platinum += value / 10;
+                                        LIB.m_MainCharacterInfo.Money.Gold += value % 10;
+                                        break;
+                                    }
+                                default:
+                                    LIB.m_MainCharacterInfo.Money.Gold += value;
+                                    break;
+                            }
+                            break;
+                        }
+                    case (LC.Platinum):
+                        {
+                            switch (CurrencyTo)
+                            {
+                                case (LC.Copper):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Copper += value * 1000;
+                                        break;
+                                    }
+                                case (LC.Silver):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Silver += value * 100;
+                                        break;
+                                    }
+                                case (LC.Electrum):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Electrum += value * 20;
+                                        break;
+                                    }
+                                case (LC.Gold):
+                                    {
+                                        LIB.m_MainCharacterInfo.Money.Gold += value * 10;
+                                        break;
+                                    }
+                                default:
+                                    break;
+                            }
+                            break;
+                        }
+                    default:
+                        break;
+                }
+            }
         }
 
         #endregion

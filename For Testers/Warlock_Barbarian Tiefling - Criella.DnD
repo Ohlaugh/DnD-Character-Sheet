@@ -9,6 +9,14 @@
     <Value>Barbarian</Value>
   </Data>
   <Data>
+    <Key>SubClass1</Key>
+    <Value>The Great Old One</Value>
+  </Data>
+  <Data>
+    <Key>SubClass2</Key>
+    <Value>Path of the Berserker</Value>
+  </Data>
+  <Data>
     <Key>Level1</Key>
     <Value>2</Value>
   </Data>
@@ -113,12 +121,20 @@
     <Value>0</Value>
   </Data>
   <Data>
-    <Key>HitDice</Key>
-    <Value>1d8</Value>
+    <Key>HitDice1</Key>
+    <Value>d8</Value>
+  </Data>>
+  <Data>
+    <Key>HitDice2</Key>
+    <Value>d12</Value>
   </Data>
   <Data>
-    <Key>HitDiceTotal</Key>
-    <Value>1</Value>
+    <Key>HitDiceTotal1</Key>
+    <Value>2</Value>
+  </Data>
+  <Data>
+    <Key>HitDiceTotal2</Key>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>Copper</Key>

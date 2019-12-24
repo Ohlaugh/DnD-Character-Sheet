@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LIB = DnD_Character_Sheet.Library;
+using LC = DnD_Character_Sheet.Constants;
 
 namespace DnD_Character_Sheet
 {
-    public static class Calculations
+    public class Calculations
     {
         public static string CalcBonus(bool proficient, int modifier)
         {

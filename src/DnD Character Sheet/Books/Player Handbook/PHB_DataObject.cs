@@ -54,7 +54,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         /// </summary>
         private static void AddArmor()
         {
-            #region LC.Light Armor
+            #region Light Armor
             LIB.m_ArmorLibrary.Add("Padded",
                 new CLIB.Armor_Class
                 {
@@ -146,7 +146,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
             #endregion
 
-            #region LC.Heavy Armor
+            #region Heavy Armor
             LIB.m_ArmorLibrary.Add("Ring Mail",
                 new CLIB.Armor_Class
                 {

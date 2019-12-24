@@ -32,13 +32,13 @@ namespace DnD_Character_Sheet
                 ClearLibrary();
                 m_CharacterName = xDoc.GetElementsByTagName(LC.CharacterSheet)[0].Attributes[0].Value;
 
-                PopulateCharData(xDoc);
-                PopulateProfData(xDoc);
-                PopulateItems(xDoc);
-                PopulateWeapons(xDoc);
-                PopulateArmor(xDoc);
-                PopulateBookData(xDoc);
-                PopulateBackgroundData(xDoc);
+                GatherCharData(xDoc);
+                GatherProfData(xDoc);
+                GatherItemData(xDoc);
+                GatherWeaponData(xDoc);
+                GatherArmorData(xDoc);
+                GatherBookData(xDoc);
+                GatherBackgroundData(xDoc);
                 stream.Close();
                 PopulateCharacterInformation();
                 m_CharacterLoaded = true;
@@ -47,7 +47,7 @@ namespace DnD_Character_Sheet
             return false;
         }
 
-        private void PopulateCharData(XmlDocument xDoc)
+        private void GatherCharData(XmlDocument xDoc)
         {
             XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Data);
             foreach (XmlNode node in nodeList)
@@ -58,7 +58,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void PopulateProfData(XmlDocument xDoc)
+        private void GatherProfData(XmlDocument xDoc)
         {
             XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Proficient);
             foreach (XmlNode node in nodeList)
@@ -69,7 +69,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void PopulateItems(XmlDocument xDoc)
+        private void GatherItemData(XmlDocument xDoc)
         {
             XmlNode itemsNode = xDoc.GetElementsByTagName(LC.Items)[0];
             XmlNodeList items = itemsNode.SelectNodes(LC.Item);
@@ -87,7 +87,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void PopulateWeapons(XmlDocument xDoc)
+        private void GatherWeaponData(XmlDocument xDoc)
         {
             XmlNode itemsNode = xDoc.GetElementsByTagName(LC.Items)[0];
             XmlNodeList weapons = itemsNode.SelectNodes(LC.Weapon);
@@ -118,7 +118,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void PopulateArmor(XmlDocument xDoc)
+        private void GatherArmorData(XmlDocument xDoc)
         {
             XmlNode itemsNode = xDoc.GetElementsByTagName(LC.Items)[0];
             XmlNodeList armor = itemsNode.SelectNodes(LC.Armor);
@@ -140,7 +140,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void PopulateBookData(XmlDocument xDoc)
+        private void GatherBookData(XmlDocument xDoc)
         {
             XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Book);
             foreach (XmlNode node in nodeList)
@@ -151,7 +151,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void PopulateBackgroundData(XmlDocument xDoc)
+        private void GatherBackgroundData(XmlDocument xDoc)
         {
             XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.BackgroundInfo);
             foreach (XmlNode node in nodeList)
@@ -170,6 +170,8 @@ namespace DnD_Character_Sheet
                 CharacterName = m_CharacterName,
                 Class1 = m_CharData[LC.Class1],
                 Class2 = m_CharData[LC.Class2],
+                SubClass1 = m_CharData[LC.SubClass1],
+                SubClass2 = m_CharData[LC.SubClass2],
                 Level1 = Convert.ToInt32(m_CharData[LC.Level1]),
                 Level2 = Convert.ToInt32(m_CharData[LC.Level2]),
                 Background = m_CharData[LC.Background],
@@ -238,8 +240,10 @@ namespace DnD_Character_Sheet
                 HP_Max = Convert.ToInt32(m_CharData[LC.HP_Max]),
                 HP_Current = Convert.ToInt32(m_CharData[LC.HP_Current]),
                 HP_Temp = Convert.ToInt32(m_CharData[LC.HP_Temp]),
-                HitDice = m_CharData[LC.HitDice],
-                HitDiceTotal = Convert.ToInt32(m_CharData[LC.HitDiceTotal]),
+                HitDice1 = m_CharData[LC.HitDice1],
+                HitDice2 = m_CharData[LC.HitDice2],
+                HitDiceTotal1 = Convert.ToInt32(m_CharData[LC.HitDiceTotal1]),
+                HitDiceTotal2 = Convert.ToInt32(m_CharData[LC.HitDiceTotal2]),
                 Money = new CLIB.Money()
                 {
                     Copper = Convert.ToInt32(m_CharData[LC.Copper]),

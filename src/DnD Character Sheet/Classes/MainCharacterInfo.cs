@@ -15,6 +15,8 @@ namespace DnD_Character_Sheet
         public string CharacterName { get; set; }
         public string Class1 { get; set; }
         public string Class2 { get; set; }
+        public string SubClass1 { get; set; }
+        public string SubClass2 { get; set; }
         public bool Multiclass { get => Class2 != ""; }
         public int TotalLevel { get => Level1 + Level2; }
         public int Level1 { get; set; }
@@ -50,8 +52,10 @@ namespace DnD_Character_Sheet
         public int HP_Max { get; set; }
         public int HP_Current { get; set; }
         public int HP_Temp { get; set; }
-        public string HitDice { get; set; }
-        public int HitDiceTotal { get; set; }
+        public string HitDice1 { get; set; }
+        public string HitDice2 { get; set; }
+        public int HitDiceTotal1 { get; set; }
+        public int HitDiceTotal2 { get; set; }
         // Death Saves?
         // Attacks and Spellcasting
         public CLIB.Money Money { get; set; }
@@ -72,6 +76,8 @@ namespace DnD_Character_Sheet
         public Dictionary<string, CLIB.Item_Class> Items { get; set; }
         public Dictionary<string, CLIB.Weapon_Class> Weapons { get; set; }
         public Dictionary<string, CLIB.Armor_Class> Armor { get; set; }
+        public double CarryingCapacity { get => Attributes.Strength * 15; }
+        public double CarryingWeight { get; set; }
 
         public string Backstory { get; set; }
 
