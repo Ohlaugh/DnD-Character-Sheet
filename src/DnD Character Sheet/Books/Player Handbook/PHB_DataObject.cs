@@ -895,6 +895,17 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Description = "A bucket can hold 3 gallons of liquid, or 1/2 cubic foot of solid material."
                 });
 
+            LIB.m_ItemLibrary.Add("Burglar's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "16 gp",
+                    Weight = 47.5,
+                    Description = "Includes a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, " +
+                    "a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a " +
+                    "waterskin. The pack also has 50 feet of hempen rope strapped to the side of it."
+                });
+
             #endregion
 
             #region C Items
@@ -1063,6 +1074,30 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #endregion
 
+            #region D Items
+
+            LIB.m_ItemLibrary.Add("Diplomat's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "39 gp",
+                    Weight = 36,
+                    Description = "Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, " +
+                    "an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap."
+                });
+
+            LIB.m_ItemLibrary.Add("Dungeoneer's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "12 gp",
+                    Weight = 61.5,
+                    Description = "Includes a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days " +
+                    "of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it."
+                });
+
+            #endregion
+
             #region E Items
 
             LIB.m_ItemLibrary.Add("Emblem",
@@ -1074,6 +1109,26 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Description = "A holy symbol is a representation of a god or pantheon. A cleric or paladin can use a holy " +
                     "symbol as a spellcasting focus, as described in the Spellcasting section. To use the symbol in this way, " +
                     "the caster must hold it in hand, wear it visibly, or bear it on a shield."
+                });
+
+            LIB.m_ItemLibrary.Add("Entertainer's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "40 gp",
+                    Weight = 38,
+                    Description = "Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, " +
+                    "and a disguise kit."
+                });
+
+            LIB.m_ItemLibrary.Add("Explorer's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "10 gp",
+                    Weight = 59,
+                    Description = "Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, " +
+                    "and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it."
                 });
 
             #endregion
@@ -1457,6 +1512,16 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "components is called a component pouch."
                 });
 
+            LIB.m_ItemLibrary.Add("Priest's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "19 gp",
+                    Weight = 24,
+                    Description = "Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, " +
+                    "a censer, vestments, 2 days of rations, and a waterskin."
+                });
+
             #endregion
 
             #region Q Items
@@ -1564,6 +1629,16 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Description = "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. " +
                     "With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to " +
                     "help determine their worth."
+                });
+
+            LIB.m_ItemLibrary.Add("Scholar's Pack",
+                new CLIB.Item_Class
+                {
+                    Style = LC.EquipmentPack,
+                    Cost = "40 gp",
+                    Weight = 10,
+                    Description = "Includes a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, " +
+                    "a little bag of sand, and a small knife."
                 });
 
             LIB.m_ItemLibrary.Add("Sealing Wax",

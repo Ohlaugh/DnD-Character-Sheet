@@ -217,6 +217,7 @@ namespace DnD_Character_Sheet
         public static readonly string Ammo = "Ammunition";
         public static readonly string DruidicFocus = "Druidic Focus";
         public static readonly string HolySymbol = "Holy Symbol";
+        public static readonly string EquipmentPack = "Equipment Pack";
 
         // Books
         public static readonly string Using_PlayerHB = "PlayerHandbook";
