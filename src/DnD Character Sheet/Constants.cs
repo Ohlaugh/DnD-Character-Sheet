@@ -212,6 +212,11 @@ namespace DnD_Character_Sheet
         public static readonly string Book = "Book";
         public static readonly string BackgroundInfo = "BackgroundInfo";
         public static readonly string Quantity = "Quantity";
+        public static readonly string AdventuringGear = "Adventuring Gear";
+        public static readonly string ArcaneFocus = "Arcane Focus";
+        public static readonly string Ammo = "Ammunition";
+        public static readonly string DruidicFocus = "Druidic Focus";
+        public static readonly string HolySymbol = "Holy Symbol";
 
         // Books
         public static readonly string Using_PlayerHB = "PlayerHandbook";

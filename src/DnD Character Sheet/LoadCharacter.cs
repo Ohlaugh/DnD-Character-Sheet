@@ -42,9 +42,9 @@ namespace DnD_Character_Sheet
                 stream.Close();
                 PopulateCharacterInformation();
                 m_CharacterLoaded = true;
-                return true;
+                return m_CharacterLoaded;
             }
-            return false;
+            return m_CharacterLoaded;
         }
 
         private void GatherCharData(XmlDocument xDoc)

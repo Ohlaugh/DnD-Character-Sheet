@@ -70,6 +70,13 @@ namespace DnD_Character_Sheet
         public static MainCharacterInfo m_MainCharacterInfo = new MainCharacterInfo();
 
         /// <summary>
+        /// This dictionary holds all information on which book the user has selected
+        /// Key: Book Name
+        /// Value: True = Using / False = Not Using
+        /// </summary>
+        public static Dictionary<string, bool> m_BookUtilization = new Dictionary<string, bool>();
+
+        /// <summary>
         /// This dictionary holds all information on each race
         /// Key: Race
         /// Value: New List<string>
@@ -77,12 +84,6 @@ namespace DnD_Character_Sheet
         /// </summary>
         public static Dictionary<string, List<string>> m_RaceLibrary = new Dictionary<string, List<string>>();
 
-        /// <summary>
-        /// This dictionary holds all information on which book the user has selected
-        /// Key: Book Name
-        /// Value: True = Using / False = Not Using
-        /// </summary>
-        public static Dictionary<string, bool> m_BookUtilization = new Dictionary<string, bool>();
 
         /// <summary>
         /// This dictionary holds all information on Armor from selected manuals
@@ -97,6 +98,13 @@ namespace DnD_Character_Sheet
         /// Value: New Weapon
         /// </summary>
         public static Dictionary<string, CLIB.Weapon_Class> m_WeaponLibrary = new Dictionary<string, CLIB.Weapon_Class>();
+
+        /// <summary>
+        /// This dictionary holds all information on Items from selected manuals
+        /// Key: Item Name
+        /// Value: New Item
+        /// </summary>
+        public static Dictionary<string, CLIB.Item_Class> m_ItemLibrary = new Dictionary<string, CLIB.Item_Class>();
 
         /// <summary>
         /// This bool indicates if a character has been loaded
@@ -116,10 +124,13 @@ namespace DnD_Character_Sheet
             m_ItemData.Clear();
             m_WeaponData.Clear();
             m_ArmorData.Clear();
+
             m_BookUtilization.Clear();
-            m_ArmorLibrary.Clear();
+
             m_RaceLibrary.Clear();
+            m_ArmorLibrary.Clear();
             m_WeaponLibrary.Clear();
+            m_ItemLibrary.Clear();
         }
 
         /// <summary>

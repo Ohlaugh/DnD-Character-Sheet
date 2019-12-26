@@ -15,8 +15,8 @@ namespace DnD_Character_Sheet.Forms
 {
     public partial class BuySellGearForm : Form
     {
-        private List<string> selectedItems = new List<string>();
-        private List<DataGridViewRow> selectedRows = new List<DataGridViewRow>();
+        private readonly List<string> selectedItems = new List<string>();
+        private readonly List<DataGridViewRow> selectedRows = new List<DataGridViewRow>();
 
         public BuySellGearForm(bool Buying)
         {
@@ -38,21 +38,26 @@ namespace DnD_Character_Sheet.Forms
         private void PopulateGrid(Dictionary<string, CLIB.Armor_Class> ArmorDictionary, Dictionary<string, CLIB.Weapon_Class> WeaponDictionary)
         {
             BuyEquipment_Grid.Rows.Clear();
-            foreach (var key in ArmorDictionary.Keys)
+            if (ArmorDictionary.Keys.Count > 0)
             {
-                CLIB.Armor_Class armor = ArmorDictionary[key];
-                string properties = string.Format(LC.ArmorProperties, armor.StrengthReq, armor.Disadvantage);
-                object[] param = { false, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
-                BuyEquipment_Grid.Rows.Add(param);
+                foreach (var key in ArmorDictionary.Keys)
+                {
+                    CLIB.Armor_Class armor = ArmorDictionary[key];
+                    string properties = string.Format(LC.ArmorProperties, armor.StrengthReq, armor.Disadvantage);
+                    object[] param = { false, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
+                    BuyEquipment_Grid.Rows.Add(param);
+                }
             }
-            foreach (var key in WeaponDictionary.Keys)
+            if (WeaponDictionary.Keys.Count > 0)
             {
-                CLIB.Weapon_Class weapon = WeaponDictionary[key];
-                string properties = string.Join(", ", weapon.Properties.ToArray());
-                object[] param = { false, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
-                BuyEquipment_Grid.Rows.Add(param);
+                foreach (var key in WeaponDictionary.Keys)
+                {
+                    CLIB.Weapon_Class weapon = WeaponDictionary[key];
+                    string properties = string.Join(", ", weapon.Properties.ToArray());
+                    object[] param = { false, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
+                    BuyEquipment_Grid.Rows.Add(param);
+                }
             }
-
         }
 
         private void BuyEquipment_Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
