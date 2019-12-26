@@ -65,7 +65,7 @@ namespace DnD_Character_Sheet
                     }
                 case (LC.EquipBuy_Button):
                     {
-                        MessageBox.Show("Will soon add a new form for buying Gear.", "Future Implimentation", MessageBoxButtons.OK);
+                        BuyEquipment();
                         break;
                     }
                 case (LC.EquipSell_Button):

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using DnD_Character_Sheet;
+using DnD_Character_Sheet.Forms;
 using LC = DnD_Character_Sheet.Constants;
 using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
 using CALC = DnD_Character_Sheet.Calculations;
@@ -178,7 +179,7 @@ namespace DnD_Character_Sheet
             foreach (var key in LIB.m_MainCharacterInfo.Item_List)
             {
                 CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
-                object[] param = { key, item.Cost, item.Weight + " lb.", item.Description };
+                object[] param = { key, item.Quantity, item.Cost, item.Weight + " lb.", item.Description };
                 LIB.m_MainCharacterInfo.CarryingWeight += item.Weight;
                 Item_Grid.Rows.Add(param);
             }
@@ -189,7 +190,7 @@ namespace DnD_Character_Sheet
 
                 string properties = string.Join(", ", weapon.Properties.ToArray());
 
-                object[] param = { weapon.Equipped, "Weapon", key, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
+                object[] param = { weapon.Equipped, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
                 LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight;
                 Equipment_Grid.Rows.Add(param);
             }
@@ -198,7 +199,7 @@ namespace DnD_Character_Sheet
             {
                 CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
                 string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
-                object[] param = { armor.Equipped, "Armor", key, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
+                object[] param = { armor.Equipped, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
                 LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight;
                 Equipment_Grid.Rows.Add(param);
             }
@@ -329,6 +330,13 @@ namespace DnD_Character_Sheet
                     LIB.m_MainCharacterInfo.HitDiceTotal1 = newTotal;
                 }
             }
+        }
+
+        private void BuyEquipment()
+        {
+            BuySellGearForm form = new BuySellGearForm();
+            form.ShowDialog();
+            UpdateGrids();
         }
 
         #endregion

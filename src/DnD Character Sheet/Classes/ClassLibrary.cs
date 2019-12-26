@@ -14,29 +14,25 @@ namespace DnD_Character_Sheet.Classes
         #region Items / Weapons / Armor
         public class Item_Class
         {
+            public string Style;
             public string Cost;
             public double Weight;
             public string Description;
+            public int Quantity = 1;
         }
 
-        public class Weapon_Class
+        public class Weapon_Class : Item_Class
         {
-            public string Style;
-            public string Cost;
             public string Damage;
-            public double Weight;
             public List<string> Properties;
             public bool Equipped;
         }
 
-        public class Armor_Class
+        public class Armor_Class :Item_Class
         {
-            public string Style;
-            public string Cost;
             public string ArmorClass;
             public int StrengthReq;
             public bool Disadvantage;
-            public double Weight;
             public bool Equipped;
         }
         #endregion

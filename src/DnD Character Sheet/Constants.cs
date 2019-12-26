@@ -94,14 +94,14 @@ namespace DnD_Character_Sheet
         public static readonly string Piercing = "{0} piercing";
         public static readonly string Slashing = "{0} slashing";
 
-        public static readonly string MeleeSimple = "Simple Melee Weapon";
-        public static readonly string MeleeMartial = "Martial Melee Weapon";
-        public static readonly string RangedSimple = "Simple Ranged Weapon";
-        public static readonly string RangedMartial = "Martial Ranged Weapon";
-        public static readonly string LightArmor = "Light Armor";
-        public static readonly string MediumArmor = "Medium Armor";
-        public static readonly string HeavyArmor = "Heavy Armor";
-        public static readonly string Shield = "Shield";
+        public const string MeleeSimple = "Simple Melee Weapon";
+        public const string MeleeMartial = "Martial Melee Weapon";
+        public const string RangedSimple = "Simple Ranged Weapon";
+        public const string RangedMartial = "Martial Ranged Weapon";
+        public const string LightArmor = "Light Armor";
+        public const string MediumArmor = "Medium Armor";
+        public const string HeavyArmor = "Heavy Armor";
+        public const string Shield = "Shield";
         #endregion
 
         #region Config File Constants
@@ -211,6 +211,7 @@ namespace DnD_Character_Sheet
         public static readonly string Disadvantage = "Disadvantage";
         public static readonly string Book = "Book";
         public static readonly string BackgroundInfo = "BackgroundInfo";
+        public static readonly string Quantity = "Quantity";
 
         // Books
         public static readonly string Using_PlayerHB = "PlayerHandbook";

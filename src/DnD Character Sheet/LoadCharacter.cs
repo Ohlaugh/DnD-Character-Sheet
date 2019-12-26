@@ -81,7 +81,8 @@ namespace DnD_Character_Sheet
                 {
                     Cost = itemNode.SelectSingleNode(LC.Cost).InnerText,
                     Weight = Convert.ToDouble(itemNode.SelectSingleNode(LC.Weight).InnerText),
-                    Description = itemNode.SelectSingleNode(LC.Description).InnerText
+                    Description = itemNode.SelectSingleNode(LC.Description).InnerText,
+                    Quantity = Convert.ToInt32(itemNode.SelectSingleNode(LC.Quantity).InnerText)
                 };
                 m_ItemData.Add(name, item);
             }
@@ -111,7 +112,8 @@ namespace DnD_Character_Sheet
                     Weight = Convert.ToDouble(weaponNode.SelectSingleNode(LC.Weight).InnerText),
                     Style = weaponNode.SelectSingleNode(LC.Style).InnerText,
                     Properties = properties,
-                    Equipped = Convert.ToBoolean(weaponNode.SelectSingleNode(LC.Equipped).InnerText)
+                    Equipped = Convert.ToBoolean(weaponNode.SelectSingleNode(LC.Equipped).InnerText),
+                    Quantity = Convert.ToInt32(weaponNode.SelectSingleNode(LC.Quantity).InnerText)
                 };                
 
                 m_WeaponData.Add(name, weapon);
@@ -134,7 +136,8 @@ namespace DnD_Character_Sheet
                     Equipped = Convert.ToBoolean(armorNode.SelectSingleNode(LC.Equipped).InnerText),
                     ArmorClass = armorNode.SelectSingleNode(LC.ArmorClass).InnerText,
                     StrengthReq = Convert.ToInt32(armorNode.SelectSingleNode(LC.StrengthReq).InnerText),
-                    Disadvantage = Convert.ToBoolean(armorNode.SelectSingleNode(LC.Disadvantage).InnerText)
+                    Disadvantage = Convert.ToBoolean(armorNode.SelectSingleNode(LC.Disadvantage).InnerText),
+                    Quantity = Convert.ToInt32(armorNode.SelectSingleNode(LC.Quantity).InnerText)
                 };
                 m_ArmorData.Add(name, item);
             }

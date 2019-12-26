@@ -279,6 +279,7 @@
       <Cost>25 gp</Cost>
       <Weight>1</Weight>
       <Description>As an action, you can splash the contents of this vial onto a creature within 5 feet or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</Description>
+      <Quantity>5</Quantity>
     </Item>
     
     <Weapon>
@@ -293,6 +294,7 @@
         <Property>Two-Handed</Property>
       </Properties>
       <Equipped>True</Equipped>
+      <Quantity>1</Quantity>
     </Weapon>
     
     <Armor>
@@ -304,6 +306,7 @@
       <Disadvantage>true</Disadvantage>
       <Weight>8</Weight>
       <Equipped>False</Equipped>
+      <Quantity>1</Quantity>
     </Armor>
   </Items>
   

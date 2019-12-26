@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterInfo));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Load_Button = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -142,19 +144,16 @@
             this.EquipSell_Button = new System.Windows.Forms.Button();
             this.EquipBuy_Button = new System.Windows.Forms.Button();
             this.Item_Grid = new System.Windows.Forms.DataGridView();
-            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Equipment_Grid = new System.Windows.Forms.DataGridView();
-            this.Equipped = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Damage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArmorClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Equipped_Gear = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Type_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Damage_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArmorClass_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Properties_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Backstory_Tab = new System.Windows.Forms.TabPage();
             this.Hair_Label = new System.Windows.Forms.Label();
             this.Skin_Label = new System.Windows.Forms.Label();
@@ -171,6 +170,11 @@
             this.Backstory_TextBox = new System.Windows.Forms.TextBox();
             this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Name_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Character_Panel.SuspendLayout();
             this.CharacterTabCtrl.SuspendLayout();
             this.Stats_Tab.SuspendLayout();
@@ -1424,69 +1428,19 @@
             this.Item_Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Item_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Item_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ItemName,
-            this.Cost,
-            this.Weight,
-            this.Description});
-            this.Item_Grid.Location = new System.Drawing.Point(1014, 3);
+            this.Name_Items,
+            this.Quantity_Items,
+            this.Cost_Items,
+            this.Weight_Items,
+            this.Description_Items});
+            this.Item_Grid.Location = new System.Drawing.Point(1193, 3);
             this.Item_Grid.Name = "Item_Grid";
             this.Item_Grid.RowHeadersVisible = false;
             this.Item_Grid.RowHeadersWidth = 62;
             this.Item_Grid.RowTemplate.Height = 28;
             this.Item_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Item_Grid.Size = new System.Drawing.Size(1028, 1004);
+            this.Item_Grid.Size = new System.Drawing.Size(849, 1004);
             this.Item_Grid.TabIndex = 216;
-            // 
-            // ItemName
-            // 
-            this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemName.DefaultCellStyle = dataGridViewCellStyle13;
-            this.ItemName.HeaderText = "Name";
-            this.ItemName.MinimumWidth = 8;
-            this.ItemName.Name = "ItemName";
-            this.ItemName.ReadOnly = true;
-            this.ItemName.Width = 87;
-            // 
-            // Cost
-            // 
-            this.Cost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cost.DefaultCellStyle = dataGridViewCellStyle14;
-            this.Cost.HeaderText = "Cost";
-            this.Cost.MinimumWidth = 8;
-            this.Cost.Name = "Cost";
-            this.Cost.ReadOnly = true;
-            this.Cost.Width = 78;
-            // 
-            // Weight
-            // 
-            this.Weight.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle15;
-            this.Weight.HeaderText = "Weight";
-            this.Weight.MinimumWidth = 8;
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            this.Weight.Width = 95;
-            // 
-            // Description
-            // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Description.DefaultCellStyle = dataGridViewCellStyle16;
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 300;
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
             // 
             // Equipment_Grid
             // 
@@ -1496,125 +1450,138 @@
             this.Equipment_Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Equipment_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Equipment_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Equipped,
-            this.Type,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Damage,
-            this.ArmorClass,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.Equipped_Gear,
+            this.Type_Gear,
+            this.Name_Gear,
+            this.Quantity_Gear,
+            this.Cost_Gear,
+            this.Damage_Gear,
+            this.ArmorClass_Gear,
+            this.Weight_Gear,
+            this.Properties_Gear});
             this.Equipment_Grid.Location = new System.Drawing.Point(0, 3);
             this.Equipment_Grid.Name = "Equipment_Grid";
             this.Equipment_Grid.RowHeadersVisible = false;
             this.Equipment_Grid.RowHeadersWidth = 62;
             this.Equipment_Grid.RowTemplate.Height = 28;
             this.Equipment_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Equipment_Grid.Size = new System.Drawing.Size(1008, 1004);
+            this.Equipment_Grid.Size = new System.Drawing.Size(1187, 1004);
             this.Equipment_Grid.TabIndex = 215;
             // 
-            // Equipped
+            // Equipped_Gear
             // 
-            this.Equipped.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.NullValue = false;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            this.Equipped.DefaultCellStyle = dataGridViewCellStyle17;
-            this.Equipped.HeaderText = "Equpped";
-            this.Equipped.MinimumWidth = 8;
-            this.Equipped.Name = "Equipped";
-            this.Equipped.Width = 80;
+            this.Equipped_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.NullValue = false;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.Equipped_Gear.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Equipped_Gear.HeaderText = "Equpped";
+            this.Equipped_Gear.MinimumWidth = 8;
+            this.Equipped_Gear.Name = "Equipped_Gear";
+            this.Equipped_Gear.Width = 80;
             // 
-            // Type
+            // Type_Gear
             // 
-            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Type.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 8;
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Width = 79;
+            this.Type_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Type_Gear.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Type_Gear.HeaderText = "Type";
+            this.Type_Gear.MinimumWidth = 8;
+            this.Type_Gear.Name = "Type_Gear";
+            this.Type_Gear.ReadOnly = true;
+            this.Type_Gear.Width = 79;
             // 
-            // dataGridViewTextBoxColumn1
+            // Name_Gear
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 87;
+            this.Name_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Name_Gear.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Name_Gear.HeaderText = "Name";
+            this.Name_Gear.MinimumWidth = 8;
+            this.Name_Gear.Name = "Name_Gear";
+            this.Name_Gear.ReadOnly = true;
+            this.Name_Gear.Width = 87;
             // 
-            // dataGridViewTextBoxColumn2
+            // Quantity_Gear
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cost";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 78;
+            this.Quantity_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Quantity_Gear.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Quantity_Gear.HeaderText = "Quantity";
+            this.Quantity_Gear.MinimumWidth = 8;
+            this.Quantity_Gear.Name = "Quantity_Gear";
+            this.Quantity_Gear.Width = 104;
             // 
-            // Damage
+            // Cost_Gear
             // 
-            this.Damage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Damage.DefaultCellStyle = dataGridViewCellStyle21;
-            this.Damage.HeaderText = "Damage";
-            this.Damage.MinimumWidth = 8;
-            this.Damage.Name = "Damage";
-            this.Damage.ReadOnly = true;
-            this.Damage.Width = 106;
+            this.Cost_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cost_Gear.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Cost_Gear.HeaderText = "Cost";
+            this.Cost_Gear.MinimumWidth = 8;
+            this.Cost_Gear.Name = "Cost_Gear";
+            this.Cost_Gear.ReadOnly = true;
+            this.Cost_Gear.Width = 78;
             // 
-            // ArmorClass
+            // Damage_Gear
             // 
-            this.ArmorClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ArmorClass.DefaultCellStyle = dataGridViewCellStyle22;
-            this.ArmorClass.HeaderText = "Armor Class";
-            this.ArmorClass.MinimumWidth = 8;
-            this.ArmorClass.Name = "ArmorClass";
-            this.ArmorClass.ReadOnly = true;
-            this.ArmorClass.Width = 131;
+            this.Damage_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Damage_Gear.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Damage_Gear.HeaderText = "Damage";
+            this.Damage_Gear.MinimumWidth = 8;
+            this.Damage_Gear.Name = "Damage_Gear";
+            this.Damage_Gear.ReadOnly = true;
+            this.Damage_Gear.Width = 106;
             // 
-            // dataGridViewTextBoxColumn3
+            // ArmorClass_Gear
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Weight";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 95;
+            this.ArmorClass_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ArmorClass_Gear.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ArmorClass_Gear.HeaderText = "Armor Class";
+            this.ArmorClass_Gear.MinimumWidth = 8;
+            this.ArmorClass_Gear.Name = "ArmorClass_Gear";
+            this.ArmorClass_Gear.ReadOnly = true;
+            this.ArmorClass_Gear.Width = 131;
             // 
-            // dataGridViewTextBoxColumn4
+            // Weight_Gear
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Properties";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.Weight_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight_Gear.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Weight_Gear.HeaderText = "Weight";
+            this.Weight_Gear.MinimumWidth = 8;
+            this.Weight_Gear.Name = "Weight_Gear";
+            this.Weight_Gear.ReadOnly = true;
+            this.Weight_Gear.Width = 95;
+            // 
+            // Properties_Gear
+            // 
+            this.Properties_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Properties_Gear.DefaultCellStyle = dataGridViewCellStyle14;
+            this.Properties_Gear.HeaderText = "Properties";
+            this.Properties_Gear.MinimumWidth = 150;
+            this.Properties_Gear.Name = "Properties_Gear";
+            this.Properties_Gear.ReadOnly = true;
             // 
             // Backstory_Tab
             // 
@@ -1788,6 +1755,69 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button_Click);
             // 
+            // Name_Items
+            // 
+            this.Name_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Name_Items.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Name_Items.HeaderText = "Name";
+            this.Name_Items.MinimumWidth = 8;
+            this.Name_Items.Name = "Name_Items";
+            this.Name_Items.ReadOnly = true;
+            this.Name_Items.Width = 87;
+            // 
+            // Quantity_Items
+            // 
+            this.Quantity_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Quantity_Items.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Quantity_Items.HeaderText = "Quantity";
+            this.Quantity_Items.MinimumWidth = 8;
+            this.Quantity_Items.Name = "Quantity_Items";
+            this.Quantity_Items.Width = 104;
+            // 
+            // Cost_Items
+            // 
+            this.Cost_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cost_Items.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Cost_Items.HeaderText = "Cost";
+            this.Cost_Items.MinimumWidth = 8;
+            this.Cost_Items.Name = "Cost_Items";
+            this.Cost_Items.ReadOnly = true;
+            this.Cost_Items.Width = 78;
+            // 
+            // Weight_Items
+            // 
+            this.Weight_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight_Items.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Weight_Items.HeaderText = "Weight";
+            this.Weight_Items.MinimumWidth = 8;
+            this.Weight_Items.Name = "Weight_Items";
+            this.Weight_Items.ReadOnly = true;
+            this.Weight_Items.Width = 95;
+            // 
+            // Description_Items
+            // 
+            this.Description_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Description_Items.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Description_Items.HeaderText = "Description";
+            this.Description_Items.MinimumWidth = 200;
+            this.Description_Items.Name = "Description_Items";
+            this.Description_Items.ReadOnly = true;
+            // 
             // CharacterInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1940,18 +1970,6 @@
         private System.Windows.Forms.Label SP_Label;
         private System.Windows.Forms.Label CP_Label;
         private System.Windows.Forms.DataGridView Item_Grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Equipped;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Damage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ArmorClass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EquipSell_Button;
         private System.Windows.Forms.Button EquipBuy_Button;
@@ -1978,6 +1996,20 @@
         private System.Windows.Forms.Label Carry_Label;
         private System.Windows.Forms.TextBox Carry_TextBox;
         private System.Windows.Forms.Button CurrencyExchange_Button;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Equipped_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Damage_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArmorClass_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Properties_Gear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description_Items;
     }
 }
 
