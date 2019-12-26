@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using DnD_Character_Sheet;
+using DnD_Character_Sheet.Forms;
 using LC = DnD_Character_Sheet.Constants;
 using PHB_DO = DnD_Character_Sheet.Books.Player_Handbook.PHB_DataObject;
 using CALC = DnD_Character_Sheet.Calculations;
@@ -65,12 +66,16 @@ namespace DnD_Character_Sheet
                     }
                 case (LC.EquipBuy_Button):
                     {
-                        BuyEquipment();
+                        BuySellGearForm form = new BuySellGearForm(true);
+                        form.ShowDialog();
+                        UpdateGrids();
                         break;
                     }
                 case (LC.EquipSell_Button):
                     {
-                        MessageBox.Show("Will soon add a new form for selling Gear.", "Future Implimentation", MessageBoxButtons.OK);
+                        BuySellGearForm form = new BuySellGearForm(false);
+                        form.ShowDialog();
+                        UpdateGrids();
                         break;
                     }
                 case (LC.CurrencyExchange_Button):

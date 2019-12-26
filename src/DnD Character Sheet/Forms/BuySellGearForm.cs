@@ -18,27 +18,38 @@ namespace DnD_Character_Sheet.Forms
         private List<string> selectedItems = new List<string>();
         private List<DataGridViewRow> selectedRows = new List<DataGridViewRow>();
 
-        public BuySellGearForm()
+        public BuySellGearForm(bool Buying)
         {
             InitializeComponent();
-            PopulateGrid();
+            if (Buying)
+            {
+                Sell_Button.Visible = false;
+                PopulateGrid(LIB.m_ArmorLibrary, LIB.m_WeaponLibrary);
+            }
+            else
+            {
+                Text = "Sell Gear";
+                BuyEquipment_Grid.Columns[0].HeaderText = "Sell";
+                Purchase_Button.Visible = false;
+                PopulateGrid(LIB.m_MainCharacterInfo.Armor, LIB.m_MainCharacterInfo.Weapons);
+            }
         }
 
-        private void PopulateGrid()
+        private void PopulateGrid(Dictionary<string, CLIB.Armor_Class> ArmorDictionary, Dictionary<string, CLIB.Weapon_Class> WeaponDictionary)
         {
             BuyEquipment_Grid.Rows.Clear();
-            foreach (var key in LIB.m_ArmorLibrary.Keys)
+            foreach (var key in ArmorDictionary.Keys)
             {
-                CLIB.Armor_Class armor = LIB.m_ArmorLibrary[key];
-                string properties = "Strength Required: " + armor.StrengthReq + Environment.NewLine + "Stealth Disadvantage: " + armor.Disadvantage;
-                object[] param = { armor.Equipped, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
+                CLIB.Armor_Class armor = ArmorDictionary[key];
+                string properties = string.Format(LC.ArmorProperties, armor.StrengthReq, armor.Disadvantage);
+                object[] param = { false, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
                 BuyEquipment_Grid.Rows.Add(param);
             }
-            foreach (var key in LIB.m_WeaponLibrary.Keys)
+            foreach (var key in WeaponDictionary.Keys)
             {
-                CLIB.Weapon_Class weapon = LIB.m_WeaponLibrary[key];
+                CLIB.Weapon_Class weapon = WeaponDictionary[key];
                 string properties = string.Join(", ", weapon.Properties.ToArray());
-                object[] param = { weapon.Equipped, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
+                object[] param = { false, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
                 BuyEquipment_Grid.Rows.Add(param);
             }
 
@@ -50,7 +61,7 @@ namespace DnD_Character_Sheet.Forms
             {
                 DataGridView grid = (DataGridView)sender;
                 DataGridViewRow row = grid.Rows[e.RowIndex];
-                string selectedItem = row.Cells["Name_Buy"].Value.ToString();
+                string selectedItem = row.Cells[LC.ItemName_Grid].Value.ToString();
                 if (selectedItems.Contains(selectedItem))
                 {
                     selectedItems.Remove(selectedItem);
@@ -68,8 +79,9 @@ namespace DnD_Character_Sheet.Forms
         {
             foreach (DataGridViewRow row in selectedRows)
             {
-                string key = row.Cells["Name_Buy"].Value.ToString();
-                int quantity = Convert.ToInt32(row.Cells["Quantity_Buy"].Value.ToString());
+                string key = row.Cells[LC.ItemName_Grid].Value.ToString();
+                int quantity = Convert.ToInt32(row.Cells[LC.Quantity_Grid].Value.ToString());
+
                 if (LIB.m_MainCharacterInfo.Armor.ContainsKey(key))
                 {
                     LIB.m_MainCharacterInfo.Armor[key].Quantity += quantity;
@@ -80,61 +92,44 @@ namespace DnD_Character_Sheet.Forms
                     LIB.m_MainCharacterInfo.Weapons[key].Quantity += quantity;
                     continue;
                 }
-                string style = row.Cells["Type_Buy"].Value.ToString();
-                string cost = row.Cells["Cost_Buy"].Value.ToString();
-                string armorClass = row.Cells["Armorclass_Buy"].Value.ToString();
-                string damage = row.Cells["Damage_Buy"].Value.ToString();
-                int weight = Convert.ToInt32(row.Cells["Weight_Buy"].Value.ToString().Split()[0]);
 
-                switch (style)
+                if (LIB.m_ArmorLibrary.ContainsKey(key))
                 {
-                    case (LC.LightArmor):
-                    case (LC.MediumArmor):
-                    case (LC.HeavyArmor):
-                    case (LC.Shield):
-                        {
-                            string[] properties = row.Cells["Properties_Buy"].Value.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-                            int strengthReq = Convert.ToInt32(properties[0].Split(':')[1]);
-                            bool disadvantage = Convert.ToBoolean(properties[1].Split(':')[1]);
+                    LIB.m_MainCharacterInfo.Armor.Add(key, LIB.m_ArmorLibrary[key]);
+                    LIB.m_MainCharacterInfo.Armor[key].Quantity = quantity;
+                }
+                else if (LIB.m_WeaponLibrary.ContainsKey(key))
+                {
+                    LIB.m_MainCharacterInfo.Weapons.Add(key, LIB.m_WeaponLibrary[key]);
+                    LIB.m_MainCharacterInfo.Weapons[key].Quantity = quantity;
+                }
+            }
+            Close();
+        }
 
-                            LIB.m_MainCharacterInfo.Armor.Add(key,
-                                new CLIB.Armor_Class
-                                {
-                                    Style = style,
-                                    Cost = cost,
-                                    ArmorClass = armorClass,
-                                    StrengthReq = strengthReq,
-                                    Disadvantage = disadvantage,
-                                    Weight = weight,
-                                    Quantity = quantity
-                                });
-                            break;
-                        }
-                    case (LC.MeleeSimple):
-                    case (LC.MeleeMartial):
-                    case (LC.RangedSimple):
-                    case (LC.RangedMartial):
-                        {
-                            string[] properties = row.Cells["Properties_Buy"].Value.ToString().Split(',');
-                            foreach (string property in properties)
-                            {
-                                property.Trim();
-                            }
-
-                            LIB.m_MainCharacterInfo.Weapons.Add(key,
-                                new CLIB.Weapon_Class
-                                {
-                                    Style = style,
-                                    Cost = cost,
-                                    Damage = damage,
-                                    Weight = weight,
-                                    Properties = properties.ToList(),
-                                    Quantity = quantity
-                                });
-                            break;
-                        }
-                    default:
-                        break;
+        private void Sell_Button_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in selectedRows)
+            {
+                string key = row.Cells[LC.ItemName_Grid].Value.ToString();
+                int quantity = Convert.ToInt32(row.Cells[LC.Quantity_Grid].Value.ToString());
+                if (LIB.m_MainCharacterInfo.Armor.ContainsKey(key))
+                {
+                    LIB.m_MainCharacterInfo.Armor[key].Quantity -= quantity;
+                    if (LIB.m_MainCharacterInfo.Armor[key].Quantity <= 0)
+                    {
+                        LIB.m_MainCharacterInfo.Armor.Remove(key);
+                    }
+                    continue;
+                }
+                if (LIB.m_MainCharacterInfo.Weapons.ContainsKey(key))
+                {
+                    LIB.m_MainCharacterInfo.Weapons[key].Quantity -= quantity;
+                    if (LIB.m_MainCharacterInfo.Weapons[key].Quantity <= 0)
+                    {
+                        LIB.m_MainCharacterInfo.Weapons.Remove(key);
+                    }
+                    continue;
                 }
             }
             Close();

@@ -221,6 +221,9 @@ namespace DnD_Character_Sheet
 
         #region UI Elements
 
+        // Format Strings
+        public static readonly string ArmorProperties = "Strength Required: {0}" + Environment.NewLine + "Stealth Disadvantage: {1}";
+
         // Check Lists
         public static readonly string Skills_CheckList = "Skills_CheckList";
         public static readonly string Saves_CheckList = "Saves_CheckList";
@@ -243,6 +246,16 @@ namespace DnD_Character_Sheet
         public const string EP_Spin = "EP_Spin";
         public const string GP_Spin = "GP_Spin";
         public const string PP_Spin = "PP_Spin";
+
+        // Buy/Sell Grid Column Names
+        public static readonly string ItemName_Grid = "ItemName";
+        public static readonly string Quantity_Grid = "Quantity";
+        public static readonly string Type_Grid = "Type";
+        public static readonly string Cost_Grid = "Cost";
+        public static readonly string Armorclass_Grid = "Armorclass";
+        public static readonly string Damage_Grid = "Damage";
+        public static readonly string Weight_Grid = "Weight";
+        public static readonly string Properties_Grid = "Properties";
 
         #endregion
     }
