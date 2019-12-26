@@ -78,6 +78,20 @@ namespace DnD_Character_Sheet
                         UpdateGrids();
                         break;
                     }
+                case (LC.ItemBuy_Button):
+                    {
+                        BuySellItemsForm form = new BuySellItemsForm(true);
+                        form.ShowDialog();
+                        UpdateGrids();
+                        break;
+                    }
+                case (LC.ItemSell_Button):
+                    {
+                        BuySellItemsForm form = new BuySellItemsForm(false);
+                        form.ShowDialog();
+                        UpdateGrids();
+                        break;
+                    }
                 case (LC.CurrencyExchange_Button):
                     {
                         MessageBox.Show("Will soon add a new form for the user to decide what they want to convert. " +

@@ -266,7 +266,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     }
                 });
 
-            LIB.m_WeaponLibrary.Add("LC.Light hammer",
+            LIB.m_WeaponLibrary.Add("Light hammer",
                 new CLIB.Weapon_Class
                 {
                     Style = LC.MeleeSimple,
@@ -571,7 +571,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #endregion
 
             #region Ranged Weapons
-            LIB.m_WeaponLibrary.Add("Crossbow, LC.Light",
+            LIB.m_WeaponLibrary.Add("Crossbow, Light",
                 new CLIB.Weapon_Class
                 {
                     Style = LC.RangedSimple,
@@ -656,7 +656,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     }
                 });
 
-            LIB.m_WeaponLibrary.Add("Crossbow, LC.Heavy",
+            LIB.m_WeaponLibrary.Add("Crossbow, Heavy",
                 new CLIB.Weapon_Class
                 {
                     Style = LC.RangedMartial,
@@ -714,7 +714,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 new CLIB.Item_Class
                 {
                     Style = LC.AdventuringGear,
-                    Cost = "50 gp",
+                    Cost = "25 gp",
                     Weight = 1,
                     Description = "As an action, you can splash the contents of this vial onto a creature within " +
                     "5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make " +
@@ -734,7 +734,16 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "fire damage at the start of each of its turns. A creature can end this damage by using its action " +
                     "to make a DC 10 Dexterity check to extinguish the flames."
                 });
-
+            
+            LIB.m_ItemLibrary.Add("Alms Box",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A small box for alms, typically found in a priest's pack."
+                });
+            
             LIB.m_ItemLibrary.Add("Amulet",
                 new CLIB.Item_Class
                 {
@@ -756,7 +765,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "poison for 1 hour. It confers no benefit to undead or constructs."
                 });
 
-            LIB.m_ItemLibrary.Add("Arrows (20)",
+            LIB.m_ItemLibrary.Add("Arrows",
                 new CLIB.Item_Class
                 {
                     Style = LC.Ammo,
@@ -766,7 +775,8 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from " +
                     "a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed " +
                     "weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute " +
-                    "to search the battlefield."
+                    "to search the battlefield.",
+                    Quantity = 20
                 });
 
             #endregion
@@ -853,7 +863,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "a block and tackle allows you to hoist up to four times the weight you can normally lift."
                 });
 
-            LIB.m_ItemLibrary.Add("Blowgun needles (50)",
+            LIB.m_ItemLibrary.Add("Blowgun needles",
                 new CLIB.Item_Class
                 {
                     Style = LC.Ammo,
@@ -863,7 +873,8 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition " +
                     "from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed " +
                     "weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to " +
-                    "search the battlefield."
+                    "search the battlefield.",
+                    Quantity = 50
                 });
 
             LIB.m_ItemLibrary.Add("Book",
@@ -875,6 +886,15 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Description = "A book might contain poetry, historical accounts, information pertaining to a particular " +
                     "field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be " +
                     "represented using text or pictures. A book of spells is a spellbook."
+                });
+
+            LIB.m_ItemLibrary.Add("Book of Lore",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A book of lore, typically found in a scholar's pack."
                 });
 
             LIB.m_ItemLibrary.Add("Bottle, Glass",
@@ -948,6 +968,15 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Weight = 1,
                     Description = "This cylindrical leather case can hold up to ten rolled-up sheets of paper or " +
                     "five rolled-up sheets of parchment."
+                });
+
+            LIB.m_ItemLibrary.Add("Censer)",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A censer, typically found in a priest's pack."
                 });
 
             LIB.m_ItemLibrary.Add("Chain (10 feet)",
@@ -1040,17 +1069,18 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "components that have a specific cost (as indicated in a spell's description)."
                 });
 
-            LIB.m_ItemLibrary.Add("Crossbow bolts (20)",
+            LIB.m_ItemLibrary.Add("Crossbow bolts",
                 new CLIB.Item_Class
                 {
                     Style = LC.Ammo,
-                    Cost = "1",
+                    Cost = "1 gp",
                     Weight = 1.5,
                     Description = "Crossbow bolts are used with a weapon that has the ammunition property to make a ranged " +
                     "attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition " +
                     "from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed " +
                     "weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to " +
-                    "search the battlefield."
+                    "search the battlefield.",
+                    Quantity = 20
                 });
 
             LIB.m_ItemLibrary.Add("Crowbar",
@@ -1075,6 +1105,17 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #endregion
 
             #region D Items
+
+            LIB.m_ItemLibrary.Add("Disguise Kit",
+                new CLIB.Item_Class
+                {
+                    Style = LC.Tool,
+                    Cost = "25 gp",
+                    Weight = 3,
+                    Description = "This pouch of cosmetics, hair dye, and small props lets you create disguises that change " +
+                    "your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability " +
+                    "checks you make to create a visual disguise."
+                });
 
             LIB.m_ItemLibrary.Add("Diplomat's Pack",
                 new CLIB.Item_Class
@@ -1263,6 +1304,15 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "dipped in a vial and leaves an ink trail when drawn across a surface."
                 });
 
+            LIB.m_ItemLibrary.Add("Block of Incense",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A block of incense, typically found in a priest's pack."
+                });
+
             #endregion
 
             #region J Items
@@ -1318,6 +1368,15 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     Description = "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional " +
                     "30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the " +
                     "hood, reducing the light to dim light in a 5-foot radius."
+                });
+
+            LIB.m_ItemLibrary.Add("Little Bag of Sand",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A small bag of sand, typically found in a scholar's pack."
                 });
 
             LIB.m_ItemLibrary.Add("Lock",
@@ -1678,7 +1737,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "into warm sealing wax, you leave an identifying mark."
                 });
 
-            LIB.m_ItemLibrary.Add("Sling Bullets (20)",
+            LIB.m_ItemLibrary.Add("Sling Bullets",
                 new CLIB.Item_Class
                 {
                     Style = LC.Ammo,
@@ -1688,7 +1747,17 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the " +
                     "ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load " +
                     "a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking " +
-                    "a minute to search the battlefield."
+                    "a minute to search the battlefield.",
+                    Quantity = 20
+                });
+
+            LIB.m_ItemLibrary.Add("Small Knife",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A small knife, typically found in a scholar's pack."
                 });
 
             LIB.m_ItemLibrary.Add("Soap",
@@ -1748,6 +1817,15 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                     "warlock, or wizard can use such an item as a spellcasting focus."
                 });
 
+            LIB.m_ItemLibrary.Add("String (10 feet)",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "A 10-foot length of string, typically found in a burglar's pack."
+                });
+
             #endregion
 
             #region T Items
@@ -1794,6 +1872,15 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #endregion
 
             #region V Items
+
+            LIB.m_ItemLibrary.Add("Vestments",
+                new CLIB.Item_Class
+                {
+                    Style = LC.AdventuringGear,
+                    Cost = "",
+                    Weight = 0,
+                    Description = "Religious clothing, typically found in a priest's pack."
+                });
 
             LIB.m_ItemLibrary.Add("Vial",
                 new CLIB.Item_Class

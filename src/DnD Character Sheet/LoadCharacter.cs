@@ -81,6 +81,7 @@ namespace DnD_Character_Sheet
                 {
                     Cost = itemNode.SelectSingleNode(LC.Cost).InnerText,
                     Weight = Convert.ToDouble(itemNode.SelectSingleNode(LC.Weight).InnerText),
+                    Style = itemNode.SelectSingleNode(LC.Style).InnerText,
                     Description = itemNode.SelectSingleNode(LC.Description).InnerText,
                     Quantity = Convert.ToInt32(itemNode.SelectSingleNode(LC.Quantity).InnerText)
                 };

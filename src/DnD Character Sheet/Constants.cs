@@ -218,6 +218,7 @@ namespace DnD_Character_Sheet
         public static readonly string DruidicFocus = "Druidic Focus";
         public static readonly string HolySymbol = "Holy Symbol";
         public static readonly string EquipmentPack = "Equipment Pack";
+        public static readonly string Tool = "Tool";
 
         // Books
         public static readonly string Using_PlayerHB = "PlayerHandbook";
@@ -240,6 +241,8 @@ namespace DnD_Character_Sheet
         public const string EquipBuy_Button = "EquipBuy_Button";
         public const string EquipSell_Button = "EquipSell_Button";
         public const string CurrencyExchange_Button = "CurrencyExchange_Button";
+        public const string ItemBuy_Button = "ItemBuy_Button";
+        public const string ItemSell_Button = "ItemSell_Button";
 
         // Numeric Spins
         public const string XP_Spin = "XP_Spin";

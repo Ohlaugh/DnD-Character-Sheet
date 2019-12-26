@@ -1150,6 +1150,9 @@
         Fe2arq2t2mO+2YH+tfXv+VBLNv/3/9hl6Ln/AoCwAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Type_Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Name_Items.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

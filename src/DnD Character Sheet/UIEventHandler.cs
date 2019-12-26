@@ -179,8 +179,8 @@ namespace DnD_Character_Sheet
             foreach (var key in LIB.m_MainCharacterInfo.Items.Keys)
             {
                 CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
-                object[] param = { key, item.Quantity, item.Cost, item.Weight + " lb.", item.Description };
-                LIB.m_MainCharacterInfo.CarryingWeight += item.Weight*item.Quantity;
+                object[] param = { item.Style, key, item.Quantity, item.Cost, item.Weight + " lb.", item.Description };
+                LIB.m_MainCharacterInfo.CarryingWeight += item.Weight * item.Quantity;
                 Item_Grid.Rows.Add(param);
             }
 
@@ -189,7 +189,7 @@ namespace DnD_Character_Sheet
                 CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
                 string properties = string.Join(", ", weapon.Properties.ToArray());
                 object[] param = { weapon.Equipped, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
-                LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight*weapon.Quantity;
+                LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight * weapon.Quantity;
                 Equipment_Grid.Rows.Add(param);
             }
 
@@ -198,7 +198,7 @@ namespace DnD_Character_Sheet
                 CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
                 string properties = string.Format(LC.ArmorProperties, armor.StrengthReq, armor.Disadvantage);
                 object[] param = { armor.Equipped, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
-                LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight*armor.Quantity;
+                LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight * armor.Quantity;
                 Equipment_Grid.Rows.Add(param);
             }
 
