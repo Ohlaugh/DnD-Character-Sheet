@@ -130,19 +130,19 @@ namespace DnD_Character_Sheet
             LIB.m_MainCharacterInfo.CarryingWeight = 0;
             foreach (var key in LIB.m_MainCharacterInfo.Items.Keys)
             {
-                CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
+                CLIB.Item item = LIB.m_MainCharacterInfo.Items[key];
                 LIB.m_MainCharacterInfo.CarryingWeight += item.Weight * item.Quantity;
             }
 
             foreach (var key in LIB.m_MainCharacterInfo.Weapons.Keys)
             {
-                CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
+                CLIB.Weapon weapon = LIB.m_MainCharacterInfo.Weapons[key];
                 LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight * weapon.Quantity;
             }
 
             foreach (var key in LIB.m_MainCharacterInfo.Armor.Keys)
             {
-                CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
+                CLIB.Armor armor = LIB.m_MainCharacterInfo.Armor[key];
                 LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight * armor.Quantity;
             }
         }

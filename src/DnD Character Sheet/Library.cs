@@ -38,21 +38,21 @@ namespace DnD_Character_Sheet
         ///     Key: Item Name
         ///     Value: New Item
         /// </summary>
-        public static Dictionary<string, CLIB.Item_Class> m_ItemData = new Dictionary<string, CLIB.Item_Class>();
+        public static Dictionary<string, CLIB.Item> m_ItemData = new Dictionary<string, CLIB.Item>();
 
         /// <summary>
         /// This contains all Weapons the current character has
         ///     Key: Weapon Name
         ///     Value: New Weapon
         /// </summary>
-        public static Dictionary<string, CLIB.Weapon_Class> m_WeaponData = new Dictionary<string, CLIB.Weapon_Class>();
+        public static Dictionary<string, CLIB.Weapon> m_WeaponData = new Dictionary<string, CLIB.Weapon>();
 
         /// <summary>
         /// This contains all Armor the current character has
         ///     Key: Armor Name
         ///     Value: New Armor
         /// </summary>
-        public static Dictionary<string, CLIB.Armor_Class> m_ArmorData = new Dictionary<string, CLIB.Armor_Class>();
+        public static Dictionary<string, CLIB.Armor> m_ArmorData = new Dictionary<string, CLIB.Armor>();
 
         #endregion
 
@@ -90,28 +90,35 @@ namespace DnD_Character_Sheet
         /// Key: Armor Name
         /// Value: New Armor
         /// </summary>
-        public static Dictionary<string, CLIB.Armor_Class> m_ArmorLibrary = new Dictionary<string, CLIB.Armor_Class>();
+        public static Dictionary<string, CLIB.Armor> m_ArmorLibrary = new Dictionary<string, CLIB.Armor>();
 
         /// <summary>
         /// This dictionary holds all information on Weapons from selected manuals
         /// Key: Weapon Name
         /// Value: New Weapon
         /// </summary>
-        public static Dictionary<string, CLIB.Weapon_Class> m_WeaponLibrary = new Dictionary<string, CLIB.Weapon_Class>();
+        public static Dictionary<string, CLIB.Weapon> m_WeaponLibrary = new Dictionary<string, CLIB.Weapon>();
 
         /// <summary>
         /// This dictionary holds all information on Items from selected manuals
         /// Key: Item Name
         /// Value: New Item
         /// </summary>
-        public static Dictionary<string, CLIB.Item_Class> m_ItemLibrary = new Dictionary<string, CLIB.Item_Class>();
+        public static Dictionary<string, CLIB.Item> m_ItemLibrary = new Dictionary<string, CLIB.Item>();
+
+        /// <summary>
+        /// This dictionary holds all information on Spells from selected manuals
+        /// Key: Spell Name
+        /// Value: New Spell
+        /// </summary>
+        public static Dictionary<string, CLIB.Spell> m_SpellLibrary = new Dictionary<string, CLIB.Spell>();
+
+        #endregion
 
         /// <summary>
         /// This bool indicates if a character has been loaded
         /// </summary>
         public static bool m_CharacterLoaded = false;
-
-        #endregion
 
         /// <summary>
         /// This method clears all Libraries

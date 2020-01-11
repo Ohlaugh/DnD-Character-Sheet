@@ -35,12 +35,12 @@ namespace DnD_Character_Sheet.Forms
             }
         }
 
-        private void PopulateGrid(Dictionary<string, CLIB.Item_Class> ItemDictionary)
+        private void PopulateGrid(Dictionary<string, CLIB.Item> ItemDictionary)
         {
             BuyItems_Grid.Rows.Clear();
             foreach (var key in ItemDictionary.Keys)
             {
-                CLIB.Item_Class item = ItemDictionary[key];
+                CLIB.Item item = ItemDictionary[key];
                 if (item.Cost != string.Empty)
                 {
                     object[] param = { false, item.Style, key, item.Quantity, item.Cost, item.Weight + " lb.", item.Description };

@@ -69,9 +69,9 @@ namespace DnD_Character_Sheet
         public CLIB.SavingThrows SavingThrows { get; set; }
 
 
-        public Dictionary<string, CLIB.Item_Class> Items { get; set; }
-        public Dictionary<string, CLIB.Weapon_Class> Weapons { get; set; }
-        public Dictionary<string, CLIB.Armor_Class> Armor { get; set; }
+        public Dictionary<string, CLIB.Item> Items { get; set; }
+        public Dictionary<string, CLIB.Weapon> Weapons { get; set; }
+        public Dictionary<string, CLIB.Armor> Armor { get; set; }
 
         public void Calculate()
         {

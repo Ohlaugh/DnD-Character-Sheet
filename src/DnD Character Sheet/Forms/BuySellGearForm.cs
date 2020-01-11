@@ -35,14 +35,14 @@ namespace DnD_Character_Sheet.Forms
             }
         }
 
-        private void PopulateGrid(Dictionary<string, CLIB.Armor_Class> ArmorDictionary, Dictionary<string, CLIB.Weapon_Class> WeaponDictionary)
+        private void PopulateGrid(Dictionary<string, CLIB.Armor> ArmorDictionary, Dictionary<string, CLIB.Weapon> WeaponDictionary)
         {
             BuyEquipment_Grid.Rows.Clear();
             if (ArmorDictionary.Keys.Count > 0)
             {
                 foreach (var key in ArmorDictionary.Keys)
                 {
-                    CLIB.Armor_Class armor = ArmorDictionary[key];
+                    CLIB.Armor armor = ArmorDictionary[key];
                     string properties = string.Format(LC.ArmorProperties, armor.StrengthReq, armor.Disadvantage);
                     object[] param = { false, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
                     BuyEquipment_Grid.Rows.Add(param);
@@ -52,7 +52,7 @@ namespace DnD_Character_Sheet.Forms
             {
                 foreach (var key in WeaponDictionary.Keys)
                 {
-                    CLIB.Weapon_Class weapon = WeaponDictionary[key];
+                    CLIB.Weapon weapon = WeaponDictionary[key];
                     string properties = string.Join(", ", weapon.Properties.ToArray());
                     object[] param = { false, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
                     BuyEquipment_Grid.Rows.Add(param);

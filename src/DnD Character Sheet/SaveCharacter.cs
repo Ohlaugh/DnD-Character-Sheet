@@ -67,21 +67,21 @@ namespace DnD_Character_Sheet
                     {
                         // Currently Unused
                     }
-                    else if (property.PropertyType == typeof(Dictionary<string, CLIB.Item_Class>))
+                    else if (property.PropertyType == typeof(Dictionary<string, CLIB.Item>))
                     {
                         foreach (var key in m_MainCharacterInfo.Items.Keys)
                         {
                             AddItemNode(key, m_MainCharacterInfo.Items[key]);
                         }
                     }
-                    else if (property.PropertyType == typeof(Dictionary<string, CLIB.Weapon_Class>))
+                    else if (property.PropertyType == typeof(Dictionary<string, CLIB.Weapon>))
                     {
                         foreach (var key in m_MainCharacterInfo.Weapons.Keys)
                         {
                             AddWeaponNode(key, m_MainCharacterInfo.Weapons[key]);
                         }
                     }
-                    else if (property.PropertyType == typeof(Dictionary<string, CLIB.Armor_Class>))
+                    else if (property.PropertyType == typeof(Dictionary<string, CLIB.Armor>))
                     {
                         foreach (var key in m_MainCharacterInfo.Armor.Keys)
                         {
@@ -144,7 +144,7 @@ namespace DnD_Character_Sheet
             }
         }
 
-        private void AddItemNode(string itemName, CLIB.Item_Class item)
+        private void AddItemNode(string itemName, CLIB.Item item)
         {
             var itemNode =
                 new XElement(LC.Item,
@@ -157,7 +157,7 @@ namespace DnD_Character_Sheet
             itemNodes.Add(itemNode);
         }
 
-        private void AddWeaponNode(string itemName, CLIB.Weapon_Class item)
+        private void AddWeaponNode(string itemName, CLIB.Weapon item)
         {
             List<object> properties = new List<object>();
             foreach (var property in item.Properties)
@@ -180,7 +180,7 @@ namespace DnD_Character_Sheet
             itemNodes.Add(itemNode);
         }
 
-        private void AddArmorNode(string itemName, CLIB.Armor_Class item)
+        private void AddArmorNode(string itemName, CLIB.Armor item)
         {
             var itemNode =
                 new XElement(LC.Armor,

@@ -77,7 +77,7 @@ namespace DnD_Character_Sheet
             foreach (XmlNode itemNode in items)
             {
                 string name = itemNode.SelectSingleNode(LC.Name).InnerText;
-                CLIB.Item_Class item = new CLIB.Item_Class
+                CLIB.Item item = new CLIB.Item
                 {
                     Cost = itemNode.SelectSingleNode(LC.Cost).InnerText,
                     Weight = Convert.ToDouble(itemNode.SelectSingleNode(LC.Weight).InnerText),
@@ -106,7 +106,7 @@ namespace DnD_Character_Sheet
                     properties.Add(property.InnerText);
                 }
 
-                CLIB.Weapon_Class weapon = new CLIB.Weapon_Class
+                CLIB.Weapon weapon = new CLIB.Weapon
                 {
                     Cost = weaponNode.SelectSingleNode(LC.Cost).InnerText,
                     Damage = weaponNode.SelectSingleNode(LC.Damage).InnerText,
@@ -129,7 +129,7 @@ namespace DnD_Character_Sheet
             foreach (XmlNode armorNode in armor)
             {
                 string name = armorNode.SelectSingleNode(LC.Name).InnerText;
-                CLIB.Armor_Class item = new CLIB.Armor_Class
+                CLIB.Armor item = new CLIB.Armor
                 {
                     Cost = armorNode.SelectSingleNode(LC.Cost).InnerText,
                     Weight = Convert.ToDouble(armorNode.SelectSingleNode(LC.Weight).InnerText),

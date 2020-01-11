@@ -57,7 +57,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         {
             #region Light Armor
             LIB.m_ArmorLibrary.Add("Padded",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.LightArmor,
                     Cost = "5 gp",
@@ -69,7 +69,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Leather",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.LightArmor,
                     Cost = "10 gp",
@@ -81,7 +81,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Studded Leather",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.LightArmor,
                     Cost = "45 gp",
@@ -95,7 +95,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #region Medium Armor
             LIB.m_ArmorLibrary.Add("Hide",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.MediumArmor,
                     Cost = "10 gp",
@@ -107,7 +107,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Chain Shirt",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.MediumArmor,
                     Cost = "50 gp",
@@ -119,7 +119,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Scale Mail",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.MediumArmor,
                     Cost = "50 gp",
@@ -131,7 +131,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Breastplate",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.MediumArmor,
                     Cost = "400 gp",
@@ -143,7 +143,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Half Plate",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.MediumArmor,
                     Cost = "750 gp",
@@ -157,7 +157,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #region Heavy Armor
             LIB.m_ArmorLibrary.Add("Ring Mail",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.HeavyArmor,
                     Cost = "30 gp",
@@ -169,7 +169,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Chain Mail",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.HeavyArmor,
                     Cost = "75 gp",
@@ -181,7 +181,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Splint",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.HeavyArmor,
                     Cost = "200 gp",
@@ -193,7 +193,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Plate",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.HeavyArmor,
                     Cost = "1500 gp",
@@ -205,7 +205,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ArmorLibrary.Add("Shield",
-                new CLIB.Armor_Class
+                new CLIB.Armor
                 {
                     Style = LC.Shield,
                     Cost = "10 gp",
@@ -225,7 +225,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
         {
             #region Melee Weapons
             LIB.m_WeaponLibrary.Add("Club",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "1 sp",
@@ -239,7 +239,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Dagger",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "2 gp",
@@ -255,7 +255,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Greatclub",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "2 sp",
@@ -269,7 +269,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Handaxe",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "5 gp",
@@ -284,7 +284,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Light hammer",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "2 gp",
@@ -299,7 +299,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Mace",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "5 gp",
@@ -310,7 +310,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Quarterstaff",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "2 sp",
@@ -324,7 +324,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Sickle",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "1 gp",
@@ -338,7 +338,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Spear",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeSimple,
                     Cost = "1 gp",
@@ -353,7 +353,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Battleaxe",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "10 gp",
@@ -367,7 +367,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Flail",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "10 gp",
@@ -378,7 +378,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Glaive",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "20 gp",
@@ -394,7 +394,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Greataxe",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "30 gp",
@@ -409,7 +409,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Greatsword",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "50 gp",
@@ -424,7 +424,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Halberd",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "20 gp",
@@ -440,7 +440,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Lance",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "10 gp",
@@ -455,7 +455,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Longsword",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "15 gp",
@@ -469,7 +469,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Maul",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "10 gp",
@@ -484,7 +484,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Morningstar",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "15 gp",
@@ -495,7 +495,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Pike",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "5 gp",
@@ -511,7 +511,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Rapier",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "25 gp",
@@ -525,7 +525,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Scimitar",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "25 gp",
@@ -540,7 +540,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Shortsword",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "10 gp",
@@ -555,7 +555,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Trident",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "5 gp",
@@ -570,7 +570,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("War Pick",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "5 gp",
@@ -581,7 +581,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Warhammer",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "15 gp",
@@ -595,7 +595,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Whip",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.MeleeMartial,
                     Cost = "2 gp",
@@ -612,7 +612,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
 
             #region Ranged Weapons
             LIB.m_WeaponLibrary.Add("Crossbow, Light",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedSimple,
                     Cost = "25 sp",
@@ -628,7 +628,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Dart",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedSimple,
                     Cost = "5 cp",
@@ -643,7 +643,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Shortbow",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedSimple,
                     Cost = "25 gp",
@@ -658,7 +658,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Sling",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedSimple,
                     Cost = "1 sp",
@@ -672,7 +672,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Blowgun",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedMartial,
                     Cost = "10 gp",
@@ -687,7 +687,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Crossbow, hand",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedMartial,
                     Cost = "75 gp",
@@ -703,7 +703,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Crossbow, Heavy",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedMartial,
                     Cost = "50 gp",
@@ -720,7 +720,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Longbow",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedMartial,
                     Cost = "50 gp",
@@ -736,7 +736,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_WeaponLibrary.Add("Net",
-                new CLIB.Weapon_Class
+                new CLIB.Weapon
                 {
                     Style = LC.RangedMartial,
                     Cost = "1 gp",
@@ -760,7 +760,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region A Items
 
             LIB.m_ItemLibrary.Add("Acid (vial)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "25 gp",
@@ -773,7 +773,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Alchemist's Fire (flask)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "50 gp",
@@ -787,7 +787,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Alms Box",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -797,7 +797,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Amulet",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.HolySymbol,
                     Cost = "5 gp",
@@ -809,7 +809,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Antitoxin",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "50 gp",
@@ -820,7 +820,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Arrows",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.Ammo,
                     Cost = "1 gp",
@@ -838,7 +838,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region B Items
 
             LIB.m_ItemLibrary.Add("Backpack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -850,7 +850,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Ball Bearings (bag of 1,000)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -863,7 +863,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Barrel",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -873,7 +873,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Basket",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "4 sp",
@@ -883,7 +883,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Bedroll",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -895,7 +895,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Bell",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -905,7 +905,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Blanket",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -915,7 +915,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Block and Tackle",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -926,7 +926,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Blowgun needles",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.Ammo,
                     Cost = "1 gp",
@@ -940,7 +940,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Book",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "25 gp",
@@ -952,7 +952,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Book of Lore",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -962,7 +962,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Bottle, Glass",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -972,7 +972,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Bucket",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 cp",
@@ -982,7 +982,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Burglar's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "16 gp",
@@ -998,7 +998,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region C Items
 
             LIB.m_ItemLibrary.Add("Caltrops (bag of 20)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1011,7 +1011,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Candle",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 cp",
@@ -1021,7 +1021,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Case, Crossbow Bolt",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1031,7 +1031,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Case, Map or Scroll",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1042,7 +1042,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Censer)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -1052,7 +1052,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Chain (10 feet)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1062,7 +1062,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Chalk (1 piece)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 cp",
@@ -1072,7 +1072,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Chest",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1082,7 +1082,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Climber's Kit",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "25 gp",
@@ -1095,7 +1095,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Clothes, Common",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -1106,7 +1106,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Clothes, Costume",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1116,7 +1116,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Clothes, Fine",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "15 gp",
@@ -1128,7 +1128,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Clothes, Traveler's",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1139,7 +1139,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Component Pouch",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "25 gp",
@@ -1151,7 +1151,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Crossbow bolts",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.Ammo,
                     Cost = "1 gp",
@@ -1165,7 +1165,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Crowbar",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1175,7 +1175,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Crystal",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.ArcaneFocus,
                     Cost = "10 gp",
@@ -1190,7 +1190,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region D Items
 
             LIB.m_ItemLibrary.Add("Disguise Kit",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.Tool,
                     Cost = "25 gp",
@@ -1202,7 +1202,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Diplomat's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "39 gp",
@@ -1213,7 +1213,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Dungeoneer's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "12 gp",
@@ -1228,7 +1228,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region E Items
 
             LIB.m_ItemLibrary.Add("Emblem",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.HolySymbol,
                     Cost = "5 gp",
@@ -1240,7 +1240,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Entertainer's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "40 gp",
@@ -1251,7 +1251,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Explorer's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "10 gp",
@@ -1266,7 +1266,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region F Items
 
             LIB.m_ItemLibrary.Add("Fishing Tackle",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1277,7 +1277,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Flask or Tankard",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 cp",
@@ -1291,7 +1291,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region G Items
 
             LIB.m_ItemLibrary.Add("Grappling Hook",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1306,7 +1306,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region H Items
 
             LIB.m_ItemLibrary.Add("Hammer",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1316,7 +1316,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Hammer, Sledge",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1326,7 +1326,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Healer's Kit",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1338,7 +1338,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Holy Water (Flask)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "25 gp",
@@ -1353,7 +1353,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Hourglass",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "25 gp",
@@ -1363,7 +1363,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Hunting Trap",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1384,7 +1384,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region I Items
 
             LIB.m_ItemLibrary.Add("Ink (1 ounce bottle)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "10 gp",
@@ -1394,7 +1394,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Ink Pen",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 cp",
@@ -1405,7 +1405,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Block of Incense",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -1419,7 +1419,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region J Items
 
             LIB.m_ItemLibrary.Add("Jug or Pitcher",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 cp",
@@ -1433,7 +1433,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region L Items
 
             LIB.m_ItemLibrary.Add("Ladder (10 foot)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 sp",
@@ -1443,7 +1443,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Lamp",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -1454,7 +1454,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Lantern, Bullseye",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "10 gp",
@@ -1465,7 +1465,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Lantern, Hooded",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1477,7 +1477,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Little Bag of Sand",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -1487,7 +1487,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Lock",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "10 gp",
@@ -1503,7 +1503,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region M Items
 
             LIB.m_ItemLibrary.Add("Magnifying Glass",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "100 gp",
@@ -1516,7 +1516,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Manacles",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1529,7 +1529,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Mess Kit",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 sp",
@@ -1540,7 +1540,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Mirror, Steel",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1556,7 +1556,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region O Items
 
             LIB.m_ItemLibrary.Add("Oil (flask)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 sp",
@@ -1573,7 +1573,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Orb",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.ArcaneFocus,
                     Cost = "20 gp",
@@ -1588,7 +1588,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region P Items
 
             LIB.m_ItemLibrary.Add("Paper (one sheet)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 sp",
@@ -1598,7 +1598,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Parchment (one sheet)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 sp",
@@ -1608,7 +1608,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Perfume (vial)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1618,7 +1618,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Pick, miner's",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1628,7 +1628,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Piton",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 cp",
@@ -1639,7 +1639,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Poison, basic (vial)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "100 gp",
@@ -1652,7 +1652,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Pole (10-foot)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 cp",
@@ -1663,7 +1663,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Pot, Iron",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1673,7 +1673,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Potion of Healing",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "50 gp",
@@ -1684,7 +1684,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Pouch",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -1696,7 +1696,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Priest's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "19 gp",
@@ -1711,7 +1711,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region Q Items
 
             LIB.m_ItemLibrary.Add("Quiver",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1725,7 +1725,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region R Items
 
             LIB.m_ItemLibrary.Add("Ram, Portable",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "4 gp",
@@ -1736,7 +1736,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Rations (1 day)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -1747,7 +1747,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Reliquary",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.HolySymbol,
                     Cost = "5 gp",
@@ -1759,7 +1759,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Robes",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1769,7 +1769,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Rod",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.ArcaneFocus,
                     Cost = "10 gp",
@@ -1780,7 +1780,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Rope, Hempen (50 feet)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1790,7 +1790,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Rope, Silk (50 feet)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "10 gp",
@@ -1804,7 +1804,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region S Items
 
             LIB.m_ItemLibrary.Add("Sack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 cp",
@@ -1814,7 +1814,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Scale, Merchant's",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1826,7 +1826,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Scholar's Pack",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.EquipmentPack,
                     Cost = "40 gp",
@@ -1837,7 +1837,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Sealing Wax",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -1847,7 +1847,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Shovel",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1857,7 +1857,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Signal Whistle",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 cp",
@@ -1867,7 +1867,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Signet Ring",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 gp",
@@ -1878,7 +1878,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Sling Bullets",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.Ammo,
                     Cost = "4 cp",
@@ -1892,7 +1892,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Small Knife",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -1902,7 +1902,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Soap",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 cp",
@@ -1912,7 +1912,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Spellbook",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "50 gp",
@@ -1923,7 +1923,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Spikes, Iron (10)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -1933,7 +1933,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Sprig of Mistletoe",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.DruidicFocus,
                     Cost = "1 gp",
@@ -1944,7 +1944,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Spyglass",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1000 gp",
@@ -1954,7 +1954,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Staff",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.ArcaneFocus,
                     Cost = "5 gp",
@@ -1965,7 +1965,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("String (10 feet)",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -1979,7 +1979,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region T Items
 
             LIB.m_ItemLibrary.Add("Tent, two-person",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 gp",
@@ -1989,7 +1989,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Tinderbox",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "5 sp",
@@ -2001,7 +2001,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Torch",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 cp",
@@ -2012,7 +2012,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Totem",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.DruidicFocus,
                     Cost = "1 gp",
@@ -2026,7 +2026,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region V Items
 
             LIB.m_ItemLibrary.Add("Vestments",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "",
@@ -2036,7 +2036,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Vial",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 gp",
@@ -2050,7 +2050,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region W Items
 
             LIB.m_ItemLibrary.Add("Wand",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.ArcaneFocus,
                     Cost = "10 gp",
@@ -2061,7 +2061,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Waterskin",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "2 sp",
@@ -2071,7 +2071,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Whetstone",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.AdventuringGear,
                     Cost = "1 cp",
@@ -2081,7 +2081,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
                 });
 
             LIB.m_ItemLibrary.Add("Wooden Staff",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.DruidicFocus,
                     Cost = "5 gp",
@@ -2095,7 +2095,7 @@ namespace DnD_Character_Sheet.Books.Player_Handbook
             #region Y Items
 
             LIB.m_ItemLibrary.Add("Yew Wand",
-                new CLIB.Item_Class
+                new CLIB.Item
                 {
                     Style = LC.DruidicFocus,
                     Cost = "10 gp",

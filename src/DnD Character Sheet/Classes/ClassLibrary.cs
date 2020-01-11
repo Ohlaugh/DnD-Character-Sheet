@@ -12,7 +12,7 @@ namespace DnD_Character_Sheet.Classes
     public class ClassLibrary
     {
         #region Items / Weapons / Armor
-        public class Item_Class
+        public class Item
         {
             public string Style;
             public string Cost;
@@ -21,14 +21,14 @@ namespace DnD_Character_Sheet.Classes
             public int Quantity = 1;
         }
 
-        public class Weapon_Class : Item_Class
+        public class Weapon : Item
         {
             public string Damage;
             public List<string> Properties;
             public bool Equipped;
         }
 
-        public class Armor_Class :Item_Class
+        public class Armor :Item
         {
             public string ArmorClass;
             public int StrengthReq;
@@ -451,6 +451,22 @@ namespace DnD_Character_Sheet.Classes
                 Wisdom = CALC.Bonus(WisdomSave, attributes.WisdomModifier);
                 Charisma = CALC.Bonus(CharismaSave, attributes.CharismaModifier);
             }
+        }
+
+        #endregion
+
+        #region Spell
+
+        public class Spell
+        {
+            public int Level { get; set; }
+            public string Class { get; set; }
+            public string School { get; set; }
+            public string CastingTime { get; set; }
+            public int Range { get; set; }
+            public string Components { get; set; }
+            public string Duration { get; set; }
+            public string Description { get; set; }
         }
 
         #endregion
