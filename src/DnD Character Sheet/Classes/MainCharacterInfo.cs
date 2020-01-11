@@ -11,14 +11,11 @@ namespace DnD_Character_Sheet
 {
     public class MainCharacterInfo
     {
-        // Top Level Info
         public string CharacterName { get; set; }
         public string Class1 { get; set; }
         public string Class2 { get; set; }
         public string SubClass1 { get; set; }
         public string SubClass2 { get; set; }
-        public bool Multiclass { get => Class2 != ""; }
-        public int TotalLevel { get => Level1 + Level2; }
         public int Level1 { get; set; }
         public int Level2 { get; set; }
         public string Background { get; set; }
@@ -33,19 +30,8 @@ namespace DnD_Character_Sheet
         public string EyeColor { get; set; }
         public string SkinColor { get; set; }
         public string HairColor { get; set; }
-
-        // Left Column Info
-        public CLIB.Attributes Attributes { get; set; }
-        public CLIB.Skills Skills { get; set; }
         public bool Inspiration { get; set; }
-        public int ProficiencyBonus { get => _ProficiencyBonus; }
         private int _ProficiencyBonus { get; set; }
-        public CLIB.SavingThrows SavingThrows { get; set; }
-        public int Perception { get => 10 + Attributes.WisdomModifier; }
-        public List<string> Proficiencies { get; set; }
-        public List<string> Languages { get; set; }
-
-        // Middle Column Info
         public int ArmorClass { get; set; }
         public int Initiative { get; set; }
         public int Speed { get; set; }
@@ -56,26 +42,36 @@ namespace DnD_Character_Sheet
         public string HitDice2 { get; set; }
         public int HitDiceTotal1 { get; set; }
         public int HitDiceTotal2 { get; set; }
-        // Death Saves?
-        // Attacks and Spellcasting
-        public CLIB.Money Money { get; set; }
-        public List<string> Equipment { get; set; }
-
-        // Right Column Info
         public string PersonalityTraits { get; set; }
         public string Ideals { get; set; }
         public string Bonds { get; set; }
         public string Flaws { get; set; }
+        public double CarryingWeight { get; set; }
+        public string Backstory { get; set; }
+
+
+        public bool Multiclass { get => Class2 != ""; }
+        public int TotalLevel { get => Level1 + Level2; }
+        public int ProficiencyBonus { get => _ProficiencyBonus; }
+        public int Perception { get => 10 + Attributes.WisdomModifier; }
+        public double CarryingCapacity { get => Attributes.Strength * 15; }
+
+
+        public List<string> Proficiencies { get; set; }
+        public List<string> Languages { get; set; }
         public List<string> Features { get; set; }
         public List<string> Traits { get; set; }
+
+
+        public CLIB.Money Money { get; set; }
+        public CLIB.Attributes Attributes { get; set; }
+        public CLIB.Skills Skills { get; set; }
+        public CLIB.SavingThrows SavingThrows { get; set; }
+
 
         public Dictionary<string, CLIB.Item_Class> Items { get; set; }
         public Dictionary<string, CLIB.Weapon_Class> Weapons { get; set; }
         public Dictionary<string, CLIB.Armor_Class> Armor { get; set; }
-        public double CarryingCapacity { get => Attributes.Strength * 15; }
-        public double CarryingWeight { get; set; }
-
-        public string Backstory { get; set; }
 
         public void Calculate()
         {
@@ -130,24 +126,24 @@ namespace DnD_Character_Sheet
         {
             return new List<Tuple<string, bool>>
             {
-                new Tuple<string, bool>(Skills.Acrobatics+" Acrobatics", Skills._Acrobatics),
-                new Tuple<string, bool>(Skills.AnimalHandling+" Animal Handling", Skills._AnimalHandling),
-                new Tuple<string, bool>(Skills.Arcana+" Arcana", Skills._Arcana),
-                new Tuple<string, bool>(Skills.Athletics+" Athletics", Skills._Athletics),
-                new Tuple<string, bool>(Skills.Deception+" Deception", Skills._Deception),
-                new Tuple<string, bool>(Skills.History+" History", Skills._History),
-                new Tuple<string, bool>(Skills.Insight+" Insight", Skills._Insight),
-                new Tuple<string, bool>(Skills.Intimidation+" Intimidation", Skills._Intimidation),
-                new Tuple<string, bool>(Skills.Investigation+" Investigation", Skills._Investigation),
-                new Tuple<string, bool>(Skills.Medicine+" Medicine", Skills._Medicine),
-                new Tuple<string, bool>(Skills.Nature+" Nature", Skills._Nature),
-                new Tuple<string, bool>(Skills.Perception+" Perception", Skills._Perception),
-                new Tuple<string, bool>(Skills.Performance+" Performance", Skills._Performance),
-                new Tuple<string, bool>(Skills.Persuassion+" Persuassion", Skills._Persuassion),
-                new Tuple<string, bool>(Skills.Religion+" Religion", Skills._Religion),
-                new Tuple<string, bool>(Skills.SlightOfHand+" Slight of Hand", Skills._SlightOfHand),
-                new Tuple<string, bool>(Skills.Stealth+" Stealth", Skills._Stealth),
-                new Tuple<string, bool>(Skills.Survival+" Survival", Skills._Survival)
+                new Tuple<string, bool>(Skills.AcrobaticsLabel+" Acrobatics", Skills.Acrobatics),
+                new Tuple<string, bool>(Skills.AnimalHandlingLabel+" Animal Handling", Skills.AnimalHandling),
+                new Tuple<string, bool>(Skills.ArcanaLabel+" Arcana", Skills.Arcana),
+                new Tuple<string, bool>(Skills.AthleticsLabel+" Athletics", Skills.Athletics),
+                new Tuple<string, bool>(Skills.DeceptionLabel+" Deception", Skills.Deception),
+                new Tuple<string, bool>(Skills.HistoryLabel+" History", Skills.History),
+                new Tuple<string, bool>(Skills.InsightLabel+" Insight", Skills.Insight),
+                new Tuple<string, bool>(Skills.IntimidationLabel+" Intimidation", Skills.Intimidation),
+                new Tuple<string, bool>(Skills.InvestigationLabel+" Investigation", Skills.Investigation),
+                new Tuple<string, bool>(Skills.MedicineLabel+" Medicine", Skills.Medicine),
+                new Tuple<string, bool>(Skills.NatureLabel+" Nature", Skills.Nature),
+                new Tuple<string, bool>(Skills.PerceptionLabel+" Perception", Skills.Perception),
+                new Tuple<string, bool>(Skills.PerformanceLabel+" Performance", Skills.Performance),
+                new Tuple<string, bool>(Skills.PersuassionLabel+" Persuassion", Skills.Persuassion),
+                new Tuple<string, bool>(Skills.ReligionLabel+" Religion", Skills.Religion),
+                new Tuple<string, bool>(Skills.SlightOfHandLabel+" Slight of Hand", Skills.SlightOfHand),
+                new Tuple<string, bool>(Skills.StealthLabel+" Stealth", Skills.Stealth),
+                new Tuple<string, bool>(Skills.SurvivalLabel+" Survival", Skills.Survival)
             };
         }
 
@@ -155,12 +151,12 @@ namespace DnD_Character_Sheet
         {
             return new List<Tuple<string, bool>>
             {
-                new Tuple<string, bool>(SavingThrows.Strength+" Strength", SavingThrows._Strength),
-                new Tuple<string, bool>(SavingThrows.Dexterity+" Dexterity",SavingThrows._Dexterity),
-                new Tuple<string, bool>(SavingThrows.Constitution+" Constitution",SavingThrows._Constitution),
-                new Tuple<string, bool>(SavingThrows.Intelligence+" Intelligence",SavingThrows._Intelligence),
-                new Tuple<string, bool>(SavingThrows.Wisdom+" Wisdom",SavingThrows._Wisdom),
-                new Tuple<string, bool>(SavingThrows.Charisma+" Charisma",SavingThrows._Charisma)
+                new Tuple<string, bool>(SavingThrows.Strength+" Strength", SavingThrows.StrengthSave),
+                new Tuple<string, bool>(SavingThrows.Dexterity+" Dexterity",SavingThrows.DexteritySave),
+                new Tuple<string, bool>(SavingThrows.Constitution+" Constitution",SavingThrows.ConstitutionSave),
+                new Tuple<string, bool>(SavingThrows.Intelligence+" Intelligence",SavingThrows.IntelligenceSave),
+                new Tuple<string, bool>(SavingThrows.Wisdom+" Wisdom",SavingThrows.WisdomSave),
+                new Tuple<string, bool>(SavingThrows.Charisma+" Charisma",SavingThrows.CharismaSave)
             };
         }
     }

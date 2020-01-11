@@ -203,35 +203,35 @@ namespace DnD_Character_Sheet
                 },
                 Skills = new CLIB.Skills()
                 {
-                    _Acrobatics = m_ProficientData[LC.Acrobatics],
-                    _AnimalHandling = m_ProficientData[LC.AnimalHandling],
-                    _Arcana = m_ProficientData[LC.Arcana],
-                    _Athletics = m_ProficientData[LC.Athletics],
-                    _Deception = m_ProficientData[LC.Deception],
-                    _History = m_ProficientData[LC.History],
-                    _Insight = m_ProficientData[LC.Insight],
-                    _Intimidation = m_ProficientData[LC.Intimidation],
-                    _Investigation = m_ProficientData[LC.Investigation],
-                    _Medicine = m_ProficientData[LC.Medicine],
-                    _Nature = m_ProficientData[LC.Nature],
-                    _Perception = m_ProficientData[LC.Perception],
-                    _Performance = m_ProficientData[LC.Performance],
-                    _Persuassion = m_ProficientData[LC.Persuassion],
-                    _Religion = m_ProficientData[LC.Religion],
-                    _SlightOfHand = m_ProficientData[LC.SlightOfHand],
-                    _Stealth = m_ProficientData[LC.Stealth],
-                    _Survival = m_ProficientData[LC.Survival]
+                    Acrobatics = m_ProficientData[LC.Acrobatics],
+                    AnimalHandling = m_ProficientData[LC.AnimalHandling],
+                    Arcana = m_ProficientData[LC.Arcana],
+                    Athletics = m_ProficientData[LC.Athletics],
+                    Deception = m_ProficientData[LC.Deception],
+                    History = m_ProficientData[LC.History],
+                    Insight = m_ProficientData[LC.Insight],
+                    Intimidation = m_ProficientData[LC.Intimidation],
+                    Investigation = m_ProficientData[LC.Investigation],
+                    Medicine = m_ProficientData[LC.Medicine],
+                    Nature = m_ProficientData[LC.Nature],
+                    Perception = m_ProficientData[LC.Perception],
+                    Performance = m_ProficientData[LC.Performance],
+                    Persuassion = m_ProficientData[LC.Persuassion],
+                    Religion = m_ProficientData[LC.Religion],
+                    SlightOfHand = m_ProficientData[LC.SlightOfHand],
+                    Stealth = m_ProficientData[LC.Stealth],
+                    Survival = m_ProficientData[LC.Survival]
                 },
                 Inspiration = Convert.ToBoolean(m_CharData[LC.Inspiration]),
                 // ProficiencyBonus is Calculated
                 SavingThrows = new CLIB.SavingThrows()
                 {
-                    _Strength = m_ProficientData[LC.StrengthSave],
-                    _Dexterity = m_ProficientData[LC.DexteritySave],
-                    _Constitution = m_ProficientData[LC.ConstitutionSave],
-                    _Intelligence = m_ProficientData[LC.IntelligenceSave],
-                    _Wisdom = m_ProficientData[LC.WisdomSave],
-                    _Charisma = m_ProficientData[LC.CharismaSave]
+                    StrengthSave = m_ProficientData[LC.StrengthSave],
+                    DexteritySave = m_ProficientData[LC.DexteritySave],
+                    ConstitutionSave = m_ProficientData[LC.ConstitutionSave],
+                    IntelligenceSave = m_ProficientData[LC.IntelligenceSave],
+                    WisdomSave = m_ProficientData[LC.WisdomSave],
+                    CharismaSave = m_ProficientData[LC.CharismaSave]
                 },
                 // Perception is Calculated
                 // Proficiencies

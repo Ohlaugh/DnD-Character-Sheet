@@ -145,146 +145,146 @@ namespace DnD_Character_Sheet
             {
                 case (LC.Acrobatics):
                     {
-                        m_MainCharacterInfo.Skills.Acrobatics = skillBonus;
-                        m_MainCharacterInfo.Skills._Acrobatics = check;
+                        m_MainCharacterInfo.Skills.AcrobaticsLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Acrobatics = check;
                         break;
                     }
                 case (LC.AnimalHandling_Spaced):
                     {
-                        m_MainCharacterInfo.Skills.AnimalHandling = skillBonus;
-                        m_MainCharacterInfo.Skills._AnimalHandling = check;
+                        m_MainCharacterInfo.Skills.AnimalHandlingLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.AnimalHandling = check;
                         break;
                     }
                 case (LC.Arcana):
                     {
-                        m_MainCharacterInfo.Skills.Arcana = skillBonus;
-                        m_MainCharacterInfo.Skills._Arcana = check;
+                        m_MainCharacterInfo.Skills.ArcanaLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Arcana = check;
                         break;
                     }
                 case (LC.Athletics):
                     {
-                        m_MainCharacterInfo.Skills.Athletics = skillBonus;
-                        m_MainCharacterInfo.Skills._Athletics = check;
+                        m_MainCharacterInfo.Skills.AthleticsLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Athletics = check;
                         break;
                     }
                 case (LC.Deception):
                     {
-                        m_MainCharacterInfo.Skills.Deception = skillBonus;
-                        m_MainCharacterInfo.Skills._Deception = check;
+                        m_MainCharacterInfo.Skills.DeceptionLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Deception = check;
                         break;
                     }
                 case (LC.History):
                     {
-                        m_MainCharacterInfo.Skills.History = skillBonus;
-                        m_MainCharacterInfo.Skills._History = check;
+                        m_MainCharacterInfo.Skills.HistoryLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.History = check;
                         break;
                     }
                 case (LC.Insight):
                     {
-                        m_MainCharacterInfo.Skills.Insight = skillBonus;
-                        m_MainCharacterInfo.Skills._Insight = check;
+                        m_MainCharacterInfo.Skills.InsightLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Insight = check;
                         break;
                     }
                 case (LC.Intimidation):
                     {
-                        m_MainCharacterInfo.Skills.Intimidation = skillBonus;
-                        m_MainCharacterInfo.Skills._Intimidation = check;
+                        m_MainCharacterInfo.Skills.IntimidationLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Intimidation = check;
                         break;
                     }
                 case (LC.Investigation):
                     {
-                        m_MainCharacterInfo.Skills.Investigation = skillBonus;
-                        m_MainCharacterInfo.Skills._Investigation = check;
+                        m_MainCharacterInfo.Skills.InvestigationLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Investigation = check;
                         break;
                     }
                 case (LC.Medicine):
                     {
-                        m_MainCharacterInfo.Skills.Medicine = skillBonus;
-                        m_MainCharacterInfo.Skills._Medicine = check;
+                        m_MainCharacterInfo.Skills.MedicineLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Medicine = check;
                         break;
                     }
                 case (LC.Nature):
                     {
-                        m_MainCharacterInfo.Skills.Nature = skillBonus;
-                        m_MainCharacterInfo.Skills._Nature = check;
+                        m_MainCharacterInfo.Skills.NatureLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Nature = check;
                         break;
                     }
                 case (LC.Perception):
                     {
-                        m_MainCharacterInfo.Skills.Perception = skillBonus;
-                        m_MainCharacterInfo.Skills._Perception = check;
+                        m_MainCharacterInfo.Skills.PerceptionLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Perception = check;
                         break;
                     }
                 case (LC.Performance):
                     {
-                        m_MainCharacterInfo.Skills.Performance = skillBonus;
-                        m_MainCharacterInfo.Skills._Performance = check;
+                        m_MainCharacterInfo.Skills.PerformanceLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Performance = check;
                         break;
                     }
                 case (LC.Persuassion):
                     {
-                        m_MainCharacterInfo.Skills.Persuassion = skillBonus;
-                        m_MainCharacterInfo.Skills._Persuassion = check;
+                        m_MainCharacterInfo.Skills.PersuassionLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Persuassion = check;
                         break;
                     }
                 case (LC.Religion):
                     {
-                        m_MainCharacterInfo.Skills.Religion = skillBonus;
-                        m_MainCharacterInfo.Skills._Religion = check;
+                        m_MainCharacterInfo.Skills.ReligionLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Religion = check;
                         break;
                     }
                 case (LC.SlightOfHand_Spaced):
                     {
-                        m_MainCharacterInfo.Skills.SlightOfHand = skillBonus;
-                        m_MainCharacterInfo.Skills._SlightOfHand = check;
+                        m_MainCharacterInfo.Skills.SlightOfHandLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.SlightOfHand = check;
                         break;
                     }
                 case (LC.Stealth):
                     {
-                        m_MainCharacterInfo.Skills.Stealth = skillBonus;
-                        m_MainCharacterInfo.Skills._Stealth = check;
+                        m_MainCharacterInfo.Skills.StealthLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Stealth = check;
                         break;
                     }
                 case (LC.Survival):
                     {
-                        m_MainCharacterInfo.Skills.Survival = skillBonus;
-                        m_MainCharacterInfo.Skills._Survival = check;
+                        m_MainCharacterInfo.Skills.SurvivalLabel = skillBonus;
+                        m_MainCharacterInfo.Skills.Survival = check;
                         break;
                     }
                 case (LC.Strength):
                     {
                         m_MainCharacterInfo.SavingThrows.Strength = skillBonus;
-                        m_MainCharacterInfo.SavingThrows._Strength = check;
+                        m_MainCharacterInfo.SavingThrows.StrengthSave = check;
                         break;
                     }
                 case (LC.Dexterity):
                     {
                         m_MainCharacterInfo.SavingThrows.Dexterity = skillBonus;
-                        m_MainCharacterInfo.SavingThrows._Dexterity = check;
+                        m_MainCharacterInfo.SavingThrows.DexteritySave = check;
                         break;
                     }
                 case (LC.Constitution):
                     {
                         m_MainCharacterInfo.SavingThrows.Constitution = skillBonus;
-                        m_MainCharacterInfo.SavingThrows._Constitution = check;
+                        m_MainCharacterInfo.SavingThrows.ConstitutionSave = check;
                         break;
                     }
                 case (LC.Intelligence):
                     {
                         m_MainCharacterInfo.SavingThrows.Intelligence = skillBonus;
-                        m_MainCharacterInfo.SavingThrows._Intelligence = check;
+                        m_MainCharacterInfo.SavingThrows.IntelligenceSave = check;
                         break;
                     }
                 case (LC.Wisdom):
                     {
                         m_MainCharacterInfo.SavingThrows.Wisdom = skillBonus;
-                        m_MainCharacterInfo.SavingThrows._Wisdom = check;
+                        m_MainCharacterInfo.SavingThrows.WisdomSave = check;
                         break;
                     }
                 case (LC.Charisma):
                     {
                         m_MainCharacterInfo.SavingThrows.Charisma = skillBonus;
-                        m_MainCharacterInfo.SavingThrows._Charisma = check;
+                        m_MainCharacterInfo.SavingThrows.CharismaSave = check;
                         break;
                     }
                 default:

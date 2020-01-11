@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Reflection;
+using System.Xml.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
@@ -49,6 +51,19 @@ namespace DnD_Character_Sheet
                             CreateMasterLibrary();
                             PopulateCharacterUI();
                             Character_Panel.Show();
+                        }
+                        break;
+                    }
+                case (LC.Save_Button):
+                    {
+                        if (LIB.m_CharacterLoaded)
+                        {
+                            SaveCharacter saveCharacter = new SaveCharacter();
+                            saveCharacter.Save();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No Character information loaded.");
                         }
                         break;
                     }
@@ -239,10 +254,51 @@ namespace DnD_Character_Sheet
                         LIB.m_MainCharacterInfo.Money.Platinum = spinValue;
                         break;
                     }
+                case (LC.Str_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Attributes.Strength = spinValue;
+                        LIB.m_MainCharacterInfo.Calculate();
+                        PopulateAttributes();
+                        break;
+                    }
+                case (LC.Dex_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Attributes.Dexterity = spinValue;
+                        LIB.m_MainCharacterInfo.Calculate();
+                        PopulateAttributes();
+                        break;
+                    }
+                case (LC.Con_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Attributes.Constitution = spinValue;
+                        LIB.m_MainCharacterInfo.Calculate();
+                        PopulateAttributes();
+                        break;
+                    }
+                case (LC.Int_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Attributes.Intelligence = spinValue;
+                        LIB.m_MainCharacterInfo.Calculate();
+                        PopulateAttributes();
+                        break;
+                    }
+                case (LC.Wis_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Attributes.Wisdom = spinValue;
+                        LIB.m_MainCharacterInfo.Calculate();
+                        PopulateAttributes();
+                        break;
+                    }
+                case (LC.Cha_Spin):
+                    {
+                        LIB.m_MainCharacterInfo.Attributes.Charisma = spinValue;
+                        LIB.m_MainCharacterInfo.Calculate();
+                        PopulateAttributes();
+                        break;
+                    }
                 default:
                     break;
             }
-
         }
     }
 }

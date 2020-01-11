@@ -237,6 +237,7 @@ namespace DnD_Character_Sheet
 
         // Buttons
         public const string Load_Button = "Load_Button";
+        public const string Save_Button = "Save_Button";
         public const string button1 = "button1";
         public const string EquipBuy_Button = "EquipBuy_Button";
         public const string EquipSell_Button = "EquipSell_Button";
@@ -255,6 +256,12 @@ namespace DnD_Character_Sheet
         public const string EP_Spin = "EP_Spin";
         public const string GP_Spin = "GP_Spin";
         public const string PP_Spin = "PP_Spin";
+        public const string Str_Spin = "Str_Spin";
+        public const string Dex_Spin = "Dex_Spin";
+        public const string Con_Spin = "Con_Spin";
+        public const string Int_Spin = "Int_Spin";
+        public const string Wis_Spin = "Wis_Spin";
+        public const string Cha_Spin = "Cha_Spin";
 
         // Buy/Sell Grid Column Names
         public static readonly string ItemName_Grid = "ItemName";

@@ -40,42 +40,42 @@ namespace DnD_Character_Sheet.Classes
         #region Skills
         public class Skills
         {
-            public string Acrobatics { get; set; }
-            public bool _Acrobatics { get; set; }
-            public string AnimalHandling { get; set; }
-            public bool _AnimalHandling { get; set; }
-            public string Arcana { get; set; }
-            public bool _Arcana { get; set; }
-            public string Athletics { get; set; }
-            public bool _Athletics { get; set; }
-            public string Deception { get; set; }
-            public bool _Deception { get; set; }
-            public string History { get; set; }
-            public bool _History { get; set; }
-            public string Insight { get; set; }
-            public bool _Insight { get; set; }
-            public string Intimidation { get; set; }
-            public bool _Intimidation { get; set; }
-            public string Investigation { get; set; }
-            public bool _Investigation { get; set; }
-            public string Medicine { get; set; }
-            public bool _Medicine { get; set; }
-            public string Nature { get; set; }
-            public bool _Nature { get; set; }
-            public string Perception { get; set; }
-            public bool _Perception { get; set; }
-            public string Performance { get; set; }
-            public bool _Performance { get; set; }
-            public string Persuassion { get; set; }
-            public bool _Persuassion { get; set; }
-            public string Religion { get; set; }
-            public bool _Religion { get; set; }
-            public string SlightOfHand { get; set; }
-            public bool _SlightOfHand { get; set; }
-            public string Stealth { get; set; }
-            public bool _Stealth { get; set; }
-            public string Survival { get; set; }
-            public bool _Survival { get; set; }
+            public string AcrobaticsLabel { get; set; }
+            public bool Acrobatics { get; set; }
+            public string AnimalHandlingLabel { get; set; }
+            public bool AnimalHandling { get; set; }
+            public string ArcanaLabel { get; set; }
+            public bool Arcana { get; set; }
+            public string AthleticsLabel { get; set; }
+            public bool Athletics { get; set; }
+            public string DeceptionLabel { get; set; }
+            public bool Deception { get; set; }
+            public string HistoryLabel { get; set; }
+            public bool History { get; set; }
+            public string InsightLabel { get; set; }
+            public bool Insight { get; set; }
+            public string IntimidationLabel { get; set; }
+            public bool Intimidation { get; set; }
+            public string InvestigationLabel { get; set; }
+            public bool Investigation { get; set; }
+            public string MedicineLabel { get; set; }
+            public bool Medicine { get; set; }
+            public string NatureLabel { get; set; }
+            public bool Nature { get; set; }
+            public string PerceptionLabel { get; set; }
+            public bool Perception { get; set; }
+            public string PerformanceLabel { get; set; }
+            public bool Performance { get; set; }
+            public string PersuassionLabel { get; set; }
+            public bool Persuassion { get; set; }
+            public string ReligionLabel { get; set; }
+            public bool Religion { get; set; }
+            public string SlightOfHandLabel { get; set; }
+            public bool SlightOfHand { get; set; }
+            public string StealthLabel { get; set; }
+            public bool Stealth { get; set; }
+            public string SurvivalLabel { get; set; }
+            public bool Survival { get; set; }
 
             public void Calculate(Attributes attributes)
             {
@@ -84,24 +84,24 @@ namespace DnD_Character_Sheet.Classes
 
             private void SetModifiers(Attributes attributes)
             {
-                Acrobatics = CALC.CalcBonus(_Acrobatics, attributes.DexterityModifier);
-                AnimalHandling = CALC.CalcBonus(_AnimalHandling, attributes.WisdomModifier);
-                Arcana = CALC.CalcBonus(_Arcana, attributes.IntelligenceModifier);
-                Athletics = CALC.CalcBonus(_Athletics, attributes.StrengthModifier);
-                Deception = CALC.CalcBonus(_Deception, attributes.CharismaModifier);
-                History = CALC.CalcBonus(_History, attributes.IntelligenceModifier);
-                Insight = CALC.CalcBonus(_Insight, attributes.WisdomModifier);
-                Intimidation = CALC.CalcBonus(_Intimidation, attributes.CharismaModifier);
-                Investigation = CALC.CalcBonus(_Investigation, attributes.IntelligenceModifier);
-                Medicine = CALC.CalcBonus(_Medicine, attributes.WisdomModifier);
-                Nature = CALC.CalcBonus(_Nature, attributes.IntelligenceModifier);
-                Perception = CALC.CalcBonus(_Nature, attributes.IntelligenceModifier);
-                Performance = CALC.CalcBonus(_Performance, attributes.CharismaModifier);
-                Persuassion = CALC.CalcBonus(_Persuassion, attributes.CharismaModifier);
-                Religion = CALC.CalcBonus(_Religion, attributes.IntelligenceModifier);
-                SlightOfHand = CALC.CalcBonus(_SlightOfHand, attributes.DexterityModifier);
-                Stealth = CALC.CalcBonus(_Stealth, attributes.DexterityModifier);
-                Survival = CALC.CalcBonus(_Survival, attributes.WisdomModifier);
+                AcrobaticsLabel = CALC.CalcBonus(Acrobatics, attributes.DexterityModifier);
+                AnimalHandlingLabel = CALC.CalcBonus(AnimalHandling, attributes.WisdomModifier);
+                ArcanaLabel = CALC.CalcBonus(Arcana, attributes.IntelligenceModifier);
+                AthleticsLabel = CALC.CalcBonus(Athletics, attributes.StrengthModifier);
+                DeceptionLabel = CALC.CalcBonus(Deception, attributes.CharismaModifier);
+                HistoryLabel = CALC.CalcBonus(History, attributes.IntelligenceModifier);
+                InsightLabel = CALC.CalcBonus(Insight, attributes.WisdomModifier);
+                IntimidationLabel = CALC.CalcBonus(Intimidation, attributes.CharismaModifier);
+                InvestigationLabel = CALC.CalcBonus(Investigation, attributes.IntelligenceModifier);
+                MedicineLabel = CALC.CalcBonus(Medicine, attributes.WisdomModifier);
+                NatureLabel = CALC.CalcBonus(Nature, attributes.IntelligenceModifier);
+                PerceptionLabel = CALC.CalcBonus(Nature, attributes.IntelligenceModifier);
+                PerformanceLabel = CALC.CalcBonus(Performance, attributes.CharismaModifier);
+                PersuassionLabel = CALC.CalcBonus(Persuassion, attributes.CharismaModifier);
+                ReligionLabel = CALC.CalcBonus(Religion, attributes.IntelligenceModifier);
+                SlightOfHandLabel = CALC.CalcBonus(SlightOfHand, attributes.DexterityModifier);
+                StealthLabel = CALC.CalcBonus(Stealth, attributes.DexterityModifier);
+                SurvivalLabel = CALC.CalcBonus(Survival, attributes.WisdomModifier);
             }
         }
 
@@ -425,17 +425,17 @@ namespace DnD_Character_Sheet.Classes
         public class SavingThrows
         {
             public string Strength { get; set; }
-            public bool _Strength { get; set; }
+            public bool StrengthSave { get; set; }
             public string Dexterity { get; set; }
-            public bool _Dexterity { get; set; }
+            public bool DexteritySave { get; set; }
             public string Constitution { get; set; }
-            public bool _Constitution { get; set; }
+            public bool ConstitutionSave { get; set; }
             public string Intelligence { get; set; }
-            public bool _Intelligence { get; set; }
+            public bool IntelligenceSave { get; set; }
             public string Wisdom { get; set; }
-            public bool _Wisdom { get; set; }
+            public bool WisdomSave { get; set; }
             public string Charisma { get; set; }
-            public bool _Charisma { get; set; }
+            public bool CharismaSave { get; set; }
 
             public void Calculate(Attributes attributes)
             {
@@ -444,12 +444,12 @@ namespace DnD_Character_Sheet.Classes
 
             private void SetModifiers(Attributes attributes)
             {
-                Strength = CALC.CalcBonus(_Strength, attributes.StrengthModifier);
-                Dexterity = CALC.CalcBonus(_Dexterity, attributes.DexterityModifier);
-                Constitution = CALC.CalcBonus(_Constitution, attributes.ConstitutionModifier);
-                Intelligence = CALC.CalcBonus(_Intelligence, attributes.IntelligenceModifier);
-                Wisdom = CALC.CalcBonus(_Wisdom, attributes.WisdomModifier);
-                Charisma = CALC.CalcBonus(_Charisma, attributes.CharismaModifier);
+                Strength = CALC.CalcBonus(StrengthSave, attributes.StrengthModifier);
+                Dexterity = CALC.CalcBonus(DexteritySave, attributes.DexterityModifier);
+                Constitution = CALC.CalcBonus(ConstitutionSave, attributes.ConstitutionModifier);
+                Intelligence = CALC.CalcBonus(IntelligenceSave, attributes.IntelligenceModifier);
+                Wisdom = CALC.CalcBonus(WisdomSave, attributes.WisdomModifier);
+                Charisma = CALC.CalcBonus(CharismaSave, attributes.CharismaModifier);
             }
         }
 

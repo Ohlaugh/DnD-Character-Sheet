@@ -76,29 +76,7 @@ namespace DnD_Character_Sheet
             PlayerName_TextBox.Text = LIB.m_MainCharacterInfo.PlayerName;
             XP_Spin.Value = LIB.m_MainCharacterInfo.ExperiencePoints;
 
-            Str_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Strength;
-            StrMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.StrengthModifier.ToString();
-            StrSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.StrengthSign;
-
-            Dex_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Dexterity;
-            DexMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.DexterityModifier.ToString();
-            DexSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.DexteritySign;
-
-            Con_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Constitution;
-            ConMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.ConstitutionModifier.ToString();
-            ConSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.ConstitutionSign;
-
-            Int_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Intelligence;
-            IntMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.IntelligenceModifier.ToString();
-            IntSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.IntelligenceSign;
-
-            Wis_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Wisdom;
-            WisMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.WisdomModifier.ToString();
-            WisSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.WisdomSign;
-
-            Cha_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Charisma;
-            ChaMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.CharismaModifier.ToString();
-            ChaSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.CharismaSign;
+            PopulateAttributes();
 
             ProfBonus_Label.Text = LIB.m_MainCharacterInfo.ProficiencyBonus.ToString();
             Inspiration_CheckBox.Checked = LIB.m_MainCharacterInfo.Inspiration;
@@ -132,6 +110,33 @@ namespace DnD_Character_Sheet
             UpdateMoney();
             UpdateLists();
             UpdateGrids();
+        }
+
+        private void PopulateAttributes()
+        {
+            Str_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Strength;
+            StrMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.StrengthModifier.ToString();
+            StrSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.StrengthSign;
+
+            Dex_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Dexterity;
+            DexMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.DexterityModifier.ToString();
+            DexSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.DexteritySign;
+
+            Con_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Constitution;
+            ConMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.ConstitutionModifier.ToString();
+            ConSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.ConstitutionSign;
+
+            Int_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Intelligence;
+            IntMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.IntelligenceModifier.ToString();
+            IntSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.IntelligenceSign;
+
+            Wis_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Wisdom;
+            WisMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.WisdomModifier.ToString();
+            WisSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.WisdomSign;
+
+            Cha_Spin.Value = LIB.m_MainCharacterInfo.Attributes.Charisma;
+            ChaMod_Label.Text = LIB.m_MainCharacterInfo.Attributes.CharismaModifier.ToString();
+            ChaSign_Label.Text = LIB.m_MainCharacterInfo.Attributes.CharismaSign;
         }
 
         /// <summary>
@@ -303,7 +308,7 @@ namespace DnD_Character_Sheet
         /// <param name="hitDiceSpin"></param>
         private void HitDice_ValueChanged(NumericUpDown hitDiceSpin)
         {
-            int oldTotal = LIB.m_MainCharacterInfo.HitDiceTotal1;
+            int oldTotal = LIB.m_MainCharacterInfo.HitDiceTotal1 + LIB.m_MainCharacterInfo.HitDiceTotal2;
             int newTotal = Convert.ToInt32(hitDiceSpin.Value);
             if (oldTotal != newTotal)
             {
