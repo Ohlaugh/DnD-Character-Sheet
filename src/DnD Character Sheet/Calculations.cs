@@ -162,9 +162,9 @@ namespace DnD_Character_Sheet
             int diceType = int.Parse(diceSplit[1]);
             int modifier = diceSplit.Length == 2 ? 0 : int.Parse(diceSplit[2]);
 
+            Random rnd = new Random();
             for (int i = 0; i < diceMultiplyer; i++)
             {
-                Random rnd = new Random();                
                 result += rnd.Next(1, diceType);
             }
             result += modifier;

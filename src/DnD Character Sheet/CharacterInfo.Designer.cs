@@ -180,6 +180,7 @@
             this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Save_Button = new System.Windows.Forms.Button();
+            this.Spells_Tab = new System.Windows.Forms.TabPage();
             this.Character_Panel.SuspendLayout();
             this.CharacterTabCtrl.SuspendLayout();
             this.Stats_Tab.SuspendLayout();
@@ -254,6 +255,7 @@
             // 
             this.CharacterTabCtrl.Controls.Add(this.Stats_Tab);
             this.CharacterTabCtrl.Controls.Add(this.Equipment_Tab);
+            this.CharacterTabCtrl.Controls.Add(this.Spells_Tab);
             this.CharacterTabCtrl.Controls.Add(this.Backstory_Tab);
             this.CharacterTabCtrl.Location = new System.Drawing.Point(0, 0);
             this.CharacterTabCtrl.Name = "CharacterTabCtrl";
@@ -1887,6 +1889,15 @@
             this.Save_Button.UseVisualStyleBackColor = true;
             this.Save_Button.Click += new System.EventHandler(this.Button_Click);
             // 
+            // Spells_Tab
+            // 
+            this.Spells_Tab.Location = new System.Drawing.Point(4, 29);
+            this.Spells_Tab.Name = "Spells_Tab";
+            this.Spells_Tab.Size = new System.Drawing.Size(2045, 1119);
+            this.Spells_Tab.TabIndex = 3;
+            this.Spells_Tab.Text = "Spells";
+            this.Spells_Tab.UseVisualStyleBackColor = true;
+            // 
             // CharacterInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2085,6 +2096,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight_Gear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Properties_Gear;
         private System.Windows.Forms.Button Save_Button;
+        private System.Windows.Forms.TabPage Spells_Tab;
     }
 }
 
