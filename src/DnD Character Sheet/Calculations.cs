@@ -146,45 +146,29 @@ namespace DnD_Character_Sheet
                 LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight * armor.Quantity;
             }
         }
-      
-      
-        public static int dice(string arg) //accepts strings in formats like "d6", "6d10", "3d12 + 15", "3d3 - 3", etc
+
+        /// <summary>
+        /// This method calculates random dice roll values
+        /// </summary>
+        /// <param name="diceInput">Format = "6d10", "3d12 + 15", "3d3 - 3", etc.</param>
+        /// <returns>Roll Value</returns>
+        public static int Dice(string diceInput)
         {
-            
-            int loop; //how many dice
-            int diceValue = 1; //number of dice sides
-            int modifier; //+5, -5, etc
             int result = 0;
 
-            loop = Int32.Parse(arg.Substring(0, arg.IndexOf("d")));
-            if (loop == 0) loop = 1; //if the format is "d6" or similar, assume only one die
-            if (loop < 0) return -1; //if roll is impossible return -1
+            char[] charArg = new char[] { 'd', 'D', '-', '+' };
+            var diceSplit = diceInput.Split(charArg);
+            int diceMultiplyer = int.Parse(diceSplit[0]);
+            int diceType = int.Parse(diceSplit[1]);
+            int modifier = diceSplit.Length == 2 ? 0 : int.Parse(diceSplit[2]);
 
-            if (arg.IndexOf(" ") == -1) modifier = 0; //if there is no modifier, set it to 0, else set it to the positive or negative value
-            else
+            for (int i = 0; i < diceMultiplyer; i++)
             {
-                String modifierText = arg.Substring(arg.IndexOf(" ") + 1);
-                modifier = Int32.Parse(arg.Substring(arg.IndexOf(" ") + 3));
-                if (arg[0].Equals('-')) modifier = modifier * -1;
+                Random rnd = new Random();                
+                result += rnd.Next(1, diceType);
             }
-
-            String diceString = arg.Substring(arg.IndexOf("d") + 1);
-            if (arg.IndexOf(" ") == -1)
-                diceValue = Int32.Parse(diceString);
-            else
-                diceValue = Int32.Parse(diceString.Substring(0, diceString.IndexOf(" ")));
-            if (diceValue < 0) return -1; //if impossible diceValue return -1
-            //Console.WriteLine(loop + "," + diceValue + "," + modifier);
-
-            for (int i = 0; i < loop; i++)
-            {
-                Random rnd = new Random();
-                int roll = rnd.Next(1, diceValue);
-                result += roll;
-            }
-            result += modifier; //modify the final result
+            result += modifier;
             return result;
         }
-
     }
 }
