@@ -26,6 +26,44 @@ namespace DnD_Character_Sheet
             return "- " + bonus;
         }
 
+        public static int dice(string arg)
+        {
+            
+            int loop; //how many dice
+            int diceValue = 1; //number of dice sides
+            int modifier; //+5, -5, etc
+            int result = 0;
+
+            loop = Int32.Parse(arg.Substring(0, arg.IndexOf("d")));
+            if (loop == 0) loop = 1; //if the format is "d6" or similar, assume only one die
+            if (loop < 0) return -1; //if roll is impossible return -1
+
+            if (arg.IndexOf(" ") == -1) modifier = 0; //if there is no modifier, set it to 0, else set it to the positive or negative value
+            else
+            {
+                String modifierText = arg.Substring(arg.IndexOf(" ") + 1);
+                modifier = Int32.Parse(arg.Substring(arg.IndexOf(" ") + 3));
+                if (arg[0].Equals('-')) modifier = modifier * -1;
+            }
+
+            String diceString = arg.Substring(arg.IndexOf("d") + 1);
+            if (arg.IndexOf(" ") == -1)
+                diceValue = Int32.Parse(diceString);
+            else
+                diceValue = Int32.Parse(diceString.Substring(0, diceString.IndexOf(" ")));
+            if (diceValue < 0) return -1; //if impossible diceValue return -1
+            //Console.WriteLine(loop + "," + diceValue + "," + modifier);
+
+            for (int i = 0; i < loop; i++)
+            {
+                Random rnd = new Random();
+                int roll = rnd.Next(1, diceValue);
+                result += roll;
+            }
+            result += modifier; //modify the final result
+            return result;
+        }
+
 
         public static int CalcLevel()
         {
