@@ -300,5 +300,39 @@ namespace DnD_Character_Sheet
                     break;
             }
         }
+
+        /// <summary>
+        /// This method handles all grid value changes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView grid = (DataGridView)sender;
+            switch (grid.Name)
+            {
+                case (LC.Equipment_Grid):
+                    {
+                        if (grid.CurrentCell != null &&
+                            grid.Columns[grid.CurrentCell.ColumnIndex].HeaderText == LC.Quantity)
+                        {
+                            EqupimentGrid_ValueChanged(grid, 2);
+                        }
+                        break;
+                    }
+                case (LC.Item_Grid):
+                    {
+                        if (grid.CurrentCell != null &&
+                            grid.Columns[grid.CurrentCell.ColumnIndex].HeaderText == LC.Quantity)
+                        {
+                            EqupimentGrid_ValueChanged(grid, 1);
+                        }
+                        break;
+                    }
+                default:
+                    break;
+            }
+
+        }
     }
 }

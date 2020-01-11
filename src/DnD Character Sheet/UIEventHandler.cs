@@ -185,7 +185,6 @@ namespace DnD_Character_Sheet
             {
                 CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
                 object[] param = { item.Style, key, item.Quantity, item.Cost, item.Weight + " lb.", item.Description };
-                LIB.m_MainCharacterInfo.CarryingWeight += item.Weight * item.Quantity;
                 Item_Grid.Rows.Add(param);
             }
 
@@ -194,7 +193,6 @@ namespace DnD_Character_Sheet
                 CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
                 string properties = string.Join(", ", weapon.Properties.ToArray());
                 object[] param = { weapon.Equipped, weapon.Style, key, weapon.Quantity, weapon.Cost, weapon.Damage, string.Empty, weapon.Weight + " lb.", properties };
-                LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight * weapon.Quantity;
                 Equipment_Grid.Rows.Add(param);
             }
 
@@ -203,10 +201,9 @@ namespace DnD_Character_Sheet
                 CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
                 string properties = string.Format(LC.ArmorProperties, armor.StrengthReq, armor.Disadvantage);
                 object[] param = { armor.Equipped, armor.Style, key, armor.Quantity, armor.Cost, string.Empty, armor.ArmorClass, armor.Weight + " lb.", properties };
-                LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight * armor.Quantity;
                 Equipment_Grid.Rows.Add(param);
             }
-
+            CALC.CarryWeight();
             Carry_TextBox.Text = LIB.m_MainCharacterInfo.CarryingWeight + " / " + LIB.m_MainCharacterInfo.CarryingCapacity + " lb.";
         }
 
@@ -231,7 +228,7 @@ namespace DnD_Character_Sheet
                 int oldHitDice2 = LIB.m_MainCharacterInfo.HitDiceTotal2;
 
                 LIB.m_MainCharacterInfo.ExperiencePoints = (int)xpSpin.Value;
-                int newTotalLevel = CALC.CalcLevel();
+                int newTotalLevel = CALC.Level();
                 if (oldTotalLevel > newTotalLevel)
                 {
                     XP_Spin.Value = oldXP;
@@ -335,6 +332,103 @@ namespace DnD_Character_Sheet
                     LIB.m_MainCharacterInfo.HitDiceTotal1 = newTotal;
                 }
             }
+        }
+
+        /// <summary>
+        /// This method handles whenever a user changes the quantity of items in their Equipment or Items grid
+        /// </summary>
+        /// <param name="grid">Equipment/Item Grid</param>
+        /// <param name="index">Quantity Column Index</param>
+        private void EqupimentGrid_ValueChanged(DataGridView grid, int index)
+        {
+            string itemName = grid.CurrentRow.Cells[index].Value.ToString();
+            bool isArmor = LIB.m_MainCharacterInfo.Armor.ContainsKey(itemName);
+            bool isWeapon = LIB.m_MainCharacterInfo.Weapons.ContainsKey(itemName);
+            bool isItem = LIB.m_MainCharacterInfo.Items.ContainsKey(itemName);
+
+            DataGridViewCell currentCell = grid.CurrentCell;
+
+            if (currentCell.Value == null)
+            {
+                if (isArmor)
+                {
+                    currentCell.Value = LIB.m_MainCharacterInfo.Armor[itemName].Quantity;
+                }
+                else if (isWeapon)
+                {
+                    currentCell.Value = LIB.m_MainCharacterInfo.Weapons[itemName].Quantity;
+                }
+                else if (isItem)
+                {
+                    currentCell.Value = LIB.m_MainCharacterInfo.Items[itemName].Quantity;
+                }
+                return;
+            }
+
+            if (int.TryParse(currentCell.Value.ToString(), out int newValue))
+            {
+                if (newValue <= 0)
+                {
+                    if (isArmor)
+                    {
+                        LIB.m_MainCharacterInfo.Armor.Remove(itemName);
+                    }
+                    else if (isWeapon)
+                    {
+                        LIB.m_MainCharacterInfo.Weapons.Remove(itemName);
+                    }
+                    else if (isItem)
+                    {
+                        LIB.m_MainCharacterInfo.Items.Remove(itemName);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: This item was not correctly added into the Equipment Library for this character");
+                    }
+                    grid.Rows.RemoveAt(grid.CurrentRow.Index);
+                }
+                else
+                {
+                    if (isArmor)
+                    {
+                        LIB.m_MainCharacterInfo.Armor[itemName].Quantity = newValue;
+                    }
+                    else if (isWeapon)
+                    {
+                        LIB.m_MainCharacterInfo.Weapons[itemName].Quantity = newValue;
+                    }
+                    else if (isItem)
+                    {
+                        LIB.m_MainCharacterInfo.Items[itemName].Quantity = newValue;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: This item was not correctly added into the Equipment Library for this character");
+                    }
+                }
+            }
+            else
+            {
+                if (isArmor)
+                {
+                    currentCell.Value = LIB.m_MainCharacterInfo.Armor[itemName].Quantity;
+                }
+                else if (isWeapon)
+                {
+                    currentCell.Value = LIB.m_MainCharacterInfo.Weapons[itemName].Quantity;
+                }
+                else if (isItem)
+                {
+                    currentCell.Value = LIB.m_MainCharacterInfo.Items[itemName].Quantity;
+                }
+                else
+                {
+                    MessageBox.Show("Error: This item was not correctly added into the Equipment Library for this character");
+                }
+            }
+
+            CALC.CarryWeight();
+            Carry_TextBox.Text = LIB.m_MainCharacterInfo.CarryingWeight + " / " + LIB.m_MainCharacterInfo.CarryingCapacity + " lb.";
         }
 
         #endregion

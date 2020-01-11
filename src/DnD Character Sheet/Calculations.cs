@@ -5,12 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using LIB = DnD_Character_Sheet.Library;
 using LC = DnD_Character_Sheet.Constants;
+using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
     public class Calculations
     {
-        public static string CalcBonus(bool proficient, int modifier)
+        /// <summary>
+        /// This method calculates the characters Proficiency Bonus for skills
+        /// </summary>
+        /// <param name="proficient"></param>
+        /// <param name="modifier"></param>
+        /// <returns></returns>
+        public static string Bonus(bool proficient, int modifier)
         {
             int bonus = modifier;
             if (proficient)
@@ -26,46 +33,11 @@ namespace DnD_Character_Sheet
             return "- " + bonus;
         }
 
-        public static int dice(string arg) //accepts strings in formats like "d6", "6d10", "3d12 + 15", "3d3 - 3", etc
-        {
-            
-            int loop; //how many dice
-            int diceValue = 1; //number of dice sides
-            int modifier; //+5, -5, etc
-            int result = 0;
-
-            loop = Int32.Parse(arg.Substring(0, arg.IndexOf("d")));
-            if (loop == 0) loop = 1; //if the format is "d6" or similar, assume only one die
-            if (loop < 0) return -1; //if roll is impossible return -1
-
-            if (arg.IndexOf(" ") == -1) modifier = 0; //if there is no modifier, set it to 0, else set it to the positive or negative value
-            else
-            {
-                String modifierText = arg.Substring(arg.IndexOf(" ") + 1);
-                modifier = Int32.Parse(arg.Substring(arg.IndexOf(" ") + 3));
-                if (arg[0].Equals('-')) modifier = modifier * -1;
-            }
-
-            String diceString = arg.Substring(arg.IndexOf("d") + 1);
-            if (arg.IndexOf(" ") == -1)
-                diceValue = Int32.Parse(diceString);
-            else
-                diceValue = Int32.Parse(diceString.Substring(0, diceString.IndexOf(" ")));
-            if (diceValue < 0) return -1; //if impossible diceValue return -1
-            //Console.WriteLine(loop + "," + diceValue + "," + modifier);
-
-            for (int i = 0; i < loop; i++)
-            {
-                Random rnd = new Random();
-                int roll = rnd.Next(1, diceValue);
-                result += roll;
-            }
-            result += modifier; //modify the final result
-            return result;
-        }
-
-
-        public static int CalcLevel()
+        /// <summary>
+        /// This method calculates the characters level based on XP
+        /// </summary>
+        /// <returns></returns>
+        public static int Level()
         {
             int XP = LIB.m_MainCharacterInfo.ExperiencePoints;
             if (XP < 300)
@@ -149,5 +121,70 @@ namespace DnD_Character_Sheet
                 return 20;
             }
         }
+
+        /// <summary>
+        /// This method calculates the characters carrying weight
+        /// </summary>
+        public static void CarryWeight()
+        {
+            LIB.m_MainCharacterInfo.CarryingWeight = 0;
+            foreach (var key in LIB.m_MainCharacterInfo.Items.Keys)
+            {
+                CLIB.Item_Class item = LIB.m_MainCharacterInfo.Items[key];
+                LIB.m_MainCharacterInfo.CarryingWeight += item.Weight * item.Quantity;
+            }
+
+            foreach (var key in LIB.m_MainCharacterInfo.Weapons.Keys)
+            {
+                CLIB.Weapon_Class weapon = LIB.m_MainCharacterInfo.Weapons[key];
+                LIB.m_MainCharacterInfo.CarryingWeight += weapon.Weight * weapon.Quantity;
+            }
+
+            foreach (var key in LIB.m_MainCharacterInfo.Armor.Keys)
+            {
+                CLIB.Armor_Class armor = LIB.m_MainCharacterInfo.Armor[key];
+                LIB.m_MainCharacterInfo.CarryingWeight += armor.Weight * armor.Quantity;
+            }
+        }
+      
+      
+        public static int dice(string arg) //accepts strings in formats like "d6", "6d10", "3d12 + 15", "3d3 - 3", etc
+        {
+            
+            int loop; //how many dice
+            int diceValue = 1; //number of dice sides
+            int modifier; //+5, -5, etc
+            int result = 0;
+
+            loop = Int32.Parse(arg.Substring(0, arg.IndexOf("d")));
+            if (loop == 0) loop = 1; //if the format is "d6" or similar, assume only one die
+            if (loop < 0) return -1; //if roll is impossible return -1
+
+            if (arg.IndexOf(" ") == -1) modifier = 0; //if there is no modifier, set it to 0, else set it to the positive or negative value
+            else
+            {
+                String modifierText = arg.Substring(arg.IndexOf(" ") + 1);
+                modifier = Int32.Parse(arg.Substring(arg.IndexOf(" ") + 3));
+                if (arg[0].Equals('-')) modifier = modifier * -1;
+            }
+
+            String diceString = arg.Substring(arg.IndexOf("d") + 1);
+            if (arg.IndexOf(" ") == -1)
+                diceValue = Int32.Parse(diceString);
+            else
+                diceValue = Int32.Parse(diceString.Substring(0, diceString.IndexOf(" ")));
+            if (diceValue < 0) return -1; //if impossible diceValue return -1
+            //Console.WriteLine(loop + "," + diceValue + "," + modifier);
+
+            for (int i = 0; i < loop; i++)
+            {
+                Random rnd = new Random();
+                int roll = rnd.Next(1, diceValue);
+                result += roll;
+            }
+            result += modifier; //modify the final result
+            return result;
+        }
+
     }
 }

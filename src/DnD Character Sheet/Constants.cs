@@ -105,6 +105,7 @@ namespace DnD_Character_Sheet
         #endregion
 
         #region Config File Constants
+        public static readonly string FileFilter = "DnD Character Files (*.DnD)|*.DnD";
 
         // Top Level
         public static readonly string Class1 = "Class1";
@@ -262,6 +263,10 @@ namespace DnD_Character_Sheet
         public const string Int_Spin = "Int_Spin";
         public const string Wis_Spin = "Wis_Spin";
         public const string Cha_Spin = "Cha_Spin";
+
+        // Grids
+        public const string Equipment_Grid = "Equipment_Grid";
+        public const string Item_Grid = "Item_Grid";
 
         // Buy/Sell Grid Column Names
         public static readonly string ItemName_Grid = "ItemName";
