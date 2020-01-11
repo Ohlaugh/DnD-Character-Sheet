@@ -35,7 +35,7 @@ namespace DnD_Character_Sheet
             }
             fileDialog.FileName += " " + m_MainCharacterInfo.Race + " - " + m_MainCharacterInfo.CharacterName;
 
-            fileDialog.Filter = "DnD Character Files (*.DnD)|*.DnD";
+            fileDialog.Filter = LC.FileFilter;
             fileDialog.FilterIndex = 1;
             var result = fileDialog.ShowDialog();
             if (result == DialogResult.OK)

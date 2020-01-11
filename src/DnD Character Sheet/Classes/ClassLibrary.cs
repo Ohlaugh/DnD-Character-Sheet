@@ -84,24 +84,24 @@ namespace DnD_Character_Sheet.Classes
 
             private void SetModifiers(Attributes attributes)
             {
-                AcrobaticsLabel = CALC.CalcBonus(Acrobatics, attributes.DexterityModifier);
-                AnimalHandlingLabel = CALC.CalcBonus(AnimalHandling, attributes.WisdomModifier);
-                ArcanaLabel = CALC.CalcBonus(Arcana, attributes.IntelligenceModifier);
-                AthleticsLabel = CALC.CalcBonus(Athletics, attributes.StrengthModifier);
-                DeceptionLabel = CALC.CalcBonus(Deception, attributes.CharismaModifier);
-                HistoryLabel = CALC.CalcBonus(History, attributes.IntelligenceModifier);
-                InsightLabel = CALC.CalcBonus(Insight, attributes.WisdomModifier);
-                IntimidationLabel = CALC.CalcBonus(Intimidation, attributes.CharismaModifier);
-                InvestigationLabel = CALC.CalcBonus(Investigation, attributes.IntelligenceModifier);
-                MedicineLabel = CALC.CalcBonus(Medicine, attributes.WisdomModifier);
-                NatureLabel = CALC.CalcBonus(Nature, attributes.IntelligenceModifier);
-                PerceptionLabel = CALC.CalcBonus(Nature, attributes.IntelligenceModifier);
-                PerformanceLabel = CALC.CalcBonus(Performance, attributes.CharismaModifier);
-                PersuassionLabel = CALC.CalcBonus(Persuassion, attributes.CharismaModifier);
-                ReligionLabel = CALC.CalcBonus(Religion, attributes.IntelligenceModifier);
-                SlightOfHandLabel = CALC.CalcBonus(SlightOfHand, attributes.DexterityModifier);
-                StealthLabel = CALC.CalcBonus(Stealth, attributes.DexterityModifier);
-                SurvivalLabel = CALC.CalcBonus(Survival, attributes.WisdomModifier);
+                AcrobaticsLabel = CALC.Bonus(Acrobatics, attributes.DexterityModifier);
+                AnimalHandlingLabel = CALC.Bonus(AnimalHandling, attributes.WisdomModifier);
+                ArcanaLabel = CALC.Bonus(Arcana, attributes.IntelligenceModifier);
+                AthleticsLabel = CALC.Bonus(Athletics, attributes.StrengthModifier);
+                DeceptionLabel = CALC.Bonus(Deception, attributes.CharismaModifier);
+                HistoryLabel = CALC.Bonus(History, attributes.IntelligenceModifier);
+                InsightLabel = CALC.Bonus(Insight, attributes.WisdomModifier);
+                IntimidationLabel = CALC.Bonus(Intimidation, attributes.CharismaModifier);
+                InvestigationLabel = CALC.Bonus(Investigation, attributes.IntelligenceModifier);
+                MedicineLabel = CALC.Bonus(Medicine, attributes.WisdomModifier);
+                NatureLabel = CALC.Bonus(Nature, attributes.IntelligenceModifier);
+                PerceptionLabel = CALC.Bonus(Nature, attributes.IntelligenceModifier);
+                PerformanceLabel = CALC.Bonus(Performance, attributes.CharismaModifier);
+                PersuassionLabel = CALC.Bonus(Persuassion, attributes.CharismaModifier);
+                ReligionLabel = CALC.Bonus(Religion, attributes.IntelligenceModifier);
+                SlightOfHandLabel = CALC.Bonus(SlightOfHand, attributes.DexterityModifier);
+                StealthLabel = CALC.Bonus(Stealth, attributes.DexterityModifier);
+                SurvivalLabel = CALC.Bonus(Survival, attributes.WisdomModifier);
             }
         }
 
@@ -444,12 +444,12 @@ namespace DnD_Character_Sheet.Classes
 
             private void SetModifiers(Attributes attributes)
             {
-                Strength = CALC.CalcBonus(StrengthSave, attributes.StrengthModifier);
-                Dexterity = CALC.CalcBonus(DexteritySave, attributes.DexterityModifier);
-                Constitution = CALC.CalcBonus(ConstitutionSave, attributes.ConstitutionModifier);
-                Intelligence = CALC.CalcBonus(IntelligenceSave, attributes.IntelligenceModifier);
-                Wisdom = CALC.CalcBonus(WisdomSave, attributes.WisdomModifier);
-                Charisma = CALC.CalcBonus(CharismaSave, attributes.CharismaModifier);
+                Strength = CALC.Bonus(StrengthSave, attributes.StrengthModifier);
+                Dexterity = CALC.Bonus(DexteritySave, attributes.DexterityModifier);
+                Constitution = CALC.Bonus(ConstitutionSave, attributes.ConstitutionModifier);
+                Intelligence = CALC.Bonus(IntelligenceSave, attributes.IntelligenceModifier);
+                Wisdom = CALC.Bonus(WisdomSave, attributes.WisdomModifier);
+                Charisma = CALC.Bonus(CharismaSave, attributes.CharismaModifier);
             }
         }
 

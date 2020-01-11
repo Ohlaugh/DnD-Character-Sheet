@@ -20,7 +20,7 @@ namespace DnD_Character_Sheet
         public bool Load()
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "DnD Character Files (*.DnD)|*.DnD";
+            fileDialog.Filter = LC.FileFilter;
             var result = fileDialog.ShowDialog();
 
             XmlDocument xDoc = new XmlDocument();
@@ -115,7 +115,7 @@ namespace DnD_Character_Sheet
                     Properties = properties,
                     Equipped = Convert.ToBoolean(weaponNode.SelectSingleNode(LC.Equipped).InnerText),
                     Quantity = Convert.ToInt32(weaponNode.SelectSingleNode(LC.Quantity).InnerText)
-                };                
+                };
 
                 m_WeaponData.Add(name, weapon);
             }
@@ -170,7 +170,6 @@ namespace DnD_Character_Sheet
         {
             m_MainCharacterInfo = new MainCharacterInfo
             {
-                // Top Level Info
                 CharacterName = m_CharacterName,
                 Class1 = m_CharData[LC.Class1],
                 Class2 = m_CharData[LC.Class2],
@@ -190,8 +189,31 @@ namespace DnD_Character_Sheet
                 EyeColor = m_CharData[LC.EyeColor],
                 SkinColor = m_CharData[LC.SkinColor],
                 HairColor = m_CharData[LC.HairColor],
+                Inspiration = Convert.ToBoolean(m_CharData[LC.Inspiration]),
+                ArmorClass = Convert.ToInt32(m_CharData[LC.ArmorClass]),
+                Initiative = Convert.ToInt32(m_CharData[LC.Initiative]),
+                Speed = Convert.ToInt32(m_CharData[LC.Speed]),
+                HP_Max = Convert.ToInt32(m_CharData[LC.HP_Max]),
+                HP_Current = Convert.ToInt32(m_CharData[LC.HP_Current]),
+                HP_Temp = Convert.ToInt32(m_CharData[LC.HP_Temp]),
+                HitDice1 = m_CharData[LC.HitDice1],
+                HitDice2 = m_CharData[LC.HitDice2],
+                HitDiceTotal1 = Convert.ToInt32(m_CharData[LC.HitDiceTotal1]),
+                HitDiceTotal2 = Convert.ToInt32(m_CharData[LC.HitDiceTotal2]),
+                PersonalityTraits = m_CharData[LC.PersonalityTraits],
+                Ideals = m_CharData[LC.Ideals],
+                Bonds = m_CharData[LC.Bonds],
+                Flaws = m_CharData[LC.Flaws],
+                Backstory = m_CharData[LC.Backstory],
 
-                // Left Column Info
+                Money = new CLIB.Money()
+                {
+                    Copper = Convert.ToInt32(m_CharData[LC.Copper]),
+                    Silver = Convert.ToInt32(m_CharData[LC.Silver]),
+                    Electrum = Convert.ToInt32(m_CharData[LC.Electrum]),
+                    Gold = Convert.ToInt32(m_CharData[LC.Gold]),
+                    Platinum = Convert.ToInt32(m_CharData[LC.Platinum]),
+                },
                 Attributes = new CLIB.Attributes
                 {
                     Strength = Convert.ToInt32(m_CharData[LC.Strength]),
@@ -222,8 +244,6 @@ namespace DnD_Character_Sheet
                     Stealth = m_ProficientData[LC.Stealth],
                     Survival = m_ProficientData[LC.Survival]
                 },
-                Inspiration = Convert.ToBoolean(m_CharData[LC.Inspiration]),
-                // ProficiencyBonus is Calculated
                 SavingThrows = new CLIB.SavingThrows()
                 {
                     StrengthSave = m_ProficientData[LC.StrengthSave],
@@ -233,39 +253,6 @@ namespace DnD_Character_Sheet
                     WisdomSave = m_ProficientData[LC.WisdomSave],
                     CharismaSave = m_ProficientData[LC.CharismaSave]
                 },
-                // Perception is Calculated
-                // Proficiencies
-                // Languages
-
-                // Middle Column Info
-                ArmorClass = Convert.ToInt32(m_CharData[LC.ArmorClass]),
-                Initiative = Convert.ToInt32(m_CharData[LC.Initiative]),
-                Speed = Convert.ToInt32(m_CharData[LC.Speed]),
-                HP_Max = Convert.ToInt32(m_CharData[LC.HP_Max]),
-                HP_Current = Convert.ToInt32(m_CharData[LC.HP_Current]),
-                HP_Temp = Convert.ToInt32(m_CharData[LC.HP_Temp]),
-                HitDice1 = m_CharData[LC.HitDice1],
-                HitDice2 = m_CharData[LC.HitDice2],
-                HitDiceTotal1 = Convert.ToInt32(m_CharData[LC.HitDiceTotal1]),
-                HitDiceTotal2 = Convert.ToInt32(m_CharData[LC.HitDiceTotal2]),
-                Money = new CLIB.Money()
-                {
-                    Copper = Convert.ToInt32(m_CharData[LC.Copper]),
-                    Silver = Convert.ToInt32(m_CharData[LC.Silver]),
-                    Electrum = Convert.ToInt32(m_CharData[LC.Electrum]),
-                    Gold = Convert.ToInt32(m_CharData[LC.Gold]),
-                    Platinum = Convert.ToInt32(m_CharData[LC.Platinum]),
-                },
-                // Death Saves
-                // Attacks and spellcasting
-
-                // Right Column Info
-                PersonalityTraits = m_CharData[LC.PersonalityTraits],
-                Ideals = m_CharData[LC.Ideals],
-                Bonds = m_CharData[LC.Bonds],
-                Flaws = m_CharData[LC.Flaws],
-
-                Backstory = m_CharData[LC.Backstory],
 
                 Items = m_ItemData,
                 Weapons = m_WeaponData,

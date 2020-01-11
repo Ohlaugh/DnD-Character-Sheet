@@ -1477,6 +1477,7 @@
             this.Item_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Item_Grid.Size = new System.Drawing.Size(1000, 1004);
             this.Item_Grid.TabIndex = 216;
+            this.Item_Grid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellValueChanged);
             // 
             // Type_Item
             // 
@@ -1582,6 +1583,7 @@
             this.Equipment_Grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Equipment_Grid.Size = new System.Drawing.Size(1036, 1004);
             this.Equipment_Grid.TabIndex = 215;
+            this.Equipment_Grid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellValueChanged);
             // 
             // Equipped_Gear
             // 
