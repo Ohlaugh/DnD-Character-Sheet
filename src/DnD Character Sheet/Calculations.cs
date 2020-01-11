@@ -26,7 +26,7 @@ namespace DnD_Character_Sheet
             return "- " + bonus;
         }
 
-        public static int dice(string arg)
+        public static int dice(string arg) //accepts strings in formats like "d6", "6d10", "3d12 + 15", "3d3 - 3", etc
         {
             
             int loop; //how many dice
