@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CharacterSheet CharacterName="Varis Meliamne">
+  <Data>
+    <Key>CharacterName</Key>
+    <Value>Varis Meliamne</Value>
+  </Data>
+  <Data>
+    <Key>Class1</Key>
+    <Value>Monk</Value>
+  </Data>
+  <Data>
+    <Key>Class2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>SubClass1</Key>
+    <Value>Way of the Drunken Master</Value>
+  </Data>
+  <Data>
+    <Key>SubClass2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>Level1</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>Level2</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Background</Key>
+    <Value>Hermit</Value>
+  </Data>
+  <Data>
+    <Key>PlayerName</Key>
+    <Value>Chase</Value>
+  </Data>
+  <Data>
+    <Key>Race</Key>
+    <Value>Wood Elf</Value>
+  </Data>
+  <Data>
+    <Key>Subrace</Key>
+    <Value>Test</Value>
+  </Data>
+  <Data>
+    <Key>Alignment</Key>
+    <Value>Neutral Good</Value>
+  </Data>
+  <Data>
+    <Key>ExperiencePoints</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Age</Key>
+    <Value>550</Value>
+  </Data>
+  <Data>
+    <Key>Height</Key>
+    <Value>6'2"</Value>
+  </Data>
+  <Data>
+    <Key>Weight</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>EyeColor</Key>
+    <Value>Unknown</Value>
+  </Data>
+  <Data>
+    <Key>SkinColor</Key>
+    <Value>Unknown</Value>
+  </Data>
+  <Data>
+    <Key>HairColor</Key>
+    <Value>Unknown</Value>
+  </Data>
+  <Data>
+    <Key>Inspiration</Key>
+    <Value>false</Value>
+  </Data>
+  <Data>
+    <Key>ArmorClass</Key>
+    <Value>18</Value>
+  </Data>
+  <Data>
+    <Key>Initiative</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Speed</Key>
+    <Value>35</Value>
+  </Data>
+  <Data>
+    <Key>HP_Max</Key>
+    <Value>10</Value>
+  </Data>
+  <Data>
+    <Key>HP_Current</Key>
+    <Value>10</Value>
+  </Data>
+  <Data>
+    <Key>HP_Temp</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>HitDice1</Key>
+    <Value>d8</Value>
+  </Data>
+  <Data>
+    <Key>HitDice2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>HitDiceTotal1</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>HitDiceTotal2</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>PersonalityTraits</Key>
+    <Value>I am utterly serene, even in the face of disaster.</Value>
+  </Data>
+  <Data>
+    <Key>Ideals</Key>
+    <Value>If you know yourself, there's nothing left to know.</Value>
+  </Data>
+  <Data>
+    <Key>Bonds</Key>
+    <Value>Nothing is more important than the other members of my hermitage, order, or association.</Value>
+  </Data>
+  <Data>
+    <Key>Flaws</Key>
+    <Value>Now that I've returned to the world, I enjoy its delights a little too much.</Value>
+  </Data>
+  <Data>
+    <Key>CarryingWeight</Key>
+    <Value>64.5</Value>
+  </Data>
+  <Data>
+    <Key>Backstory</Key>
+    <Value>
+      I was the caretaker of an an=ncient ruin or relic.
+    </Value>
+  </Data>
+  <Data>
+    <Key>Multiclass</Key>
+    <Value>false</Value>
+  </Data>
+  <Data>
+    <Key>TotalLevel</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>ProficiencyBonus</Key>
+    <Value>2</Value>
+  </Data>
+  <Data>
+    <Key>Perception</Key>
+    <Value>14</Value>
+  </Data>
+  <Data>
+    <Key>CarryingCapacity</Key>
+    <Value>165</Value>
+  </Data>
+  <Data>
+    <Key>Copper</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Silver</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Electrum</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Gold</Key>
+    <Value>5</Value>
+  </Data>
+  <Data>
+    <Key>Platinum</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Strength</Key>
+    <Value>11</Value>
+  </Data>
+  <Data>
+    <Key>StrengthModifier</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Dexterity</Key>
+    <Value>18</Value>
+  </Data>
+  <Data>
+    <Key>DexterityModifier</Key>
+    <Value>4</Value>
+  </Data>
+  <Data>
+    <Key>Constitution</Key>
+    <Value>15</Value>
+  </Data>
+  <Data>
+    <Key>ConstitutionModifier</Key>
+    <Value>2</Value>
+  </Data>
+  <Data>
+    <Key>Intelligence</Key>
+    <Value>9</Value>
+  </Data>
+  <Data>
+    <Key>IntelligenceModifier</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>Wisdom</Key>
+    <Value>19</Value>
+  </Data>
+  <Data>
+    <Key>WisdomModifier</Key>
+    <Value>4</Value>
+  </Data>
+  <Data>
+    <Key>Charisma</Key>
+    <Value>8</Value>
+  </Data>
+  <Data>
+    <Key>CharismaModifier</Key>
+    <Value>1</Value>
+  </Data>
+  <Proficient>
+    <Key>Acrobatics</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>AnimalHandling</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Arcana</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Athletics</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Deception</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>History</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Insight</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Intimidation</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Investigation</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Medicine</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Nature</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Perception</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Performance</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Persuassion</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Religion</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>SlightOfHand</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Stealth</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Survival</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>StrengthSave</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>DexteritySave</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>ConstitutionSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>IntelligenceSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>WisdomSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>CharismaSave</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Book>
+    <Key>PlayerHandbook</Key>
+    <Value>true</Value>
+  </Book>
+  <Book>
+    <Key>XanatharsGuide</Key>
+    <Value>true</Value>
+  </Book>
+  <Items>
+    <Item>
+      <Name>Backpack</Name>
+      <Cost>2 gp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A backpack is a leather pack carried on the back, typically with straps to secure it. A backpack can hold 1 cubic foot/ 30 pounds of gear. You can also strap items, such as a bedroll or a coil of rope, to the outside of a backpack.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Bedroll</Name>
+      <Cost>1 gp</Cost>
+      <Weight>7</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>You never know where you’re going to sleep, and a bedroll helps you get better sleep in a hayloft or on the cold ground. A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. In an emergency, it can double as a stretcher.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Mess Kit</Name>
+      <Cost>2 sp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Tinderbox</Name>
+      <Cost>5 sp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch -- or anything else with abundant, exposed fuel -- takes an action. Lighting any other fire takes 1 minute.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Torch</Name>
+      <Cost>1 cp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Rations (1 day)</Name>
+      <Cost>5 sp</Cost>
+      <Weight>2</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Waterskin</Name>
+      <Cost>2 sp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A waterskin can hold 4 pints of liquid.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Rope, Hempen (50 feet)</Name>
+      <Cost>1 gp</Cost>
+      <Weight>10</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Rope, has 2 hit points and can be burst with a DC 17 Strength check.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Weapon>
+      <Name>Spear</Name>
+      <Cost>1 gp</Cost>
+      <Weight>3</Weight>
+      <Style>Simple Melee Weapon</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <Damage>1d6 piercing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Thrown (range 20/60)</Property>
+        <Property>Versatile 1d8</Property>
+      </Properties>
+    </Weapon>
+    <Weapon>
+      <Name>Dart</Name>
+      <Cost>5 cp</Cost>
+      <Weight>0.25</Weight>
+      <Style>Simple Ranged Weapon</Style>
+      <Description />
+      <Quantity>10</Quantity>
+      <Damage>1d4 piercing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Finesse</Property>
+        <Property>Thrown (range 20/60)</Property>
+      </Properties>
+    </Weapon>
+  </Items>
+</CharacterSheet>
