@@ -107,7 +107,7 @@ namespace DnD_Character_Sheet
         #region Config File Constants
         public static readonly string FileFilter = "DnD Character Files (*.DnD)|*.DnD";
 
-        // Top Level
+        // Character Info
         public static readonly string Class1 = "Class1";
         public static readonly string Class2 = "Class2";
         public static readonly string SubClass1 = "SubClass1";
@@ -131,6 +131,10 @@ namespace DnD_Character_Sheet
         public static readonly string HitDice2 = "HitDice2";
         public static readonly string HitDiceTotal1 = "HitDiceTotal1";
         public static readonly string HitDiceTotal2 = "HitDiceTotal2";
+        public static readonly string Book = "Book";
+        public static readonly string Feature = "Feature";
+        public static readonly string OtherProficiencies = "OtherProficiencies";
+        public static readonly string Language = "Language";
 
         // Attributes
         public const string Strength = "Strength";
@@ -210,7 +214,6 @@ namespace DnD_Character_Sheet
         public static readonly string Armor = "Armor";
         public static readonly string StrengthReq = "StrengthReq";
         public static readonly string Disadvantage = "Disadvantage";
-        public static readonly string Book = "Book";
         public static readonly string BackgroundInfo = "BackgroundInfo";
         public static readonly string Quantity = "Quantity";
         public static readonly string AdventuringGear = "Adventuring Gear";

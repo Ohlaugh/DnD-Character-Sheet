@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterInfo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Load_Button = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.Character_Panel = new System.Windows.Forms.Panel();
             this.CharacterTabCtrl = new System.Windows.Forms.TabControl();
             this.Stats_Tab = new System.Windows.Forms.TabPage();
+            this.Class_Label = new System.Windows.Forms.Label();
+            this.OtherProf_TextBox = new System.Windows.Forms.RichTextBox();
+            this.Features_Label = new System.Windows.Forms.Label();
+            this.FeaturesTraits_List = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CurrencyExchange_Button = new System.Windows.Forms.Button();
             this.SubClass_Label = new System.Windows.Forms.Label();
             this.SubClass_TextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PP_Spin = new System.Windows.Forms.NumericUpDown();
             this.GP_Spin = new System.Windows.Forms.NumericUpDown();
             this.EP_Spin = new System.Windows.Forms.NumericUpDown();
@@ -96,7 +97,6 @@
             this.Player_Label = new System.Windows.Forms.Label();
             this.Character_Label = new System.Windows.Forms.Label();
             this.SavingThrows_Label = new System.Windows.Forms.Label();
-            this.Class_Label = new System.Windows.Forms.Label();
             this.Saves_CheckList = new System.Windows.Forms.CheckedListBox();
             this.Skills_CheckList = new System.Windows.Forms.CheckedListBox();
             this.Con_Group = new System.Windows.Forms.GroupBox();
@@ -163,6 +163,7 @@
             this.ArmorClass_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Properties_Gear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Spells_Tab = new System.Windows.Forms.TabPage();
             this.Backstory_Tab = new System.Windows.Forms.TabPage();
             this.Hair_Label = new System.Windows.Forms.Label();
             this.Skin_Label = new System.Windows.Forms.Label();
@@ -180,11 +181,10 @@
             this.Info_TextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Save_Button = new System.Windows.Forms.Button();
-            this.Spells_Tab = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.Character_Panel.SuspendLayout();
             this.CharacterTabCtrl.SuspendLayout();
             this.Stats_Tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PP_Spin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GP_Spin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EP_Spin)).BeginInit();
@@ -223,32 +223,12 @@
             this.Load_Button.UseVisualStyleBackColor = true;
             this.Load_Button.Click += new System.EventHandler(this.Button_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(1074, 1249);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 19);
-            this.textBox4.TabIndex = 22;
-            this.textBox4.Text = "Class";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(1074, 1202);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(219, 41);
-            this.textBox5.TabIndex = 21;
-            this.textBox5.Text = "Barbarian";
-            // 
             // Character_Panel
             // 
             this.Character_Panel.Controls.Add(this.CharacterTabCtrl);
             this.Character_Panel.Location = new System.Drawing.Point(0, 0);
             this.Character_Panel.Name = "Character_Panel";
-            this.Character_Panel.Size = new System.Drawing.Size(2056, 1173);
+            this.Character_Panel.Size = new System.Drawing.Size(2056, 1221);
             this.Character_Panel.TabIndex = 23;
             // 
             // CharacterTabCtrl
@@ -260,15 +240,19 @@
             this.CharacterTabCtrl.Location = new System.Drawing.Point(0, 0);
             this.CharacterTabCtrl.Name = "CharacterTabCtrl";
             this.CharacterTabCtrl.SelectedIndex = 0;
-            this.CharacterTabCtrl.Size = new System.Drawing.Size(2053, 1152);
+            this.CharacterTabCtrl.Size = new System.Drawing.Size(2053, 1196);
             this.CharacterTabCtrl.TabIndex = 0;
             // 
             // Stats_Tab
             // 
+            this.Stats_Tab.Controls.Add(this.label2);
+            this.Stats_Tab.Controls.Add(this.Class_Label);
+            this.Stats_Tab.Controls.Add(this.OtherProf_TextBox);
+            this.Stats_Tab.Controls.Add(this.Features_Label);
+            this.Stats_Tab.Controls.Add(this.FeaturesTraits_List);
             this.Stats_Tab.Controls.Add(this.CurrencyExchange_Button);
             this.Stats_Tab.Controls.Add(this.SubClass_Label);
             this.Stats_Tab.Controls.Add(this.SubClass_TextBox);
-            this.Stats_Tab.Controls.Add(this.pictureBox1);
             this.Stats_Tab.Controls.Add(this.PP_Spin);
             this.Stats_Tab.Controls.Add(this.GP_Spin);
             this.Stats_Tab.Controls.Add(this.EP_Spin);
@@ -311,7 +295,6 @@
             this.Stats_Tab.Controls.Add(this.Player_Label);
             this.Stats_Tab.Controls.Add(this.Character_Label);
             this.Stats_Tab.Controls.Add(this.SavingThrows_Label);
-            this.Stats_Tab.Controls.Add(this.Class_Label);
             this.Stats_Tab.Controls.Add(this.Saves_CheckList);
             this.Stats_Tab.Controls.Add(this.Skills_CheckList);
             this.Stats_Tab.Controls.Add(this.Con_Group);
@@ -333,10 +316,58 @@
             this.Stats_Tab.Location = new System.Drawing.Point(4, 29);
             this.Stats_Tab.Name = "Stats_Tab";
             this.Stats_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Stats_Tab.Size = new System.Drawing.Size(2045, 1119);
+            this.Stats_Tab.Size = new System.Drawing.Size(2045, 1163);
             this.Stats_Tab.TabIndex = 0;
             this.Stats_Tab.Text = "Character Stats";
             this.Stats_Tab.UseVisualStyleBackColor = true;
+            // 
+            // Class_Label
+            // 
+            this.Class_Label.AutoSize = true;
+            this.Class_Label.Location = new System.Drawing.Point(538, 54);
+            this.Class_Label.Name = "Class_Label";
+            this.Class_Label.Size = new System.Drawing.Size(48, 20);
+            this.Class_Label.TabIndex = 235;
+            this.Class_Label.Text = "Class";
+            // 
+            // OtherProf_TextBox
+            // 
+            this.OtherProf_TextBox.Location = new System.Drawing.Point(13, 1044);
+            this.OtherProf_TextBox.Name = "OtherProf_TextBox";
+            this.OtherProf_TextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.OtherProf_TextBox.Size = new System.Drawing.Size(743, 110);
+            this.OtherProf_TextBox.TabIndex = 234;
+            this.OtherProf_TextBox.Text = "";
+            // 
+            // Features_Label
+            // 
+            this.Features_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Features_Label.Location = new System.Drawing.Point(515, 276);
+            this.Features_Label.Name = "Features_Label";
+            this.Features_Label.Size = new System.Drawing.Size(233, 27);
+            this.Features_Label.TabIndex = 230;
+            this.Features_Label.Text = "Features and Traits";
+            this.Features_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FeaturesTraits_List
+            // 
+            this.FeaturesTraits_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.FeaturesTraits_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.FeaturesTraits_List.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.FeaturesTraits_List.Location = new System.Drawing.Point(515, 307);
+            this.FeaturesTraits_List.MultiSelect = false;
+            this.FeaturesTraits_List.Name = "FeaturesTraits_List";
+            this.FeaturesTraits_List.ShowItemToolTips = true;
+            this.FeaturesTraits_List.Size = new System.Drawing.Size(233, 698);
+            this.FeaturesTraits_List.TabIndex = 229;
+            this.FeaturesTraits_List.UseCompatibleStateImageBehavior = false;
+            this.FeaturesTraits_List.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 125;
             // 
             // CurrencyExchange_Button
             // 
@@ -366,16 +397,6 @@
             this.SubClass_TextBox.ReadOnly = true;
             this.SubClass_TextBox.Size = new System.Drawing.Size(707, 41);
             this.SubClass_TextBox.TabIndex = 226;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(542, 276);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(954, 807);
-            this.pictureBox1.TabIndex = 224;
-            this.pictureBox1.TabStop = false;
             // 
             // PP_Spin
             // 
@@ -821,15 +842,6 @@
             this.SavingThrows_Label.TabIndex = 163;
             this.SavingThrows_Label.Text = "Saving Throws";
             this.SavingThrows_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Class_Label
-            // 
-            this.Class_Label.AutoSize = true;
-            this.Class_Label.Location = new System.Drawing.Point(519, 55);
-            this.Class_Label.Name = "Class_Label";
-            this.Class_Label.Size = new System.Drawing.Size(48, 20);
-            this.Class_Label.TabIndex = 162;
-            this.Class_Label.Text = "Class";
             // 
             // Saves_CheckList
             // 
@@ -1388,7 +1400,7 @@
             this.Equipment_Tab.Controls.Add(this.Equipment_Grid);
             this.Equipment_Tab.Location = new System.Drawing.Point(4, 29);
             this.Equipment_Tab.Name = "Equipment_Tab";
-            this.Equipment_Tab.Size = new System.Drawing.Size(2045, 1119);
+            this.Equipment_Tab.Size = new System.Drawing.Size(2045, 1163);
             this.Equipment_Tab.TabIndex = 2;
             this.Equipment_Tab.Text = "Equipment";
             this.Equipment_Tab.UseVisualStyleBackColor = true;
@@ -1484,10 +1496,10 @@
             // Type_Item
             // 
             this.Type_Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Type_Item.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle91.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle91.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle91.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Type_Item.DefaultCellStyle = dataGridViewCellStyle91;
             this.Type_Item.HeaderText = "Type";
             this.Type_Item.MinimumWidth = 8;
             this.Type_Item.Name = "Type_Item";
@@ -1497,10 +1509,10 @@
             // Name_Items
             // 
             this.Name_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Name_Items.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle92.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle92.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle92.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Name_Items.DefaultCellStyle = dataGridViewCellStyle92;
             this.Name_Items.HeaderText = "Name";
             this.Name_Items.MinimumWidth = 8;
             this.Name_Items.Name = "Name_Items";
@@ -1510,11 +1522,11 @@
             // Quantity_Items
             // 
             this.Quantity_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Quantity_Items.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle93.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle93.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle93.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Quantity_Items.DefaultCellStyle = dataGridViewCellStyle93;
             this.Quantity_Items.HeaderText = "Quantity";
             this.Quantity_Items.MinimumWidth = 8;
             this.Quantity_Items.Name = "Quantity_Items";
@@ -1523,11 +1535,11 @@
             // Cost_Items
             // 
             this.Cost_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cost_Items.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle94.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle94.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle94.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cost_Items.DefaultCellStyle = dataGridViewCellStyle94;
             this.Cost_Items.HeaderText = "Cost";
             this.Cost_Items.MinimumWidth = 8;
             this.Cost_Items.Name = "Cost_Items";
@@ -1537,11 +1549,11 @@
             // Weight_Items
             // 
             this.Weight_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Weight_Items.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle95.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle95.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle95.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight_Items.DefaultCellStyle = dataGridViewCellStyle95;
             this.Weight_Items.HeaderText = "Weight";
             this.Weight_Items.MinimumWidth = 8;
             this.Weight_Items.Name = "Weight_Items";
@@ -1551,10 +1563,10 @@
             // Description_Items
             // 
             this.Description_Items.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Description_Items.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle96.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle96.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle96.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Description_Items.DefaultCellStyle = dataGridViewCellStyle96;
             this.Description_Items.HeaderText = "Description";
             this.Description_Items.MinimumWidth = 200;
             this.Description_Items.Name = "Description_Items";
@@ -1590,11 +1602,11 @@
             // Equipped_Gear
             // 
             this.Equipped_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = false;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.Equipped_Gear.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle97.NullValue = false;
+            dataGridViewCellStyle97.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle97.SelectionForeColor = System.Drawing.Color.Black;
+            this.Equipped_Gear.DefaultCellStyle = dataGridViewCellStyle97;
             this.Equipped_Gear.HeaderText = "Equpped";
             this.Equipped_Gear.MinimumWidth = 8;
             this.Equipped_Gear.Name = "Equipped_Gear";
@@ -1603,10 +1615,10 @@
             // Type_Gear
             // 
             this.Type_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Type_Gear.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle98.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle98.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle98.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Type_Gear.DefaultCellStyle = dataGridViewCellStyle98;
             this.Type_Gear.HeaderText = "Type";
             this.Type_Gear.MinimumWidth = 8;
             this.Type_Gear.Name = "Type_Gear";
@@ -1616,10 +1628,10 @@
             // Name_Gear
             // 
             this.Name_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Name_Gear.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle99.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle99.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle99.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Name_Gear.DefaultCellStyle = dataGridViewCellStyle99;
             this.Name_Gear.HeaderText = "Name";
             this.Name_Gear.MinimumWidth = 8;
             this.Name_Gear.Name = "Name_Gear";
@@ -1629,11 +1641,11 @@
             // Quantity_Gear
             // 
             this.Quantity_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Quantity_Gear.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle100.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle100.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle100.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Quantity_Gear.DefaultCellStyle = dataGridViewCellStyle100;
             this.Quantity_Gear.HeaderText = "Quantity";
             this.Quantity_Gear.MinimumWidth = 8;
             this.Quantity_Gear.Name = "Quantity_Gear";
@@ -1642,11 +1654,11 @@
             // Cost_Gear
             // 
             this.Cost_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cost_Gear.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle101.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cost_Gear.DefaultCellStyle = dataGridViewCellStyle101;
             this.Cost_Gear.HeaderText = "Cost";
             this.Cost_Gear.MinimumWidth = 8;
             this.Cost_Gear.Name = "Cost_Gear";
@@ -1656,11 +1668,11 @@
             // Damage_Gear
             // 
             this.Damage_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Damage_Gear.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Damage_Gear.DefaultCellStyle = dataGridViewCellStyle102;
             this.Damage_Gear.HeaderText = "Damage";
             this.Damage_Gear.MinimumWidth = 8;
             this.Damage_Gear.Name = "Damage_Gear";
@@ -1670,11 +1682,11 @@
             // ArmorClass_Gear
             // 
             this.ArmorClass_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ArmorClass_Gear.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle103.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle103.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ArmorClass_Gear.DefaultCellStyle = dataGridViewCellStyle103;
             this.ArmorClass_Gear.HeaderText = "Armor Class";
             this.ArmorClass_Gear.MinimumWidth = 8;
             this.ArmorClass_Gear.Name = "ArmorClass_Gear";
@@ -1684,11 +1696,11 @@
             // Weight_Gear
             // 
             this.Weight_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Weight_Gear.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight_Gear.DefaultCellStyle = dataGridViewCellStyle104;
             this.Weight_Gear.HeaderText = "Weight";
             this.Weight_Gear.MinimumWidth = 8;
             this.Weight_Gear.Name = "Weight_Gear";
@@ -1698,14 +1710,23 @@
             // Properties_Gear
             // 
             this.Properties_Gear.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Properties_Gear.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle105.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle105.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle105.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Properties_Gear.DefaultCellStyle = dataGridViewCellStyle105;
             this.Properties_Gear.HeaderText = "Properties";
             this.Properties_Gear.MinimumWidth = 150;
             this.Properties_Gear.Name = "Properties_Gear";
             this.Properties_Gear.ReadOnly = true;
+            // 
+            // Spells_Tab
+            // 
+            this.Spells_Tab.Location = new System.Drawing.Point(4, 29);
+            this.Spells_Tab.Name = "Spells_Tab";
+            this.Spells_Tab.Size = new System.Drawing.Size(2045, 1163);
+            this.Spells_Tab.TabIndex = 3;
+            this.Spells_Tab.Text = "Spells";
+            this.Spells_Tab.UseVisualStyleBackColor = true;
             // 
             // Backstory_Tab
             // 
@@ -1726,7 +1747,7 @@
             this.Backstory_Tab.Location = new System.Drawing.Point(4, 29);
             this.Backstory_Tab.Name = "Backstory_Tab";
             this.Backstory_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Backstory_Tab.Size = new System.Drawing.Size(2045, 1119);
+            this.Backstory_Tab.Size = new System.Drawing.Size(2045, 1163);
             this.Backstory_Tab.TabIndex = 1;
             this.Backstory_Tab.Text = "Backstory";
             this.Backstory_Tab.UseVisualStyleBackColor = true;
@@ -1889,14 +1910,14 @@
             this.Save_Button.UseVisualStyleBackColor = true;
             this.Save_Button.Click += new System.EventHandler(this.Button_Click);
             // 
-            // Spells_Tab
+            // label2
             // 
-            this.Spells_Tab.Location = new System.Drawing.Point(4, 29);
-            this.Spells_Tab.Name = "Spells_Tab";
-            this.Spells_Tab.Size = new System.Drawing.Size(2045, 1119);
-            this.Spells_Tab.TabIndex = 3;
-            this.Spells_Tab.Text = "Spells";
-            this.Spells_Tab.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 1018);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(257, 20);
+            this.label2.TabIndex = 236;
+            this.label2.Text = "Other Proficiencies and Languages";
             // 
             // CharacterInfo
             // 
@@ -1905,21 +1926,19 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(2058, 1287);
+            this.Controls.Add(this.Load_Button);
             this.Controls.Add(this.Save_Button);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Character_Panel);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.Load_Button);
             this.MaximumSize = new System.Drawing.Size(2080, 1343);
             this.Name = "CharacterInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Main Character Information";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Character_Panel.ResumeLayout(false);
             this.CharacterTabCtrl.ResumeLayout(false);
             this.Stats_Tab.ResumeLayout(false);
             this.Stats_Tab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PP_Spin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GP_Spin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EP_Spin)).EndInit();
@@ -1955,14 +1974,11 @@
             this.Backstory_Tab.ResumeLayout(false);
             this.Backstory_Tab.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button Load_Button;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel Character_Panel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabControl CharacterTabCtrl;
@@ -1993,7 +2009,6 @@
         private System.Windows.Forms.Label Player_Label;
         private System.Windows.Forms.Label Character_Label;
         private System.Windows.Forms.Label SavingThrows_Label;
-        private System.Windows.Forms.Label Class_Label;
         private System.Windows.Forms.CheckedListBox Saves_CheckList;
         private System.Windows.Forms.CheckedListBox Skills_CheckList;
         private System.Windows.Forms.GroupBox Con_Group;
@@ -2052,7 +2067,6 @@
         private System.Windows.Forms.Label SP_Label;
         private System.Windows.Forms.Label CP_Label;
         private System.Windows.Forms.DataGridView Item_Grid;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EquipSell_Button;
         private System.Windows.Forms.Button EquipBuy_Button;
         private System.Windows.Forms.NumericUpDown Con_Spin;
@@ -2097,6 +2111,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Properties_Gear;
         private System.Windows.Forms.Button Save_Button;
         private System.Windows.Forms.TabPage Spells_Tab;
+        private System.Windows.Forms.ListView FeaturesTraits_List;
+        private System.Windows.Forms.Label Features_Label;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.RichTextBox OtherProf_TextBox;
+        private System.Windows.Forms.Label Class_Label;
+        private System.Windows.Forms.Label label2;
     }
 }
 

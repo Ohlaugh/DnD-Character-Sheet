@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +54,18 @@ namespace DnD_Character_Sheet
         /// </summary>
         public static Dictionary<string, CLIB.Armor> m_ArmorData = new Dictionary<string, CLIB.Armor>();
 
+        /// <summary>
+        /// This contains all Features and Traits the current character has
+        ///     Key: Feature Name
+        ///     Value: Feature Description
+        /// </summary>
+        public static Dictionary<string, string> m_FeatureData = new Dictionary<string, string>();
+
+        /// <summary>
+        /// This contains all Language, Armor, Weapon and tool Proficiencies
+        /// </summary>
+        public static Dictionary<string, List<string>> m_OtherProfData = new Dictionary<string, List<string>>();
+        
         #endregion
 
         #region Main Libraries
@@ -131,6 +143,14 @@ namespace DnD_Character_Sheet
             m_ItemData.Clear();
             m_WeaponData.Clear();
             m_ArmorData.Clear();
+            m_FeatureData.Clear();
+            m_OtherProfData = new Dictionary<string, List<string>>()
+            {
+                { LC.Language, new List<string>() },
+                { LC.Armor, new List<string>() },
+                { LC.Weapon, new List<string>() },
+                { LC.Tool, new List<string>() }
+            };
 
             m_BookUtilization.Clear();
 

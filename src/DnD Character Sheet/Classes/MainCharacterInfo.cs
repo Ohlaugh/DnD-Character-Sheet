@@ -57,11 +57,10 @@ namespace DnD_Character_Sheet
         public double CarryingCapacity { get => Attributes.Strength * 15; }
 
 
-        public List<string> Proficiencies { get; set; }
-        public List<string> Languages { get; set; }
-        public List<string> Features { get; set; }
         public List<string> Traits { get; set; }
 
+        public Dictionary<string, List<string>> OtherProficiencies { get; set; }
+        public Dictionary<string, string> Features { get; set; }
 
         public CLIB.Money Money { get; set; }
         public CLIB.Attributes Attributes { get; set; }

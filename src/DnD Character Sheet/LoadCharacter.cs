@@ -38,6 +38,8 @@ namespace DnD_Character_Sheet
                 GatherWeaponData(xDoc);
                 GatherArmorData(xDoc);
                 GatherBookData(xDoc);
+                GatherFeaturesData(xDoc);
+                GatherOtherProfData(xDoc);
                 GatherBackgroundData(xDoc);
                 stream.Close();
                 PopulateCharacterInformation();
@@ -155,6 +157,41 @@ namespace DnD_Character_Sheet
             }
         }
 
+        private void GatherFeaturesData(XmlDocument xDoc)
+        {
+            XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.Feature);
+            foreach (XmlNode node in nodeList)
+            {
+                string key = node.SelectSingleNode(LC.Key).InnerText;
+                string value = node.SelectSingleNode(LC.Value).InnerText;
+                m_FeatureData.Add(key, value);
+            }
+        }
+
+        private void GatherOtherProfData(XmlDocument xDoc)
+        {
+            XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.OtherProficiencies);
+            foreach (XmlNode node in nodeList)
+            {
+                foreach (XmlNode languageNode in node.SelectNodes(LC.Language))
+                {
+                    m_OtherProfData[LC.Language].Add(languageNode.InnerText);
+                }
+                foreach (XmlNode armorNode in node.SelectNodes(LC.Armor))
+                {
+                    m_OtherProfData[LC.Armor].Add(armorNode.InnerText);
+                }
+                foreach (XmlNode weaponNode in node.SelectNodes(LC.Weapon))
+                {
+                    m_OtherProfData[LC.Weapon].Add(weaponNode.InnerText);
+                }
+                foreach (XmlNode toolNode in node.SelectNodes(LC.Tool))
+                {
+                    m_OtherProfData[LC.Tool].Add(toolNode.InnerText);
+                }
+            }
+        }
+
         private void GatherBackgroundData(XmlDocument xDoc)
         {
             XmlNodeList nodeList = xDoc.GetElementsByTagName(LC.BackgroundInfo);
@@ -256,8 +293,9 @@ namespace DnD_Character_Sheet
 
                 Items = m_ItemData,
                 Weapons = m_WeaponData,
-                Armor = m_ArmorData
-
+                Armor = m_ArmorData,
+                Features = m_FeatureData,
+                OtherProficiencies = m_OtherProfData
             };
 
             m_MainCharacterInfo.Calculate();

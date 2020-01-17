@@ -110,6 +110,7 @@ namespace DnD_Character_Sheet
             UpdateMoney();
             UpdateLists();
             UpdateGrids();
+            UpdateOtherProfInfo();
         }
 
         private void PopulateAttributes()
@@ -171,6 +172,16 @@ namespace DnD_Character_Sheet
             {
                 Saves_CheckList.Items.Add(save.Item1, save.Item2);
             }
+
+            FeaturesTraits_List.Items.Clear();
+            foreach (var key in LIB.m_MainCharacterInfo.Features.Keys)
+            {
+                ListViewItem temp = new ListViewItem(key)
+                {
+                    ToolTipText = LIB.m_MainCharacterInfo.Features[key]
+                };
+                FeaturesTraits_List.Items.Add(temp);
+            }
         }
 
         /// <summary>
@@ -205,6 +216,33 @@ namespace DnD_Character_Sheet
             }
             CALC.CarryWeight();
             Carry_TextBox.Text = LIB.m_MainCharacterInfo.CarryingWeight + " / " + LIB.m_MainCharacterInfo.CarryingCapacity + " lb.";
+        }
+
+        /// <summary>
+        /// This Method updates the  Other Proficiencies and Languages textbox
+        /// </summary>
+        private void UpdateOtherProfInfo()
+        {
+            OtherProf_TextBox.Text = string.Empty;
+            foreach (var key in LIB.m_MainCharacterInfo.OtherProficiencies.Keys)
+            {
+                OtherProf_TextBox.Text += key + ": ";
+
+                if (LIB.m_MainCharacterInfo.OtherProficiencies[key].Count == 0)
+                {
+                    OtherProf_TextBox.Text += "None";
+                }
+                else
+                {
+                    foreach (var item in LIB.m_MainCharacterInfo.OtherProficiencies[key])
+                    {
+                        OtherProf_TextBox.Text += item + ", ";
+                    }
+                    OtherProf_TextBox.Text = OtherProf_TextBox.Text.Remove(
+                        OtherProf_TextBox.Text.Length - 2, 2);
+                }
+                OtherProf_TextBox.Text += Environment.NewLine;
+            }
         }
 
         #endregion

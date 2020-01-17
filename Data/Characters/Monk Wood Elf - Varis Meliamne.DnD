@@ -143,18 +143,12 @@
   <Data>
     <Key>Backstory</Key>
     <Value>
-      I was the caretaker of an an=ncient ruin or relic.Darkvision
+      I was the caretaker of an ancient ruin or relic.
       
       Temp Location:
-      Fey Ancestry
-      Trance
-      Mask of the Wild
       Unarmored defense
       Martial Arts
       Feature: Discovery
-      Languages: Common, Elvish, Sylvan
-      Weapons: Simple Weapons, Longsword, shortsword, shortbow, longbow
-      Tools: Herbalism Kit, Piccolo
     </Value>
   </Data>
   <Data>
@@ -349,6 +343,34 @@
     <Key>XanatharsGuide</Key>
     <Value>true</Value>
   </Book>
+  <Feature>
+    <Key>Darkvision</Key>
+    <Value>Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</Value>
+  </Feature>
+  <Feature>
+    <Key>Fey Ancestry</Key>
+    <Value>You have advantage on saving throws against being charmed, and magic can't put you to sleep.</Value>
+  </Feature>
+  <Feature>
+    <Key>Trance</Key>
+    <Value>Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</Value>
+  </Feature>
+  <Feature>
+    <Key>Mask of the Wild</Key>
+    <Value>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenonmena.</Value>
+  </Feature>
+  <OtherProficiencies>
+    <Language>Common</Language>
+    <Language>Elvish</Language>
+    <Language>Sylvan</Language>
+    <Weapon>Simple Weapons</Weapon>
+    <Weapon>Longsword</Weapon>
+    <Weapon>Shortsword</Weapon>
+    <Weapon>Shortbow</Weapon>
+    <Weapon>Longbow</Weapon>
+    <Tool>Herbalism Kit</Tool>    
+    <Tool>Piccolo</Tool>    
+  </OtherProficiencies>
   <Items>
     <Item>
       <Name>Backpack</Name>

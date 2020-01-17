@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +21,13 @@ namespace DnD_Character_Sheet
     {
         private List<object> dataNodes = new List<object>();
         private List<object> itemNodes = new List<object>();
+        private List<object> otherProfNodes = new List<object>();
 
         public bool Save()
         {
             dataNodes.Clear();
             itemNodes.Clear();
+            otherProfNodes.Clear();
 
             SaveFileDialog fileDialog = new SaveFileDialog();
             fileDialog.FileName = fileDialog.InitialDirectory + m_MainCharacterInfo.Class1;
@@ -62,7 +64,7 @@ namespace DnD_Character_Sheet
                     {
                         AddNode(typeof(CLIB.Money), m_MainCharacterInfo.Money, LC.Data);
                     }
-                    // Only Proficiencies, Languages, Features and Traits are stored as List<string> 
+                    // Only Traits are stored as List<string> 
                     else if (property.PropertyType == typeof(List<string>))
                     {
                         // Currently Unused
@@ -88,6 +90,29 @@ namespace DnD_Character_Sheet
                             AddArmorNode(key, m_MainCharacterInfo.Armor[key]);
                         }
                     }
+                    else if (property.PropertyType == typeof(Dictionary<string, string>))
+                    {
+                        foreach (var key in m_MainCharacterInfo.Features.Keys)
+                        {
+                            var featureNode =
+                                new XElement(LC.Feature,
+                                    new XElement(LC.Key, key),
+                                    new XElement(LC.Value, m_MainCharacterInfo.Features[key]));
+                            dataNodes.Add(featureNode);
+                        }
+                    }
+                    else if (property.PropertyType == typeof(Dictionary<string, List<string>>))
+                    {
+                        foreach (var key in m_MainCharacterInfo.OtherProficiencies.Keys)
+                        {
+                            foreach (var item in m_MainCharacterInfo.OtherProficiencies[key])
+                            {
+                                var otherProf =
+                                    new XElement(key, item);
+                                otherProfNodes.Add(otherProf);
+                            }
+                        }
+                    }
                     else
                     {
                         var dataNode =
@@ -111,6 +136,8 @@ namespace DnD_Character_Sheet
                     new XElement(LC.CharacterSheet,
                     new XAttribute("CharacterName", m_CharacterName),
                         dataNodes,
+                        new XElement(LC.OtherProficiencies,
+                            otherProfNodes),
                         new XElement(LC.Items,
                             itemNodes
                         ));
