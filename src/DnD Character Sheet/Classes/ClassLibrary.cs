@@ -95,7 +95,7 @@ namespace DnD_Character_Sheet.Classes
                 InvestigationLabel = CALC.Bonus(Investigation, attributes.IntelligenceModifier);
                 MedicineLabel = CALC.Bonus(Medicine, attributes.WisdomModifier);
                 NatureLabel = CALC.Bonus(Nature, attributes.IntelligenceModifier);
-                PerceptionLabel = CALC.Bonus(Nature, attributes.IntelligenceModifier);
+                PerceptionLabel = CALC.Bonus(Perception, attributes.WisdomModifier);
                 PerformanceLabel = CALC.Bonus(Performance, attributes.CharismaModifier);
                 PersuassionLabel = CALC.Bonus(Persuassion, attributes.CharismaModifier);
                 ReligionLabel = CALC.Bonus(Religion, attributes.IntelligenceModifier);

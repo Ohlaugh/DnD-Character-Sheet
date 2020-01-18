@@ -281,6 +281,19 @@ namespace DnD_Character_Sheet
         public static readonly string Weight_Grid = "Weight";
         public static readonly string Properties_Grid = "Properties";
 
+        // Textboxes
+        public const string Speed_TextBox = "Speed_TextBox";
+        public const string AC_TextBox = "AC_TextBox";
+        public const string Backstory_TextBox = "Backstory_TextBox";
+        public const string Age_TextBox = "Age_TextBox";
+        public const string Height_TextBox = "Height_TextBox";
+        public const string Weight_TextBox = "Weight_TextBox";
+        public const string Eye_TextBox = "Eye_TextBox";
+        public const string Skin_TextBox = "Skin_TextBox";
+        public const string Hair_TextBox = "Hair_TextBox";
+        public const string Info_TextBox = "Info_TextBox";
+        public const string OtherProf_TextBox = "OtherProf_TextBox";
+
         #endregion
     }
 }

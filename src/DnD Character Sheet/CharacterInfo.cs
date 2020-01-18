@@ -334,5 +334,81 @@ namespace DnD_Character_Sheet
             }
 
         }
+
+        /// <summary>
+        /// This method handles all textbox text changes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            string textValue = textBox.Text;
+            switch (textBox.Name)
+            {
+                case (LC.Speed_TextBox):
+                    {
+                        if (int.TryParse(textValue, out int value))
+                        {
+                            LIB.m_MainCharacterInfo.Speed = value;
+                        }
+                        else
+                        {
+                            textBox.Text = LIB.m_MainCharacterInfo.Speed.ToString();
+                        }
+                        break;
+                    }
+                case (LC.Backstory_TextBox):
+                    {
+                        LIB.m_MainCharacterInfo.Backstory = textValue;
+                        break;
+                    }
+                case (LC.Age_TextBox):
+                    {
+                        if (int.TryParse(textValue, out int value))
+                        {
+                            LIB.m_MainCharacterInfo.Age = value;
+                        }
+                        else
+                        {
+                            textBox.Text = LIB.m_MainCharacterInfo.Age.ToString();
+                        }
+                        break;
+                    }
+                case (LC.Height_TextBox):
+                    {
+                        break;
+                    }
+                case (LC.Weight_TextBox):
+                    {
+                        if (double.TryParse(textValue, out double value))
+                        {
+                            LIB.m_MainCharacterInfo.Weight = value;
+                        }
+                        else
+                        {
+                            textBox.Text = LIB.m_MainCharacterInfo.Weight.ToString();
+                        }
+                        break;
+                    }
+                case (LC.Eye_TextBox):
+                    {
+                        LIB.m_MainCharacterInfo.EyeColor = textValue;
+                        break;
+                    }
+                case (LC.Skin_TextBox):
+                    {
+                        LIB.m_MainCharacterInfo.SkinColor = textValue;
+                        break;
+                    }
+                case (LC.Hair_TextBox):
+                    {
+                        LIB.m_MainCharacterInfo.HairColor = textValue;
+                        break;
+                    }
+                default:
+                    break;
+            }
+        }
     }
 }

@@ -53,11 +53,13 @@ namespace DnD_Character_Sheet
         public bool Multiclass { get => Class2 != ""; }
         public int TotalLevel { get => Level1 + Level2; }
         public int ProficiencyBonus { get => _ProficiencyBonus; }
-        public int Perception { get => 10 + Attributes.WisdomModifier; }
+        public int Perception { get { 
+                return Skills.Perception ? 
+                    10 + Attributes.WisdomModifier + ProficiencyBonus : 
+                    10 + Attributes.WisdomModifier; 
+            } }
         public double CarryingCapacity { get => Attributes.Strength * 15; }
 
-
-        public List<string> Traits { get; set; }
 
         public Dictionary<string, List<string>> OtherProficiencies { get; set; }
         public Dictionary<string, string> Features { get; set; }

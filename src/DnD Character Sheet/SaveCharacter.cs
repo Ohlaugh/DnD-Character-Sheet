@@ -64,11 +64,6 @@ namespace DnD_Character_Sheet
                     {
                         AddNode(typeof(CLIB.Money), m_MainCharacterInfo.Money, LC.Data);
                     }
-                    // Only Traits are stored as List<string> 
-                    else if (property.PropertyType == typeof(List<string>))
-                    {
-                        // Currently Unused
-                    }
                     else if (property.PropertyType == typeof(Dictionary<string, CLIB.Item>))
                     {
                         foreach (var key in m_MainCharacterInfo.Items.Keys)
