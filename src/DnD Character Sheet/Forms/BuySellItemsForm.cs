@@ -95,7 +95,7 @@ namespace DnD_Character_Sheet.Forms
         {
             switch (key)
             {
-                case ("Burglar's Pack"):
+                case "Burglar's Pack":
                     {
                         PurchaseItem("Backpack", 1 * quantity);
                         PurchaseItem("Ball Bearings (bag of 1,000)", 1 * quantity);
@@ -113,7 +113,7 @@ namespace DnD_Character_Sheet.Forms
                         PurchaseItem("Rope, Hempen (50 feet)", 1 * quantity);
                         break;
                     }
-                case ("Diplomat's Pack"):
+                case "Diplomat's Pack":
                     {
                         PurchaseItem("Chest", 1 * quantity);
                         PurchaseItem("Case, Map or Scroll", 2 * quantity);
@@ -128,7 +128,7 @@ namespace DnD_Character_Sheet.Forms
                         PurchaseItem("Soap", 1 * quantity);
                         break;
                     }
-                case ("Dungeoneer's Pack"):
+                case "Dungeoneer's Pack":
                     {
                         PurchaseItem("Backpack", 1 * quantity);
                         PurchaseItem("Crowbar", 1 * quantity);
@@ -141,7 +141,7 @@ namespace DnD_Character_Sheet.Forms
                         PurchaseItem("Rope, Hempen (50 feet)", 1 * quantity);
                         break;
                     }
-                case ("Entertainer's Pack"):
+                case "Entertainer's Pack":
                     {
                         PurchaseItem("Backpack", 1 * quantity);
                         PurchaseItem("Bedroll", 1 * quantity);
@@ -152,7 +152,7 @@ namespace DnD_Character_Sheet.Forms
                         PurchaseItem("Disguise Kit", 1 * quantity);
                         break;
                     }
-                case ("Explorer's Pack"):
+                case "Explorer's Pack":
                     {
                         PurchaseItem("Backpack", 1 * quantity);
                         PurchaseItem("Bedroll", 1 * quantity);
@@ -164,7 +164,7 @@ namespace DnD_Character_Sheet.Forms
                         PurchaseItem("Rope, Hempen (50 feet)", 1 * quantity);
                         break;
                     }
-                case ("Priest's Pack"):
+                case "Priest's Pack":
                     {
                         PurchaseItem("Backpack", 1 * quantity);
                         PurchaseItem("Blanket", 1 * quantity);
@@ -178,7 +178,7 @@ namespace DnD_Character_Sheet.Forms
                         PurchaseItem("Waterskin", 1 * quantity);
                         break;
                     }
-                case ("Scholar's Pack"):
+                case "Scholar's Pack":
                     {
                         PurchaseItem("Backpack", 1 * quantity);
                         PurchaseItem("Book of Lore", 1 * quantity);

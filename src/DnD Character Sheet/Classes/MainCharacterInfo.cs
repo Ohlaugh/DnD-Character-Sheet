@@ -48,6 +48,7 @@ namespace DnD_Character_Sheet
         public string Flaws { get; set; }
         public double CarryingWeight { get; set; }
         public string Backstory { get; set; }
+        public string Notes { get; set; }
 
 
         public bool Multiclass { get => Class2 != ""; }
@@ -87,34 +88,34 @@ namespace DnD_Character_Sheet
             int bonus = 0;
             switch (TotalLevel)
             {
-                case (1):
-                case (2):
-                case (3):
-                case (4):
+                case 1:
+                case 2:
+                case 3:
+                case 4:
                     bonus = 2;
                     break;
-                case (5):
-                case (6):
-                case (7):
-                case (8):
+                case 5:
+                case 6:
+                case 7:
+                case 8:
                     bonus = 3;
                     break;
-                case (9):
-                case (10):
-                case (11):
-                case (12):
+                case 9:
+                case 10:
+                case 11:
+                case 12:
                     bonus = 4;
                     break;
-                case (13):
-                case (14):
-                case (15):
-                case (16):
+                case 13:
+                case 14:
+                case 15:
+                case 16:
                     bonus = 5;
                     break;
-                case (17):
-                case (18):
-                case (19):
-                case (20):
+                case 17:
+                case 18:
+                case 19:
+                case 20:
                     bonus = 6;
                     break;
                 default:

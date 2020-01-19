@@ -242,6 +242,7 @@ namespace DnD_Character_Sheet
                 Bonds = m_CharData[LC.Bonds],
                 Flaws = m_CharData[LC.Flaws],
                 Backstory = m_CharData[LC.Backstory],
+                Notes = m_CharData[LC.Notes],
 
                 Money = new CLIB.Money()
                 {

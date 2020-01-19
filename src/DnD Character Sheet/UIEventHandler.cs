@@ -69,8 +69,14 @@ namespace DnD_Character_Sheet
                 SubClass_TextBox.Text = LIB.m_MainCharacterInfo.SubClass1;
                 DiceType_TextBox.Text = LIB.m_MainCharacterInfo.HitDice1;
             }
-            Race_TextBox.Text = LIB.m_MainCharacterInfo.Race;
-            Subrace_TextBox.Text = LIB.m_MainCharacterInfo.Subrace;
+            if (LIB.m_MainCharacterInfo.Subrace != string.Empty)
+            {
+                Race_TextBox.Text = LIB.m_MainCharacterInfo.Subrace;
+            }
+            else
+            {
+                Race_TextBox.Text = LIB.m_MainCharacterInfo.Race;
+            }
             Background_TextBox.Text = LIB.m_MainCharacterInfo.Background;
             Alignment_TextBox.Text = LIB.m_MainCharacterInfo.Alignment;
             PlayerName_TextBox.Text = LIB.m_MainCharacterInfo.PlayerName;
@@ -106,6 +112,7 @@ namespace DnD_Character_Sheet
                 "Flaws = " + LIB.m_MainCharacterInfo.Flaws + Environment.NewLine + Environment.NewLine;
 
             Backstory_TextBox.Text = LIB.m_MainCharacterInfo.Backstory;
+            Notes_TextBox.Text = LIB.m_MainCharacterInfo.Notes;
 
             UpdateMoney();
             UpdateLists();

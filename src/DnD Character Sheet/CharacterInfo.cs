@@ -43,7 +43,7 @@ namespace DnD_Character_Sheet
 
             switch (button.Name)
             {
-                case (LC.Load_Button):
+                case LC.Load_Button:
                     {
                         LoadCharacter characterLoader = new LoadCharacter();
                         if (characterLoader.Load())
@@ -54,7 +54,7 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.Save_Button):
+                case LC.Save_Button:
                     {
                         if (LIB.m_CharacterLoaded)
                         {
@@ -67,7 +67,7 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.button1):
+                case LC.button1:
                     {
                         if (Character_Panel.Visible)
                         {
@@ -79,35 +79,35 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.EquipBuy_Button):
+                case LC.EquipBuy_Button:
                     {
                         BuySellGearForm form = new BuySellGearForm(true);
                         form.ShowDialog();
                         UpdateGrids();
                         break;
                     }
-                case (LC.EquipSell_Button):
+                case LC.EquipSell_Button:
                     {
                         BuySellGearForm form = new BuySellGearForm(false);
                         form.ShowDialog();
                         UpdateGrids();
                         break;
                     }
-                case (LC.ItemBuy_Button):
+                case LC.ItemBuy_Button:
                     {
                         BuySellItemsForm form = new BuySellItemsForm(true);
                         form.ShowDialog();
                         UpdateGrids();
                         break;
                     }
-                case (LC.ItemSell_Button):
+                case LC.ItemSell_Button:
                     {
                         BuySellItemsForm form = new BuySellItemsForm(false);
                         form.ShowDialog();
                         UpdateGrids();
                         break;
                     }
-                case (LC.CurrencyExchange_Button):
+                case LC.CurrencyExchange_Button:
                     {
                         MessageBox.Show("Will soon add a new form for the user to decide what they want to convert. " +
                             "For now all this does is convert gold to silver or silver to gold.", "Future Implimentation", MessageBoxButtons.OK);
@@ -162,7 +162,6 @@ namespace DnD_Character_Sheet
             string[] numbers = new string[] { "10", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
             string skillName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
 
-
             if (box.Name == LC.Skills_CheckList)
             {
                 Skills_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
@@ -172,6 +171,10 @@ namespace DnD_Character_Sheet
                 Saves_CheckList.Items[box.SelectedIndex] = skillBonus + " " + skillName;
             }
             LIB.UpdateLibrary(skillName, skillBonus, check);
+            if(skillName == LC.Perception)
+            {
+                Perception_Label.Text = LIB.m_MainCharacterInfo.Perception.ToString();
+            }
         }
 
         /// <summary>
@@ -204,92 +207,92 @@ namespace DnD_Character_Sheet
             int spinValue = Convert.ToInt32(spinCtrl.Value);
             switch (spinCtrl.Name)
             {
-                case (LC.XP_Spin):
+                case LC.XP_Spin:
                     {
                         XP_ValueChanged(spinCtrl);
                         break;
                     }
-                case (LC.HitDiceRemain_Spin):
+                case LC.HitDiceRemain_Spin:
                     {
                         HitDice_ValueChanged(spinCtrl);
                         break;
                     }
-                case (LC.Initiative_Spin):
+                case LC.Initiative_Spin:
                     {
                         LIB.m_MainCharacterInfo.Initiative = spinValue;
                         break;
                     }
-                case (LC.HPCurrent_Spin):
+                case LC.HPCurrent_Spin:
                     {
                         LIB.m_MainCharacterInfo.HP_Current = spinValue;
                         break;
                     }
-                case (LC.HPTemp_Spin):
+                case LC.HPTemp_Spin:
                     {
                         LIB.m_MainCharacterInfo.HP_Temp = spinValue;
                         break;
                     }
-                case (LC.CP_Spin):
+                case LC.CP_Spin:
                     {
                         LIB.m_MainCharacterInfo.Money.Copper = spinValue;
                         break;
                     }
-                case (LC.SP_Spin):
+                case LC.SP_Spin:
                     {
                         LIB.m_MainCharacterInfo.Money.Silver = spinValue;
                         break;
                     }
-                case (LC.EP_Spin):
+                case LC.EP_Spin:
                     {
                         LIB.m_MainCharacterInfo.Money.Electrum = spinValue;
                         break;
                     }
-                case (LC.GP_Spin):
+                case LC.GP_Spin:
                     {
                         LIB.m_MainCharacterInfo.Money.Gold = spinValue;
                         break;
                     }
-                case (LC.PP_Spin):
+                case LC.PP_Spin:
                     {
                         LIB.m_MainCharacterInfo.Money.Platinum = spinValue;
                         break;
                     }
-                case (LC.Str_Spin):
+                case LC.Str_Spin:
                     {
                         LIB.m_MainCharacterInfo.Attributes.Strength = spinValue;
                         LIB.m_MainCharacterInfo.Calculate();
                         PopulateAttributes();
                         break;
                     }
-                case (LC.Dex_Spin):
+                case LC.Dex_Spin:
                     {
                         LIB.m_MainCharacterInfo.Attributes.Dexterity = spinValue;
                         LIB.m_MainCharacterInfo.Calculate();
                         PopulateAttributes();
                         break;
                     }
-                case (LC.Con_Spin):
+                case LC.Con_Spin:
                     {
                         LIB.m_MainCharacterInfo.Attributes.Constitution = spinValue;
                         LIB.m_MainCharacterInfo.Calculate();
                         PopulateAttributes();
                         break;
                     }
-                case (LC.Int_Spin):
+                case LC.Int_Spin:
                     {
                         LIB.m_MainCharacterInfo.Attributes.Intelligence = spinValue;
                         LIB.m_MainCharacterInfo.Calculate();
                         PopulateAttributes();
                         break;
                     }
-                case (LC.Wis_Spin):
+                case LC.Wis_Spin:
                     {
                         LIB.m_MainCharacterInfo.Attributes.Wisdom = spinValue;
                         LIB.m_MainCharacterInfo.Calculate();
                         PopulateAttributes();
                         break;
                     }
-                case (LC.Cha_Spin):
+                case LC.Cha_Spin:
                     {
                         LIB.m_MainCharacterInfo.Attributes.Charisma = spinValue;
                         LIB.m_MainCharacterInfo.Calculate();
@@ -311,7 +314,7 @@ namespace DnD_Character_Sheet
             DataGridView grid = (DataGridView)sender;
             switch (grid.Name)
             {
-                case (LC.Equipment_Grid):
+                case LC.Equipment_Grid:
                     {
                         if (grid.CurrentCell != null &&
                             grid.Columns[grid.CurrentCell.ColumnIndex].HeaderText == LC.Quantity)
@@ -320,7 +323,7 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.Item_Grid):
+                case LC.Item_Grid:
                     {
                         if (grid.CurrentCell != null &&
                             grid.Columns[grid.CurrentCell.ColumnIndex].HeaderText == LC.Quantity)
@@ -346,7 +349,7 @@ namespace DnD_Character_Sheet
             string textValue = textBox.Text;
             switch (textBox.Name)
             {
-                case (LC.Speed_TextBox):
+                case LC.Speed_TextBox:
                     {
                         if (int.TryParse(textValue, out int value))
                         {
@@ -358,12 +361,12 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.Backstory_TextBox):
+                case LC.Backstory_TextBox:
                     {
                         LIB.m_MainCharacterInfo.Backstory = textValue;
                         break;
                     }
-                case (LC.Age_TextBox):
+                case LC.Age_TextBox:
                     {
                         if (int.TryParse(textValue, out int value))
                         {
@@ -375,11 +378,11 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.Height_TextBox):
+                case LC.Height_TextBox:
                     {
                         break;
                     }
-                case (LC.Weight_TextBox):
+                case LC.Weight_TextBox:
                     {
                         if (double.TryParse(textValue, out double value))
                         {
@@ -391,19 +394,24 @@ namespace DnD_Character_Sheet
                         }
                         break;
                     }
-                case (LC.Eye_TextBox):
+                case LC.Eye_TextBox:
                     {
                         LIB.m_MainCharacterInfo.EyeColor = textValue;
                         break;
                     }
-                case (LC.Skin_TextBox):
+                case LC.Skin_TextBox:
                     {
                         LIB.m_MainCharacterInfo.SkinColor = textValue;
                         break;
                     }
-                case (LC.Hair_TextBox):
+                case LC.Hair_TextBox:
                     {
                         LIB.m_MainCharacterInfo.HairColor = textValue;
+                        break;
+                    }
+                case LC.Notes_TextBox:
+                    {
+                        LIB.m_MainCharacterInfo.Notes = textValue;
                         break;
                     }
                 default:

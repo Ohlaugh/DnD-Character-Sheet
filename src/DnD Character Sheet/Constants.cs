@@ -193,6 +193,7 @@ namespace DnD_Character_Sheet
         public static readonly string Bonds = "Bonds";
         public static readonly string Flaws = "Flaws";
         public static readonly string Backstory = "Backstory";
+        public static readonly string Notes = "Notes";
 
         // Weapons and Items
         public static readonly string CharacterSheet = "CharacterSheet";
@@ -293,6 +294,7 @@ namespace DnD_Character_Sheet
         public const string Hair_TextBox = "Hair_TextBox";
         public const string Info_TextBox = "Info_TextBox";
         public const string OtherProf_TextBox = "OtherProf_TextBox";
+        public const string Notes_TextBox = "Notes_TextBox";
 
         #endregion
     }

@@ -38,11 +38,11 @@
   </Data>
   <Data>
     <Key>Race</Key>
-    <Value>Wood Elf</Value>
+    <Value>Elf</Value>
   </Data>
   <Data>
     <Key>Subrace</Key>
-    <Value>Test</Value>
+    <Value>Wood Elf</Value>
   </Data>
   <Data>
     <Key>Alignment</Key>
@@ -153,6 +153,10 @@ That was over 540 years ago.... yet I remember it so clearly, we befriended Crie
       Temp Location:
       Feature: Discovery
     </Value>
+  </Data>
+  <Data>
+    <Key>Notes</Key>
+    <Value>Notes go here</Value>
   </Data>
   <Data>
     <Key>Multiclass</Key>

@@ -127,30 +127,30 @@ namespace DnD_Character_Sheet.Classes
             {
                 switch (CurrencyFrom)
                 {
-                    case (LC.Copper):
+                    case LC.Copper:
                         {
                             LIB.m_MainCharacterInfo.Money.Copper -= value;
                             switch (CurrencyTo)
                             {
-                                case (LC.Silver):
+                                case LC.Silver:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Silver += value / 10;
                                         LIB.m_MainCharacterInfo.Money.Copper += value % 10;
                                         break;
                                     }
-                                case (LC.Electrum):
+                                case LC.Electrum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Electrum += value / 50;
                                         LIB.m_MainCharacterInfo.Money.Copper += value % 50;
                                         break;
                                     }
-                                case (LC.Gold):
+                                case LC.Gold:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Gold += value / 100;
                                         LIB.m_MainCharacterInfo.Money.Copper += value % 100;
                                         break;
                                     }
-                                case (LC.Platinum):
+                                case LC.Platinum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Platinum += value / 1000;
                                         LIB.m_MainCharacterInfo.Money.Copper += value % 1000;
@@ -162,29 +162,29 @@ namespace DnD_Character_Sheet.Classes
                             }
                             break;
                         }
-                    case (LC.Silver):
+                    case LC.Silver:
                         {
                             LIB.m_MainCharacterInfo.Money.Silver -= value;
                             switch (CurrencyTo)
                             {
-                                case (LC.Copper):
+                                case LC.Copper:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Copper += value * 10;
                                         break;
                                     }
-                                case (LC.Electrum):
+                                case LC.Electrum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Electrum += value / 5;
                                         LIB.m_MainCharacterInfo.Money.Silver += value % 5;
                                         break;
                                     }
-                                case (LC.Gold):
+                                case LC.Gold:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Gold += value / 10;
                                         LIB.m_MainCharacterInfo.Money.Silver += value % 10;
                                         break;
                                     }
-                                case (LC.Platinum):
+                                case LC.Platinum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Platinum += value / 100;
                                         LIB.m_MainCharacterInfo.Money.Silver += value % 100;
@@ -196,28 +196,28 @@ namespace DnD_Character_Sheet.Classes
                             }
                             break;
                         }
-                    case (LC.Electrum):
+                    case LC.Electrum:
                         {
                             LIB.m_MainCharacterInfo.Money.Electrum -= value;
                             switch (CurrencyTo)
                             {
-                                case (LC.Copper):
+                                case LC.Copper:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Copper += value * 50;
                                         break;
                                     }
-                                case (LC.Silver):
+                                case LC.Silver:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Silver += value * 5;
                                         break;
                                     }
-                                case (LC.Gold):
+                                case LC.Gold:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Gold += value / 2;
                                         LIB.m_MainCharacterInfo.Money.Electrum += value % 2;
                                         break;
                                     }
-                                case (LC.Platinum):
+                                case LC.Platinum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Platinum += value / 20;
                                         LIB.m_MainCharacterInfo.Money.Electrum += value % 20;
@@ -229,27 +229,27 @@ namespace DnD_Character_Sheet.Classes
                             }
                             break;
                         }
-                    case (LC.Gold):
+                    case LC.Gold:
                         {
                             LIB.m_MainCharacterInfo.Money.Gold -= value;
                             switch (CurrencyTo)
                             {
-                                case (LC.Copper):
+                                case LC.Copper:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Copper += value * 100;
                                         break;
                                     }
-                                case (LC.Silver):
+                                case LC.Silver:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Silver += value * 10;
                                         break;
                                     }
-                                case (LC.Electrum):
+                                case LC.Electrum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Electrum += value * 2;
                                         break;
                                     }
-                                case (LC.Platinum):
+                                case LC.Platinum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Platinum += value / 10;
                                         LIB.m_MainCharacterInfo.Money.Gold += value % 10;
@@ -261,26 +261,26 @@ namespace DnD_Character_Sheet.Classes
                             }
                             break;
                         }
-                    case (LC.Platinum):
+                    case LC.Platinum:
                         {
                             switch (CurrencyTo)
                             {
-                                case (LC.Copper):
+                                case LC.Copper:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Copper += value * 1000;
                                         break;
                                     }
-                                case (LC.Silver):
+                                case LC.Silver:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Silver += value * 100;
                                         break;
                                     }
-                                case (LC.Electrum):
+                                case LC.Electrum:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Electrum += value * 20;
                                         break;
                                     }
-                                case (LC.Gold):
+                                case LC.Gold:
                                     {
                                         LIB.m_MainCharacterInfo.Money.Gold += value * 10;
                                         break;
@@ -343,71 +343,71 @@ namespace DnD_Character_Sheet.Classes
                 int modifier = 0;
                 switch (score)
                 {
-                    case (1):
+                    case 1:
                         modifier = 5;
                         sign = "-";
                         break;
-                    case (2):
-                    case (3):
+                    case 2:
+                    case 3:
                         modifier = 4;
                         sign = "-";
                         break;
-                    case (4):
-                    case (5):
+                    case 4:
+                    case 5:
                         modifier = 3;
                         sign = "-";
                         break;
-                    case (6):
-                    case (7):
+                    case 6:
+                    case 7:
                         modifier = 2;
                         sign = "-";
                         break;
-                    case (8):
-                    case (9):
+                    case 8:
+                    case 9:
                         modifier = 1;
                         sign = "-";
                         break;
-                    case (10):
-                    case (11):
+                    case 10:
+                    case 11:
                         modifier = 0;
                         break;
-                    case (12):
-                    case (13):
+                    case 12:
+                    case 13:
                         modifier = 1;
                         break;
-                    case (14):
-                    case (15):
+                    case 14:
+                    case 15:
                         modifier = 2;
                         break;
-                    case (16):
-                    case (17):
+                    case 16:
+                    case 17:
                         modifier = 3;
                         break;
-                    case (18):
-                    case (19):
+                    case 18:
+                    case 19:
                         modifier = 4;
                         break;
-                    case (20):
-                    case (21):
+                    case 20:
+                    case 21:
                         modifier = 5;
                         break;
-                    case (22):
-                    case (23):
+                    case 22:
+                    case 23:
                         modifier = 6;
                         break;
-                    case (24):
-                    case (25):
+                    case 24:
+                    case 25:
                         modifier = 7;
                         break;
-                    case (26):
-                    case (27):
+                    case 26:
+                    case 27:
                         modifier = 8;
                         break;
-                    case (28):
-                    case (29):
+                    case 28:
+                    case 29:
                         modifier = 9;
                         break;
-                    case (30):
+                    case 30:
                         modifier = 10;
                         break;
 
