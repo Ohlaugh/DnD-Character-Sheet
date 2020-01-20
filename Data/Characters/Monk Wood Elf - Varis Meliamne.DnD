@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CharacterSheet CharacterName="Varis Meliamne">
   <Data>
     <Key>CharacterName</Key>
@@ -98,7 +98,7 @@
   </Data>
   <Data>
     <Key>HP_Current</Key>
-    <Value>10</Value>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>HP_Temp</Key>
@@ -138,7 +138,7 @@
   </Data>
   <Data>
     <Key>CarryingWeight</Key>
-    <Value>64.5</Value>
+    <Value>68.5</Value>
   </Data>
   <Data>
     <Key>Backstory</Key>
@@ -146,7 +146,7 @@
 
 That was over 540 years ago.... yet I remember it so clearly, we befriended Criella and became members of the Order of Serenity. It was a peaceful life, everyone was friendly and helped each other and there were no more bandit raids. I became the caretaker of an ancient relic, the statue of a creature whom the other monks said we a depiction of an ancient god. My sister was part of the group of monks that traveled the lands to care for others, my brother became one of the best wine makers of the entire monestary. We were happy, we had a family and most importantly we had each other. 
 
-
+But soon a stranger came to our monestary... a charming fellow by the name of Daeris who we provided food, water and shelter as he was traveling. However, soon after he left our Relic that I was caretaker for went missing. I was charged with following and finding Daeris to return our Relic back to its home...
 
       I was the caretaker of an ancient ruin or relic.
       
@@ -156,7 +156,12 @@ That was over 540 years ago.... yet I remember it so clearly, we befriended Crie
   </Data>
   <Data>
     <Key>Notes</Key>
-    <Value>Notes go here</Value>
+    <Value>Gimbal = Andy
+Daeris = Joel
+Longstrider = Don
+Erdan = Jeff
+
+Carrying two deeds and a will that I found in a trapped chest within a secret room (my companions do not know I have this)</Value>
   </Data>
   <Data>
     <Key>Multiclass</Key>
@@ -445,7 +450,7 @@ That was over 540 years ago.... yet I remember it so clearly, we befriended Crie
       <Weight>2</Weight>
       <Style>Adventuring Gear</Style>
       <Description>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</Description>
-      <Quantity>10</Quantity>
+      <Quantity>12</Quantity>
     </Item>
     <Item>
       <Name>Waterskin</Name>
