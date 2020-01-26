@@ -16,10 +16,15 @@ namespace DnD_Character_Sheet
         /// </summary>
         /// <param name="proficient"></param>
         /// <param name="modifier"></param>
+        /// <param name="sign"></param>
         /// <returns></returns>
-        public static string Bonus(bool proficient, int modifier)
+        public static string Bonus(bool proficient, int modifier, string sign)
         {
             int bonus = modifier;
+            if (sign == "-")
+            {
+                bonus *= -1;
+            }
             if (proficient)
             {
                 bonus += LIB.m_MainCharacterInfo.ProficiencyBonus;
@@ -30,7 +35,7 @@ namespace DnD_Character_Sheet
                 return "+ " + bonus;
             }
 
-            return "- " + bonus;
+            return "- " + bonus * -1;
         }
 
         /// <summary>

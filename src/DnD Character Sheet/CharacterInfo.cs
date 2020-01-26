@@ -143,6 +143,10 @@ namespace DnD_Character_Sheet
             int bonus = int.Parse(box.SelectedItem.ToString().Split()[1]);
             string sign = box.SelectedItem.ToString().Split()[0] + " ";
             bool check = false;
+            if (sign == "- ")
+            {
+                bonus *= -1;
+            }
             if (eventArgs.NewValue == CheckState.Checked)
             {
                 bonus += LIB.m_MainCharacterInfo.ProficiencyBonus;
@@ -153,11 +157,16 @@ namespace DnD_Character_Sheet
                 bonus -= LIB.m_MainCharacterInfo.ProficiencyBonus;
                 check = false;
             }
-            if (bonus < 0 && sign != "- ")
+            if (bonus < 0)
             {
-                bonus *= -1;
                 sign = "- ";
+                bonus *= -1;
             }
+            else
+            {
+                sign = "+ ";
+            }
+
             string skillBonus = sign + bonus;
             string[] numbers = new string[] { "10", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
             string skillName = box.SelectedItem.ToString().Split(numbers, StringSplitOptions.None)[1].Trim();
