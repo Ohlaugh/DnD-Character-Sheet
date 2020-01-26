@@ -295,6 +295,7 @@ namespace DnD_Character_Sheet
         public const string Info_TextBox = "Info_TextBox";
         public const string OtherProf_TextBox = "OtherProf_TextBox";
         public const string Notes_TextBox = "Notes_TextBox";
+        public const string HPMax_TextBox = "HPMax_TextBox";
 
         #endregion
     }

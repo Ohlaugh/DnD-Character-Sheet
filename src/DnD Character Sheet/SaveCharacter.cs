@@ -35,7 +35,7 @@ namespace DnD_Character_Sheet
             {
                 fileDialog.FileName += "_" + m_MainCharacterInfo.Class2;
             }
-            fileDialog.FileName += " " + m_MainCharacterInfo.Race + " - " + m_MainCharacterInfo.CharacterName;
+            fileDialog.FileName += " " + m_MainCharacterInfo.Subrace + " - " + m_MainCharacterInfo.CharacterName;
 
             fileDialog.Filter = LC.FileFilter;
             fileDialog.FilterIndex = 1;

@@ -358,6 +358,20 @@ namespace DnD_Character_Sheet
             string textValue = textBox.Text;
             switch (textBox.Name)
             {
+                case LC.HPMax_TextBox:
+                    {
+                        if (int.TryParse(textValue, out int value))
+                        {
+                            LIB.m_MainCharacterInfo.HP_Max = value;
+                            HPCurrent_Spin.Maximum = LIB.m_MainCharacterInfo.HP_Max;
+                            HPCurrent_Spin.Value = LIB.m_MainCharacterInfo.HP_Max;
+                        }
+                        else
+                        {
+                            textBox.Text = LIB.m_MainCharacterInfo.HP_Max.ToString();
+                        }
+                        break;
+                    }
                 case LC.Speed_TextBox:
                     {
                         if (int.TryParse(textValue, out int value))

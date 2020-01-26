@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <CharacterSheet CharacterName="Varis Meliamne">
   <Data>
     <Key>CharacterName</Key>
@@ -22,7 +22,7 @@
   </Data>
   <Data>
     <Key>Level1</Key>
-    <Value>1</Value>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>Level2</Key>
@@ -50,7 +50,7 @@
   </Data>
   <Data>
     <Key>ExperiencePoints</Key>
-    <Value>0</Value>
+    <Value>300</Value>
   </Data>
   <Data>
     <Key>Age</Key>
@@ -62,7 +62,7 @@
   </Data>
   <Data>
     <Key>Weight</Key>
-    <Value>0</Value>
+    <Value>120</Value>
   </Data>
   <Data>
     <Key>EyeColor</Key>
@@ -90,15 +90,15 @@
   </Data>
   <Data>
     <Key>Speed</Key>
-    <Value>35</Value>
+    <Value>45</Value>
   </Data>
   <Data>
     <Key>HP_Max</Key>
-    <Value>10</Value>
+    <Value>15</Value>
   </Data>
   <Data>
     <Key>HP_Current</Key>
-    <Value>2</Value>
+    <Value>15</Value>
   </Data>
   <Data>
     <Key>HP_Temp</Key>
@@ -114,7 +114,7 @@
   </Data>
   <Data>
     <Key>HitDiceTotal1</Key>
-    <Value>1</Value>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>HitDiceTotal2</Key>
@@ -138,7 +138,7 @@
   </Data>
   <Data>
     <Key>CarryingWeight</Key>
-    <Value>68.5</Value>
+    <Value>69.5</Value>
   </Data>
   <Data>
     <Key>Backstory</Key>
@@ -161,7 +161,11 @@ Daeris = Joel
 Longstrider = Don
 Erdan = Jeff
 
-Carrying two deeds and a will that I found in a trapped chest within a secret room (my companions do not know I have this)</Value>
+Hermit Background gives me: A scroll case stuffed full of notes from my studies or prayers, a winter blanket, a set of common clothes
+
+Carrying two deeds and a will that I found in a trapped chest within a secret room (my companions do not know I have this)
+
+SECRETS: Deeds are for the Durst family estate and the Durst family windwill</Value>
   </Data>
   <Data>
     <Key>Multiclass</Key>
@@ -169,7 +173,7 @@ Carrying two deeds and a will that I found in a trapped chest within a secret ro
   </Data>
   <Data>
     <Key>TotalLevel</Key>
-    <Value>1</Value>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>ProficiencyBonus</Key>
@@ -217,6 +221,38 @@ Carrying two deeds and a will that I found in a trapped chest within a secret ro
       You can use Dexterity instead of Strength for the attack and damge rolls of your unarmed strikes and monk weapons.
       You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon. This die changes as you gain monk levels, as shown in the Martial Arts column of the Monk table.
       When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action.
+    </Value>
+  </Feature>
+  <Feature>
+    <Key>Ki</Key>
+    <Value>
+      You can spend these points to fuel various ki features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind. You learn more ki features as you gain levels in this class.
+      When you spend a ki point, it is unvailable until you finish a short or long rest, at the end of which you draw all of your expended ki back into yourself. YOu must spend at least 30 minutes of the rest meditating to regain your ki points.
+      Some of your ki features require your target to make a saving throw to resist th efeature's effects. The saving throw DC is calculated as 8 + proficiency bonus + wisdom modifier.
+    </Value>
+  </Feature>
+  <Feature>
+    <Key>Flurry of Blows</Key>
+    <Value>
+      Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.
+    </Value>
+  </Feature>
+  <Feature>
+    <Key>Patient Defense</Key>
+    <Value>
+      You can spend 1 ki point to take the Dodge action as a bonus action on your turn.
+    </Value>
+  </Feature>
+  <Feature>
+    <Key>Step of the Wind</Key>
+    <Value>
+      You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.
+    </Value>
+  </Feature>
+  <Feature>
+    <Key>Unarmored Movement</Key>
+    <Value>
+      Your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels.
     </Value>
   </Feature>
   <Data>
@@ -450,7 +486,7 @@ Carrying two deeds and a will that I found in a trapped chest within a secret ro
       <Weight>2</Weight>
       <Style>Adventuring Gear</Style>
       <Description>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</Description>
-      <Quantity>12</Quantity>
+      <Quantity>11</Quantity>
     </Item>
     <Item>
       <Name>Waterskin</Name>
@@ -474,7 +510,7 @@ Carrying two deeds and a will that I found in a trapped chest within a secret ro
       <Weight>3</Weight>
       <Style>Simple Melee Weapon</Style>
       <Description />
-      <Quantity>1</Quantity>
+      <Quantity>2</Quantity>
       <Damage>1d6 piercing</Damage>
       <Equipped>false</Equipped>
       <Properties>
