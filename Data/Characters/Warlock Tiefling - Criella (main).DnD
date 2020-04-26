@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<CharacterSheet CharacterName="Varis Meliamne">
+<CharacterSheet CharacterName="Criella">
   <Data>
     <Key>CharacterName</Key>
     <Value>Criella</Value>
@@ -94,11 +94,11 @@
   </Data>
   <Data>
     <Key>HP_Max</Key>
-    <Value>8</Value>
+    <Value>10</Value>
   </Data>
   <Data>
     <Key>HP_Current</Key>
-    <Value>0</Value>
+    <Value>10</Value>
   </Data>
   <Data>
     <Key>HP_Temp</Key>
@@ -138,7 +138,7 @@
   </Data>
   <Data>
     <Key>CarryingWeight</Key>
-    <Value>69.5</Value>
+    <Value>114.5</Value>
   </Data>
   <Data>
     <Key>Backstory</Key>
@@ -151,7 +151,24 @@ You stay hidden in the woods for another three years, during this time you learn
   </Data>
   <Data>
     <Key>Notes</Key>
-    <Value>Notes:</Value>
+    <Value>Notes:
+
+A scroll case stuffed full of notes from your studies or prayers, 
+a winter blanket, 
+a set of common clothes, 
+a herbalism kit
+
+
+
+Spells:
+0:
+	Thaumaturgy
+	Eldritch Blast
+	True Strike
+
+1: 
+	Shield
+                Unseen Servant</Value>
   </Data>
   <Data>
     <Key>Multiclass</Key>
@@ -167,11 +184,11 @@ You stay hidden in the woods for another three years, during this time you learn
   </Data>
   <Data>
     <Key>Perception</Key>
-    <Value>10</Value>
+    <Value>12</Value>
   </Data>
   <Data>
     <Key>CarryingCapacity</Key>
-    <Value>165</Value>
+    <Value>180</Value>
   </Data>
   <Feature>
     <Key>Darkvision</Key>
@@ -219,14 +236,13 @@ You stay hidden in the woods for another three years, during this time you learn
     <Key>Platinum</Key>
     <Value>0</Value>
   </Data>
-  
   <Data>
     <Key>Strength</Key>
     <Value>12</Value>
   </Data>
   <Data>
     <Key>StrengthModifier</Key>
-    <Value>0</Value>
+    <Value>1</Value>
   </Data>
   <Data>
     <Key>Dexterity</Key>
@@ -234,7 +250,7 @@ You stay hidden in the woods for another three years, during this time you learn
   </Data>
   <Data>
     <Key>DexterityModifier</Key>
-    <Value>4</Value>
+    <Value>1</Value>
   </Data>
   <Data>
     <Key>Constitution</Key>
@@ -250,7 +266,7 @@ You stay hidden in the woods for another three years, during this time you learn
   </Data>
   <Data>
     <Key>IntelligenceModifier</Key>
-    <Value>1</Value>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>Wisdom</Key>
@@ -258,7 +274,7 @@ You stay hidden in the woods for another three years, during this time you learn
   </Data>
   <Data>
     <Key>WisdomModifier</Key>
-    <Value>4</Value>
+    <Value>2</Value>
   </Data>
   <Data>
     <Key>Charisma</Key>
@@ -266,7 +282,7 @@ You stay hidden in the woods for another three years, during this time you learn
   </Data>
   <Data>
     <Key>CharismaModifier</Key>
-    <Value>1</Value>
+    <Value>5</Value>
   </Data>
   <Proficient>
     <Key>Acrobatics</Key>
@@ -382,19 +398,154 @@ You stay hidden in the woods for another three years, during this time you learn
     <Tool>Piccolo</Tool>
   </OtherProficiencies>
   <Items>
-    <Weapon>
-      <Name>Spear</Name>
+    <Item>
+      <Name>Crossbow bolts</Name>
+      <Cost>1 gp</Cost>
+      <Weight>1.5</Weight>
+      <Style>Ammunition</Style>
+      <Description>Crossbow bolts are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.</Description>
+      <Quantity>20</Quantity>
+    </Item>
+    <Item>
+      <Name>Backpack</Name>
+      <Cost>2 gp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A backpack is a leather pack carried on the back, typically with straps to secure it. A backpack can hold 1 cubic foot/ 30 pounds of gear. You can also strap items, such as a bedroll or a coil of rope, to the outside of a backpack.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Crowbar</Name>
+      <Cost>2 gp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Hammer</Name>
       <Cost>1 gp</Cost>
       <Weight>3</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>This one-handed hammer with an iron head is useful for pounding pitons into a wall.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Piton</Name>
+      <Cost>5 cp</Cost>
+      <Weight>0.25</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>When a wall doesn’t offer handholds and footholds, you can make your own. A piton is a steel spike with an eye through which you can loop a rope.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Torch</Name>
+      <Cost>1 cp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Tinderbox</Name>
+      <Cost>5 sp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch -- or anything else with abundant, exposed fuel -- takes an action. Lighting any other fire takes 1 minute.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Rations (1 day)</Name>
+      <Cost>5 sp</Cost>
+      <Weight>2</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Waterskin</Name>
+      <Cost>2 sp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A waterskin can hold 4 pints of liquid.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Rope, Hempen (50 feet)</Name>
+      <Cost>1 gp</Cost>
+      <Weight>10</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Rope, has 2 hit points and can be burst with a DC 17 Strength check.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Weapon>
+      <Name>Handaxe</Name>
+      <Cost>5 gp</Cost>
+      <Weight>2</Weight>
       <Style>Simple Melee Weapon</Style>
       <Description />
       <Quantity>1</Quantity>
-      <Damage>1d6 piercing</Damage>
+      <Damage>1d6 slashing</Damage>
       <Equipped>false</Equipped>
       <Properties>
+        <Property>Light</Property>
         <Property>Thrown (range 20/60)</Property>
+      </Properties>
+    </Weapon>
+    <Weapon>
+      <Name>Quarterstaff</Name>
+      <Cost>2 sp</Cost>
+      <Weight>4</Weight>
+      <Style>Simple Melee Weapon</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <Damage>1d6 bludgeoning</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
         <Property>Versatile 1d8</Property>
       </Properties>
     </Weapon>
+    <Weapon>
+      <Name>Crossbow, Light</Name>
+      <Cost>25 sp</Cost>
+      <Weight>5</Weight>
+      <Style>Simple Ranged Weapon</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <Damage>1d8 piercing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Ammunition (range 80/320)</Property>
+        <Property>Loading</Property>
+        <Property>Two-Handed</Property>
+      </Properties>
+    </Weapon>
+    <Weapon>
+      <Name>Dagger</Name>
+      <Cost>2 gp</Cost>
+      <Weight>1</Weight>
+      <Style>Simple Melee Weapon</Style>
+      <Description />
+      <Quantity>2</Quantity>
+      <Damage>1d4 piercing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Finesse</Property>
+        <Property>Light</Property>
+        <Property>Thrown (range 20/60)</Property>
+      </Properties>
+    </Weapon>
+    <Armor>
+      <Name>Leather</Name>
+      <Cost>10 gp</Cost>
+      <Weight>10</Weight>
+      <Style>Light Armor</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <ArmorClass>11 + Dex</ArmorClass>
+      <StrengthReq>0</StrengthReq>
+      <Disadvantage>false</Disadvantage>
+      <Equipped>false</Equipped>
+    </Armor>
   </Items>
 </CharacterSheet>

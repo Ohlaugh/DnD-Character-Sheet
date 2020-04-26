@@ -98,7 +98,7 @@
   </Data>
   <Data>
     <Key>HP_Current</Key>
-    <Value>15</Value>
+    <Value>0</Value>
   </Data>
   <Data>
     <Key>HP_Temp</Key>
@@ -162,7 +162,7 @@ Longstrider = Don
 Erdan = Jeff
 
 Hermit Background gives me: A scroll case stuffed full of notes from my studies or prayers, a winter blanket, a set of common clothes
-Ki Points = 1/2
+Ki Points = 0/2
 
 
 Carrying two deeds and a will that I found in a trapped chest within a secret room (my companions do not know I have this)
@@ -278,7 +278,7 @@ puch had a certain amount of silver (will count later)</Value>
   </Data>
   <Data>
     <Key>Gold</Key>
-    <Value>10</Value>
+    <Value>15</Value>
   </Data>
   <Data>
     <Key>Platinum</Key>
