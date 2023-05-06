@@ -94,7 +94,8 @@
               Margin="5"
               Click="Save_Button_Click" />
       <Button Content="Test"
-              Margin="5"/>
+              Margin="5"
+              Click="Test_Button_Click" />
     </StackPanel>
     <TabControl Name="TabControl_CharacterSheet"
                 Visibility="Hidden">

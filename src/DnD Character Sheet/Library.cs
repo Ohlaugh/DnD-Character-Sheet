@@ -1,4 +1,3 @@
-using DnD_Character_Sheet.Classes;
 using Interfaces;
 using Interfaces.HelperClasses;
 using System;
@@ -54,7 +53,7 @@ namespace DnD_Character_Sheet
     /// Key: Spell Name
     /// Value: New Spell
     /// </summary>
-    private static Dictionary<string, Spell> m_SpellLibrary = new Dictionary<string, Spell>();
+    private static List<Spell> m_SpellLibrary = new List<Spell>();
 
     #endregion Private Members
 
@@ -103,7 +102,7 @@ namespace DnD_Character_Sheet
     /// Key: Spell Name
     /// Value: New Spell
     /// </summary>
-    public static Dictionary<string, Spell> SpellLibrary { get { return m_SpellLibrary; } }
+    public static List<Spell> SpellLibrary { get { return m_SpellLibrary; } }
 
     #endregion Public Members
 
@@ -134,6 +133,7 @@ namespace DnD_Character_Sheet
             AddArmors(book.Armors);
             AddWeapons(book.Weapons);
             AddItems(book.Items);
+            AddSpells(book.Spells);
           }
         }
         characterLoaded = true;
@@ -270,6 +270,14 @@ namespace DnD_Character_Sheet
       m_ItemLibrary.AddRange(items.Where(item => !m_ItemLibrary.Contains(item)));
     }
 
+    /// <summary>
+    /// Import Spells to the main Library
+    /// </summary>
+    /// <param name="spells">List of Spells</param>
+    private static void AddSpells(List<Spell> spells)
+    {
+      m_SpellLibrary.AddRange(spells.Where(spell => !m_SpellLibrary.Contains(spell)));
+    }
 
 
     /// <summary>

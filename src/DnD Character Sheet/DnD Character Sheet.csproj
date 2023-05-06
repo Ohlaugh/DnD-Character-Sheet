@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Books\Books.csproj" />
+    <ProjectReference Include="..\DEV_HELP\DEV_HELP.csproj" />
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
   </ItemGroup>
 

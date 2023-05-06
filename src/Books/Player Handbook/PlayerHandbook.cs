@@ -14,5 +14,6 @@ namespace Books.Player_Handbook
     public List<Armor> Armors { get { return PHBC.Armors; } }
     public List<Weapon> Weapons { get { return PHBC.Weapons; } }
     public List<Item> Items { get { return PHBC.Items; } }
+    public List<Spell> Spells { get { return PHBC.Spells; } }
   }
 }
