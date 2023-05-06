@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CharacterSheet CharacterName="Criella">
+  <Data>
+    <Key>CharacterName</Key>
+    <Value>Criella</Value>
+  </Data>
+  <Data>
+    <Key>Class</Key>
+    <Value>Warlock</Value>
+  </Data>
+  <Data>
+    <Key>Class2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>SubClass</Key>
+    <Value>Hexblade, Pact of the Blade</Value>
+  </Data>
+  <Data>
+    <Key>SubClass2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>Level</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>Level</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Background</Key>
+    <Value>Hermit</Value>
+  </Data>
+  <Data>
+    <Key>PlayerName</Key>
+    <Value>Chase</Value>
+  </Data>
+  <Data>
+    <Key>Race</Key>
+    <Value>Tiefling</Value>
+  </Data>
+  <Data>
+    <Key>Subrace</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>Alignment</Key>
+    <Value>Choatic Neutral</Value>
+  </Data>
+  <Data>
+    <Key>ExperiencePoints</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Age</Key>
+    <Value>17</Value>
+  </Data>
+  <Data>
+    <Key>Height</Key>
+    <Value>5'11"</Value>
+  </Data>
+  <Data>
+    <Key>Weight</Key>
+    <Value>120</Value>
+  </Data>
+  <Data>
+    <Key>EyeColor</Key>
+    <Value>Black</Value>
+  </Data>
+  <Data>
+    <Key>SkinColor</Key>
+    <Value>Pinkish Red</Value>
+  </Data>
+  <Data>
+    <Key>HairColor</Key>
+    <Value>Bright Purple</Value>
+  </Data>
+  <Data>
+    <Key>Inspiration</Key>
+    <Value>false</Value>
+  </Data>
+  <Data>
+    <Key>ArmorClass</Key>
+    <Value>12</Value>
+  </Data>
+  <Data>
+    <Key>Initiative</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Speed</Key>
+    <Value>30</Value>
+  </Data>
+  <Data>
+    <Key>HP_Max</Key>
+    <Value>10</Value>
+  </Data>
+  <Data>
+    <Key>HP_Current</Key>
+    <Value>10</Value>
+  </Data>
+  <Data>
+    <Key>HP_Temp</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>HitDice</Key>
+    <Value>d8</Value>
+  </Data>
+  <Data>
+    <Key>HitDice2</Key>
+    <Value></Value>
+  </Data>
+  <Data>
+    <Key>HitDiceRem</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>HitDiceRem2</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>HitDiceTotal</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>HitDiceTotal2</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>PersonalityTraits</Key>
+    <Value>I’ve been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.</Value>
+  </Data>
+  <Data>
+    <Key>Ideals</Key>
+    <Value>Inquiry and curiosity are the pillars of progress. Solitude and contemplation are paths toward mystical or magical power.</Value>
+  </Data>
+  <Data>
+    <Key>Bonds</Key>
+    <Value>I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them.</Value>
+  </Data>
+  <Data>
+    <Key>Flaws</Key>
+    <Value>I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell.</Value>
+  </Data>
+  <Data>
+    <Key>CarryingWeight</Key>
+    <Value>114.5</Value>
+  </Data>
+  <Data>
+    <Key>Backstory</Key>
+    <Value>You lived in a small town just outside a major city where your parents were farmers. The towns people merely tolerated your family’s existence, being Tielfings they did not treat you with any kindness. Your parents did their best to pay no attention to the others in the town and mostly kept to themselves. You and your family had been called many things, most of which you did not understand but knew that the words were hurtful. Your mother would read to you every night to help you sleep, and you still remember her gentle voice as if she was there speaking to you. 
+This was your life for six years, but everything changed during a particularly harsh harvest the largest farm in the towns crops had withered and died the week before harvest. Angry and looking for answers, they towns people started to head toward your home. Your mother hid you behind a secret door where she kept hers and your fathers’ diary. You heard lots of angry words and then suddenly your mother screamed out on horror. They towns people took your parents to the middle of town and you were left inside. You waited and waited but your parents did not return. You left your hiding spot and ventured out into the town, you heard a large commotion within the center of town, so you head towards it. Within the center of a large mob are your parents, their hands are bound and everyone around them is yelling a word, “kill” you did not fully understand this word until later, but it still haunts your dreams. The local sheriff showed up with a large sword, he made a spectacle of the whole thing and without warning you watch this man swing the blade over his shoulder and free your parents head from their shoulders. You cry out from where you were hiding behind the crowd, some nearby townspeople hear you and shout to the others that they found the “demon spawn”. You run as quickly as you could back to your hiding spot and hope they never find you. You pray that this is all a horrible nightmare and that there is something someone can do to fix it. The commotion in your house grows silent as you hear a voice whisper to you, it’s a deep and evil sounding voice that tells you there is something you can do to “help”. The voice tells you to pray to a greater lord, The Raven Queen and he would be able to help. Unknowing of this lord you decide he must be able to bring your parents back. As you pray the voice answers back, he is willing to help you, all you must do is sign your name in blood. A piece of paper appears before you and you sign your name the best you can. The Raven Queen thanks you and suddenly you feel a mystical presence around you, you are filled with anger and the urge to kill all of those that have wronged you and your family. Suddenly the hidden door is pulled open and it’s the sheriff. Thinking of what he did to your parents your vision turns red as you put your hands out to keep him away, the sheriff is then engulfed with flames. He cries out “The demon child, kill the demon child!”. The flames cannot be extinguished no matter what the towns people do. As more people come for you scream out and are surrounded by mystical flames, your vision goes completely dark and all you can hear are screams of the people in your town.
+You wake to find the charred bodies of the townspeople, you angrily cry out to The Raven Queen and he tells you, “Gather what you can carry mortal, head into the woods to a hidden cabin. Your training has just begone, young warlock.” All sense of joy and happiness have been replaced by anger and hatred, and you are compelled to obey. You gather the books from your hiding spot and a few things from around the house and flee into the woods. You find a small cabin hidden within the deeps of the woods, far from civilization. You do as The Raven Queen commands and begin your training. This is now your life, and for the next eight years you do as The Raven Queen commands and live within the wilds, never speaking and always obeying. Until your 14th birthday, when The Raven Queen says you have completed your training and tells you to go forth and spread his name with your newfound powers. On this day he presents you with a gift, a twisted tree branch made of obsidian imbued with his power. You carry it with you always as you realize it not only helps you cast new spells but makes your spells more powerful.
+Finally feeling a sense of freedom, you decide to stay in the woods and live on your own and continue your training. During this time of “freedom” you finally get to go through your parent’s diaries and you learn about the demon lords they worshiped. Your mother was a worshiper of Malcanthet, the Queen of Succubi to alter her form to seduce a man she liked (your father). Within your mother’s diary you find a unique single gold piece that seems to have some sort of magical power. Your father was not able to select his own lord to worship but was instead forced to worship The Raven Queen. With this knowledge comes the realization of why The Raven Queen spoke to you all those years ago. You find that your mothers worship of Malcanthet passed on her seductive features to you, so you cover yourself with a hooded black cloak, to not only hide your features from others but to hide your identity as a Tiefling. 
+You stay hidden in the woods for another three years, during this time you learn how to use the plants around you as medicine and potions becoming proficient in herbalism. After many years you decide it is time to venture back into society in order to greater strengthen your powers.
+    </Value>
+  </Data>
+  <Data>
+    <Key>Notes</Key>
+    <Value>Notes:
+
+A scroll case stuffed full of notes from your studies or prayers, 
+a winter blanket, 
+a set of common clothes, 
+a herbalism kit
+
+
+
+Spells:
+0:
+	Thaumaturgy
+	Eldritch Blast
+	True Strike
+
+1: 
+	Shield
+                Unseen Servant</Value>
+  </Data>
+  <Data>
+    <Key>Multiclass</Key>
+    <Value>false</Value>
+  </Data>
+  <Data>
+    <Key>TotalLevel</Key>
+    <Value>1</Value>
+  </Data>
+  <Data>
+    <Key>ProficiencyBonus</Key>
+    <Value>2</Value>
+  </Data>
+  <Data>
+    <Key>Perception</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>CarryingCapacity</Key>
+    <Value>120</Value>
+  </Data>
+  <Feature>
+    <Key>Darkvision</Key>
+    <Value>Thanks to your infernal heritage, you have superior vision in dark and dim conditions. 
+    You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. 
+    You can't discern color in darkness, only shades of gray.</Value>
+  </Feature>
+  <Feature>
+    <Key>Hellish Resistance</Key>
+    <Value>You have resistance to fire damage.</Value>
+  </Feature>
+  <Feature>
+    <Key>Infernal Legacy</Key>
+    <Value>You know the thaumaturgy cantrip. 
+    When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. 
+    When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when oyu finish a long rest. 
+    Charisma is your spellcasting ability for these spells.</Value>
+  </Feature>
+  <Feature>
+    <Key>Hexblade's Curse</Key>
+    <Value>Starting at 1st level, you gain the ability to place a baleful curse on someone. 
+  - As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. 
+  - The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits: 
+	- You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.
+	- Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 29 on the d20.
+	- If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (min of 1 hp).
+  
+	You can't use this feature again until you finish a short or long rest.</Value>
+  </Feature>
+  <Feature>
+    <Key>Hex Warrior</Key>
+    <Value>At 1st level, you acquire the training necessary to effectively arm yourself for battle. 
+  - You gain proficiency with medium armor, shields, and martial weapons.
+   
+	The influence of your patron also allows you to mystically channel your will through a particular weapon:
+  - Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. 
+  - When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. 
+  
+  This benefit lasts until you finish a long rest. 
+  If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type.</Value>
+  </Feature>
+  <Data>
+    <Key>Copper</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Silver</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Electrum</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Gold</Key>
+    <Value>5</Value>
+  </Data>
+  <Data>
+    <Key>Platinum</Key>
+    <Value>0</Value>
+  </Data>
+  <Data>
+    <Key>Strength</Key>
+    <Value>8</Value>
+  </Data>
+  <Data>
+    <Key>Dexterity</Key>
+    <Value>11</Value>
+  </Data>
+  <Data>
+    <Key>Constitution</Key>
+    <Value>14</Value>
+  </Data>
+  <Data>
+    <Key>Intelligence</Key>
+    <Value>13</Value>
+  </Data>
+  <Data>
+    <Key>Wisdom</Key>
+    <Value>12</Value>
+  </Data>
+  <Data>
+    <Key>Charisma</Key>
+    <Value>17</Value>
+  </Data>
+  <Proficient>
+    <Key>Acrobatics_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>AnimalHandling_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Arcana_Proficient</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Athletics_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Deception_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>History_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Insight_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Intimidation_Proficient</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Investigation_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Medicine_Proficient</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Nature_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Perception_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Performance_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Persuassion_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Religion_Proficient</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>SlightOfHand_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Stealth_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>Survival_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>StrengthSave_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>DexteritySave_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>ConstitutionSave_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>IntelligenceSave_Proficient</Key>
+    <Value>false</Value>
+  </Proficient>
+  <Proficient>
+    <Key>WisdomSave_Proficient</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Proficient>
+    <Key>CharismaSave_Proficient</Key>
+    <Value>true</Value>
+  </Proficient>
+  <Book>
+    <Key>PlayerHandbook</Key>
+    <Value>true</Value>
+  </Book>
+  <Book>
+    <Key>XanatharsGuide</Key>
+    <Value>true</Value>
+  </Book>
+  <OtherProficiencies>
+    <Language>Common</Language>
+    <Language>Infernal</Language>
+    <Language>Elvish</Language>
+    <Weapon>Simple Weapons</Weapon>
+    <Weapon>Martial Weapons</Weapon>
+    <Tool>Herbalism Kit</Tool>
+    <Tool>Piccolo</Tool>
+  </OtherProficiencies>
+  <Items>
+    <Item>
+      <Name>Crossbow bolts</Name>
+      <Cost>1 gp</Cost>
+      <Weight>1.5</Weight>
+      <Style>Ammunition</Style>
+      <Description>Crossbow bolts are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.</Description>
+      <Quantity>20</Quantity>
+    </Item>
+    <Item>
+      <Name>Backpack</Name>
+      <Cost>2 gp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A backpack is a leather pack carried on the back, typically with straps to secure it. A backpack can hold 1 cubic foot/ 30 pounds of gear. You can also strap items, such as a bedroll or a coil of rope, to the outside of a backpack.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Crowbar</Name>
+      <Cost>2 gp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Hammer</Name>
+      <Cost>1 gp</Cost>
+      <Weight>3</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>This one-handed hammer with an iron head is useful for pounding pitons into a wall.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Piton</Name>
+      <Cost>5 cp</Cost>
+      <Weight>0.25</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>When a wall doesn’t offer handholds and footholds, you can make your own. A piton is a steel spike with an eye through which you can loop a rope.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Torch</Name>
+      <Cost>1 cp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Tinderbox</Name>
+      <Cost>5 sp</Cost>
+      <Weight>1</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch -- or anything else with abundant, exposed fuel -- takes an action. Lighting any other fire takes 1 minute.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Rations (1 day)</Name>
+      <Cost>5 sp</Cost>
+      <Weight>2</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</Description>
+      <Quantity>10</Quantity>
+    </Item>
+    <Item>
+      <Name>Waterskin</Name>
+      <Cost>2 sp</Cost>
+      <Weight>5</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>A waterskin can hold 4 pints of liquid.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Item>
+      <Name>Rope, Hempen (50 feet)</Name>
+      <Cost>1 gp</Cost>
+      <Weight>10</Weight>
+      <Style>Adventuring Gear</Style>
+      <Description>Rope, has 2 hit points and can be burst with a DC 17 Strength check.</Description>
+      <Quantity>1</Quantity>
+    </Item>
+    <Weapon>
+      <Name>Handaxe</Name>
+      <Cost>5 gp</Cost>
+      <Weight>2</Weight>
+      <Style>Simple Melee Weapon</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <Damage>1d6 slashing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Light</Property>
+        <Property>Thrown (range 20/60)</Property>
+      </Properties>
+    </Weapon>
+    <Weapon>
+      <Name>Quarterstaff</Name>
+      <Cost>2 sp</Cost>
+      <Weight>4</Weight>
+      <Style>Simple Melee Weapon</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <Damage>1d6 bludgeoning</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Versatile 1d8</Property>
+      </Properties>
+    </Weapon>
+    <Weapon>
+      <Name>Crossbow, Light</Name>
+      <Cost>25 sp</Cost>
+      <Weight>5</Weight>
+      <Style>Simple Ranged Weapon</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <Damage>1d8 piercing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Ammunition (range 80/320)</Property>
+        <Property>Loading</Property>
+        <Property>Two-Handed</Property>
+      </Properties>
+    </Weapon>
+    <Weapon>
+      <Name>Dagger</Name>
+      <Cost>2 gp</Cost>
+      <Weight>1</Weight>
+      <Style>Simple Melee Weapon</Style>
+      <Description />
+      <Quantity>2</Quantity>
+      <Damage>1d4 piercing</Damage>
+      <Equipped>false</Equipped>
+      <Properties>
+        <Property>Finesse</Property>
+        <Property>Light</Property>
+        <Property>Thrown (range 20/60)</Property>
+      </Properties>
+    </Weapon>
+    <Armor>
+      <Name>Leather</Name>
+      <Cost>10 gp</Cost>
+      <Weight>10</Weight>
+      <Style>Light Armor</Style>
+      <Description />
+      <Quantity>1</Quantity>
+      <ArmorClass>11 + Dex</ArmorClass>
+      <StrengthReq>0</StrengthReq>
+      <Disadvantage>false</Disadvantage>
+      <Equipped>false</Equipped>
+    </Armor>
+  </Items>
+</CharacterSheet>

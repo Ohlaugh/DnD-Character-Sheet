@@ -1,322 +1,462 @@
+using DnD_Character_Sheet.Classes;
+using Interfaces;
+using Interfaces.HelperClasses;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using DnD_Character_Sheet;
-using LC = DnD_Character_Sheet.Constants;
-using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
-    class Library
+  class Library
+  {
+    #region Private Members
+
+    /// <summary>
+    /// This Holds all information on the current character
+    /// </summary>
+    private static MainCharacterInfo m_MainCharacterInfo = new MainCharacterInfo();
+
+    /// <summary>
+    /// This dictionary holds all information on each race
+    /// Key: Race
+    /// Value: New List<string>
+    ///     Value: Subrace
+    /// </summary>
+    private static Dictionary<string, List<string>> m_RaceLibrary = new Dictionary<string, List<string>>();
+
+    /// <summary>
+    /// This dictionary holds all information on each class
+    /// Key: Class
+    /// Value: New List<string>
+    ///     Value: Subclass
+    /// </summary>
+    private static Dictionary<string, List<string>> m_ClassLibrary = new Dictionary<string, List<string>>();
+
+    /// <summary>
+    /// This list holds all information on Armor from selected manuals
+    /// </summary>
+    private static List<Armor> m_ArmorLibrary = new List<Armor>();
+
+    /// <summary>
+    /// This list holds all information on Weapons from selected manuals
+    /// </summary>
+    private static List<Weapon> m_WeaponLibrary = new List<Weapon>();
+
+    /// <summary>
+    /// This dictionary holds all information on Items from selected manuals
+    /// Key: Item Name
+    /// Value: New Item
+    /// </summary>
+    private static List<Item> m_ItemLibrary = new List<Item>();
+
+    /// <summary>
+    /// This dictionary holds all information on Spells from selected manuals
+    /// Key: Spell Name
+    /// Value: New Spell
+    /// </summary>
+    private static Dictionary<string, Spell> m_SpellLibrary = new Dictionary<string, Spell>();
+
+    #endregion Private Members
+
+    #region Public Members
+
+    /// <summary>
+    /// This Holds all information on the current character
+    /// </summary>
+    public static MainCharacterInfo MainCharacterInfo { get { return m_MainCharacterInfo; } }
+
+    /// <summary>
+    /// This dictionary holds all information on each race
+    /// Key: Race
+    /// Value: New List<string>
+    ///     Value: Subrace
+    /// </summary>
+    public static Dictionary<string, List<string>> RaceLibrary { get { return m_RaceLibrary; } }
+
+    /// <summary>
+    /// This dictionary holds all information on each class
+    /// Key: Class
+    /// Value: New List<string>
+    ///     Value: Subclass
+    /// </summary>
+    public static Dictionary<string, List<string>> ClassLibrary { get { return m_ClassLibrary; } }
+
+    /// <summary>
+    /// This list holds all information on Armor from selected manuals
+    /// </summary>
+    public static List<Armor> ArmorLibrary { get { return m_ArmorLibrary; } }
+
+    /// <summary>
+    /// This list holds all information on Weapons from selected manuals
+    /// </summary>
+    public static List<Weapon> WeaponLibrary { get { return m_WeaponLibrary; } }
+
+    /// <summary>
+    /// This dictionary holds all information on Items from selected manuals
+    /// Key: Item Name
+    /// Value: New Item
+    /// </summary>
+    public static List<Item> ItemLibrary { get { return m_ItemLibrary; } }
+
+    /// <summary>
+    /// This dictionary holds all information on Spells from selected manuals
+    /// Key: Spell Name
+    /// Value: New Spell
+    /// </summary>
+    public static Dictionary<string, Spell> SpellLibrary { get { return m_SpellLibrary; } }
+
+    #endregion Public Members
+
+    #region Public Methods
+
+    /// <summary>
+    /// This method will add the loaded character into the main Library
+    /// </summary>
+    /// <param name="mainCharacter">Serialized Main Character Info</param>
+    public static bool AddCharacter(MainCharacterInfo mainCharacter)
     {
-        #region Read in Data
+      bool characterLoaded = false;
+      try
+      {
+        ClearLibrary();
+        m_MainCharacterInfo = mainCharacter;
 
-        /// <summary>
-        /// This holds all information read in from the character sheet
-        ///     Key: Character Data
-        ///     Value: Character Value
-        /// </summary>
-        public static Dictionary<string, string> m_CharData = new Dictionary<string, string>();
-
-        /// <summary>
-        /// This contains all skills the current character is proficient in
-        ///     Key: Character Data
-        ///     Value: Character Value
-        /// </summary>
-        public static Dictionary<string, bool> m_ProficientData = new Dictionary<string, bool>();
-
-        /// <summary>
-        /// This contains all Items the current character has
-        ///     Key: Item Name
-        ///     Value: New Item
-        /// </summary>
-        public static Dictionary<string, CLIB.Item> m_ItemData = new Dictionary<string, CLIB.Item>();
-
-        /// <summary>
-        /// This contains all Weapons the current character has
-        ///     Key: Weapon Name
-        ///     Value: New Weapon
-        /// </summary>
-        public static Dictionary<string, CLIB.Weapon> m_WeaponData = new Dictionary<string, CLIB.Weapon>();
-
-        /// <summary>
-        /// This contains all Armor the current character has
-        ///     Key: Armor Name
-        ///     Value: New Armor
-        /// </summary>
-        public static Dictionary<string, CLIB.Armor> m_ArmorData = new Dictionary<string, CLIB.Armor>();
-
-        /// <summary>
-        /// This contains all Features and Traits the current character has
-        ///     Key: Feature Name
-        ///     Value: Feature Description
-        /// </summary>
-        public static Dictionary<string, string> m_FeatureData = new Dictionary<string, string>();
-
-        /// <summary>
-        /// This contains all Language, Armor, Weapon and tool Proficiencies
-        /// </summary>
-        public static Dictionary<string, List<string>> m_OtherProfData = new Dictionary<string, List<string>>();
-        
-        #endregion
-
-        #region Main Libraries
-
-        /// <summary>
-        /// This holds the current characters name
-        /// This is also the main Key used in dictionaries
-        /// </summary>
-        public static string m_CharacterName;
-
-        /// <summary>
-        /// This Holds all information on the current character
-        /// </summary>
-        public static MainCharacterInfo m_MainCharacterInfo = new MainCharacterInfo();
-
-        /// <summary>
-        /// This dictionary holds all information on which book the user has selected
-        /// Key: Book Name
-        /// Value: True = Using / False = Not Using
-        /// </summary>
-        public static Dictionary<string, bool> m_BookUtilization = new Dictionary<string, bool>();
-
-        /// <summary>
-        /// This dictionary holds all information on each race
-        /// Key: Race
-        /// Value: New List<string>
-        ///     Value: Subrace
-        /// </summary>
-        public static Dictionary<string, List<string>> m_RaceLibrary = new Dictionary<string, List<string>>();
-
-
-        /// <summary>
-        /// This dictionary holds all information on Armor from selected manuals
-        /// Key: Armor Name
-        /// Value: New Armor
-        /// </summary>
-        public static Dictionary<string, CLIB.Armor> m_ArmorLibrary = new Dictionary<string, CLIB.Armor>();
-
-        /// <summary>
-        /// This dictionary holds all information on Weapons from selected manuals
-        /// Key: Weapon Name
-        /// Value: New Weapon
-        /// </summary>
-        public static Dictionary<string, CLIB.Weapon> m_WeaponLibrary = new Dictionary<string, CLIB.Weapon>();
-
-        /// <summary>
-        /// This dictionary holds all information on Items from selected manuals
-        /// Key: Item Name
-        /// Value: New Item
-        /// </summary>
-        public static Dictionary<string, CLIB.Item> m_ItemLibrary = new Dictionary<string, CLIB.Item>();
-
-        /// <summary>
-        /// This dictionary holds all information on Spells from selected manuals
-        /// Key: Spell Name
-        /// Value: New Spell
-        /// </summary>
-        public static Dictionary<string, CLIB.Spell> m_SpellLibrary = new Dictionary<string, CLIB.Spell>();
-
-        #endregion
-
-        /// <summary>
-        /// This bool indicates if a character has been loaded
-        /// </summary>
-        public static bool m_CharacterLoaded = false;
-
-        /// <summary>
-        /// This method clears all Libraries
-        /// USE ONLY WHEN NEW CHARACTER IS LOADED/CREATED
-        /// </summary>
-        public static void ClearLibrary()
+        foreach (string assemblyName in MainCharacterInfo.Books)
         {
-            m_CharData.Clear();
-            m_ProficientData.Clear();
-            m_ItemData.Clear();
-            m_WeaponData.Clear();
-            m_ArmorData.Clear();
-            m_FeatureData.Clear();
-            m_OtherProfData = new Dictionary<string, List<string>>()
-            {
-                { LC.Language, new List<string>() },
-                { LC.Armor, new List<string>() },
-                { LC.Weapon, new List<string>() },
-                { LC.Tool, new List<string>() }
-            };
-
-            m_BookUtilization.Clear();
-
-            m_RaceLibrary.Clear();
-            m_ArmorLibrary.Clear();
-            m_WeaponLibrary.Clear();
-            m_ItemLibrary.Clear();
+          Type? test = Type.GetType(assemblyName);
+          if (test != null)
+          {
+            IBook? book = Activator.CreateInstance(test) as IBook;
+            AddRaces(book.Races);
+            AddSubRaces(book.SubRaces);
+            AddClasses(book.Classes);
+            AddSubClasses(book.SubClasses);
+            AddArmors(book.Armors);
+            AddWeapons(book.Weapons);
+            AddItems(book.Items);
+          }
         }
+        characterLoaded = true;
+      }
+      catch (Exception)
+      {
 
-        /// <summary>
-        /// Update the Skills for the main character
-        /// </summary>
-        /// <param name="skillName">Name of the Changed Skill</param>
-        /// <param name="skillBonus">New value for the skill</param>
-        /// <param name="check">If the skill has proficiency</param>
-        public static void UpdateLibrary(string skillName, string skillBonus, bool check)
-        {
-            switch (skillName)
-            {
-                case LC.Acrobatics:
-                    {
-                        m_MainCharacterInfo.Skills.AcrobaticsLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Acrobatics = check;
-                        break;
-                    }
-                case LC.AnimalHandling_Spaced:
-                    {
-                        m_MainCharacterInfo.Skills.AnimalHandlingLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.AnimalHandling = check;
-                        break;
-                    }
-                case LC.Arcana:
-                    {
-                        m_MainCharacterInfo.Skills.ArcanaLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Arcana = check;
-                        break;
-                    }
-                case LC.Athletics:
-                    {
-                        m_MainCharacterInfo.Skills.AthleticsLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Athletics = check;
-                        break;
-                    }
-                case LC.Deception:
-                    {
-                        m_MainCharacterInfo.Skills.DeceptionLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Deception = check;
-                        break;
-                    }
-                case LC.History:
-                    {
-                        m_MainCharacterInfo.Skills.HistoryLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.History = check;
-                        break;
-                    }
-                case LC.Insight:
-                    {
-                        m_MainCharacterInfo.Skills.InsightLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Insight = check;
-                        break;
-                    }
-                case LC.Intimidation:
-                    {
-                        m_MainCharacterInfo.Skills.IntimidationLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Intimidation = check;
-                        break;
-                    }
-                case LC.Investigation:
-                    {
-                        m_MainCharacterInfo.Skills.InvestigationLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Investigation = check;
-                        break;
-                    }
-                case LC.Medicine:
-                    {
-                        m_MainCharacterInfo.Skills.MedicineLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Medicine = check;
-                        break;
-                    }
-                case LC.Nature:
-                    {
-                        m_MainCharacterInfo.Skills.NatureLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Nature = check;
-                        break;
-                    }
-                case LC.Perception:
-                    {
-                        m_MainCharacterInfo.Skills.PerceptionLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Perception = check;
-                        break;
-                    }
-                case LC.Performance:
-                    {
-                        m_MainCharacterInfo.Skills.PerformanceLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Performance = check;
-                        break;
-                    }
-                case LC.Persuassion:
-                    {
-                        m_MainCharacterInfo.Skills.PersuassionLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Persuassion = check;
-                        break;
-                    }
-                case LC.Religion:
-                    {
-                        m_MainCharacterInfo.Skills.ReligionLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Religion = check;
-                        break;
-                    }
-                case LC.SlightOfHand_Spaced:
-                    {
-                        m_MainCharacterInfo.Skills.SlightOfHandLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.SlightOfHand = check;
-                        break;
-                    }
-                case LC.Stealth:
-                    {
-                        m_MainCharacterInfo.Skills.StealthLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Stealth = check;
-                        break;
-                    }
-                case LC.Survival:
-                    {
-                        m_MainCharacterInfo.Skills.SurvivalLabel = skillBonus;
-                        m_MainCharacterInfo.Skills.Survival = check;
-                        break;
-                    }
-                case LC.Strength:
-                    {
-                        m_MainCharacterInfo.SavingThrows.Strength = skillBonus;
-                        m_MainCharacterInfo.SavingThrows.StrengthSave = check;
-                        break;
-                    }
-                case LC.Dexterity:
-                    {
-                        m_MainCharacterInfo.SavingThrows.Dexterity = skillBonus;
-                        m_MainCharacterInfo.SavingThrows.DexteritySave = check;
-                        break;
-                    }
-                case LC.Constitution:
-                    {
-                        m_MainCharacterInfo.SavingThrows.Constitution = skillBonus;
-                        m_MainCharacterInfo.SavingThrows.ConstitutionSave = check;
-                        break;
-                    }
-                case LC.Intelligence:
-                    {
-                        m_MainCharacterInfo.SavingThrows.Intelligence = skillBonus;
-                        m_MainCharacterInfo.SavingThrows.IntelligenceSave = check;
-                        break;
-                    }
-                case LC.Wisdom:
-                    {
-                        m_MainCharacterInfo.SavingThrows.Wisdom = skillBonus;
-                        m_MainCharacterInfo.SavingThrows.WisdomSave = check;
-                        break;
-                    }
-                case LC.Charisma:
-                    {
-                        m_MainCharacterInfo.SavingThrows.Charisma = skillBonus;
-                        m_MainCharacterInfo.SavingThrows.CharismaSave = check;
-                        break;
-                    }
-                default:
-                    break;
-            }
-        }
+      }
+      return characterLoaded;
     }
+
+    #endregion Public Methods
+
+
+
+
+    /// <summary>
+    /// Import Races to the main Library
+    /// </summary>
+    /// <param name="races">List of Races</param>
+    private static void AddRaces(List<string> races)
+    {
+      foreach (string race in races)
+      {
+        if (!m_RaceLibrary.ContainsKey(race))
+        {
+          m_RaceLibrary.Add(race, new List<string>());
+        }
+      }
+    }
+
+    /// <summary>
+    /// Import Subraces to the main Library.
+    /// </summary>
+    /// <param name="subraces">List of subraces in the format of: "Race:Subrace"
+    /// </param>
+    private static void AddSubRaces(List<string> subraces)
+    {
+      foreach (string unSplitPair in subraces)
+      {
+        string[] splitPair = unSplitPair.Split(':');
+
+        if (splitPair.Length == 2)
+        {
+          string race = splitPair[0];
+          string subRace = splitPair[1];
+
+          // Add the Subrace if Race exists and Subrace does not
+          if (m_RaceLibrary.ContainsKey(race) &&
+            !m_RaceLibrary[race].Contains(subRace))
+          {
+            m_RaceLibrary[race].Add(subRace);
+          }
+          // Unlikely but add just in case...
+          else
+          {
+            m_RaceLibrary.Add(race, new List<string> { subRace });
+          }
+        }
+      }
+    }
+
+    /// <summary>
+    /// Import classes to the main Library
+    /// </summary>
+    /// <param name="classes">List of classes</param>
+    private static void AddClasses(List<string> classes)
+    {
+      foreach (string _class in classes)
+      {
+        // Add class if it does not Exist
+        if (!m_ClassLibrary.ContainsKey(_class))
+        {
+          m_ClassLibrary.Add(_class, new List<string>());
+        }
+      }
+    }
+
+    /// <summary>
+    /// Import Subclasses to the main Library.
+    /// </summary>
+    /// <param name="subclasses">List of subclasses in the format of: "class:Subclass"
+    /// </param>
+    private static void AddSubClasses(List<string> subclasses)
+    {
+      foreach (string unSplitPair in subclasses)
+      {
+        string[] splitPair = unSplitPair.Split(':');
+
+        if (splitPair.Length == 2)
+        {
+          string _class = splitPair[0];
+          string subclass = splitPair[1];
+
+          // Add the Subclass if class exists and Subclass does not
+          if (m_ClassLibrary.ContainsKey(_class) &&
+            !m_ClassLibrary[_class].Contains(subclass))
+          {
+            m_ClassLibrary[_class].Add(subclass);
+          }
+          // Unlikely but add just in case...
+          else
+          {
+            m_ClassLibrary.Add(_class, new List<string> { subclass });
+          }
+        }
+      }
+    }
+
+    /// <summary>
+    /// Import Armors to the main Library
+    /// </summary>
+    /// <param name="armors">List of Armor</param>
+    private static void AddArmors(List<Armor> armors)
+    {
+      m_ArmorLibrary.AddRange(armors.Where(armor => !m_ArmorLibrary.Contains(armor)));
+    }
+
+    /// <summary>
+    /// Import Weapons to the main Library
+    /// </summary>
+    /// <param name="weapons">List of Weapons</param>
+    private static void AddWeapons(List<Weapon> weapons)
+    {
+      m_WeaponLibrary.AddRange(weapons.Where(weapon => !m_WeaponLibrary.Contains(weapon)));
+    }
+
+    /// <summary>
+    /// Import Items to the main Library
+    /// </summary>
+    /// <param name="items">List of Items</param>
+    private static void AddItems(List<Item> items)
+    {
+      m_ItemLibrary.AddRange(items.Where(item => !m_ItemLibrary.Contains(item)));
+    }
+
+
+
+    /// <summary>
+    /// This method clears all Libraries
+    /// USE ONLY WHEN NEW CHARACTER IS LOADED/CREATED
+    /// </summary>
+    private static void ClearLibrary()
+    {
+      m_RaceLibrary.Clear();
+      m_ClassLibrary.Clear();
+      m_ArmorLibrary.Clear();
+      m_WeaponLibrary.Clear();
+      m_ItemLibrary.Clear();
+      m_SpellLibrary.Clear();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ///// <summary>
+    ///// Update the Skills for the main character
+    ///// </summary>
+    ///// <param name="skillName">Name of the Changed Skill</param>
+    ///// <param name="skillBonus">New value for the skill</param>
+    ///// <param name="check">If the skill has proficiency</param>
+    //public static void UpdateLibrary(string skillName, string skillBonus, bool check)
+    //{
+    //  switch (skillName)
+    //  {
+    //    case LC.Acrobatics:
+    //      {
+    //        MainCharacterInfo.Skills.Acrobatics_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Acrobatics_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.AnimalHandling_Spaced:
+    //      {
+    //        MainCharacterInfo.Skills.AnimalHandling_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.AnimalHandling_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Arcana:
+    //      {
+    //        MainCharacterInfo.Skills.Arcana_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Arcana_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Athletics:
+    //      {
+    //        MainCharacterInfo.Skills.Athletics_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Athletics_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Deception:
+    //      {
+    //        MainCharacterInfo.Skills.Deception_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Deception_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.History:
+    //      {
+    //        MainCharacterInfo.Skills.History_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.History_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Insight:
+    //      {
+    //        MainCharacterInfo.Skills.Insight_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Insight_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Intimidation:
+    //      {
+    //        MainCharacterInfo.Skills.Intimidation_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Intimidation_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Investigation:
+    //      {
+    //        MainCharacterInfo.Skills.Investigation_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Investigation_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Medicine:
+    //      {
+    //        MainCharacterInfo.Skills.Medicine_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Medicine_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Nature:
+    //      {
+    //        MainCharacterInfo.Skills.Nature_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Nature_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Perception:
+    //      {
+    //        MainCharacterInfo.Skills.Perception_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Perception_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Performance:
+    //      {
+    //        MainCharacterInfo.Skills.Performance_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Performance_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Persuassion:
+    //      {
+    //        MainCharacterInfo.Skills.Persuassion_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Persuassion_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Religion:
+    //      {
+    //        MainCharacterInfo.Skills.Religion_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Religion_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.SlightOfHand_Spaced:
+    //      {
+    //        MainCharacterInfo.Skills.SlightOfHand_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.SlightOfHand_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Stealth:
+    //      {
+    //        MainCharacterInfo.Skills.Stealth_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Stealth_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Survival:
+    //      {
+    //        MainCharacterInfo.Skills.Survival_Modifier = skillBonus;
+    //        MainCharacterInfo.Skills.Survival_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Strength:
+    //      {
+    //        MainCharacterInfo.SavingThrows.StrengthSave_Modifier = skillBonus;
+    //        MainCharacterInfo.SavingThrows.StrengthSave_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Dexterity:
+    //      {
+    //        MainCharacterInfo.SavingThrows.DexteritySave_Modifier = skillBonus;
+    //        MainCharacterInfo.SavingThrows.DexteritySave_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Constitution:
+    //      {
+    //        MainCharacterInfo.SavingThrows.ConstitutionSave_Modifier = skillBonus;
+    //        MainCharacterInfo.SavingThrows.ConstitutionSave_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Intelligence:
+    //      {
+    //        MainCharacterInfo.SavingThrows.IntelligenceSave_Modifier = skillBonus;
+    //        MainCharacterInfo.SavingThrows.IntelligenceSave_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Wisdom:
+    //      {
+    //        MainCharacterInfo.SavingThrows.WisdomSave_Modifier = skillBonus;
+    //        MainCharacterInfo.SavingThrows.WisdomSave_Proficient = check;
+    //        break;
+    //      }
+    //    case LC.Charisma:
+    //      {
+    //        MainCharacterInfo.SavingThrows.CharismaSave_Modifier = skillBonus;
+    //        MainCharacterInfo.SavingThrows.CharismaSave_Proficient = check;
+    //        break;
+    //      }
+    //    default:
+    //      break;
+    //  }
+    //}
+  }
 }

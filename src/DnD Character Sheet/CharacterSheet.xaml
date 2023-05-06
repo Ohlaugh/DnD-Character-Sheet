@@ -1,0 +1,707 @@
+﻿<Window x:Class="DnD_Character_Sheet.CharacterSheet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DnD_Character_Sheet"
+        mc:Ignorable="d">
+  <!--Width="2076"
+        Height="1328"-->
+
+
+  <Window.Resources>
+    <Style x:Key="Generic_UserTextBox"
+           TargetType="TextBox">
+      <Setter Property="TextAlignment"
+              Value="Center" />
+      <Setter Property="Margin"
+              Value="5" />
+      <Setter Property="FontSize"
+              Value="30" />
+    </Style>
+
+    <!-- Style used for the Attribute Modifier Label-->
+    <Style x:Key="Attribute_Mod"
+           TargetType="Label">
+      <Setter Property="HorizontalAlignment"
+              Value="Center" />
+      <Setter Property="FontSize"
+              Value="30" />
+      <Setter Property="Margin"
+              Value="-5" />
+    </Style>
+    <!-- Style used for the Attribute Value Textbox-->
+    <Style x:Key="Attribute_Value"
+           TargetType="TextBox">
+      <Setter Property="HorizontalAlignment"
+              Value="Center" />
+      <Setter Property="HorizontalContentAlignment"
+              Value="Center" />
+      <Setter Property="FontSize"
+              Value="20" />
+    </Style>
+
+    <!-- Style used for Saving Throws and Skills CheckBoxes-->
+    <Style x:Key="Save_Prof"
+           TargetType="CheckBox">
+      <Setter Property="HorizontalAlignment"
+              Value="Center" />
+      <Setter Property="VerticalAlignment"
+              Value="Center" />
+    </Style>
+
+    <!-- Style Used for Stack Panels in the Saving Throws and Skills Panels-->
+    <Style x:Key="Skills_StackPanel"
+           TargetType="StackPanel">
+      <Setter Property="Margin"
+              Value="0,-5,0,-5" />
+      <Setter Property="Orientation"
+              Value="Horizontal" />
+    </Style>
+
+    <Style x:Key="DisableSelection"
+           TargetType="DataGridCell">
+      <Setter Property="Focusable"
+              Value="False" />
+      <Setter Property="Background"
+              Value="Transparent" />
+      <Setter Property="Foreground"
+              Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+      <Setter Property="BorderBrush"
+              Value="Transparent" />
+    </Style>
+    <Style x:Key="Body_Content_DataGrid_Centering"
+           TargetType="{x:Type DataGridCell}">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="{x:Type DataGridCell}">
+            <Grid Background="{TemplateBinding Background}">
+              <ContentPresenter VerticalAlignment="Center" />
+            </Grid>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </Window.Resources>
+  <StackPanel>
+
+    <StackPanel Orientation="Horizontal"
+                Margin="5">
+      <Button Content="Load File"
+              Margin="5"
+              Click="Load_Button_Click" />
+      <Button Content="Save File"
+              Margin="5"
+              Click="Save_Button_Click" />
+      <Button Content="Test"
+              Margin="5"/>
+    </StackPanel>
+    <TabControl Name="TabControl_CharacterSheet"
+                Visibility="Hidden">
+      <!--Character Stats-->
+      <TabItem Header="Character Stats">
+        <StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Name">
+              <TextBox Margin="5"
+                       Text="{Binding CharacterName, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Class">
+              <TextBox Margin="5"
+                       Text="{Binding Class, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="SubClass">
+              <TextBox Margin="5"
+                       Text="{Binding SubClass, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Race">
+              <TextBox Margin="5"
+                       Text="{Binding Race, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="SubRace">
+              <TextBox Margin="5"
+                       Text="{Binding Subrace, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Background">
+              <TextBox Margin="5"
+                       Text="{Binding Background, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Alignment">
+              <TextBox Margin="5"
+                       Text="{Binding Alignment, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Currency">
+              <StackPanel Orientation="Horizontal">
+                <Label Content="CP:"
+                       Margin="0,0,-4,0" />
+                <TextBox Margin="0,5.4,5,5"
+                         Text="{Binding Money.Copper, Mode = TwoWay}" />
+                <Label Content="SP:"
+                       Margin="0,0,-4,0" />
+                <TextBox Margin="0,5.4,5,5"
+                         Text="{Binding Money.Silver, Mode = TwoWay}" />
+                <Label Content="EP:"
+                       Margin="0,0,-4,0" />
+                <TextBox Margin="0,5.4,5,5"
+                         Text="{Binding Money.Electrum, Mode = TwoWay}" />
+                <Label Content="GP:"
+                       Margin="0,0,-4,0" />
+                <TextBox Margin="0,5.4,5,5"
+                         Text="{Binding Money.Gold, Mode = TwoWay}" />
+                <Label Content="PP:"
+                       Margin="0,0,-4,0" />
+                <TextBox Margin="0,5.4,5,5"
+                         Text="{Binding Money.Platinum, Mode = TwoWay}" />
+              </StackPanel>
+            </GroupBox>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Level">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding Level, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Experience">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding ExperiencePoints, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Armor Class">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding ArmorClass, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Initiative">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding Initiative, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox>
+              <GroupBox.Header>
+                <TextBlock TextWrapping="Wrap"
+                           Width="60"
+                           Text="Hit Dice" />
+              </GroupBox.Header>
+              <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                  <Label Content="Total:" />
+                  <TextBox VerticalAlignment="Center"
+                           Text="{Binding HitDiceRem, Mode = TwoWay}" />
+                  <Label Content="/" />
+                  <Label Content="{Binding HitDiceTotal, Mode = OneWay}" />
+                </StackPanel>
+                <Label HorizontalAlignment="Center"
+                       Content="{Binding HitDice, Mode = OneWay}" />
+              </StackPanel>
+            </GroupBox>
+            <GroupBox Header="HP Max">
+              <Label HorizontalAlignment="Center"
+                     Content="{Binding HP_Max, Mode = OneWay}" />
+            </GroupBox>
+            <GroupBox Header="HP Current">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding HP_Current, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="HP Temp">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding HP_Temp, Mode = TwoWay}" />
+            </GroupBox>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <StackPanel>
+              <StackPanel Orientation="Horizontal">
+                <!--Attributes-->
+                <StackPanel Name="StackPanel_Attributes">
+                  <!--Strength-->
+                  <GroupBox Name="GroupBox_Str"
+                            Header="Strength">
+                    <StackPanel>
+                      <Label Style="{StaticResource Attribute_Mod}"
+                             Content="{Binding Attributes.StrengthModifier, Mode = OneWay}" />
+                      <TextBox Style="{StaticResource Attribute_Value}"
+                               Text="{Binding Attributes.Strength, Mode = TwoWay}" />
+                    </StackPanel>
+                  </GroupBox>
+                  <!--Dexterity-->
+                  <GroupBox Name="GroupBox_Dex"
+                            Header="Dexterity">
+                    <StackPanel>
+                      <Label Style="{StaticResource Attribute_Mod}"
+                             Content="{Binding Attributes.DexterityModifier, Mode = OneWay}" />
+                      <TextBox Style="{StaticResource Attribute_Value}"
+                               Text="{Binding Attributes.Dexterity, Mode = TwoWay}" />
+                    </StackPanel>
+                  </GroupBox>
+                  <!--Constitution-->
+                  <GroupBox Name="GroupBox_Con"
+                            Header="Constitution">
+                    <StackPanel>
+                      <Label Style="{StaticResource Attribute_Mod}"
+                             Content="{Binding Attributes.ConstitutionModifier, Mode = OneWay}" />
+                      <TextBox Style="{StaticResource Attribute_Value}"
+                               Text="{Binding Attributes.Constitution, Mode = TwoWay}" />
+                    </StackPanel>
+                  </GroupBox>
+                  <!--Intelligence-->
+                  <GroupBox Name="GroupBox_Int"
+                            Header="Intelligence">
+                    <StackPanel>
+                      <Label Style="{StaticResource Attribute_Mod}"
+                             Content="{Binding Attributes.IntelligenceModifier, Mode = OneWay}" />
+                      <TextBox Style="{StaticResource Attribute_Value}"
+                               Text="{Binding Attributes.Intelligence, Mode = TwoWay}" />
+                    </StackPanel>
+                  </GroupBox>
+                  <!--Wisdom-->
+                  <GroupBox Name="GroupBox_Wis"
+                            Header="Wisdom">
+                    <StackPanel>
+                      <Label Style="{StaticResource Attribute_Mod}"
+                             Content="{Binding Attributes.WisdomModifier, Mode = OneWay}" />
+                      <TextBox Style="{StaticResource Attribute_Value}"
+                               Text="{Binding Attributes.Wisdom, Mode = TwoWay}" />
+                    </StackPanel>
+                  </GroupBox>
+                  <!--Charisma-->
+                  <GroupBox Name="GroupBox_Cha"
+                            Header="Charisma">
+                    <StackPanel>
+                      <Label Style="{StaticResource Attribute_Mod}"
+                             Content="{Binding Attributes.CharismaModifier, Mode = OneWay}" />
+                      <TextBox Style="{StaticResource Attribute_Value}"
+                               Text="{Binding Attributes.Charisma, Mode = TwoWay}" />
+                    </StackPanel>
+                  </GroupBox>
+                </StackPanel>
+
+                <!-- Stack Panel for Stats-->
+                <StackPanel>
+                  <GroupBox Header="Inspiration">
+                    <CheckBox HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              IsChecked="{Binding Inspiration, Mode = TwoWay}" />
+
+                  </GroupBox>
+                  <GroupBox Header="Proficiency Bonus">
+                    <Label HorizontalAlignment="Center"
+                           Margin="-5"
+                           Content="{Binding ProficiencyBonus, Mode = OneWay}" />
+                  </GroupBox>
+                  <GroupBox Header="Perception">
+                    <Label                        HorizontalAlignment="Center"
+                                                  Margin="-5"
+                                                  Content="{Binding Perception, Mode = OneWay}" />
+                  </GroupBox>
+                  <!-- Saving Throws -->
+                  <GroupBox Header="Saving Throws">
+                    <StackPanel>
+                      <!--Stength-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding SavingThrows.StrengthSave_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding SavingThrows.StrengthSave_Modifier, Mode = OneWay}" />
+                        <Label Content="Strength" />
+                      </StackPanel>
+                      <!--Dexterity-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding SavingThrows.DexteritySave_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding SavingThrows.DexteritySave_Modifier, Mode = OneWay}" />
+                        <Label Content="Dexterity" />
+                      </StackPanel>
+                      <!--Constitution-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding SavingThrows.ConstitutionSave_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding SavingThrows.ConstitutionSave_Modifier, Mode = OneWay}" />
+                        <Label Content="Constitution" />
+                      </StackPanel>
+                      <!--Intelligence-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding SavingThrows.IntelligenceSave_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding SavingThrows.IntelligenceSave_Modifier, Mode = OneWay}" />
+                        <Label Content="Intelligence" />
+                      </StackPanel>
+                      <!--Wisdom-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding SavingThrows.WisdomSave_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding SavingThrows.WisdomSave_Modifier, Mode = OneWay}" />
+                        <Label Content="Wisdom" />
+                      </StackPanel>
+                      <!--Charisma-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding SavingThrows.CharismaSave_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding SavingThrows.CharismaSave_Modifier, Mode = OneWay}" />
+                        <Label Content="Charisma" />
+                      </StackPanel>
+                    </StackPanel>
+                  </GroupBox>
+                  <GroupBox Header="Skills">
+                    <StackPanel>
+                      <!--Acrobatics-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Acrobatics_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Acrobatics_Modifier, Mode = OneWay}" />
+                        <Label Content="Acrobatics (Dex)" />
+                      </StackPanel>
+                      <!--Animal Handling-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.AnimalHandling_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.AnimalHandling_Modifier, Mode = OneWay}" />
+                        <Label Content="Animal Handling (Wis)" />
+                      </StackPanel>
+                      <!--Arcana-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Arcana_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Arcana_Modifier, Mode = OneWay}" />
+                        <Label Content="Arcana (Int)" />
+                      </StackPanel>
+                      <!--Athletics-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Athletics_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Athletics_Modifier, Mode = OneWay}" />
+                        <Label Content="Athletics (Str)" />
+                      </StackPanel>
+                      <!--Deception-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Deception_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Deception_Modifier, Mode = OneWay}" />
+                        <Label Content="Deception (Cha)" />
+                      </StackPanel>
+                      <!--History-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.History_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.History_Modifier, Mode = OneWay}" />
+                        <Label Content="History (Int)" />
+                      </StackPanel>
+                      <!--Insight-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Insight_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Insight_Modifier, Mode = OneWay}" />
+                        <Label Content="Insight (Wis)" />
+                      </StackPanel>
+                      <!--Intimidation-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Intimidation_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Intimidation_Modifier, Mode = OneWay}" />
+                        <Label Content="Intimidation (Cha)" />
+                      </StackPanel>
+                      <!--Investigation-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Investigation_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Investigation_Modifier, Mode = OneWay}" />
+                        <Label Content="Investigation (Int)" />
+                      </StackPanel>
+                      <!--Medicine-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Medicine_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Medicine_Modifier, Mode = OneWay}" />
+                        <Label Content="Medicine (Wis)" />
+                      </StackPanel>
+                      <!--Nature-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Nature_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Nature_Modifier, Mode = OneWay}" />
+                        <Label Content="Nature (Int)" />
+                      </StackPanel>
+                      <!--Perception-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Perception_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Perception_Modifier, Mode = OneWay}" />
+                        <Label Content="Perception (Wis)" />
+                      </StackPanel>
+                      <!--Performance-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Performance_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Performance_Modifier, Mode = OneWay}" />
+                        <Label Content="Performance (Cha)" />
+                      </StackPanel>
+                      <!--Persuasion-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Persuassion_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Persuassion_Modifier, Mode = OneWay}" />
+                        <Label Content="Persuasion (Cha)" />
+                      </StackPanel>
+                      <!--Religion-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Religion_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Religion_Modifier, Mode = OneWay}" />
+                        <Label Content="Religion (Int)" />
+                      </StackPanel>
+                      <!--Sleight Of Hand-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.SlightOfHand_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.SlightOfHand_Modifier, Mode = OneWay}" />
+                        <Label Content="Sleight Of Hand (Dex)" />
+                      </StackPanel>
+                      <!--Stealth-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Stealth_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Stealth_Modifier, Mode = OneWay}" />
+                        <Label Content="Stealth (Dex)" />
+                      </StackPanel>
+                      <!--Survival-->
+                      <StackPanel Style="{StaticResource Skills_StackPanel}">
+                        <CheckBox Style="{StaticResource Save_Prof}"
+                                  IsChecked="{Binding Skills.Survival_Proficient, Mode = TwoWay}" />
+                        <Label Content="{Binding Skills.Survival_Modifier, Mode = OneWay}" />
+                        <Label Content="Survival (Wis)" />
+                      </StackPanel>
+
+                    </StackPanel>
+                  </GroupBox>
+                </StackPanel>
+
+                <!--Features and Traits-->
+                <GroupBox Header="Features and Traits">
+                  <StackPanel x:Name="StackPanel_Features_Traits" />
+                </GroupBox>
+              </StackPanel>
+              <GroupBox Header="Other Proficiencies and Languages">
+                <TextBlock Name="TextBlock_ProfAndLang"
+                           TextWrapping="Wrap"
+                           FontSize="16" />
+              </GroupBox>
+            </StackPanel>
+            <StackPanel>
+              <GroupBox Header="Attacks and Spellcasting">
+                <StackPanel>
+                  <StackPanel Name="StackPanel_AttackandSpells">
+
+                  </StackPanel>
+                  <StackPanel Name="StackPanel_AttackandSpells_Info">
+
+                  </StackPanel>
+                </StackPanel>
+              </GroupBox>
+            </StackPanel>
+          </StackPanel>
+        </StackPanel>
+      </TabItem>
+      <!--Equipment-->
+      <TabItem Header="Equipment">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+          <StackPanel>
+            <StackPanel Orientation="Horizontal">
+              <!--Weapons-->
+              <StackPanel>
+                <DataGrid Name="DataGrid_Wepons"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="false"
+                          CellStyle="{StaticResource Body_Content_DataGrid_Centering}"
+                          HeadersVisibility="Column"
+                          ItemsSource="{Binding Weapons}">
+                  <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="Equiped"
+                                            Binding="{Binding Equipped, Mode = TwoWay}" />
+                    <DataGridTextColumn Header="Type"
+                                        Binding="{Binding Style, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Name"
+                                        Binding="{Binding Name, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Quantity"
+                                        Binding="{Binding Quantity, Mode = TwoWay}" />
+                    <DataGridTextColumn Header="Cost"
+                                        Binding="{Binding Cost, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Damage"
+                                        Binding="{Binding Damage, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Weight"
+                                        Binding="{Binding Weight, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Properties"
+                                        Binding="{Binding Properties_Display, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                  </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Orientation="Horizontal">
+                  <Button Content="Buy"
+                          Margin="5" />
+                  <Button Content="Sell"
+                          Margin="5" />
+                </StackPanel>
+              </StackPanel>
+              <!--Armor-->
+              <StackPanel>
+                <DataGrid Name="Armor"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="false"
+                          HeadersVisibility="Column"
+                          ItemsSource="{Binding Armor}">
+                  <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="Equiped"
+                                            Binding="{Binding Equipped, Mode = TwoWay}" />
+                    <DataGridTextColumn Header="Type"
+                                        Binding="{Binding Style, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Name"
+                                        Binding="{Binding Name, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Quantity"
+                                        Binding="{Binding Quantity, Mode = TwoWay}" />
+                    <DataGridTextColumn Header="Cost"
+                                        Binding="{Binding Cost, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Armor Class"
+                                        Binding="{Binding ArmorClass, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Weight"
+                                        Binding="{Binding Weight, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Required Strength"
+                                        Binding="{Binding StrengthReq, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Stealth Disadvantage"
+                                        Binding="{Binding Disadvantage, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                  </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Orientation="Horizontal">
+                  <Button Content="Buy"
+                          Margin="5" />
+                  <Button Content="Sell"
+                          Margin="5" />
+                </StackPanel>
+              </StackPanel>
+              <!--Equipment-->
+              <StackPanel>
+                <DataGrid Name="Equipment"
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="false"
+                          HeadersVisibility="Column"
+                          ItemsSource="{Binding Items}">
+                  <DataGrid.Columns>
+                    <DataGridTextColumn Header="Type"
+                                        Binding="{Binding Style, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Name"
+                                        Binding="{Binding Name, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Quantity"
+                                        Binding="{Binding Quantity, Mode = TwoWay}" />
+                    <DataGridTextColumn Header="Cost"
+                                        Binding="{Binding Cost, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Weight"
+                                        Binding="{Binding Weight, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}" />
+                    <DataGridTextColumn Header="Description"
+                                        Binding="{Binding Description, Mode = OneWay}"
+                                        CellStyle="{StaticResource DisableSelection}">
+                      <DataGridTextColumn.ElementStyle>
+                        <Style>
+                          <Setter Property="TextBlock.TextWrapping"
+                                  Value="Wrap" />
+                          <Setter Property="TextBlock.MaxWidth"
+                                  Value="400" />
+                        </Style>
+                      </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                  </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Orientation="Horizontal">
+                  <Button Content="Buy"
+                          Margin="5" />
+                  <Button Content="Sell"
+                          Margin="5" />
+                </StackPanel>
+              </StackPanel>
+            </StackPanel>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <!--Spells-->
+      <TabItem Header="Spells">
+
+      </TabItem>
+      <!--Backstory-->
+      <TabItem Header="Backstory">
+        <StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Age">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding Age, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Height">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding Height, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Weight">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding Weight, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Eye Color">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding EyeColor, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Skin Color">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding SkinColor, Mode = TwoWay}" />
+            </GroupBox>
+            <GroupBox Header="Hair Color">
+              <TextBox Style="{StaticResource Generic_UserTextBox}"
+                       Text="{Binding HairColor, Mode = TwoWay}" />
+            </GroupBox>
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Backstory"
+                      MaxWidth="1400">
+              <TextBlock TextWrapping="Wrap"
+                         Text="{Binding Backstory, Mode = TwoWay}"
+                         FontSize="18" />
+            </GroupBox>
+            <StackPanel MaxWidth="400">
+              <GroupBox Header="Personality Traits">
+                <TextBlock TextWrapping="Wrap"
+                           Text="{Binding PersonalityTraits, Mode = TwoWay}"
+                           FontSize="18" />
+              </GroupBox>
+              <GroupBox Header="Ideals">
+                <TextBlock TextWrapping="Wrap"
+                           Text="{Binding Ideals, Mode = TwoWay}"
+                           FontSize="18" />
+              </GroupBox>
+              <GroupBox Header="Bonds">
+                <TextBlock TextWrapping="Wrap"
+                           Text="{Binding Bonds, Mode = TwoWay}"
+                           FontSize="18" />
+              </GroupBox>
+              <GroupBox Header="Flaws">
+                <TextBlock TextWrapping="Wrap"
+                           Text="{Binding Flaws, Mode = TwoWay}"
+                           FontSize="18" />
+              </GroupBox>
+            </StackPanel>
+          </StackPanel>
+        </StackPanel>
+      </TabItem>
+      <!--Notes-->
+      <TabItem Header="Notes">
+      </TabItem>
+    </TabControl>
+
+    <!--<StackPanel Orientation="Horizontal"
+                Margin="5">
+      <Button Content="Load Character" />
+    </StackPanel>-->
+  </StackPanel>
+</Window>

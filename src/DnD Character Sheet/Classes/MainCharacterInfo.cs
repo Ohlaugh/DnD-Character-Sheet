@@ -1,166 +1,802 @@
-﻿using System;
+﻿using DnD_Character_Sheet.Classes;
+using DnD_Character_Sheet.HelperClasses;
+using Interfaces.HelperClasses;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DnD_Character_Sheet;
-using LC = DnD_Character_Sheet.Constants;
-using CLIB = DnD_Character_Sheet.Classes.ClassLibrary;
 
 namespace DnD_Character_Sheet
 {
-    public class MainCharacterInfo
+  public class MainCharacterInfo : NotifyProperty
+  {
+    #region Private Members
+
+    private string m_CharacterName = string.Empty;
+    private string m_Class = string.Empty;
+    private string m_SubClass = string.Empty;
+    private int m_Level = 0;
+    private string m_Background = string.Empty;
+    private string m_PlayerName = string.Empty;
+    private string m_Race = string.Empty;
+    private string m_Subrace = string.Empty;
+    private string m_Alignment = string.Empty;
+    private int m_ExperiencePoints = 0;
+    private int m_Age = 0;
+    private string m_Height = string.Empty;
+    private double m_Weight = 0;
+    private string m_EyeColor = string.Empty;
+    private string m_SkinColor = string.Empty;
+    private string m_HairColor = string.Empty;
+    private bool m_Inspiration = false;
+    private int m_ArmorClass = 0;
+    private int m_Initiative = 0;
+    private int m_Speed = 0;
+    private int m_HP_Max = 0;
+    private int m_HP_Current = 0;
+    private int m_HP_Temp = 0;
+    private string m_HitDice = string.Empty;
+    private int m_HitDiceRem = 0;
+    private int m_HitDiceTotal = 0;
+    private string m_PersonalityTraits = string.Empty;
+    private string m_Ideals = string.Empty;
+    private string m_Bonds = string.Empty;
+    private string m_Flaws = string.Empty;
+    private double m_CarryingWeight = 0;
+    private string m_Backstory = string.Empty;
+    private string m_Notes = string.Empty;
+    private bool m_Multiclass = false;
+    private int m_ProficiencyBonus = 0;
+    private int m_Perception = 0;
+    private double m_CarryingCapacity = 0;
+
+    private Money m_Money = new();
+    private Attributes m_Attributes = new();
+    private Skills m_Skills = new();
+    private SavingThrows m_SavingThrows = new();
+
+    private List<string> m_Proficient_Languages = new();
+    private List<string> m_Proficient_Armor = new();
+    private List<string> m_Proficient_Weapon = new();
+    private List<string> m_Proficient_Tools = new();
+    private List<string> m_Books = new();
+
+    private List<Feature> m_Features = new();
+    private List<Item> m_Items = new();
+    private List<Weapon> m_Weapons = new();
+    private List<Armor> m_Armor = new();
+
+
+
+    #endregion Private Members
+
+    #region Public Members
+
+    public string CharacterName
     {
-        public string CharacterName { get; set; }
-        public string Class1 { get; set; }
-        public string Class2 { get; set; }
-        public string SubClass1 { get; set; }
-        public string SubClass2 { get; set; }
-        public int Level1 { get; set; }
-        public int Level2 { get; set; }
-        public string Background { get; set; }
-        public string PlayerName { get; set; }
-        public string Race { get; set; }
-        public string Subrace { get; set; }
-        public string Alignment { get; set; }
-        public int ExperiencePoints { get; set; }
-        public int Age { get; set; }
-        public string Height { get; set; }
-        public double Weight { get; set; }
-        public string EyeColor { get; set; }
-        public string SkinColor { get; set; }
-        public string HairColor { get; set; }
-        public bool Inspiration { get; set; }
-        private int _ProficiencyBonus { get; set; }
-        public int ArmorClass { get; set; }
-        public int Initiative { get; set; }
-        public int Speed { get; set; }
-        public int HP_Max { get; set; }
-        public int HP_Current { get; set; }
-        public int HP_Temp { get; set; }
-        public string HitDice1 { get; set; }
-        public string HitDice2 { get; set; }
-        public int HitDiceTotal1 { get; set; }
-        public int HitDiceTotal2 { get; set; }
-        public string PersonalityTraits { get; set; }
-        public string Ideals { get; set; }
-        public string Bonds { get; set; }
-        public string Flaws { get; set; }
-        public double CarryingWeight { get; set; }
-        public string Backstory { get; set; }
-        public string Notes { get; set; }
+      get { return m_CharacterName; }
 
-
-        public bool Multiclass { get => Class2 != ""; }
-        public int TotalLevel { get => Level1 + Level2; }
-        public int ProficiencyBonus { get => _ProficiencyBonus; }
-        public int Perception { get { 
-                return Skills.Perception ? 
-                    10 + Attributes.WisdomModifier + ProficiencyBonus : 
-                    10 + Attributes.WisdomModifier; 
-            } }
-        public double CarryingCapacity { get => Attributes.Strength * 15; }
-
-
-        public Dictionary<string, List<string>> OtherProficiencies { get; set; }
-        public Dictionary<string, string> Features { get; set; }
-
-        public CLIB.Money Money { get; set; }
-        public CLIB.Attributes Attributes { get; set; }
-        public CLIB.Skills Skills { get; set; }
-        public CLIB.SavingThrows SavingThrows { get; set; }
-
-
-        public Dictionary<string, CLIB.Item> Items { get; set; }
-        public Dictionary<string, CLIB.Weapon> Weapons { get; set; }
-        public Dictionary<string, CLIB.Armor> Armor { get; set; }
-
-        public void Calculate()
+      set
+      {
+        if (value != m_CharacterName)
         {
-            SetProfBonus();
-            Attributes.Calculate();
-            Skills.Calculate(Attributes);
-            SavingThrows.Calculate(Attributes);
+          m_CharacterName = value;
+          NotifyPropertyChanged();
         }
-
-        private void SetProfBonus()
-        {
-            int bonus = 0;
-            switch (TotalLevel)
-            {
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                    bonus = 2;
-                    break;
-                case 5:
-                case 6:
-                case 7:
-                case 8:
-                    bonus = 3;
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                case 12:
-                    bonus = 4;
-                    break;
-                case 13:
-                case 14:
-                case 15:
-                case 16:
-                    bonus = 5;
-                    break;
-                case 17:
-                case 18:
-                case 19:
-                case 20:
-                    bonus = 6;
-                    break;
-                default:
-                    break;
-            }
-            _ProficiencyBonus = bonus;
-        }
-
-        public List<Tuple<string, bool>> GetSkills()
-        {
-            return new List<Tuple<string, bool>>
-            {
-                new Tuple<string, bool>(Skills.AcrobaticsLabel+" Acrobatics", Skills.Acrobatics),
-                new Tuple<string, bool>(Skills.AnimalHandlingLabel+" Animal Handling", Skills.AnimalHandling),
-                new Tuple<string, bool>(Skills.ArcanaLabel+" Arcana", Skills.Arcana),
-                new Tuple<string, bool>(Skills.AthleticsLabel+" Athletics", Skills.Athletics),
-                new Tuple<string, bool>(Skills.DeceptionLabel+" Deception", Skills.Deception),
-                new Tuple<string, bool>(Skills.HistoryLabel+" History", Skills.History),
-                new Tuple<string, bool>(Skills.InsightLabel+" Insight", Skills.Insight),
-                new Tuple<string, bool>(Skills.IntimidationLabel+" Intimidation", Skills.Intimidation),
-                new Tuple<string, bool>(Skills.InvestigationLabel+" Investigation", Skills.Investigation),
-                new Tuple<string, bool>(Skills.MedicineLabel+" Medicine", Skills.Medicine),
-                new Tuple<string, bool>(Skills.NatureLabel+" Nature", Skills.Nature),
-                new Tuple<string, bool>(Skills.PerceptionLabel+" Perception", Skills.Perception),
-                new Tuple<string, bool>(Skills.PerformanceLabel+" Performance", Skills.Performance),
-                new Tuple<string, bool>(Skills.PersuassionLabel+" Persuassion", Skills.Persuassion),
-                new Tuple<string, bool>(Skills.ReligionLabel+" Religion", Skills.Religion),
-                new Tuple<string, bool>(Skills.SlightOfHandLabel+" Slight of Hand", Skills.SlightOfHand),
-                new Tuple<string, bool>(Skills.StealthLabel+" Stealth", Skills.Stealth),
-                new Tuple<string, bool>(Skills.SurvivalLabel+" Survival", Skills.Survival)
-            };
-        }
-
-        public List<Tuple<string, bool>> GetSaves()
-        {
-            return new List<Tuple<string, bool>>
-            {
-                new Tuple<string, bool>(SavingThrows.Strength+" Strength", SavingThrows.StrengthSave),
-                new Tuple<string, bool>(SavingThrows.Dexterity+" Dexterity",SavingThrows.DexteritySave),
-                new Tuple<string, bool>(SavingThrows.Constitution+" Constitution",SavingThrows.ConstitutionSave),
-                new Tuple<string, bool>(SavingThrows.Intelligence+" Intelligence",SavingThrows.IntelligenceSave),
-                new Tuple<string, bool>(SavingThrows.Wisdom+" Wisdom",SavingThrows.WisdomSave),
-                new Tuple<string, bool>(SavingThrows.Charisma+" Charisma",SavingThrows.CharismaSave)
-            };
-        }
+      }
     }
+    public string Class
+    {
+      get { return m_Class; }
+
+      set
+      {
+        if (value != m_Class)
+        {
+          m_Class = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string SubClass
+    {
+      get { return m_SubClass; }
+
+      set
+      {
+        if (value != m_SubClass)
+        {
+          m_SubClass = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int Level
+    {
+      get { return m_Level; }
+
+      set
+      {
+        if (value != m_Level)
+        {
+          m_Level = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Background
+    {
+      get { return m_Background; }
+
+      set
+      {
+        if (value != m_Background)
+        {
+          m_Background = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string PlayerName
+    {
+      get { return m_PlayerName; }
+
+      set
+      {
+        if (value != m_PlayerName)
+        {
+          m_PlayerName = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Race
+    {
+      get { return m_Race; }
+
+      set
+      {
+        if (value != m_Race)
+        {
+          m_Race = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Subrace
+    {
+      get { return m_Subrace; }
+
+      set
+      {
+        if (value != m_Subrace)
+        {
+          m_Subrace = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Alignment
+    {
+      get { return m_Alignment; }
+
+      set
+      {
+        if (value != m_Alignment)
+        {
+          m_Alignment = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int ExperiencePoints
+    {
+      get { return m_ExperiencePoints; }
+
+      set
+      {
+        if (value != m_ExperiencePoints)
+        {
+          m_ExperiencePoints = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int Age
+    {
+      get { return m_Age; }
+
+      set
+      {
+        if (value != m_Age)
+        {
+          m_Age = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Height
+    {
+      get { return m_Height; }
+
+      set
+      {
+        if (value != m_Height)
+        {
+          m_Height = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public double Weight
+    {
+      get { return m_Weight; }
+
+      set
+      {
+        if (value != m_Weight)
+        {
+          m_Weight = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string EyeColor
+    {
+      get { return m_EyeColor; }
+
+      set
+      {
+        if (value != m_EyeColor)
+        {
+          m_EyeColor = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string SkinColor
+    {
+      get { return m_SkinColor; }
+
+      set
+      {
+        if (value != m_SkinColor)
+        {
+          m_SkinColor = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string HairColor
+    {
+      get { return m_HairColor; }
+
+      set
+      {
+        if (value != m_HairColor)
+        {
+          m_HairColor = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public bool Inspiration
+    {
+      get { return m_Inspiration; }
+
+      set
+      {
+        if (value != m_Inspiration)
+        {
+          m_Inspiration = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int ArmorClass
+    {
+      get { return m_ArmorClass; }
+
+      set
+      {
+        if (value != m_ArmorClass)
+        {
+          m_ArmorClass = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int Initiative
+    {
+      get { return m_Initiative; }
+
+      set
+      {
+        if (value != m_Initiative)
+        {
+          m_Initiative = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int Speed
+    {
+      get { return m_Speed; }
+
+      set
+      {
+        if (value != m_Speed)
+        {
+          m_Speed = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int HP_Max
+    {
+      get { return m_HP_Max; }
+
+      set
+      {
+        if (value != m_HP_Max)
+        {
+          m_HP_Max = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int HP_Current
+    {
+      get { return m_HP_Current; }
+
+      set
+      {
+        if (value != m_HP_Current)
+        {
+          m_HP_Current = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int HP_Temp
+    {
+      get { return m_HP_Temp; }
+
+      set
+      {
+        if (value != m_HP_Temp)
+        {
+          m_HP_Temp = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string HitDice
+    {
+      get { return m_HitDice; }
+
+      set
+      {
+        if (value != m_HitDice)
+        {
+          m_HitDice = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int HitDiceRem
+    {
+      get { return m_HitDiceRem; }
+
+      set
+      {
+        if (value != m_HitDiceRem)
+        {
+          m_HitDiceRem = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int HitDiceTotal
+    {
+      get { return m_HitDiceTotal; }
+
+      set
+      {
+        if (value != m_HitDiceTotal)
+        {
+          m_HitDiceTotal = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string PersonalityTraits
+    {
+      get { return m_PersonalityTraits; }
+
+      set
+      {
+        if (value != m_PersonalityTraits)
+        {
+          m_PersonalityTraits = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Ideals
+    {
+      get { return m_Ideals; }
+
+      set
+      {
+        if (value != m_Ideals)
+        {
+          m_Ideals = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Bonds
+    {
+      get { return m_Bonds; }
+
+      set
+      {
+        if (value != m_Bonds)
+        {
+          m_Bonds = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Flaws
+    {
+      get { return m_Flaws; }
+
+      set
+      {
+        if (value != m_Flaws)
+        {
+          m_Flaws = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public double CarryingWeight
+    {
+      get { return m_CarryingWeight; }
+
+      set
+      {
+        if (value != m_CarryingWeight)
+        {
+          m_CarryingWeight = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Backstory
+    {
+      get { return m_Backstory; }
+
+      set
+      {
+        if (value != m_Backstory)
+        {
+          m_Backstory = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Notes
+    {
+      get { return m_Notes; }
+
+      set
+      {
+        if (value != m_Notes)
+        {
+          m_Notes = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int ProficiencyBonus
+    {
+      get { return m_ProficiencyBonus; }
+
+      set
+      {
+        if (value != m_ProficiencyBonus)
+        {
+          m_ProficiencyBonus = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public int Perception
+    {
+      get
+      {
+        return 0;
+        // TODO
+        //return Skills.Perception ?
+        //    10 + Attributes.WisdomModifier + ProficiencyBonus :
+        //    10 + Attributes.WisdomModifier;
+      }
+    }
+    public double CarryingCapacity { get => Attributes.Strength * 15; }
+
+    public Money Money
+    {
+      get { return m_Money; }
+
+      set
+      {
+        if (value != m_Money)
+        {
+          m_Money = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public Attributes Attributes
+    {
+      get { return m_Attributes; }
+
+      set
+      {
+        if (value != m_Attributes)
+        {
+          m_Attributes = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public Skills Skills
+    {
+      get { return m_Skills; }
+
+      set
+      {
+        if (value != m_Skills)
+        {
+          m_Skills = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public SavingThrows SavingThrows
+    {
+      get { return m_SavingThrows; }
+
+      set
+      {
+        if (value != m_SavingThrows)
+        {
+          m_SavingThrows = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+
+    public List<string> Proficient_Languages
+    {
+      get { return m_Proficient_Languages; }
+
+      set
+      {
+        if (value != m_Proficient_Languages)
+        {
+          m_Proficient_Languages = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<string> Proficient_Armor
+    {
+      get { return m_Proficient_Armor; }
+
+      set
+      {
+        if (value != m_Proficient_Armor)
+        {
+          m_Proficient_Armor = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<string> Proficient_Weapon
+    {
+      get { return m_Proficient_Weapon; }
+
+      set
+      {
+        if (value != m_Proficient_Weapon)
+        {
+          m_Proficient_Weapon = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<string> Proficient_Tools
+    {
+      get { return m_Proficient_Tools; }
+
+      set
+      {
+        if (value != m_Proficient_Tools)
+        {
+          m_Proficient_Tools = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<string> Books
+    {
+      get { return m_Books; }
+
+      set
+      {
+        if (value != m_Books)
+        {
+          m_Books = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+
+
+    public List<Feature> Features
+    {
+      get { return m_Features; }
+
+      set
+      {
+        if (value != m_Features)
+        {
+          m_Features = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<Item> Items
+    {
+      get { return m_Items; }
+
+      set
+      {
+        if (value != m_Items)
+        {
+          m_Items = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<Weapon> Weapons
+    {
+      get { return m_Weapons; }
+
+      set
+      {
+        if (value != m_Weapons)
+        {
+          m_Weapons = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public List<Armor> Armor
+    {
+      get { return m_Armor; }
+
+      set
+      {
+        if (value != m_Armor)
+        {
+          m_Armor = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+
+    #endregion Public Members
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void Calculate()
+    {
+      SetProfBonus();
+      Skills.Calculate(Attributes);
+      SavingThrows.Calculate(Attributes);
+    }
+
+    private void SetProfBonus()
+    {
+      int bonus = 0;
+      switch (Level)
+      {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+          bonus = 2;
+          break;
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+          bonus = 3;
+          break;
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+          bonus = 4;
+          break;
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+          bonus = 5;
+          break;
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+          bonus = 6;
+          break;
+        default:
+          break;
+      }
+      //_ProficiencyBonus = bonus;
+    }
+
+    public List<Tuple<string, bool>> GetSkills()
+    {
+      return new List<Tuple<string, bool>>
+            {
+                new Tuple<string, bool>(Skills.Acrobatics_Modifier+" Acrobatics", Skills.Acrobatics_Proficient),
+                new Tuple<string, bool>(Skills.AnimalHandling_Modifier+" Animal Handling", Skills.AnimalHandling_Proficient),
+                new Tuple<string, bool>(Skills.Arcana_Modifier+" Arcana", Skills.Arcana_Proficient),
+                new Tuple<string, bool>(Skills.Athletics_Modifier+" Athletics", Skills.Athletics_Proficient),
+                new Tuple<string, bool>(Skills.Deception_Modifier+" Deception", Skills.Deception_Proficient),
+                new Tuple<string, bool>(Skills.History_Modifier+" History", Skills.History_Proficient),
+                new Tuple<string, bool>(Skills.Insight_Modifier+" Insight", Skills.Insight_Proficient),
+                new Tuple<string, bool>(Skills.Intimidation_Modifier+" Intimidation", Skills.Intimidation_Proficient),
+                new Tuple<string, bool>(Skills.Investigation_Modifier+" Investigation", Skills.Investigation_Proficient),
+                new Tuple<string, bool>(Skills.Medicine_Modifier+" Medicine", Skills.Medicine_Proficient),
+                new Tuple<string, bool>(Skills.Nature_Modifier+" Nature", Skills.Nature_Proficient),
+                new Tuple<string, bool>(Skills.Perception_Modifier+" Perception", Skills.Perception_Proficient),
+                new Tuple<string, bool>(Skills.Performance_Modifier+" Performance", Skills.Performance_Proficient),
+                new Tuple<string, bool>(Skills.Persuassion_Modifier+" Persuassion", Skills.Persuassion_Proficient),
+                new Tuple<string, bool>(Skills.Religion_Modifier+" Religion", Skills.Religion_Proficient),
+                new Tuple<string, bool>(Skills.SlightOfHand_Modifier+" Slight of Hand", Skills.SlightOfHand_Proficient),
+                new Tuple<string, bool>(Skills.Stealth_Modifier+" Stealth", Skills.Stealth_Proficient),
+                new Tuple<string, bool>(Skills.Survival_Modifier+" Survival", Skills.Survival_Proficient)
+            };
+    }
+
+    public List<Tuple<string, bool>> GetSaves()
+    {
+      return new List<Tuple<string, bool>>
+            {
+                new Tuple<string, bool>(SavingThrows.StrengthSave_Modifier+" Strength", SavingThrows.StrengthSave_Proficient),
+                new Tuple<string, bool>(SavingThrows.DexteritySave_Modifier+" Dexterity",SavingThrows.DexteritySave_Proficient),
+                new Tuple<string, bool>(SavingThrows.ConstitutionSave_Modifier+" Constitution",SavingThrows.ConstitutionSave_Proficient),
+                new Tuple<string, bool>(SavingThrows.IntelligenceSave_Modifier+" Intelligence",SavingThrows.IntelligenceSave_Proficient),
+                new Tuple<string, bool>(SavingThrows.WisdomSave_Modifier+" Wisdom",SavingThrows.WisdomSave_Proficient),
+                new Tuple<string, bool>(SavingThrows.CharismaSave_Modifier+" Charisma",SavingThrows.CharismaSave_Proficient)
+            };
+    }
+  }
 
 }
