@@ -22,7 +22,7 @@ namespace DnD_Character_Sheet
     private void PopulateCharacterSheet()
     {
       DataContext = Library.MainCharacterInfo;
-
+      Title = $"{Library.MainCharacterInfo.Race} {Library.MainCharacterInfo.Class} - {Library.MainCharacterInfo.CharacterName}";
       foreach (Feature feature in Library.MainCharacterInfo.Features)
       {
         Label label = new Label();
@@ -39,14 +39,13 @@ namespace DnD_Character_Sheet
         string.Join(", ", Library.MainCharacterInfo.Proficient_Armor),
         string.Join(", ", Library.MainCharacterInfo.Proficient_Weapon),
         string.Join(", ", Library.MainCharacterInfo.Proficient_Tools));
+      TextBlock_ProfAndLang.Text = profAndLangText;
 
+      //List<Weapon> equipWeapons = (Library.MainCharacterInfo.Weapons.
+      //  Where(weapon => weapon.Equipped)).ToList();
+      //DataGrid_Equiped_Weapons.ItemsSource = equipWeapons;
 
-      foreach (Weapon weapon in Library.MainCharacterInfo.Weapons)
-      {
-
-      }
-
-      TabControl_CharacterSheet.Visibility = Visibility.Visible;
+      StackPanel_CharacterSheet.Visibility = Visibility.Visible;
     }
 
     private void Load_Button_Click(object sender, RoutedEventArgs e)
@@ -93,6 +92,38 @@ namespace DnD_Character_Sheet
     {
       DEV_HELP.Parsers test = new DEV_HELP.Parsers();
       test.SpellParser();
+    }
+
+
+    private void BuySell(string type, bool buy)
+    {
+      BuySellInventory buySellInventory = new BuySellInventory(type, buy);
+      buySellInventory.ShowDialog();
+    }
+
+    private void Buy_Weapons_Button_Click(object sender, RoutedEventArgs e)
+    {
+      BuySell(nameof(Weapon), true);
+    }
+    private void Sell_Weapons_Button_Click(object sender, RoutedEventArgs e)
+    {
+      BuySell(nameof(Weapon), false);
+    }
+    private void Buy_Armors_Button_Click(object sender, RoutedEventArgs e)
+    {
+      BuySell(nameof(Armor), true);
+    }
+    private void Sell_Armors_Button_Click(object sender, RoutedEventArgs e)
+    {
+      BuySell(nameof(Armor), false);
+    }
+    private void Buy_Items_Button_Click(object sender, RoutedEventArgs e)
+    {
+      BuySell(nameof(Item), true);
+    }
+    private void Sell_Items_Button_Click(object sender, RoutedEventArgs e)
+    {
+      BuySell(nameof(Item), false);
     }
   }
 }

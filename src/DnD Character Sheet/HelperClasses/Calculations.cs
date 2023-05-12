@@ -2,20 +2,20 @@
 using System;
 using LIB = DnD_Character_Sheet.Library;
 
-namespace DnD_Character_Sheet
+namespace DnD_Character_Sheet.HelperClasses
 {
   public class Calculations
   {
     /// <summary>
     /// This method calculates the characters Proficiency Bonus for skills
     /// </summary>
-    /// <param name="proficient"></param>
-    /// <param name="modifier"></param>
+    /// <param name="proficient">Is this Skill proficient</param>
+    /// <param name="currentModifier"></param>
     /// <param name="sign"></param>
     /// <returns></returns>
-    public static string Bonus(bool proficient, string modifier)
+    public static string Bonus(bool proficient, string currentModifier)
     {
-      string[] splitMod = modifier.Split(' ');
+      string[] splitMod = currentModifier.Split(' ');
       string sign = splitMod[0];
       int bonus = int.Parse(splitMod[1]);
       if (sign == "-")
@@ -26,13 +26,22 @@ namespace DnD_Character_Sheet
       {
         bonus += LIB.MainCharacterInfo.ProficiencyBonus;
       }
+      else
+      {
+        bonus -= LIB.MainCharacterInfo.ProficiencyBonus;
+      }
 
       if (bonus >= 0)
       {
-        return "+ " + bonus;
+        sign = "+ ";
+      }
+      else
+      {
+        sign = "- ";
+        bonus *= -1;
       }
 
-      return "- " + bonus * -1;
+      return sign + bonus;
     }
 
     /// <summary>
@@ -140,7 +149,7 @@ namespace DnD_Character_Sheet
         LIB.MainCharacterInfo.CarryingWeight += weapon.Weight * weapon.Quantity;
       }
 
-      foreach (Armor armor in LIB.MainCharacterInfo.Armor)
+      foreach (Armor armor in LIB.MainCharacterInfo.Armors)
       {
         LIB.MainCharacterInfo.CarryingWeight += armor.Weight * armor.Quantity;
       }

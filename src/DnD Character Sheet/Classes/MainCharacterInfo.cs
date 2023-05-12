@@ -3,6 +3,8 @@ using DnD_Character_Sheet.HelperClasses;
 using Interfaces.HelperClasses;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace DnD_Character_Sheet
 {
@@ -42,6 +44,9 @@ namespace DnD_Character_Sheet
     private string m_Flaws = string.Empty;
     private double m_CarryingWeight = 0;
     private string m_Backstory = string.Empty;
+    private string m_Organizations = string.Empty;
+    private string m_Allies = string.Empty;
+    private string m_Enemies = string.Empty;
     private string m_Notes = string.Empty;
     private bool m_Multiclass = false;
     private int m_ProficiencyBonus = 0;
@@ -53,16 +58,16 @@ namespace DnD_Character_Sheet
     private Skills m_Skills = new();
     private SavingThrows m_SavingThrows = new();
 
-    private List<string> m_Proficient_Languages = new();
-    private List<string> m_Proficient_Armor = new();
-    private List<string> m_Proficient_Weapon = new();
-    private List<string> m_Proficient_Tools = new();
-    private List<string> m_Books = new();
+    private ObservableCollection<string> m_Proficient_Languages = new();
+    private ObservableCollection<string> m_Proficient_Armor = new();
+    private ObservableCollection<string> m_Proficient_Weapon = new();
+    private ObservableCollection<string> m_Proficient_Tools = new();
+    private ObservableCollection<string> m_Books = new();
 
-    private List<Feature> m_Features = new();
-    private List<Item> m_Items = new();
-    private List<Weapon> m_Weapons = new();
-    private List<Armor> m_Armor = new();
+    private ObservableCollection<Feature> m_Features = new();
+    private ObservableCollection<Item> m_Items = new();
+    private ObservableCollection<Weapon> m_Weapons = new();
+    private ObservableCollection<Armor> m_Armors = new();
 
 
 
@@ -486,6 +491,45 @@ namespace DnD_Character_Sheet
         }
       }
     }
+    public string Organizations
+    {
+      get { return m_Organizations; }
+
+      set
+      {
+        if (value != m_Organizations)
+        {
+          m_Organizations = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Allies
+    {
+      get { return m_Allies; }
+
+      set
+      {
+        if (value != m_Allies)
+        {
+          m_Allies = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public string Enemies
+    {
+      get { return m_Enemies; }
+
+      set
+      {
+        if (value != m_Enemies)
+        {
+          m_Enemies = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
     public string Notes
     {
       get { return m_Notes; }
@@ -578,7 +622,7 @@ namespace DnD_Character_Sheet
       }
     }
 
-    public List<string> Proficient_Languages
+    public ObservableCollection<string> Proficient_Languages
     {
       get { return m_Proficient_Languages; }
 
@@ -591,7 +635,7 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<string> Proficient_Armor
+    public ObservableCollection<string> Proficient_Armor
     {
       get { return m_Proficient_Armor; }
 
@@ -604,7 +648,7 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<string> Proficient_Weapon
+    public ObservableCollection<string> Proficient_Weapon
     {
       get { return m_Proficient_Weapon; }
 
@@ -617,7 +661,7 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<string> Proficient_Tools
+    public ObservableCollection<string> Proficient_Tools
     {
       get { return m_Proficient_Tools; }
 
@@ -630,7 +674,7 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<string> Books
+    public ObservableCollection<string> Books
     {
       get { return m_Books; }
 
@@ -645,7 +689,7 @@ namespace DnD_Character_Sheet
     }
 
 
-    public List<Feature> Features
+    public ObservableCollection<Feature> Features
     {
       get { return m_Features; }
 
@@ -658,7 +702,7 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<Item> Items
+    public ObservableCollection<Item> Items
     {
       get { return m_Items; }
 
@@ -671,7 +715,7 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<Weapon> Weapons
+    public ObservableCollection<Weapon> Weapons
     {
       get { return m_Weapons; }
 
@@ -684,15 +728,15 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public List<Armor> Armor
+    public ObservableCollection<Armor> Armors
     {
-      get { return m_Armor; }
+      get { return m_Armors; }
 
       set
       {
-        if (value != m_Armor)
+        if (value != m_Armors)
         {
-          m_Armor = value;
+          m_Armors = value;
           NotifyPropertyChanged();
         }
       }
@@ -701,11 +745,116 @@ namespace DnD_Character_Sheet
     #endregion Public Members
 
 
+    public void AddWeapon(Weapon weapon)
+    {
+      bool exists = false;
+      foreach (Weapon curWep in m_Weapons.Where(current => current.Name == weapon.Name))
+      {
+        curWep.Quantity += weapon.Quantity;
+        exists = true;
+        break;
+      }
 
+      if (!exists)
+      {
+        m_Weapons.Add(weapon);
+      }
+    }
 
+    public void AddArmor(Armor armor)
+    {
+      bool exists = false;
+      foreach (Armor curArmor in m_Armors.Where(current => current.Name == armor.Name))
+      {
+        curArmor.Quantity += armor.Quantity;
+        exists = true;
+        break;
+      }
 
+      if (!exists)
+      {
+        m_Armors.Add(armor);
+      }
+    }
 
+    public void AddItem(Item item)
+    {
+      bool exists = false;
+      foreach (Item curItem in m_Items.Where(current => current.Name == item.Name))
+      {
+        curItem.Quantity += item.Quantity;
+        exists = true;
+        break;
+      }
 
+      if (!exists)
+      {
+        m_Items.Add(item);
+      }
+    }
+
+    public void SellWeapon(Weapon weapon)
+    {
+      bool quantityOut = false;
+      int weaponIndex = -1;
+      foreach (Weapon curWep in m_Weapons.Where(current => current.Name == weapon.Name))
+      {
+        weaponIndex = m_Weapons.IndexOf(curWep);
+        curWep.Quantity -= weapon.Quantity;
+        if (curWep.Quantity <= 0)
+        {
+          quantityOut = true;
+        }
+        break;
+      }
+
+      if (quantityOut)
+      {
+        m_Weapons.RemoveAt(weaponIndex);
+      }
+    }
+
+    public void SellArmor(Armor armor)
+    {
+      bool quantityOut = false;
+      int armorIndex = -1;
+      foreach (Armor curArmor in m_Armors.Where(current => current.Name == armor.Name))
+      {
+        armorIndex = m_Armors.IndexOf(curArmor);
+        curArmor.Quantity -= armor.Quantity;
+        if (curArmor.Quantity <= 0)
+        {
+          quantityOut = true;
+        }
+        break;
+      }
+
+      if (quantityOut)
+      {
+        m_Armors.RemoveAt(armorIndex);
+      }
+    }
+
+    public void SellItem(Item item)
+    {
+      bool quantityOut = false;
+      int itemIndex = -1;
+      foreach (Item curItem in m_Items.Where(current => current.Name == item.Name))
+      {
+        itemIndex = m_Items.IndexOf(curItem);
+        curItem.Quantity -= item.Quantity;
+        if (curItem.Quantity <= 0)
+        {
+          quantityOut = true;
+        }
+        break;
+      }
+
+      if (quantityOut)
+      {
+        m_Items.RemoveAt(itemIndex);
+      }
+    }
 
 
 
@@ -715,7 +864,6 @@ namespace DnD_Character_Sheet
     public void Calculate()
     {
       SetProfBonus();
-      Skills.Calculate(Attributes);
       SavingThrows.Calculate(Attributes);
     }
 

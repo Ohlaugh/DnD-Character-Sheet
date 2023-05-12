@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CALC = DnD_Character_Sheet.Calculations;
+using CALC = DnD_Character_Sheet.HelperClasses.Calculations;
 using LC = DnD_Character_Sheet.Constants;
 
 namespace DnD_Character_Sheet.Classes
@@ -521,41 +521,6 @@ namespace DnD_Character_Sheet.Classes
     }
 
     #endregion Public Members
-
-    #region Public Methods
-
-    public void Calculate(Attributes attributes)
-    {
-      SetModifiers(attributes);
-    }
-
-    #endregion Public Methods
-
-    #region Private Methods
-
-    private void SetModifiers(Attributes attributes)
-    {
-      Acrobatics_Modifier = CALC.Bonus(Acrobatics_Proficient, attributes.DexterityModifier);
-      AnimalHandling_Modifier = CALC.Bonus(AnimalHandling_Proficient, attributes.WisdomModifier);
-      Arcana_Modifier = CALC.Bonus(Arcana_Proficient, attributes.IntelligenceModifier);
-      Athletics_Modifier = CALC.Bonus(Athletics_Proficient, attributes.StrengthModifier);
-      Deception_Modifier = CALC.Bonus(Deception_Proficient, attributes.CharismaModifier);
-      History_Modifier = CALC.Bonus(History_Proficient, attributes.IntelligenceModifier);
-      Insight_Modifier = CALC.Bonus(Insight_Proficient, attributes.WisdomModifier);
-      Intimidation_Modifier = CALC.Bonus(Intimidation_Proficient, attributes.CharismaModifier);
-      Investigation_Modifier = CALC.Bonus(Investigation_Proficient, attributes.IntelligenceModifier);
-      Medicine_Modifier = CALC.Bonus(Medicine_Proficient, attributes.WisdomModifier);
-      Nature_Modifier = CALC.Bonus(Nature_Proficient, attributes.IntelligenceModifier);
-      Perception_Modifier = CALC.Bonus(Perception_Proficient, attributes.WisdomModifier);
-      Performance_Modifier = CALC.Bonus(Performance_Proficient, attributes.CharismaModifier);
-      Persuassion_Modifier = CALC.Bonus(Persuassion_Proficient, attributes.CharismaModifier);
-      Religion_Modifier = CALC.Bonus(Religion_Proficient, attributes.IntelligenceModifier);
-      SlightOfHand_Modifier = CALC.Bonus(SlightOfHand_Proficient, attributes.DexterityModifier);
-      Stealth_Modifier = CALC.Bonus(Stealth_Proficient, attributes.DexterityModifier);
-      Survival_Modifier = CALC.Bonus(Survival_Proficient, attributes.WisdomModifier);
-    }
-
-    #endregion Private Methods
 
     #region IPropertyChanged
 

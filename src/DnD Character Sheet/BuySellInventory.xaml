@@ -1,0 +1,196 @@
+﻿<Window x:Class="DnD_Character_Sheet.BuySellInventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD_Character_Sheet"
+        mc:Ignorable="d"
+        Title="Mystic Trader"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize">
+  <Window.Resources>
+
+    <Style x:Key="Body_Content_DataGrid_Centering"
+           TargetType="{x:Type DataGridCell}">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="{x:Type DataGridCell}">
+            <Grid Background="{TemplateBinding Background}">
+              <ContentPresenter VerticalAlignment="Center" />
+            </Grid>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Setter Property="BorderBrush"
+              Value="Transparent" />
+      <Setter Property="Background"
+              Value="Transparent" />
+      <Setter Property="Foreground"
+              Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+    </Style>
+
+    <Style x:Key="DataGrid_TextBox"
+           TargetType="TextBox">
+      <Setter Property="TextAlignment"
+              Value="Center" />
+      <Setter Property="BorderBrush"
+              Value="Transparent" />
+    </Style>
+  </Window.Resources>
+
+  <StackPanel>
+    <Button Name="Button_Action"
+            HorizontalAlignment="Left"
+            Margin="5"
+            Click="Button_Action_Click" />
+    <StackPanel>
+      <!--Weapons-->
+      <DataGrid Name="DataGrid_Weapons"
+                AutoGenerateColumns="False"
+                CanUserAddRows="false"
+                CellStyle="{StaticResource Body_Content_DataGrid_Centering}"
+                HeadersVisibility="Column"
+                HorizontalAlignment="Left"
+                VerticalScrollBarVisibility="Auto"
+                Visibility="Collapsed"
+                MaxHeight="800">
+        <DataGrid.Columns>
+          <DataGridTemplateColumn Header="Purchase">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <CheckBox IsChecked="{Binding Path=BuySell, UpdateSourceTrigger=PropertyChanged}"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Type"
+                              Binding="{Binding Style, Mode = OneWay}" />
+          <DataGridTextColumn Header="Name"
+                              Binding="{Binding Name, Mode = OneWay}" />
+          <DataGridTemplateColumn Header="Quantity">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <TextBox Text="{Binding Path=Quantity, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource DataGrid_TextBox}" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Cost"
+                              Binding="{Binding Cost, Mode = OneWay}" />
+          <DataGridTextColumn Header="Damage"
+                              Binding="{Binding Damage, Mode = OneWay}" />
+          <DataGridTextColumn Header="Weight"
+                              Binding="{Binding Weight, Mode = OneWay}" />
+          <DataGridTextColumn Header="Properties"
+                              Binding="{Binding Properties_Display, Mode = OneWay}" />
+        </DataGrid.Columns>
+      </DataGrid>
+      <!--Armor-->
+      <DataGrid Name="DataGrid_Armor"
+                AutoGenerateColumns="False"
+                CanUserAddRows="false"
+                CellStyle="{StaticResource Body_Content_DataGrid_Centering}"
+                HeadersVisibility="Column"
+                HorizontalAlignment="Left"
+                VerticalScrollBarVisibility="Auto"
+                Visibility="Collapsed"
+                MaxHeight="800">
+        <DataGrid.Columns>
+          <DataGridTemplateColumn Header="Purchase">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <CheckBox IsChecked="{Binding Path=BuySell, UpdateSourceTrigger=PropertyChanged}"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Type"
+                              Binding="{Binding Style, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Name"
+                              Binding="{Binding Name, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTemplateColumn Header="Quantity">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <TextBox Text="{Binding Path=Quantity, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource DataGrid_TextBox}" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Cost"
+                              Binding="{Binding Cost, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Armor Class"
+                              Binding="{Binding ArmorClass, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Weight"
+                              Binding="{Binding Weight, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Required Strength"
+                              Binding="{Binding StrengthReq, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Stealth Disadvantage"
+                              Binding="{Binding Disadvantage, Mode = OneWay}"
+                              IsReadOnly="True" />
+        </DataGrid.Columns>
+      </DataGrid>
+      <!--Equipment-->
+      <DataGrid Name="DataGrid_Equipment"
+                AutoGenerateColumns="False"
+                CanUserAddRows="false"
+                CellStyle="{StaticResource Body_Content_DataGrid_Centering}"
+                HeadersVisibility="Column"
+                HorizontalAlignment="Left"
+                VerticalScrollBarVisibility="Auto"
+                Visibility="Collapsed"
+                MaxHeight="800">
+        <DataGrid.Columns>
+          <DataGridTemplateColumn Header="Purchase">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <CheckBox IsChecked="{Binding Path=BuySell, UpdateSourceTrigger=PropertyChanged}"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Type"
+                              Binding="{Binding Style, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Name"
+                              Binding="{Binding Name, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTemplateColumn Header="Quantity">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <TextBox Text="{Binding Path=Quantity, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource DataGrid_TextBox}" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Cost"
+                              Binding="{Binding Cost, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Weight"
+                              Binding="{Binding Weight, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Description"
+                              Binding="{Binding Description, Mode = OneWay}"
+                              IsReadOnly="True">
+            <DataGridTextColumn.ElementStyle>
+              <Style>
+                <Setter Property="TextBlock.TextWrapping"
+                        Value="Wrap" />
+                <Setter Property="TextBlock.MaxWidth"
+                        Value="400" />
+              </Style>
+            </DataGridTextColumn.ElementStyle>
+          </DataGridTextColumn>
+        </DataGrid.Columns>
+      </DataGrid>
+    </StackPanel>
+  </StackPanel>
+</Window>

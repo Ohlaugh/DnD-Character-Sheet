@@ -85,7 +85,7 @@
     <Acrobatics_Proficient>false</Acrobatics_Proficient>
     <AnimalHandling_Modifier>+ 1</AnimalHandling_Modifier>
     <AnimalHandling_Proficient>false</AnimalHandling_Proficient>
-    <Arcana_Modifier>+ 1</Arcana_Modifier>
+    <Arcana_Modifier>+ 3</Arcana_Modifier>
     <Arcana_Proficient>true</Arcana_Proficient>
     <Athletics_Modifier>- 1</Athletics_Modifier>
     <Athletics_Proficient>false</Athletics_Proficient>
@@ -95,11 +95,11 @@
     <History_Proficient>false</History_Proficient>
     <Insight_Modifier>+ 1</Insight_Modifier>
     <Insight_Proficient>false</Insight_Proficient>
-    <Intimidation_Modifier>+ 3</Intimidation_Modifier>
+    <Intimidation_Modifier>+ 5</Intimidation_Modifier>
     <Intimidation_Proficient>true</Intimidation_Proficient>
     <Investigation_Modifier>+ 1</Investigation_Modifier>
     <Investigation_Proficient>false</Investigation_Proficient>
-    <Medicine_Modifier>+ 1</Medicine_Modifier>
+    <Medicine_Modifier>+ 3</Medicine_Modifier>
     <Medicine_Proficient>true</Medicine_Proficient>
     <Nature_Modifier>+ 1</Nature_Modifier>
     <Nature_Proficient>false</Nature_Proficient>
@@ -109,7 +109,7 @@
     <Performance_Proficient>false</Performance_Proficient>
     <Persuassion_Modifier>+ 3</Persuassion_Modifier>
     <Persuassion_Proficient>false</Persuassion_Proficient>
-    <Religion_Modifier>+ 1</Religion_Modifier>
+    <Religion_Modifier>+ 3</Religion_Modifier>
     <Religion_Proficient>true</Religion_Proficient>
     <SlightOfHand_Modifier>+ 0</SlightOfHand_Modifier>
     <SlightOfHand_Proficient>false</SlightOfHand_Proficient>
@@ -127,9 +127,9 @@
     <ConstitutionSave_Proficient>false</ConstitutionSave_Proficient>
     <IntelligenceSave_Modifier>+ 1</IntelligenceSave_Modifier>
     <IntelligenceSave_Proficient>false</IntelligenceSave_Proficient>
-    <WisdomSave_Modifier>+ 1</WisdomSave_Modifier>
+    <WisdomSave_Modifier>+ 3</WisdomSave_Modifier>
     <WisdomSave_Proficient>true</WisdomSave_Proficient>
-    <CharismaSave_Modifier>+ 3</CharismaSave_Modifier>
+    <CharismaSave_Modifier>+ 5</CharismaSave_Modifier>
     <CharismaSave_Proficient>true</CharismaSave_Proficient>
   </SavingThrows>
   <Proficient_Languages>
@@ -195,7 +195,7 @@
       </Properties>
     </Weapon>
   </Weapons>
-  <Armor>
+  <Armors>
     <Armor Equipped="true" Name="Leather" Style="Light Armor" Cost="10 gp" Weight="10" Description="" Quantity="1" ArmorClass="11 + Dex" StrengthReq="0" Disadvantage="false" />
-  </Armor>
+  </Armors>
 </MainCharacterInfo>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CALC = DnD_Character_Sheet.Calculations;
+using CALC = DnD_Character_Sheet.HelperClasses.Calculations;
 using LC = DnD_Character_Sheet.Constants;
 
 namespace DnD_Character_Sheet.Classes

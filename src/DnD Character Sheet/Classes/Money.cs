@@ -87,6 +87,38 @@ namespace DnD_Character_Sheet.Classes
     #region Public Methods
 
     /// <summary>
+    /// This method will add the cost of an item to the current money object.
+    /// </summary>
+    /// <param name="cost">Cost in ITEM format (Cost Type)</param>
+    /// <param name="quantity">Number of items to add</param>
+    public void AddFunds(string cost, int quantity)
+    {
+      string[] split = cost.Split(' ');
+      if (split.Length == 2)
+      {
+        int value = int.Parse(split[0]) * quantity;
+        switch (split[1].ToUpper())
+        {
+          case ("CP"):
+            m_Copper += value;
+            break;
+          case ("SP"):
+            m_Silver += value;
+            break;
+          case ("GP"):
+            m_Gold += value;
+            break;
+          case ("PP"):
+            m_Platinum += value;
+            break;
+          default:
+            m_Electrum += value;
+            break;
+        }
+      }
+    }
+
+    /// <summary>
     /// This method converts the currency provided
     /// </summary>
     /// <param name="CurrencyFrom">Currency Converting From</param>
