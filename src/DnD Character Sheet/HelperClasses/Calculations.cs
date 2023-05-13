@@ -10,9 +10,8 @@ namespace DnD_Character_Sheet.HelperClasses
     /// This method calculates the characters Proficiency Bonus for skills
     /// </summary>
     /// <param name="proficient">Is this Skill proficient</param>
-    /// <param name="currentModifier"></param>
-    /// <param name="sign"></param>
-    /// <returns></returns>
+    /// <param name="currentModifier">Current Modifier of Skill</param>
+    /// <returns>Updated Modifier</returns>
     public static string Bonus(bool proficient, string currentModifier)
     {
       string[] splitMod = currentModifier.Split(' ');

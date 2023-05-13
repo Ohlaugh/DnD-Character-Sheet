@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CALC = DnD_Character_Sheet.HelperClasses.Calculations;
@@ -73,6 +73,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Acrobatics_Proficient)
         {
           m_Acrobatics_Proficient = value;
+          Acrobatics_Modifier = CALC.Bonus(Acrobatics_Proficient, Acrobatics_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -99,6 +100,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_AnimalHandling_Proficient)
         {
           m_AnimalHandling_Proficient = value;
+          AnimalHandling_Modifier = CALC.Bonus(m_AnimalHandling_Proficient, AnimalHandling_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -125,6 +127,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Arcana_Proficient)
         {
           m_Arcana_Proficient = value;
+          Arcana_Modifier = CALC.Bonus(m_Arcana_Proficient, Arcana_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -151,6 +154,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Athletics_Proficient)
         {
           m_Athletics_Proficient = value;
+          Athletics_Modifier = CALC.Bonus(m_Athletics_Proficient, Athletics_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -177,6 +181,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Deception_Proficient)
         {
           m_Deception_Proficient = value;
+          Deception_Modifier = CALC.Bonus(m_Deception_Proficient, Deception_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -203,6 +208,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_History_Proficient)
         {
           m_History_Proficient = value;
+          History_Modifier = CALC.Bonus(m_History_Proficient, History_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -229,6 +235,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Insight_Proficient)
         {
           m_Insight_Proficient = value;
+          Insight_Modifier = CALC.Bonus(m_Insight_Proficient, Insight_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -255,6 +262,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Intimidation_Proficient)
         {
           m_Intimidation_Proficient = value;
+          Intimidation_Modifier = CALC.Bonus(m_Intimidation_Proficient, Intimidation_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -281,6 +289,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Investigation_Proficient)
         {
           m_Investigation_Proficient = value;
+          Investigation_Modifier = CALC.Bonus(m_Investigation_Proficient, Investigation_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -307,6 +316,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Medicine_Proficient)
         {
           m_Medicine_Proficient = value;
+          Medicine_Modifier = CALC.Bonus(m_Medicine_Proficient, Medicine_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -333,6 +343,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Nature_Proficient)
         {
           m_Nature_Proficient = value;
+          Nature_Modifier = CALC.Bonus(m_Nature_Proficient, Nature_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -359,6 +370,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Perception_Proficient)
         {
           m_Perception_Proficient = value;
+          Perception_Modifier = CALC.Bonus(m_Perception_Proficient, Perception_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -385,6 +397,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Performance_Proficient)
         {
           m_Performance_Proficient = value;
+          Performance_Modifier = CALC.Bonus(m_Performance_Proficient, Performance_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -411,6 +424,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Persuassion_Proficient)
         {
           m_Persuassion_Proficient = value;
+          Persuassion_Modifier = CALC.Bonus(m_Persuassion_Proficient, Persuassion_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -437,6 +451,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Religion_Proficient)
         {
           m_Religion_Proficient = value;
+          Religion_Modifier = CALC.Bonus(m_Religion_Proficient, Religion_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -463,6 +478,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_SlightOfHand_Proficient)
         {
           m_SlightOfHand_Proficient = value;
+          SlightOfHand_Modifier = CALC.Bonus(m_SlightOfHand_Proficient, SlightOfHand_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -489,6 +505,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Stealth_Proficient)
         {
           m_Stealth_Proficient = value;
+          Stealth_Modifier = CALC.Bonus(m_Stealth_Proficient, Stealth_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -515,6 +532,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_Survival_Proficient)
         {
           m_Survival_Proficient = value;
+          Survival_Modifier = CALC.Bonus(m_Survival_Proficient, Survival_Modifier);
           NotifyPropertyChanged();
         }
       }

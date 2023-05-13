@@ -48,6 +48,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_StrengthSave_Proficient)
         {
           m_StrengthSave_Proficient = value;
+          StrengthSave_Modifier = CALC.Bonus(m_StrengthSave_Proficient, StrengthSave_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -74,6 +75,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_DexteritySave_Proficient)
         {
           m_DexteritySave_Proficient = value;
+          DexteritySave_Modifier = CALC.Bonus(m_DexteritySave_Proficient, DexteritySave_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -100,6 +102,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_ConstitutionSave_Proficient)
         {
           m_ConstitutionSave_Proficient = value;
+          ConstitutionSave_Modifier = CALC.Bonus(m_ConstitutionSave_Proficient, ConstitutionSave_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -126,6 +129,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_IntelligenceSave_Proficient)
         {
           m_IntelligenceSave_Proficient = value;
+          IntelligenceSave_Modifier = CALC.Bonus(m_IntelligenceSave_Proficient, IntelligenceSave_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -152,6 +156,7 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_WisdomSave_Proficient)
         {
           m_WisdomSave_Proficient = value;
+          WisdomSave_Modifier = CALC.Bonus(m_WisdomSave_Proficient, WisdomSave_Modifier);
           NotifyPropertyChanged();
         }
       }
@@ -178,35 +183,13 @@ namespace DnD_Character_Sheet.Classes
         if (value != m_CharismaSave_Proficient)
         {
           m_CharismaSave_Proficient = value;
+          CharismaSave_Modifier = CALC.Bonus(m_CharismaSave_Proficient, CharismaSave_Modifier);
           NotifyPropertyChanged();
         }
       }
     }
 
     #endregion Public Members
-
-    #region Public Methods
-
-    public void Calculate(Attributes attributes)
-    {
-      SetModifiers(attributes);
-    }
-
-    #endregion Public Methods
-
-    #region Private Methods
-
-    private void SetModifiers(Attributes attributes)
-    {
-      StrengthSave_Modifier = CALC.Bonus(StrengthSave_Proficient, attributes.StrengthModifier);
-      DexteritySave_Modifier = CALC.Bonus(DexteritySave_Proficient, attributes.DexterityModifier);
-      ConstitutionSave_Modifier = CALC.Bonus(ConstitutionSave_Proficient, attributes.ConstitutionModifier);
-      IntelligenceSave_Modifier = CALC.Bonus(IntelligenceSave_Proficient, attributes.IntelligenceModifier);
-      WisdomSave_Modifier = CALC.Bonus(WisdomSave_Proficient, attributes.WisdomModifier);
-      CharismaSave_Modifier = CALC.Bonus(CharismaSave_Proficient, attributes.CharismaModifier);
-    }
-
-    #endregion Private Methods
 
     #region IPropertyChanged
 

@@ -864,7 +864,6 @@ namespace DnD_Character_Sheet
     public void Calculate()
     {
       SetProfBonus();
-      SavingThrows.Calculate(Attributes);
     }
 
     private void SetProfBonus()
