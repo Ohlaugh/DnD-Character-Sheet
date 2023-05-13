@@ -68,6 +68,7 @@ namespace DnD_Character_Sheet
     private ObservableCollection<Item> m_Items = new();
     private ObservableCollection<Weapon> m_Weapons = new();
     private ObservableCollection<Armor> m_Armors = new();
+    private ObservableCollection<CombatAction> m_Actions = new();
 
 
 
@@ -737,6 +738,19 @@ namespace DnD_Character_Sheet
         if (value != m_Armors)
         {
           m_Armors = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    public ObservableCollection<CombatAction> Actions
+    {
+      get { return m_Actions; }
+
+      set
+      {
+        if (value != m_Actions)
+        {
+          m_Actions = value;
           NotifyPropertyChanged();
         }
       }

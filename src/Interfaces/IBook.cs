@@ -12,5 +12,6 @@ namespace Interfaces
     public List<Weapon> Weapons { get; }
     public List<Item> Items { get; }
     public List<Spell> Spells { get; }
+    public List<CombatAction> CombatActions { get; }
   }
 }

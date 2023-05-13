@@ -43,17 +43,18 @@ namespace DnD_Character_Sheet
 
     /// <summary>
     /// This dictionary holds all information on Items from selected manuals
-    /// Key: Item Name
-    /// Value: New Item
     /// </summary>
     private static List<Item> m_ItemLibrary = new List<Item>();
 
     /// <summary>
     /// This dictionary holds all information on Spells from selected manuals
-    /// Key: Spell Name
-    /// Value: New Spell
     /// </summary>
     private static List<Spell> m_SpellLibrary = new List<Spell>();
+
+    /// <summary>
+    /// This dictionary holds all information on Actions from selected manuals
+    /// </summary>
+    private static List<CombatAction> m_ActionLibrary = new List<CombatAction>();
 
     #endregion Private Members
 
@@ -104,6 +105,11 @@ namespace DnD_Character_Sheet
     /// </summary>
     public static List<Spell> SpellLibrary { get { return m_SpellLibrary; } }
 
+    /// <summary>
+    /// This dictionary holds all information on Actions from selected manuals
+    /// </summary>
+    public static List<CombatAction> ActionLibrary { get { return m_ActionLibrary; } }
+
     #endregion Public Members
 
     #region Public Methods
@@ -134,6 +140,7 @@ namespace DnD_Character_Sheet
             AddWeapons(book.Weapons);
             AddItems(book.Items);
             AddSpells(book.Spells);
+            AddActions(book.CombatActions);
           }
         }
         characterLoaded = true;
@@ -279,6 +286,14 @@ namespace DnD_Character_Sheet
       m_SpellLibrary.AddRange(spells.Where(spell => !m_SpellLibrary.Contains(spell)));
     }
 
+    /// <summary>
+    /// Import Actions to the main Library
+    /// </summary>
+    /// <param name="actions">List of Actions</param>
+    private static void AddActions(List<CombatAction> actions)
+    {
+      m_ActionLibrary.AddRange(actions.Where(action => !m_ActionLibrary.Contains(action)));
+    }
 
     /// <summary>
     /// This method clears all Libraries

@@ -45,6 +45,8 @@ namespace DnD_Character_Sheet
       //  Where(weapon => weapon.Equipped)).ToList();
       //DataGrid_Equiped_Weapons.ItemsSource = equipWeapons;
 
+      // TODO DONT FORGET UNARMED STRIKE
+
       StackPanel_CharacterSheet.Visibility = Visibility.Visible;
     }
 
@@ -90,8 +92,7 @@ namespace DnD_Character_Sheet
 
     private void Test_Button_Click(object sender, RoutedEventArgs e)
     {
-      DEV_HELP.Parsers test = new DEV_HELP.Parsers();
-      test.SpellParser();
+
     }
 
 

@@ -23,6 +23,139 @@ namespace Books.Player_Handbook
       "Dragonborn:Gold", "Dragonborn:Green", "Dragonborn:Red", "Dragonborn:Silver", "Dragonborn:White",
       "Gnome:Forest Gnome", "Gnome:Rock Gnome"};
 
+    internal static readonly List<CombatAction> Actions = new()
+    {
+      new CombatAction
+      {
+        Name = "Attack",
+        Source = "Basic Rules",
+        Description = $"The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.{Environment.NewLine} With this action, you make one melee or ranged attack.{Environment.NewLine} Certain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action."
+      },
+      new CombatAction
+      {
+        Name = "Cast a Spell",
+        Source = "Basic Rules",
+        Description = $"Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a casting time, which specifies whether the caster must use an action, a reaction, minutes, or even hours to cast the spell. Casting a spell is, therefore, not neccessarily an action. Most spells do have casting time of 1 action, to cast such a spell."
+      },
+      new CombatAction
+      {
+        Name = "Dash",
+        Source = "Basic Rules",
+        Description = $"When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.{Environment.NewLine} Any increase or decrease to your speed changesd this additional movement by the same amount. If your speed of 30 feet is reduced to 15 feet, for instance, you can move up to 30 feet this turn if you dash."
+      },
+      new CombatAction
+      {
+        Name = "Disengage",
+        Source = "Basic Rules",
+        Description = $"If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of your turn."
+      },
+      new CombatAction
+      {
+        Name = "Dodge",
+        Source = "Basic Rules",
+        Description = $"When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. AYou lose this benefit if you are incapacitated or if your speed drops to 0."
+      },
+      new CombatAction
+      {
+        Name = "Grapple",
+        Source="Basic Rules",
+        Description = $"When you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.{Environment.NewLine} The target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize the target by making a grapple check instead of an attack roll: a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you succeed, you subject the target to the grappled condition. The condition specifies the things that end it, and you can release the target whenever you like (no action required).{Environment.NewLine} Escaping a Grapple: A grappled creature can use its action to escape. To do so, it must succeed on a Strength (Athletics) or Dexterity (Acrobatics) check contested by your Strength (Athletics) check.{Environment.NewLine} Moving a Grappled Creature: When you move, you can drag or carry the grappled creature with you, but your speed is halved, unless the creature is two or more sizes smaller than you."
+      },
+      new CombatAction
+      {
+        Name = "Help",
+        Source = "Basic Rules",
+        Description = $"You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with, provided that it makes the check before the start of your next turn.{Environment.NewLine} Alternatively, you can aid a friendly creature in attacking a creature within 5 feet of you. You feint, distract the target, or in some other way team up to make your ally's attack more effective. If your ally attacks the target before your turn, the first attack roll is made with advantage."
+      },
+      new CombatAction
+      {
+        Name = "Hide",
+        Source = "Basic Rules",
+        Description = $"When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide. If you succeed, you gain certain benefits of Unseen Attacker."
+      },
+      new CombatAction
+      {
+        Name = "Improvise",
+        Source ="Basic Rules",
+        Description = $"Your character can do things not covered by the actions in this chapter, such as breaking down doors, intimidating enemies, sensing weaknesses in magical defenses, or calling for a parley with a foe. The only limits to the actions you can attempt are your imagination and your character's ability scores. See the descriptions of the ability scores in chapter 7 for inspiration as you improvise.{Environment.NewLine} When you describe an action not detailed elsewhere in the rules, the DM tells you whether that action is possible and what kind of roll you need to make, if any, to determine success or failure."
+      },
+      new CombatAction
+      {
+        Name = "Ready",
+        Source = "Basic Rules",
+        Description = $"Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn, which lets you act using your reaction before the start of your next turn.{Environment.NewLine} First, you decide what perceivable circumstance will trigger your reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your speed in response to it. Examples include \"If the cultist steps on the trapdoor, I'll pull the lever that opens it,\" and \"If the goblin steps next to me, I move away.\"{Environment.NewLine} When the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger. Remember that you can take only one reaction per round.{Environment.NewLine} When you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spell must have a casting time of 1 action, and holding onto the spell's magic requires concentration. If your concentration is broken, the spell dissipates without taking effect. For example, if you are concentrating on the web spell and ready magic missile, your web spell ends, and if you take damage before you release magic missile with your reaction, your concentration might be broken."
+      },
+      new CombatAction
+      {
+        Name = "Search",
+        Source = "Basic Rules",
+        Description = $"When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a Wisdom (Perception) check or an Intelligence (Investigation) check."
+      },
+      new CombatAction
+      {
+        Name = "Shove",
+        Source = "Basic Rules",
+        Description = $"Using the Attack action, you can make a special melee attack to shove a creature, either to knock it prone or push it away from you. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.{Environment.NewLine} The target must be no more than one size larger than you and must be within your reach. Instead of making an attack roll, you make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). You succeed automatically if the target is incapacitated. If you succeed, you either knock the target prone or push it 5 feet away from you."
+      },
+      new CombatAction
+      {
+        Name = "Use an Object",
+        Source = "Basic Rules",
+        Description = $"You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your action for its use, you take the Use an Object action. This action is also useful when you want to interact with more than one object on your turn."
+      },
+      new CombatAction
+      {
+        Name = "Unarmed Strike",
+        Source = "Basic Rules",
+        Description = $"Instead of using a weapon to make a melee weapon attack, you can use an unarmed strike: a punch, kick, head-butt, or similar forceful blow (none of which count as weapons). On a hit, an unarmed strike deals bludgeoning damage equal to 1 + your Strength modifier. You are proficient with your unarmed strikes."
+      },
+
+      new CombatAction
+      {
+        Name = "Two-Weapon Fighting",
+        Source = "Basic Rules",
+        Bonus = true,
+        Description = $"When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a different light melee weapon that you're holding in the other hand. You don't add your ability modifier to the damage of the bonus attack, unless that modifier is negative.{Environment.NewLine} If either weapon has the thrown property, you can throw the weapon, instead of making a melee attack with it."
+      },
+
+      new CombatAction
+      {
+        Name = "Opportunity Attack",
+        Source = "Basic Rules",
+        Reaction = true,
+        Description = $"You can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature. The attack occurs right before the creature leaves your reach"
+      },
+
+      new CombatAction
+      {
+        Name = "Interact with an Object",
+        Source = "Basic Rules",
+        OtherActionType = true,
+        Description = $"Here are a few examples of the sorts of thing you can do in tandem with your movement and action:" +
+        $"{Environment.NewLine}- draw or sheathe a sword" +
+        $"{Environment.NewLine}- open or close a door" +
+        $"{Environment.NewLine}- withdraw a potion from your backpack" +
+        $"{Environment.NewLine}- pick up a dropped axe" +
+        $"{Environment.NewLine}- take a bauble from a table" +
+        $"{Environment.NewLine}- remove a ring from your finger" +
+        $"{Environment.NewLine}- stuff some food into your mouth" +
+        $"{Environment.NewLine}- plant a banner in the ground" +
+        $"{Environment.NewLine}- fish a few coins from your belt pouch" +
+        $"{Environment.NewLine}- drink all the ale in a flagon" +
+        $"{Environment.NewLine}- throw a lever or a switch" +
+        $"{Environment.NewLine}- pull a torch from a sconce" +
+        $"{Environment.NewLine}- take a book from a shelf you can reach" +
+        $"{Environment.NewLine}- extinguish a small flame" +
+        $"{Environment.NewLine}- don a mask" +
+        $"{Environment.NewLine}- pull the hood of your cloak up and over your head" +
+        $"{Environment.NewLine}- put your ear to a door" +
+        $"{Environment.NewLine}- kick a small stone" +
+        $"{Environment.NewLine}- turn a key in a lock" +
+        $"{Environment.NewLine}- tap the floor with a 10-foot pole" +
+        $"{Environment.NewLine}- hand an item to another character"
+      }
+    };
+
     internal static readonly List<Armor> Armors = new()
     {
     #region Armor
