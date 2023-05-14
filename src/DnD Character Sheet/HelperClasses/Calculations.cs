@@ -25,6 +25,7 @@ namespace DnD_Character_Sheet.HelperClasses
         {
           bonus *= -1;
         }
+        bonus += baseStat;
         bonus += LIB.MainCharacterInfo.ProficiencyBonus;
 
         if (bonus >= 0)
