@@ -1,4 +1,5 @@
 ﻿using Interfaces.HelperClasses;
+using IC = Interfaces.Constants;
 using LC = Books.Constants;
 
 namespace Books.Player_Handbook
@@ -329,7 +330,7 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          LC.Light
+          IC.Light
         },
         Quantity = 1
       },
@@ -342,9 +343,9 @@ namespace Books.Player_Handbook
         Weight = 1,
         Properties = new List<string>
         {
-          LC.Finesse,
-          LC.Light,
-          string.Format(LC.Thrown,20,60)
+          IC.Finesse,
+          IC.Light,
+          string.Format(IC.Thrown,20,60)
         },
         Quantity = 1
       },
@@ -357,7 +358,7 @@ namespace Books.Player_Handbook
         Weight = 10,
         Properties = new List<string>
         {
-          LC.Two_Handed
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -370,8 +371,8 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          LC.Light,
-          string.Format(LC.Thrown,20,60)
+          IC.Light,
+          string.Format(IC.Thrown,20,60)
         },
         Quantity = 1
       },
@@ -384,8 +385,8 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          LC.Light,
-          string.Format(LC.Thrown,20,60)
+          IC.Light,
+          string.Format(IC.Thrown,20,60)
         },
         Quantity = 1
       },
@@ -408,7 +409,7 @@ namespace Books.Player_Handbook
         Weight = 4,
         Properties = new List<string>
         {
-          string.Format(LC.Versatile, "1d8")
+          string.Format(IC.Versatile, "1d8")
         },
         Quantity = 1
       },
@@ -421,7 +422,7 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          LC.Light
+          IC.Light
         },
         Quantity = 1
       },
@@ -434,8 +435,8 @@ namespace Books.Player_Handbook
         Weight = 3,
         Properties = new List<string>
         {
-          string.Format(LC.Thrown,20,60),
-          string.Format(LC.Versatile, "1d8")
+          string.Format(IC.Thrown,20,60),
+          string.Format(IC.Versatile, "1d8")
         },
         Quantity = 1
       },
@@ -448,7 +449,7 @@ namespace Books.Player_Handbook
         Weight = 4,
         Properties = new List<string>
         {
-          string.Format(LC.Versatile, "1d10")
+          string.Format(IC.Versatile, "1d10")
         },
         Quantity = 1
       },
@@ -471,9 +472,9 @@ namespace Books.Player_Handbook
         Weight = 6,
         Properties = new List<string>
         {
-          LC.Heavy,
-          LC.Reach,
-          LC.Two_Handed
+          IC.Heavy,
+          IC.Reach,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -486,8 +487,8 @@ namespace Books.Player_Handbook
         Weight = 7,
         Properties = new List<string>
         {
-          LC.Heavy,
-          LC.Two_Handed
+          IC.Heavy,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -500,8 +501,8 @@ namespace Books.Player_Handbook
         Weight = 6,
         Properties = new List<string>
         {
-          LC.Heavy,
-          LC.Two_Handed
+          IC.Heavy,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -514,9 +515,9 @@ namespace Books.Player_Handbook
         Weight = 6,
         Properties = new List<string>
         {
-          LC.Heavy,
-          LC.Reach,
-          LC.Two_Handed
+          IC.Heavy,
+          IC.Reach,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -529,8 +530,8 @@ namespace Books.Player_Handbook
         Weight = 6,
         Properties = new List<string>
         {
-          LC.Reach,
-          LC.Special
+          IC.Reach,
+          IC.Special
         },
         Quantity = 1
       },
@@ -543,7 +544,7 @@ namespace Books.Player_Handbook
         Weight = 3,
         Properties = new List<string>
         {
-          string.Format(LC.Versatile, "1d10")
+          string.Format(IC.Versatile, "1d10")
         },
         Quantity = 1
       },
@@ -556,8 +557,8 @@ namespace Books.Player_Handbook
         Weight = 10,
         Properties = new List<string>
         {
-          LC.Heavy,
-          LC.Two_Handed
+          IC.Heavy,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -580,9 +581,9 @@ namespace Books.Player_Handbook
         Weight = 18,
         Properties = new List<string>
         {
-          LC.Heavy,
-          LC.Reach,
-          LC.Two_Handed
+          IC.Heavy,
+          IC.Reach,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -595,7 +596,7 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          LC.Finesse
+          IC.Finesse
         },
         Quantity = 1
       },
@@ -608,8 +609,8 @@ namespace Books.Player_Handbook
         Weight = 3,
         Properties = new List<string>
         {
-          LC.Finesse,
-          LC.Light
+          IC.Finesse,
+          IC.Light
         },
         Quantity = 1
       },
@@ -622,8 +623,8 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          LC.Finesse,
-          LC.Light
+          IC.Finesse,
+          IC.Light
         },
         Quantity = 1
       },
@@ -636,8 +637,8 @@ namespace Books.Player_Handbook
         Weight = 4,
         Properties = new List<string>
         {
-          string.Format(LC.Thrown,20,60),
-          string.Format(LC.Versatile, "1d18")
+          string.Format(IC.Thrown,20,60),
+          string.Format(IC.Versatile, "1d18")
         },
         Quantity = 1
       },
@@ -660,7 +661,7 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          string.Format(LC.Versatile, "1d10")
+          string.Format(IC.Versatile, "1d10")
         },
         Quantity = 1
       },
@@ -673,8 +674,8 @@ namespace Books.Player_Handbook
         Weight = 3,
         Properties = new List<string>
         {
-          LC.Finesse,
-          LC.Reach
+          IC.Finesse,
+          IC.Reach
         },
         Quantity = 1
       },
@@ -690,9 +691,9 @@ namespace Books.Player_Handbook
         Weight = 5,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,80,320),
-          LC.Loading,
-          LC.Two_Handed
+          string.Format(IC.Ammunition,80,320),
+          IC.Loading,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -705,8 +706,8 @@ namespace Books.Player_Handbook
         Weight = .25,
         Properties = new List<string>
         {
-          LC.Finesse,
-          string.Format(LC.Thrown,20,60)
+          IC.Finesse,
+          string.Format(IC.Thrown,20,60)
         },
         Quantity = 1
       },
@@ -719,8 +720,8 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,80,320),
-          LC.Two_Handed
+          string.Format(IC.Ammunition,80,320),
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -733,7 +734,7 @@ namespace Books.Player_Handbook
         Weight = 0,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,30,120)
+          string.Format(IC.Ammunition,30,120)
         },
         Quantity = 1
       },
@@ -746,8 +747,8 @@ namespace Books.Player_Handbook
         Weight = 1,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,25,100),
-          LC.Loading
+          string.Format(IC.Ammunition,25,100),
+          IC.Loading
         },
         Quantity = 1
       },
@@ -760,9 +761,9 @@ namespace Books.Player_Handbook
         Weight = 3,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,30,120),
-          LC.Light,
-          LC.Loading
+          string.Format(IC.Ammunition,30,120),
+          IC.Light,
+          IC.Loading
         },
         Quantity = 1
       },
@@ -775,10 +776,10 @@ namespace Books.Player_Handbook
         Weight = 18,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,100,400),
-          LC.Heavy,
-          LC.Loading,
-          LC.Two_Handed
+          string.Format(IC.Ammunition,100,400),
+          IC.Heavy,
+          IC.Loading,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -791,9 +792,9 @@ namespace Books.Player_Handbook
         Weight = 2,
         Properties = new List<string>
         {
-          string.Format(LC.Ammunition,100,400),
-          LC.Heavy,
-          LC.Two_Handed
+          string.Format(IC.Ammunition,100,400),
+          IC.Heavy,
+          IC.Two_Handed
         },
         Quantity = 1
       },
@@ -806,8 +807,8 @@ namespace Books.Player_Handbook
         Weight = 3,
         Properties = new List<string>
         {
-          LC.Special,
-          string.Format(LC.Thrown,5,15)
+          IC.Special,
+          string.Format(IC.Thrown,5,15)
         },
         Quantity = 1
       }
@@ -2046,10 +2047,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You hurl a bubble of acid. Choose one or two creatures you can see within range. If you choose two, they must be within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage." +
 "This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
         Ritual = false
@@ -2060,10 +2061,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a tiny strip of white cloth)",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a tiny strip of white cloth)",
+        Duration = "8 hours",
         Description = "Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points increase by an additional 5 for each slot level above 2nd.",
         Ritual = false
@@ -2074,10 +2075,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a tiny bell and a piece of fine silver wire)",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 minute",
+        Range = "30 feet",
+        Components = "V, S, M (a tiny bell and a piece of fine silver wire)",
+        Duration = "8 hours",
         Description = "You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is mental or audible." +
 "A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping." +
 "An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.",
@@ -2089,10 +2090,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one." +
 "Aquatic Adaptation. You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed." +
 "Change Appearance. You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can’t appear as a creature of a different size than you, and your basic shape stays the same; if you’re bipedal, you can’t use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again." +
@@ -2105,10 +2106,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a morsel of food)",
-        Duration = "Duration: 24 hours",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a morsel of food)",
+        Duration = "24 hours",
         Description = "This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast’s Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell’s duration. If you or one of your companions harms the target, the spell ends." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.",
         Ritual = false
@@ -2119,10 +2120,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a morsel of food)",
-        Duration = "Duration: 24 hours",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a morsel of food)",
+        Duration = "24 hours",
         Description = "By means of this spell, you use an animal to deliver a message. Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat. You specify a location, which you must have visited, and a recipient who matches a general description, such as “a man or woman dressed in the uniform of the town guard” or “a red-haired dwarf wearing a pointed hat.” You also speak a message of up to twenty-five words. The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals." +
 "When the messenger arrives, it delivers your message to the creature that you described, replicating the sound of your voice. The messenger speaks only to a creature matching the description you gave. If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell." +
 "At Higher Levels. If you cast this spell using a spell slot of 3nd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.",
@@ -2134,10 +2135,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 24 hours",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 24 hours",
         Description = "Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a Large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your action to transform affected creatures into new forms." +
 "The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target’s game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 hit points, it isn’t knocked unconscious. The creature is limited in the actions it can perform by the nature of its new form, and it can’t speak or cast spells." +
 "The target’s gear melds into the new form. The target can’t activate, wield, or otherwise benefit from any of its equipment.",
@@ -2149,10 +2150,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 10 feet",
-        Components = "Components: V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 minute",
+        Range = "10 feet",
+        Components = "V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)",
+        Duration = "Instantaneous",
         Description = "This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the DM has the creature’s game statistics)." +
 "On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete." +
 "The creature is under your control for 24 hours, after which it stops obeying any command you’ve given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one." +
@@ -2165,10 +2166,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "Objects come to life at your command. Choose up to ten nonmagical objects within range that are not being worn or carried. Medium targets count as two objects, Large targets count as four objects, Huge targets count as eight objects. You can’t animate any object larger than Huge. Each target animates and becomes a creature under your control until the spell ends or until reduced to 0 hit points." +
 "As a bonus action, you can mentally command any creature you made with this spell if the creature is within 500 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete." +
 "Animated Object Statistics" +
@@ -2189,10 +2190,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (10-foot radius)",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Self (10-foot radius)",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "A shimmering barrier extends out from you in a 10-foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration." +
 "The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier." +
 "If you move so that an affected creature is forced to pass through the barrier, the spell ends.",
@@ -2204,10 +2205,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (10-foot-radius sphere)",
-        Components = "Components: V, S, M (a pinch of powdered iron or iron filings)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Self (10-foot-radius sphere)",
+        Components = "V, S, M (a pinch of powdered iron or iron filings)",
+        Duration = "Concentration, up to 1 hour",
         Description = "A 10-foot-radius invisible sphere of antimagic surrounds you. This area is divorced from the magical energy that suffuses the multiverse. Within the sphere, spells can’t be cast, summoned creatures disappear, and even magic items become mundane. Until the spell ends, the sphere moves with you, centered on you." +
 "Spells and other magical effects, except those created by an artifact or a deity, are suppressed in the sphere and can’t protrude into it. A slot expended to cast a suppressed spell is consumed. While an effect is suppressed, it doesn’t function, but the time it spends suppressed counts against its duration." +
 "Targeted Effects. Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target." +
@@ -2226,10 +2227,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 hour",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect)",
-        Duration = "Duration: 10 days",
+        CastingTime = "1 hour",
+        Range = "60 feet",
+        Components = "V, S, M (either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect)",
+        Duration = "10 days",
         Description = "This spell attracts or repels creatures of your choice. You target something within range, either a Huge or smaller object or creature or an area that is no larger than a 200-foot cube. Then specify a kind of intelligent creature, such as red dragons, goblins, or vampires. You invest the target with an aura that either attracts or repels the specified creatures for the duration. Choose antipathy or sympathy as the aura’s effect." +
 "Antipathy. The enchantment causes creatures of the kind you designated to feel an intense urge to leave the area and avoid the target. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or become frightened. The creature remains frightened while it can see the target or is within 60 feet of it. While frightened by the target, the creature must use its movement to move to the nearest safe spot from which it can’t see the target. If the creature moves more than 60 feet from the target and can’t see it, the creature is no longer frightened, but the creature becomes frightened again if it regains sight of the target or moves within 60 feet of it." +
 "Sympathy. The enchantment causes the specified creatures to feel an intense urge to approach the target while within 60 feet of it or able to see it. When such a creature can see the target or comes within 60 feet of it, the creature must succeed on a Wisdom saving throw or use its movement on each of its turns to enter the area or move within reach of the target. When the creature has done so, it can’t willingly move away from the target." +
@@ -2244,10 +2245,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a bit of bat fur)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a bit of bat fur)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You create an invisible, magical eye within range that hovers in the air for the duration." +
 "You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction." +
 "As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can’t enter another plane of existence. A solid barrier blocks the eye’s movement, but the eye can pass through an opening as small as 1 inch in diameter.",
@@ -2259,10 +2260,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 500 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "500 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You create linked teleportation portals that remain open for the duration. Choose two points on the ground that you can see, one point within 10 feet of you and one point within 500 feet of you. A circular portal, 10 feet in diameter, opens over each point. If the portal would open in the space occupied by a creature, the spell fails, and the casting is lost." +
 "The portals are two-dimensional glowing rings filled with mist, hovering inches from the ground and perpendicular to it at the points you choose. A ring is visible only from one side (your choice), which is the side that functions as a portal." +
 "Any creature or object entering the portal exits from the other portal as if the two were adjacent to each other; passing through a portal from the nonportal side has no effect. The mist that fills each portal is opaque and blocks vision through it. On your turn, you can rotate the rings as a bonus action so that the active side faces in a different direction.",
@@ -2274,10 +2275,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (gold dust worth at least 25 gp, which the spell consumes)",
-        Duration = "Duration: Until dispelled",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (gold dust worth at least 25 gp, which the spell consumes)",
+        Duration = "Until dispelled",
         Description = "You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes." +
 "While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10.",
         Ritual = false
@@ -2288,10 +2289,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a cup of water)",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (a cup of water)",
+        Duration = "1 hour",
         Description = "A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear. You gain 5 temporary hit points for the duration. If a creature hits you with a melee attack while you have these hit points, the creature takes 5 cold damage." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st.",
         Ritual = false
@@ -2302,10 +2303,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (10-foot radius)",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Self (10-foot radius)",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You invoke the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and batter all creatures within 10 feet of you. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 necrotic damage and can’t take reactions until its next turn. On a successful save, the creature takes half damage, but suffers no other effect." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
         Ritual = false
@@ -2316,10 +2317,10 @@ namespace Books.Player_Handbook
         Level = 9,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 hour",
-        Range = "Range: 10 feet",
-        Components = "Components: V, S, M (for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes)",
-        Duration = "Duration: Special",
+        CastingTime = "1 hour",
+        Range = "10 feet",
+        Components = "V, S, M (for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes)",
+        Duration = "Special",
         Description = "You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell fails and the casting is wasted if you are already on that plane). The material body you leave behind is unconscious and in a state of suspended animation; it doesn’t need food or air and doesn’t age." +
 "Your astral body resembles your mortal form in almost every way, replicating your game statistics and possessions. The principal difference is the addition of a silvery cord that extends from between your shoulder blades and trails behind you, fading to invisibility after 1 foot. This cord is your tether to your material body. As long as the tether remains intact, you can find your way home. If the cord is cut—something that can happen only when an effect specifically states that it does—your soul and body are separated, killing you instantly." +
 "Your astral form can freely travel through the Astral Plane and can pass through portals there leading to any other plane. If you enter a new plane or return to the plane you were on when casting this spell, your body and possessions are transported along the silver cord, allowing you to re-enter your body as you enter the new plane. Your astral form is a separate incarnation. Any damage or other effects that apply to it have no effect on your physical body, nor do they persist when you return to it." +
@@ -2334,10 +2335,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (specially marked sticks, bones, or similar tokens worth at least 25 gp)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 minute",
+        Range = "Self",
+        Components = "V, S, M (specially marked sticks, bones, or similar tokens worth at least 25 gp)",
+        Duration = "Instantaneous",
         Description = "By casting gem-inlaid sticks, rolling dragon bones, laying out ornate cards, or employing some other divining tool, you receive an omen from an otherworldly entity about the results of a specific course of action that you plan to take within the next 30 minutes. The DM chooses from the following possible omens:" +
 "Weal, for good results" +
 "Woe, for bad results" +
@@ -2353,10 +2354,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (30-foot radius)",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "Self (30-foot radius)",
+        Components = "V",
+        Duration = "Concentration, up to 10 minutes",
         Description = "Life-preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can’t be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points.",
         Ritual = false
       },
@@ -2366,10 +2367,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (30-foot radius)",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "Self (30-foot radius)",
+        Components = "V",
+        Duration = "Concentration, up to 10 minutes",
         Description = "Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can’t become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: blinded, charmed, deafened, frightened, paralyzed, poisoned, and stunned.",
         Ritual = false
       },
@@ -2379,10 +2380,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (30-foot radius)",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self (30-foot radius)",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points.",
         Ritual = false
       },
@@ -2392,10 +2393,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 8 hours",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (an agate worth at least 1,000 gp, which the spell consumes)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "8 hours",
+        Range = "Touch",
+        Components = "V, S, M (an agate worth at least 1,000 gp, which the spell consumes)",
+        Duration = "Instantaneous",
         Description = "After spending the casting time tracing magical pathways within a precious gemstone, you touch a Huge or smaller beast or plant. The target must have either no Intelligence score or an Intelligence of 3 or less. The target gains an Intelligence of 10. The target also gains the ability to speak one language you know. If the target is a plant, it gains the ability to move its limbs, roots, vines, creepers, and so forth, and it gains senses similar to a human’s. Your DM chooses statistics appropriate for the awakened plant, such as the statistics for the awakened shrub or the awakened tree." +
 "The awakened beast or plant is charmed by you for 30 days or until you or your companions do anything harmful to it. When the charmed condition ends, the awakened creature chooses whether to remain friendly to you, based on how you treated it while it was charmed.",
         Ritual = false
@@ -2409,10 +2410,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a drop of blood)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a drop of blood)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
         Ritual = false
@@ -2423,10 +2424,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points or fewer, you banish it. If the target is native to a different plane of existence than the one you’re on, the target disappears, returning to its home plane. If the target is native to the plane you’re on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied.",
         Ritual = false
       },
@@ -2436,10 +2437,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (an item distasteful to the target)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (an item distasteful to the target)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You attempt to send one creature that you can see within range to another plane of existence. The target must succeed on a Charisma saving throw or be banished." +
 "If the target is native to the plane of existence you’re on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied." +
 "If the target is native to a different plane of existence than the one you’re on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn’t return." +
@@ -2452,10 +2453,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a handful of oak bark)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a handful of oak bark)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You touch a willing creature. Until the spell ends, the target’s skin has a rough, bark-like appearance, and the target’s AC can’t be less than 16, regardless of what kind of armor it is wearing.",
         Ritual = false
       },
@@ -2465,10 +2466,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.",
         Ritual = false
       },
@@ -2478,10 +2479,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast’s eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast’s senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.",
         Ritual = true
       },
@@ -2491,10 +2492,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:" +
 "Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score." +
 "While cursed, the target has disadvantage on attack rolls against you." +
@@ -2510,10 +2511,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S, M (an eggshell and a snakeskin glove)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S, M (an eggshell and a snakeskin glove)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell’s duration, and it moves at your command, mimicking the movements of your own hand." +
 "The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn’t fill its space." +
 "When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it." +
@@ -2530,10 +2531,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "90 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You create a vertical wall of whirling, razor-sharp blades made of magical energy. The wall appears within range and lasts for the duration. You can make a straight wall up to 100 feet long, 20 feet high, and 5 feet thick, or a ringed wall up to 60 feet in diameter, 20 feet high, and 5 feet thick. The wall provides three-quarters cover to creatures behind it, and its space is difficult terrain." +
 "When a creature enters the wall’s area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes 6d10 slashing damage. On a successful save, the creature takes half as much damage.",
         Ritual = false
@@ -2544,10 +2545,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 round",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "1 round",
         Description = "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
         Ritual = false
       },
@@ -2557,10 +2558,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a sprinkling of holy water)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a sprinkling of holy water)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
         Ritual = false
@@ -2571,10 +2572,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs." +
 "If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it." +
 "If you target a nonmagical plant that isn’t a creature, such as a tree or shrub, it doesn’t make a saving throw; it simply withers and dies." +
@@ -2587,10 +2588,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "The next time you hit a creature with a melee weapon attack during this spell’s duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded until the spell ends." +
 "A creature blinded by this spell makes another Constitution saving throw at the end of each of its turns. On a successful save, it is no longer blinded.",
         Ritual = false
@@ -2601,10 +2602,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V",
+        Duration = "1 minute",
         Description = "You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
         Ritual = false
@@ -2615,10 +2616,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "1 minute",
         Description = "Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action." +
 "While on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can’t see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive you or interact with you, unless they have the ability to do so.",
         Ritual = false
@@ -2629,10 +2630,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn’t rely on sight, as with blindsight, or can see through illusions, as with truesight.",
         Ritual = false
       },
@@ -2642,10 +2643,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 2d6 radiant damage to the target, which becomes visible if it’s invisible, and the target sheds dim light in a 5-foot radius and can’t become invisible until the spell ends." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd.",
         Ritual = false
@@ -2656,10 +2657,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (15-foot cone)",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Self (15-foot cone)",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one." +
 "The fire ignites any flammable objects in the area that aren’t being worn or carried." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
@@ -2674,10 +2675,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "A storm cloud appears in the shape of a cylinder that is 10 feet tall with a 60-foot radius, centered on a point you can see within range directly above you. The spell fails if you can’t see a point in the air where the storm cloud could appear (for example, if you are in a room that can’t accommodate the cloud)." +
 "When you cast the spell, choose a point you can see under the cloud. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 3d10 lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one." +
 "If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell’s damage increases by 1d10." +
@@ -2690,10 +2691,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects." +
 "You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime." +
 "Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.",
@@ -2705,10 +2706,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (a bit of fur; a piece of amber, glass, or a crystal rod; and three silver pins)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (a bit of fur; a piece of amber, glass, or a crystal rod; and three silver pins)",
+        Duration = "Instantaneous",
         Description = "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts." +
 "A target must make a Dexterity saving throw. The target takes 10d8 lightning damage on a failed save, or half as much damage on a successful one." +
 "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th.",
@@ -2720,10 +2721,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "1 hour",
         Description = "You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.",
         Ritual = false
@@ -2734,10 +2735,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 round",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "1 round",
         Description = "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can’t regain hit points until the start of your next turn. Until then, the hand clings to the target." +
 "If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn." +
 "This spell’s damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).",
@@ -2749,10 +2750,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S, M (a diamond worth at least 50 gp)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "90 feet",
+        Components = "V, S, M (a diamond worth at least 50 gp)",
+        Duration = "Instantaneous",
         Description = "You hurl a 4-inch-diameter sphere of energy at a creature that you can see within range. You choose acid, cold, fire, lightning, poison, or thunder for the type of orb you create, and then make a ranged spell attack against the target. If the attack hits, the creature takes 3d8 damage of the type you chose." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.",
         Ritual = false
@@ -2763,18 +2764,18 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (the powder of a crushed black pearl worth at least 500 gp)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (the powder of a crushed black pearl worth at least 500 gp)",
+        Duration = "Instantaneous",
         Description = "A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range. Each creature in that area must make a Constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one." +
 "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th." +
 "Circle of Power" +
 "5th-level abjuration" +
-"Casting Time: 1 action" +
-"Range: Self (30-foot radius)" +
-"Components: V" +
-"Duration: Concentration, up to 10 minutes" +
+"1 action" +
+"Self (30-foot radius)" +
+"V" +
+"Concentration, up to 10 minutes" +
 "Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw.",
         Ritual = false
       },
@@ -2784,10 +2785,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: 1 mile",
-        Components = "Components: V, S, M (a focus worth at least 100 gp, either a jeweled horn for hearing or a glass eye for seeing)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "10 minutes",
+        Range = "1 mile",
+        Components = "V, S, M (a focus worth at least 100 gp, either a jeweled horn for hearing or a glass eye for seeing)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can’t be attacked or otherwise interacted with." +
 "When you cast the spell, you choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As your action, you can switch between seeing and hearing." +
 "A creature that can see the sensor (such as a creature benefiting from see invisibility or truesight) sees a luminous, intangible orb about the size of your fist.",
@@ -2799,10 +2800,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 hour",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold the creature being cloned, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 hour",
+        Range = "Touch",
+        Components = "V, S, M (a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold the creature being cloned, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water)",
+        Duration = "Instantaneous",
         Description = "This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside the vessel used in the spell’s casting and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed." +
 "At any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original’s equipment. The original creature’s physical remains, if they still exist, become inert and can’t thereafter be restored to life, since the creature’s soul is elsewhere.",
         Ritual = false
@@ -2813,10 +2814,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a sliver of glass)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a sliver of glass)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell’s area for the first time on a turn or starts its turn there." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd.",
         Ritual = false
@@ -2827,10 +2828,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured." +
 "When a creature enters the spell’s area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 poison damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don’t need to breathe." +
 "The fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings." +
@@ -2843,10 +2844,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (15-foot cone)",
-        Components = "Components: V, S, M (a pinch of powder or sand that is colored red, yellow, and blue)",
-        Duration = "Duration: 1 round",
+        CastingTime = "1 action",
+        Range = "Self (15-foot cone)",
+        Components = "V, S, M (a pinch of powder or sand that is colored red, yellow, and blue)",
+        Duration = "1 round",
         Description = "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can affect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can’t see)." +
 "Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the end of your next turn. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st.",
@@ -2858,10 +2859,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V",
-        Duration = "Duration: 1 round",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V",
+        Duration = "1 round",
         Description = "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn’t understand your language, or if your command is directly harmful to it." +
 "Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can’t follow your command, the spell ends." +
 "Approach. The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you." +
@@ -2878,10 +2879,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (incense and a vial of holy or unholy water)",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 minute",
+        Range = "Self",
+        Components = "V, S, M (incense and a vial of holy or unholy water)",
+        Duration = "1 minute",
         Description = "You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question." +
 "Divine beings aren’t necessarily omniscient, so you might receive “unclear” as an answer if a question pertains to information that lies beyond the deity’s knowledge. In a case where a one-word answer could be misleading or contrary to the deity’s interests, the DM might offer a short phrase as an answer instead." +
 "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret.",
@@ -2893,10 +2894,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 minute",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You briefly become one with nature and gain knowledge of the surrounding territory. In the outdoors, the spell gives you knowledge of the land within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn’t function where nature has been replaced by construction, such as in dungeons and towns." +
 "You instantly gain knowledge of up to three facts of your choice about any of the following subjects as they relate to the area:" +
 "terrain and bodies of water" +
@@ -2913,18 +2914,18 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: 30 feet",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "30 feet",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "You attempt to compel a creature into a duel. One creature that you can see within range must make a Wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you; if it succeeds on this saving throw, this spell doesn’t restrict the target’s movement for that turn." +
 "The spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target." +
 "Comprehend Languages" +
 "1st-level divination (ritual)" +
-"Casting Time: 1 action" +
-"Range: Self" +
-"Components: V, S, M (a pinch of soot and salt)" +
-"Duration: 1 hour" +
+"1 action" +
+"Self" +
+"V, S, M (a pinch of soot and salt)" +
+"1 hour" +
 "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text." +
 "This spell doesn’t decode secret messages in a text or a glyph, such as an arcane sigil, that isn’t part of a written language.",
         Ritual = false
@@ -2935,10 +2936,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can’t be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you. Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take its action before it moves. After moving in this way, it can make another Wisdom saving throw to try to end the effect." +
 "A target isn’t compelled to move into an obviously deadly hazard, such as a fire or pit, but it will provoke opportunity attacks to move in the designated direction.",
         Ritual = false
@@ -2949,10 +2950,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (60-foot cone)",
-        Components = "Components: V, S, M (a small crystal or glass cone)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Self (60-foot cone)",
+        Components = "V, S, M (a small crystal or glass cone)",
+        Duration = "Instantaneous",
         Description = "A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one." +
 "A creature killed by this spell becomes a frozen statue until it thaws." +
 "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.",
@@ -2964,10 +2965,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S, M (three nut shells)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "90 feet",
+        Components = "V, S, M (three nut shells)",
+        Duration = "Concentration, up to 1 minute",
         Description = "This spell assaults and twists creatures’ minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it." +
 "An affected target can’t take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn." +
 "d10	Behavior" +
@@ -2985,10 +2986,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You summon fey spirits that take the form of beasts and appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:" +
 "One beast of challenge rating 2 or lower" +
 "Two beasts of challenge rating 1 or lower" +
@@ -3006,10 +3007,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (60-foot cone)",
-        Components = "Components: V, S, M (one piece of ammunition or a thrown weapon)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Self (60-foot cone)",
+        Components = "V, S, M (one piece of ammunition or a thrown weapon)",
+        Duration = "Instantaneous",
         Description = "You throw a nonmagical weapon or fire a piece of nonmagical ammunition into the air to create a cone of identical weapons that shoot forward and then disappear. Each creature in a 60-foot cone must succeed on a Dexterity saving throw. A creature takes 3d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the weapon or ammunition used as a component.",
         Ritual = false
       },
@@ -3019,10 +3020,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 minute",
+        Range = "90 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You summon a celestial of challenge rating 4 or lower, which appears in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends." +
 "The celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don’t violate its alignment. If you don’t issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions." +
 "The DM has the celestial’s statistics." +
@@ -3035,10 +3036,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S, M (burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 minute",
+        Range = "90 feet",
+        Components = "V, S, M (burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends." +
 "The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don’t issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions." +
 "If your concentration is broken, the elemental doesn’t disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can’t be dismissed by you, and it disappears 1 hour after you summoned it." +
@@ -3052,10 +3053,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 minute",
+        Range = "90 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends." +
 "The fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don’t violate its alignment. If you don’t issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions." +
 "If your concentration is broken, the fey creature doesn’t disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can’t be dismissed by you, and it disappears 1 hour after you summoned it." +
@@ -3069,10 +3070,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 minute",
+        Range = "90 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You summon elementals that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:" +
 "One elemental of challenge rating 2 or lower" +
 "Two elementals of challenge rating 1 or lower" +
@@ -3090,10 +3091,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (one piece of ammunition or one thrown weapon)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (one piece of ammunition or one thrown weapon)",
+        Duration = "Instantaneous",
         Description = "You fire a piece of nonmagical ammunition from a ranged weapon or throw a nonmagical weapon into the air and choose a point within range. Hundreds of duplicates of the ammunition or weapon fall in a volley from above and then disappear. Each creature in a 40-foot-radius, 20-foot-high cylinder centered on that point must make a Dexterity saving throw. A creature takes 8d8 damage on a failed save, or half as much damage on a successful one. The damage type is the same as that of the ammunition or weapon.",
         Ritual = false
       },
@@ -3103,10 +3104,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (one holly berry per creature summoned)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (one holly berry per creature summoned)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You summon fey creatures that appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:" +
 "One fey creature of challenge rating 2 or lower" +
 "Two fey creatures of challenge rating 1 or lower" +
@@ -3124,10 +3125,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 minute",
+        Range = "Self",
+        Components = "V",
+        Duration = "1 minute",
         Description = "You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can’t take actions, can’t understand what other creatures say, can’t read, and speak only in gibberish. A greater restoration spell cast on you ends this effect." +
 "On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as “yes,” “no,” “maybe,” “never,” “irrelevant,” or “unclear” (if the entity doesn’t know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.",
         Ritual = true
@@ -3138,10 +3139,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
+        CastingTime = "1 action",
+        Range = "Touch",
         Components = "Component: V, S",
-        Duration = "Duration: 7 days",
+        Duration = "7 days",
         Description = "Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, the target is poisoned." +
 "At the end of each of the poisoned target’s turns, the target must make a Constitution saving throw. If the target succeeds on three of these saves, it is no longer poisoned, and the spell ends. If the target fails three of these saves, the target is no longer poisoned, but choose one of the diseases below. The target is subjected to the chosen disease for the spell’s duration." +
 "Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease’s effects apply to it." +
@@ -3159,10 +3160,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp)",
-        Duration = "Duration: 10 days",
+        CastingTime = "10 minutes",
+        Range = "Self",
+        Components = "V, S, M (a statuette of yourself carved from ivory and decorated with gems worth at least 1,500 gp)",
+        Duration = "10 days",
         Description = "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell—called the contingent spell—as part of casting contingency, expending spell slots for both, but the contingent spell doesn’t come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid." +
 "The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to, and then contingency ends." +
 "The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
@@ -3174,10 +3175,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (ruby dust worth 50 gp, which the spell consumes)",
-        Duration = "Duration: Until dispelled",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (ruby dust worth 50 gp, which the spell consumes)",
+        Duration = "Until dispelled",
         Description = "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn’t use oxygen. A continual flame can be covered or hidden but not smothered or quenched.",
         Ritual = false
       },
@@ -3187,10 +3188,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 300 feet",
-        Components = "Components: V, S, M (a drop of water and a pinch of dust)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "300 feet",
+        Components = "V, S, M (a drop of water and a pinch of dust)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one." +
 "Flood. You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land." +
 "If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave’s path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing." +
@@ -3208,10 +3209,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: Self (5-mile radius)",
-        Components = "Components: V, S, M (burning incense and bits of earth and wood mixed in water)",
-        Duration = "Duration: Concentration, up to 8 hours",
+        CastingTime = "10 minutes",
+        Range = "Self (5-mile radius)",
+        Components = "V, S, M (burning incense and bits of earth and wood mixed in water)",
+        Duration = "Concentration, up to 8 hours",
         Description = "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don’t have a clear path to the sky ends the spell early." +
 "When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 × 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal." +
 "When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction." +
@@ -3245,10 +3246,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 5 feet",
-        Components = "Components: V, S, M (four or more arrows or bolts)",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 action",
+        Range = "5 feet",
+        Components = "V, S, M (four or more arrows or bolts)",
+        Duration = "8 hours",
         Description = "You plant four pieces of nonmagical ammunition—arrows or crossbow bolts—in the ground within range and lay magic upon them to protect an area. Until the spell ends, whenever a creature other than you comes within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 1d6 piercing damage. The piece of ammunition is then destroyed. The spell ends when no ammunition remains." +
 "When you cast this spell, you can designate any creatures you choose, and the spell ignores them." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd.",
@@ -3260,10 +3261,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 reaction, which you take when you see a creature within 60 feet of you casting a spell",
-        Range = "Range: 60 feet",
-        Components = "Components: S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 reaction, which you take when you see a creature within 60 feet of you casting a spell",
+        Range = "60 feet",
+        Components = "S",
+        Duration = "Instantaneous",
         Description = "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a success, the creature’s spell fails and has no effect." +
 "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.",
         Ritual = false
@@ -3274,10 +3275,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn’t go bad.",
         Ritual = false
       },
@@ -3287,10 +3288,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a drop of water if creating water or a few grains of sand if destroying it)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a drop of water if creating water or a few grains of sand if destroying it)",
+        Duration = "Instantaneous",
         Description = "You either create or destroy water." +
 "Create Water. You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area." +
 "Destroy Water. You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range." +
@@ -3303,10 +3304,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 10 feet",
-        Components = "Components: V, S, M (one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 minute",
+        Range = "10 feet",
+        Components = "V, S, M (one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150 gp black onyx stone for each corpse)",
+        Duration = "Instantaneous",
         Description = "You can cast this spell only at night. Choose up to three corpses of Medium or Small humanoids within range. Each corpse becomes a ghoul under your control. (The DM has game statistics for these creatures.)" +
 "As a bonus action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete." +
 "The creature is under your control for 24 hours, after which it stops obeying any command you have given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell, rather than animating new ones." +
@@ -3319,11 +3320,11 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a tiny piece of matter of the same type of the item you plan to create)",
-        Duration = "Duration: Special",
-        Description = "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before." +
+        CastingTime = "1 minute",
+        Range = "30 feet",
+        Components = "V, S, M (a tiny piece of matter of the same type of the item you plan to create)",
+        Duration = "Special",
+        Description = "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before." +
 "The duration depends on the object’s material. If the object is composed of multiple materials, use the shortest duration." +
 "Material	Duration" +
 "Vegetable matter	1 day" +
@@ -3341,10 +3342,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes." +
 "The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach." +
 "On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.",
@@ -3356,10 +3357,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "Holy power radiates from you in an aura with a 30-foot radius, awakening boldness in friendly creatures. Until the spell ends, the aura moves with you, centered on you. While in the aura, each nonhostile creature in the aura (including you) deals an extra 1d4 radiant damage when it hits with a weapon attack.",
         Ritual = false
       },
@@ -3369,10 +3370,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
         Ritual = false
@@ -3386,10 +3387,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S, M (a bit of phosphorus or wychwood, or a glowworm)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S, M (a bit of phosphorus or wychwood, or a glowworm)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius." +
 "As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell’s range.",
         Ritual = false
@@ -3400,10 +3401,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, M (bat fur and a drop of pitch or piece of coal)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, M (bat fur and a drop of pitch or piece of coal)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can’t see through this darkness, and nonmagical light can’t illuminate it." +
 "If the point you choose is on an object you are holding or one that isn’t being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness." +
 "If any of this spell’s area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.",
@@ -3415,10 +3416,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (either a pinch of dried carrot or an agate)",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (either a pinch of dried carrot or an agate)",
+        Duration = "8 hours",
         Description = "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
         Ritual = false
       },
@@ -3428,10 +3429,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "1 hour",
         Description = "A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet." +
 "If you chose a point on an object you are holding or one that isn’t being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light." +
 "If any of this spell’s area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled.",
@@ -3443,10 +3444,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "8 hours",
         Description = "You touch a creature and grant it a measure of protection from death." +
 "The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends." +
 "If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
@@ -3458,10 +3459,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (a tiny ball of bat guano and sulfur)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (a tiny ball of bat guano and sulfur)",
+        Duration = "Concentration, up to 1 minute",
         Description = "A beam of yellow light flashes from your pointing finger, then condenses to linger at a chosen point within range as a glowing bead for the duration. When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one." +
 "The spell’s base damage is 12d6. If at the end of your turn the bead has not yet detonated, the damage increases by 1d6." +
 "If the glowing bead is touched before the interval has expired, the creature touching it must make a Dexterity saving throw. On a failed save, the spell ends immediately, causing the bead to erupt in flame. On a successful save, the creature can throw the bead up to 40 feet. When it strikes a creature or a solid object, the spell ends, and the bead explodes." +
@@ -3475,10 +3476,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: S",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "S",
+        Duration = "1 hour",
         Description = "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side." +
 "Each time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
         Ritual = false
@@ -3489,10 +3490,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (30-foot radius)",
-        Components = "Components: V",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Self (30-foot radius)",
+        Components = "V",
+        Duration = "Instantaneous",
         Description = "You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn’t knocked prone.",
         Ritual = false
       },
@@ -3502,10 +3503,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated." +
 "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
         Ritual = false
@@ -3516,10 +3517,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any." +
 "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
         Ritual = true
@@ -3530,10 +3531,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a yew leaf)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (a yew leaf)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case." +
 "The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
         Ritual = true
@@ -3544,10 +3545,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a copper piece)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (a copper piece)",
+        Duration = "Concentration, up to 1 minute",
         Description = "For the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn’t speak any language, the creature is unaffected." +
 "You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature’s thoughts or attempt to probe deeper into the same creature’s mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature’s thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends." +
 "Questions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation." +
@@ -3561,10 +3562,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 500 feet",
-        Components = "Components: V",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "500 feet",
+        Components = "V",
+        Duration = "Instantaneous",
         Description = "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as “200 feet straight downward” or “upward to the northwest at a 45-degree angle, 300 feet.”" +
 "You can bring along objects as long as their weight doesn’t exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell." +
 "If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.",
@@ -3576,10 +3577,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "1 hour",
         Description = "You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can’t change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you." +
 "The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair." +
 "To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.",
@@ -3591,10 +3592,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a lodestone and a pinch of dust)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a lodestone and a pinch of dust)",
+        Duration = "Instantaneous",
         Description = "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force." +
 "A creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 10d6 + 40 force damage. The target is disintegrated if this damage leaves it with 0 hit points." +
 "A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell." +
@@ -3608,10 +3609,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (holy water or powdered silver and iron)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (holy water or powdered silver and iron)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you." +
 "You can end the spell early by using either of the following special functions." +
 "Break Enchantment. As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures." +
@@ -3624,10 +3625,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a successful check, the spell ends." +
 "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell’s level is equal to or less than the level of the spell slot you used.",
         Ritual = false
@@ -3638,10 +3639,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V",
+        Duration = "Instantaneous",
         Description = "You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must make a Wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn’t move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn’t have to move away. A deafened creature automatically succeeds on the save." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
         Ritual = false
@@ -3652,10 +3653,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp, which the spell consumes)",
+        Duration = "Instantaneous",
         Description = "Your magic and an offering put you in contact with a god or a god’s servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen." +
 "The spell doesn’t take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion." +
 "If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
@@ -3667,10 +3668,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.",
         Ritual = false
       },
@@ -3680,10 +3681,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: 30 feet",
-        Components = "Components: V",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 bonus action",
+        Range = "30 feet",
+        Components = "V",
+        Duration = "Instantaneous",
         Description = "You utter a divine word, imbued with the power that shaped the world at the dawn of creation. Choose any number of creatures you can see within range. Each creature that can hear you must make a Charisma saving throw. On a failed save, a creature suffers an effect based on its current hit points:" +
 "50 hit points or fewer: deafened for 1 minute" +
 "40 hit points or fewer: deafened and blinded for 10 minutes" +
@@ -3698,10 +3699,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You attempt to beguile a beast that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw." +
 "While the beast is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability." +
 "You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well." +
@@ -3715,10 +3716,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You attempt to beguile a creature that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw." +
 "While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability." +
 "You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well." +
@@ -3732,10 +3733,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw." +
 "While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability." +
 "You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well." +
@@ -3749,10 +3750,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a sapphire worth 1,000 gp)",
-        Duration = "Duration: Until dispelled",
+        CastingTime = "1 minute",
+        Range = "Touch",
+        Components = "V, S, M (a sapphire worth 1,000 gp)",
+        Duration = "Until dispelled",
         Description = "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire." +
 "At any time thereafter, you can use your action to speak the item’s name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends." +
 "If another creature is holding or carrying the item, crushing the sapphire doesn’t transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment." +
@@ -3765,10 +3766,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Special",
-        Components = "Components: V, S, M (a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird)",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 minute",
+        Range = "Special",
+        Components = "V, S, M (a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird)",
+        Duration = "8 hours",
         Description = "This spell shapes a creature’s dreams. Choose a creature known to you as the target of this spell. The target must be on the same plane of existence as you. Creatures that don’t sleep, such as elves, can’t be contacted by this spell. You, or a willing creature you touch, enters a trance state, acting as a messenger. While in the trance, the messenger is aware of his or her surroundings, but can’t take actions or move." +
 "If the target is asleep, the messenger appears in the target’s dreams and can converse with the target as long as it remains asleep, through the duration of the spell. The messenger can also shape the environment of the dream, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the effect of the spell early. The target recalls the dream perfectly upon waking. If the target is awake when you cast the spell, the messenger knows it, and can either end the trance (and the spell) or wait for the target to fall asleep, at which point the messenger appears in the target’s dreams." +
 "You can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a Wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target’s sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 3d6 psychic damage." +
@@ -3781,10 +3782,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "Whispering to the spirits of nature, you create one of the following effects within range:" +
 "You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round." +
 "You instantly make a flower blossom, a seed pod open, or a leaf bud bloom." +
@@ -3801,10 +3802,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 500 feet",
-        Components = "Components: V, S, M (a pinch of dirt, a piece of rock, and a lump of clay)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "500 feet",
+        Components = "V, S, M (a pinch of dirt, a piece of rock, and a lump of clay)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area." +
 "The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature’s concentration is broken." +
 "When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone." +
@@ -3820,10 +3821,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage." +
 "The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
         Ritual = false
@@ -3834,10 +3835,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits." +
 "At Higher Levels. When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4.",
         Ritual = false
@@ -3848,10 +3849,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (fur or a feather from a beast)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (fur or a feather from a beast)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends." +
 "Bear’s Endurance. The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends." +
 "Bull’s Strength. The target has advantage on Strength checks, and his or her carrying capacity doubles." +
@@ -3868,10 +3869,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a pinch of powdered iron)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a pinch of powdered iron)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect." +
 "If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once." +
 "Enlarge. The target’s size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn’t enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target’s weapons also grow to match its new size. While these weapons are enlarged, the target’s attacks with them deal 1d4 extra damage." +
@@ -3884,10 +3885,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away." +
 "While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed." +
 "At Higher Levels. If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
@@ -3899,10 +3900,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "90 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain." +
 "A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself." +
 "When the spell ends, the conjured plants wilt away.",
@@ -3914,10 +3915,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "1 minute",
         Description = "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can’t be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are incapacitated or can no longer speak.",
         Ritual = false
       },
@@ -3927,10 +3928,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Up to 8 hours",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Up to 8 hours",
         Description = "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can’t see anything more than 60 feet away." +
 "While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren’t on the Ethereal Plane can’t perceive you and can’t interact with you, unless a special ability or magic has given them the ability to do so." +
 "You ignore all objects and effects that aren’t on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from." +
@@ -3945,10 +3946,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S, M (a piece of tentacle from a giant octopus or a giant squid)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "90 feet",
+        Components = "V, S, M (a piece of tentacle from a giant octopus or a giant squid)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain." +
 "When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage." +
 "A creature restrained by the tentacles can use its action to make a Strength or Dexterity check (its choice) against your spell save DC. On a success, it frees itself.",
@@ -3960,10 +3961,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.",
         Ritual = false
       },
@@ -3973,10 +3974,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "For the spell’s duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can’t target a creature again if it has succeeded on a saving throw against this casting of eyebite." +
 "Asleep. The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake." +
 "Panicked. The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends." +
@@ -3992,10 +3993,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "10 minutes",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool." +
 "Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot cube, or eight connected 5-foot cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials." +
 "Creatures or magic items can’t be created or transmuted by this spell. You also can’t use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan’s tools used to craft such objects.",
@@ -4007,10 +4008,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius." +
 "Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can’t benefit from being invisible.",
         Ritual = false
@@ -4021,10 +4022,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a small amount of alcohol or distilled spirits)",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (a small amount of alcohol or distilled spirits)",
+        Duration = "1 hour",
         Description = "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.",
         Ritual = false
@@ -4035,10 +4036,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (30-foot cone)",
-        Components = "Components: V, S, M (a white feather or the heart of a hen)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self (30-foot cone)",
+        Components = "V, S, M (a white feather or the heart of a hen)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You project a phantasmal image of a creature’s worst fears. Each creature in a 30-foot cone must succeed on a Wisdom saving throw or drop whatever it is holding and become frightened for the duration." +
 "While frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn’t have line of sight to you, the creature can make a Wisdom saving throw. On a successful save, the spell ends for that creature.",
         Ritual = false
@@ -4049,10 +4050,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 reaction, which you take when you or a creature within 60 feet of you falls",
-        Range = "Range: 60 feet",
-        Components = "Components: V, M (a small feather or piece of down)",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 reaction, which you take when you or a creature within 60 feet of you falls",
+        Range = "60 feet",
+        Components = "V, M (a small feather or piece of down)",
+        Duration = "1 minute",
         Description = "Choose up to five falling creatures within range. A falling creature’s rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
         Ritual = false
       },
@@ -4062,10 +4063,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (a handful of clay, crystal, glass, or mineral spheres)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (a handful of clay, crystal, glass, or mineral spheres)",
+        Duration = "Instantaneous",
         Description = "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an Intelligence saving throw." +
 "On a failed save, the creature’s Intelligence and Charisma scores become 1. The creature can’t cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them." +
 "At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends." +
@@ -4078,10 +4079,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a pinch of graveyard dirt)",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a pinch of graveyard dirt)",
+        Duration = "1 hour",
         Description = "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death." +
 "For the spell’s duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target’s status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell’s effect, the disease and poison have no effect until the spell ends.",
         Ritual = true
@@ -4092,10 +4093,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 hour",
-        Range = "Range: 10 feet",
-        Components = "Components: V, S, M (10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 hour",
+        Range = "10 feet",
+        Components = "V, S, M (10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier)",
+        Duration = "Instantaneous",
         Description = "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast." +
 "Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can’t attack, but it can take other actions as normal." +
 "When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again. As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you. Whenever the familiar drops to 0 hit points or disappears into the pocket dimension, it leaves behind in its space anything it was wearing or carrying." +
@@ -4110,10 +4111,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "10 minutes",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You summon a spirit that assumes the form of an unusually intelligent, strong, and loyal steed, creating a long-lasting bond with it. Appearing in an unoccupied space within range, the steed takes on a form that you choose: a warhorse, a pony, a camel, an elk, or a mastiff. (Your DM might allow other animals to be summoned as steeds.) The steed has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of its normal type. Additionally, if your steed has an Intelligence of 5 or less, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak." +
 "Your steed serves you as a mount, both in combat and out, and you have an instinctive bond with it that allows you to fight as a seamless unit. While mounted on your steed, you can make any spell you cast that targets only you also target your steed." +
 "When the steed drops to 0 hit points, it disappears, leaving behind no physical form. You can also dismiss your steed at any time as an action, causing it to disappear. In either case, casting this spell again summons the same steed, restored to its hit point maximum." +
@@ -4127,10 +4128,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100 gp and an object from the location you wish to find)",
-        Duration = "Duration: Concentration, up to 1 day",
+        CastingTime = "1 minute",
+        Range = "Self",
+        Components = "V, S, M (a set of divinatory tools—such as bones, ivory sticks, cards, teeth, or carved runes—worth 100 gp and an object from the location you wish to find)",
+        Duration = "Concentration, up to 1 day",
         Description = "This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn’t specific (such as “a green dragon’s lair”), the spell fails." +
 "For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination.",
         Ritual = false
@@ -4141,10 +4142,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole." +
 "This spell merely reveals that a trap is present. You don’t learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense.",
         Ritual = false
@@ -4155,10 +4156,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 7d8 + 30 necrotic damage on a failed save, or half as much damage on a successful one." +
 "A humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability.",
         Ritual = false
@@ -4169,10 +4170,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (a tiny ball of bat guano and sulfur)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (a tiny ball of bat guano and sulfur)",
+        Duration = "Instantaneous",
         Description = "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one." +
 "The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried." +
 "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.",
@@ -4184,10 +4185,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried." +
 "This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).",
         Ritual = false
@@ -4198,10 +4199,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a bit of phosphorus or a firefly)",
-        Duration = "Duration: 10 minutes",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (a bit of phosphorus or a firefly)",
+        Duration = "10 minutes",
         Description = "Thin and wispy flames wreathe your body for the duration, shedding bright light in a 10-foot radius and dim light for an additional 10 feet. You can end the spell early by using an action to dismiss it." +
 "The flames provide you with a warm shield or a chill shield, as you choose. The warm shield grants you resistance to cold damage, and the chill shield grants you resistance to fire damage." +
 "In addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 2d8 fire damage from a warm shield, or 2d8 cold damage from a chill shield.",
@@ -4213,10 +4214,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 7d10 fire damage on a failed save, or half as much damage on a successful one." +
 "The fire damages objects in the area and ignites flammable objects that aren’t being worn or carried. If you choose, plant life in the area is unaffected by this spell.",
         Ritual = false
@@ -4227,10 +4228,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (leaf of sumac)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V, S, M (leaf of sumac)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You evoke a fiery blade in your free hand. The blade is similar in size and shape to a scimitar, and it lasts for the duration. If you let go of the blade, it disappears, but you can evoke the blade again as a bonus action." +
 "You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 3d6 fire damage." +
 "The flaming blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet." +
@@ -4243,10 +4244,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (pinch of sulfur)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (pinch of sulfur)",
+        Duration = "Instantaneous",
         Description = "A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 4d6 fire damage and 4d6 radiant damage on a failed save, or half as much damage on a successful one." +
 "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th.",
         Ritual = false
@@ -4257,10 +4258,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a bit of tallow, a pinch of brimstone, and a dusting of powdered iron)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a bit of tallow, a pinch of brimstone, and a dusting of powdered iron)",
+        Duration = "Concentration, up to 1 minute",
         Description = "A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one." +
 "As a bonus action, you can move the sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere’s damage, and the sphere stops moving this turn." +
 "When you move the sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide. The sphere ignites flammable objects not being worn or carried, and it sheds bright light in a 20-foot radius and dim light for an additional 20 feet." +
@@ -4273,10 +4274,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a pinch of lime, water, and earth)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a pinch of lime, water, and earth)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You attempt to turn one creature that you can see within range into stone. If the target’s body is made of flesh, the creature must make a Constitution saving throw. On a failed save, it is restrained as its flesh begins to harden. On a successful save, the creature isn’t affected." +
 "A creature restrained by this spell must make another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and subjected to the petrified condition for the duration. The successes and failures don’t need to be consecutive; keep track of both until the target collects three of a kind." +
 "If the creature is physically broken while petrified, it suffers from similar deformities if it reverts to its original state." +
@@ -4289,10 +4290,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a wing feather from any bird)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a wing feather from any bird)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You touch a willing creature. The target gains a flying speed of 60 feet for the duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall." +
 "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.",
         Ritual = false
@@ -4303,10 +4304,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 hour",
         Description = "You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st.",
         Ritual = false
@@ -4317,10 +4318,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp)",
-        Duration = "Duration: 1 day",
+        CastingTime = "10 minutes",
+        Range = "Touch",
+        Components = "V, S, M (a sprinkling of holy water, rare incense, and powdered ruby worth at least 1,000 gp)",
+        Duration = "1 day",
         Description = "You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can’t teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell." +
 "In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell’s area for the first time on a turn or starts its turn there, the creature takes 5d10 radiant or necrotic damage (your choice when you cast this spell)." +
 "When you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell." +
@@ -4333,10 +4334,10 @@ namespace Books.Player_Handbook
         Level = 7,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 100 feet",
-        Components = "Components: V, S, M (ruby dust worth 1,500 gp)",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "100 feet",
+        Components = "V, S, M (ruby dust worth 1,500 gp)",
+        Duration = "1 hour",
         Description = "An immobile, invisible, cube-shaped prison composed of magical force springs into existence around an area you choose within range. The prison can be a cage or a solid box, as you choose." +
 "A prison in the shape of a cage can be up to 20 feet on a side and is made from 1/2-inch diameter bars spaced 1/2 inch apart." +
 "A prison in the shape of a box can be up to 10 feet on a side, creating a solid barrier that prevents any matter from passing through it and blocking any spells cast into or out from the area." +
@@ -4351,10 +4352,10 @@ namespace Books.Player_Handbook
         Level = 9,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a hummingbird feather)",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 minute",
+        Range = "Touch",
+        Components = "V, S, M (a hummingbird feather)",
+        Duration = "8 hours",
         Description = "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can’t be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration." +
 "This spell immediately ends if you cast it again before its duration ends.",
         Ritual = false
@@ -4365,10 +4366,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a leather strap, bound around the arm or a similar appendage)",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a leather strap, bound around the arm or a similar appendage)",
+        Duration = "1 hour",
         Description = "You touch a willing creature. For the duration, the target’s movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target’s speed nor cause the target to be paralyzed or restrained." +
 "The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target’s movement or attacks.",
         Ritual = false
@@ -4379,10 +4380,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: S, M (a small amount of makeup applied to the face as this spell is cast)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "S, M (a small amount of makeup applied to the face as this spell is cast)",
+        Duration = "Concentration, up to 1 minute",
         Description = "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn’t hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it.",
         Ritual = false
       },
@@ -4395,10 +4396,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a bit of gauze and a wisp of smoke)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a bit of gauze and a wisp of smoke)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You transform a willing creature you touch, along with everything it’s wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn’t affected." +
 "While in this form, the target’s only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can’t fall and remains hovering in the air even when stunned or otherwise incapacitated." +
 "While in the form of a misty cloud, the target can’t talk or manipulate objects, and any objects it was carrying or holding can’t be dropped, used, or otherwise interacted with. The target can’t attack or cast spells.",
@@ -4410,10 +4411,10 @@ namespace Books.Player_Handbook
         Level = 9,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a diamond worth at least 5,000 gp)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a diamond worth at least 5,000 gp)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You conjure a portal linking an unoccupied space you can see within range to a precise location on a different plane of existence. The portal is a circular opening, which you can make 5 to 20 feet in diameter. You can orient the portal in any direction you choose. The portal lasts for the duration." +
 "The portal has a front and a back on each plane where it appears. Travel through the portal is possible only by moving through its front. Anything that does so is instantly transported to the other plane, appearing in the unoccupied space nearest to the portal." +
 "Deities and other planar rulers can prevent portals created by this spell from opening in their presence or anywhere within their domains." +
@@ -4426,10 +4427,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 60 feet",
-        Components = "Components: V",
-        Duration = "Duration: 30 days",
+        CastingTime = "1 minute",
+        Range = "60 feet",
+        Components = "V",
+        Duration = "30 days",
         Description = "You place a magical command on a creature that you can see within range, forcing it to carry out some service or refrain from some action or course of activity as you decide. If the creature can understand you, it must succeed on a Wisdom saving throw or become charmed by you for the duration. While the creature is charmed by you, it takes 5d10 psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can’t understand you is unaffected by the spell." +
 "You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends." +
 "You can end the spell early by using an action to dismiss it. A remove curse, greater restoration, or wish spell also ends it." +
@@ -4442,10 +4443,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a pinch of salt and one copper piece placed on each of the corpse’s eyes, which must remain there for the duration)",
-        Duration = "Duration: 10 days",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a pinch of salt and one copper piece placed on each of the corpse’s eyes, which must remain there for the duration)",
+        Duration = "10 days",
         Description = "You touch a corpse or other remains. For the duration, the target is protected from decay and can’t become undead." +
 "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don’t count against the time limit of spells such as raise dead.",
         Ritual = true
@@ -4456,10 +4457,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 10 minutes",
         Description = "You transform up to ten centipedes, three spiders, five wasps, or one scorpion within range into giant versions of their natural forms for the duration. A centipede becomes a giant centipede, a spider becomes a giant spider, a wasp becomes a giant wasp, and a scorpion becomes a giant scorpion." +
 "Each creature obeys your verbal commands, and in combat, they act on your turn each round. The DM has the statistics for these creatures and resolves their actions and movement." +
 "A creature remains in its giant size for the duration, until it drops to 0 hit points, or until you use an action to dismiss the effect on it." +
@@ -4472,10 +4473,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: 1 hour",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V",
+        Duration = "1 hour",
         Description = "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.",
         Ritual = false
       },
@@ -4485,10 +4486,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (10-foot radius)",
-        Components = "Components: V, S, M (a glass or crystal bead that shatters when the spell ends)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self (10-foot radius)",
+        Components = "V, S, M (a glass or crystal bead that shatters when the spell ends)",
+        Duration = "Concentration, up to 1 minute",
         Description = "An immobile, faintly shimmering barrier springs into existence in a 10-foot radius around you and remains for the duration." +
 "Any spell of 5th level or lower cast from outside the barrier can’t affect creatures or objects within it, even if the spell is cast using a higher level spell slot. Such a spell can target creatures and objects within the barrier, but the spell has no effect on them. Similarly, the area within the barrier is excluded from the areas affected by such spells." +
 "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th.",
@@ -4500,10 +4501,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 hour",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consumes)",
-        Duration = "Duration: Until dispelled or triggered",
+        CastingTime = "1 hour",
+        Range = "Touch",
+        Components = "V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consumes)",
+        Duration = "Until dispelled or triggered",
         Description = "When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered." +
 "The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found." +
 "You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends." +
@@ -4520,10 +4521,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a sprig of mistletoe)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a sprig of mistletoe)",
+        Duration = "Instantaneous",
         Description = "Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day." +
 "The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
         Ritual = false
@@ -4534,10 +4535,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "30 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast this spell, you can direct the vine to lash out at a creature within 30 feet of it that you can see. That creature must succeed on a Dexterity saving throw or be pulled 20 feet directly toward the vine." +
 "Until the spell ends, you can direct the vine to lash out at the same creature or another one as a bonus action on each of your turns.",
         Ritual = false
@@ -4548,10 +4549,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a bit of pork rind or butter)",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a bit of pork rind or butter)",
+        Duration = "1 minute",
         Description = "Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration." +
 "When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.",
         Ritual = false
@@ -4562,10 +4563,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target’s person.",
         Ritual = false
       },
@@ -4575,10 +4576,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (diamond dust worth at least 100 gp, which the spell consumes)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (diamond dust worth at least 100 gp, which the spell consumes)",
+        Duration = "Instantaneous",
         Description = "You imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target’s exhaustion level by one, or end one of the following effects on the target:" +
 "One effect that charmed or petrified the target" +
 "One curse, including the target’s attunement to a cursed magic item" +
@@ -4592,10 +4593,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V",
-        Duration = "Duration: 8 hours",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V",
+        Duration = "8 hours",
         Description = "A Large spectral guardian appears and hovers for the duration in an unoccupied space of your choice that you can see within range. The guardian occupies that space and is indistinct except for a gleaming sword and shield emblazoned with the symbol of your deity." +
 "Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a Dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage.",
         Ritual = false
@@ -4606,10 +4607,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp)",
-        Duration = "Duration: 24 hours",
+        CastingTime = "10 minutes",
+        Range = "Touch",
+        Components = "V, S, M (burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10 gp)",
+        Duration = "24 hours",
         Description = "You create a ward that protects up to 2,500 square feet of floor space (an area 50 feet square, or one hundred 5-foot squares or twenty-five 10-foot squares). The warded area can be up to 20 feet tall, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them, as long as you can walk into each contiguous area while you are casting the spell." +
 "When you cast this spell, you can specify individuals that are unaffected by any or all of the effects that you choose. You can also specify a password that, when spoken aloud, makes the speaker immune to these effects." +
 "Guards and wards creates the following effects within the warded area." +
@@ -4632,10 +4633,10 @@ namespace Books.Player_Handbook
         Level = 0,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.",
         Ritual = false
       },
@@ -4645,10 +4646,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: 1 round",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "V, S",
+        Duration = "1 round",
         Description = "A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.",
         Ritual = false
@@ -4659,10 +4660,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self (60-foot line)",
-        Components = "Components: V, S, M (a legume seed)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self (60-foot line)",
+        Components = "V, S, M (a legume seed)",
+        Duration = "Concentration, up to 1 minute",
         Description = "A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell’s duration. Each creature that starts its turn in the line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line." +
 "Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you." +
 "The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them." +
@@ -4678,10 +4679,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: Self",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 bonus action",
+        Range = "Self",
+        Components = "V",
+        Duration = "Concentration, up to 1 minute",
         Description = "The next time you hit a creature with a ranged weapon attack before the spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition. In addition to the normal effect of the attack, the target of the attack and each creature within 5 feet of it must make a Dexterity saving throw. A creature takes 1d10 piercing damage on a failed save, or half as much damage on a successful one." +
 "At Higher Levels. If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st (to a maximum of 6d10).",
         Ritual = false
@@ -4692,10 +4693,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 24 hours",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (herbs, oils, and incense worth at least 1,000 gp, which the spell consumes)",
-        Duration = "Duration: Until dispelled",
+        CastingTime = "24 hours",
+        Range = "Touch",
+        Components = "V, S, M (herbs, oils, and incense worth at least 1,000 gp, which the spell consumes)",
+        Duration = "Until dispelled",
         Description = "You touch a point and infuse an area around it with holy (or unholy) power. The area can have a radius up to 60 feet, and the spell fails if the radius includes an area already under the effect a hallow spell. The affected area is subject to the following effects." +
 "First, celestials, elementals, fey, fiends, and undead can’t enter the area, nor can such creatures charm, frighten, or possess creatures within it. Any creature charmed, frightened, or possessed by such a creature is no longer charmed, frightened, or possessed upon entering the area. You can exclude one or more of those types of creatures from this effect." +
 "Second, you can bind an extra effect to the area. Choose the effect from the following list, or choose an effect offered by the DM. Some of these effects apply to creatures in the area; you can designate whether the effect applies to all creatures, creatures that follow a specific deity or leader, or creatures of a specific sort, such as orcs or trolls. When a creature that would be affected enters the spell’s area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area." +
@@ -4717,10 +4718,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: 300 feet",
-        Components = "Components: V, S, M (a stone, a twig, and a bit of green plant)",
-        Duration = "Duration: 24 hours",
+        CastingTime = "10 minutes",
+        Range = "300 feet",
+        Components = "V, S, M (a stone, a twig, and a bit of green plant)",
+        Duration = "24 hours",
         Description = "You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren’t changed in appearance." +
 "The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn’t obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain.",
         Ritual = false
@@ -4731,10 +4732,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can’t reduce the target’s hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature’s hit point maximum to return to normal before that time passes.",
         Ritual = false
       },
@@ -4744,10 +4745,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a shaving of licorice root)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "30 feet",
+        Components = "V, S, M (a shaving of licorice root)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Choose a willing creature that you can see within range. Until the spell ends, the target’s speed is doubled, it gains a +2 bonus to AC, it has advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action." +
 "When the spell ends, the target can’t move or take actions until after its next turn, as a wave of lethargy sweeps over it.",
         Ritual = false
@@ -4758,10 +4759,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead." +
 "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th.",
         Ritual = false
@@ -4772,10 +4773,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: 60 feet",
-        Components = "Components: V",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 bonus action",
+        Range = "60 feet",
+        Components = "V",
+        Duration = "Instantaneous",
         Description = "A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
         Ritual = false
@@ -4786,10 +4787,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a piece of iron and a flame)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a piece of iron and a flame)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 2d8 fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again." +
 "If a creature is holding or wearing the object and takes the damage from it, the creature must succeed on a Constitution saving throw or drop the object if it can. If it doesn’t drop the object, it has disadvantage on attack rolls and ability checks until the start of your next turn." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd.",
@@ -4801,10 +4802,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 reaction, which you take in response to being damaged by a creature within 60 feet of you that you can see",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 reaction, which you take in response to being damaged by a creature within 60 feet of you that you can see",
+        Range = "60 feet",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.",
         Ritual = false
@@ -4815,10 +4816,10 @@ namespace Books.Player_Handbook
         Level = 6,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 10 minutes",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S , M (a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "10 minutes",
+        Range = "30 feet",
+        Components = "V, S , M (a gem-encrusted bowl worth at least 1,000 gp, which the spell consumes)",
+        Duration = "Instantaneous",
         Description = "You bring forth a great feast, including magnificent food and drink. The feast takes 1 hour to consume and disappears at the end of that time, and the beneficial effects don’t set in until this hour is over. Up to twelve creatures can partake of the feast." +
 "A creature that partakes of the feast gains several benefits. The creature is cured of all diseases and poison, becomes immune to poison and being frightened, and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 2d10, and it gains the same number of hit points. These benefits last for 24 hours.",
         Ritual = false
@@ -4829,10 +4830,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.",
         Ritual = false
@@ -4843,10 +4844,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S, M (the petrified eye of a newt)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 bonus action",
+        Range = "90 feet",
+        Components = "V, S, M (the petrified eye of a newt)",
+        Duration = "Concentration, up to 1 hour",
         Description = "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra 1d6 necrotic damage to the target whenever you hit it with an attack. Also, choose one ability when you cast the spell. The target has disadvantage on ability checks made with the chosen ability." +
 "If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to curse a new creature." +
 "A remove curse cast on the target ends this spell early." +
@@ -4859,10 +4860,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 90 feet",
-        Components = "Components: V, S, M (a small, straight piece of iron)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "90 feet",
+        Components = "V, S, M (a small, straight piece of iron)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. This spell has no effect on undead. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target." +
 "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 feet of each other when you target them.",
         Ritual = false
@@ -4873,10 +4874,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Enchantment",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V, S, M (a small, straight piece of iron)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V, S, M (a small, straight piece of iron)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.",
         Ritual = false
@@ -4887,10 +4888,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Self",
-        Components = "Components: V, S, M (a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint’s robe or a piece of parchment from a religious text)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "Self",
+        Components = "V, S, M (a tiny reliquary worth at least 1,000 gp containing a sacred relic, such as a scrap of cloth from a saint’s robe or a piece of parchment from a religious text)",
+        Duration = "Concentration, up to 1 minute",
         Description = "Divine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be blinded until the spell ends.",
         Ritual = false
       },
@@ -4900,10 +4901,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S, M (a pickled octopus tentacle)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S, M (a pickled octopus tentacle)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You open a gateway to the dark between the stars, a region infested with unknown horrors. A 20-foot-radius sphere of blackness and bitter cold appears, centered on a point with range and lasting for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are blinded." +
 "The void creates a warp in the fabric of space, and the area is difficult terrain. Any creature that starts its turn in the area takes 2d6 cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 acid damage as milky, otherworldly tentacles rub against it.",
         Ritual = false
@@ -4914,10 +4915,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 bonus action",
-        Range = "Range: 90 feet",
-        Components = "Components: V",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 bonus action",
+        Range = "90 feet",
+        Components = "V",
+        Duration = "Concentration, up to 1 hour",
         Description = "You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.",
         Ritual = false
@@ -4928,10 +4929,10 @@ namespace Books.Player_Handbook
         Level = 3,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 120 feet",
-        Components = "Components: S, M (a glowing stick of incense or a crystal vial filled with phosphorescent material)",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "120 feet",
+        Components = "S, M (a glowing stick of incense or a crystal vial filled with phosphorescent material)",
+        Duration = "Concentration, up to 1 minute",
         Description = "You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0." +
 "The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.",
         Ritual = false
@@ -4945,10 +4946,10 @@ namespace Books.Player_Handbook
         Level = 4,
         Class = "",
         School = "Evocation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 300 feet",
-        Components = "Components: V, S, M (a pinch of dust and a few drops of water)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "300 feet",
+        Components = "V, S, M (a pinch of dust and a few drops of water)",
+        Duration = "Instantaneous",
         Description = "A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes 2d8 bludgeoning damage and 4d6 cold damage on a failed save, or half as much damage on a successful one." +
 "Hailstones turn the storm’s area of effect into difficult terrain until the end of your next turn." +
 "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by 1d8 for each slot level above 4th.",
@@ -4960,10 +4961,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Divination",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a pearl worth at least 100 gp and an owl feather)",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 minute",
+        Range = "Touch",
+        Components = "V, S, M (a pearl worth at least 100 gp and an owl feather)",
+        Duration = "Instantaneous",
         Description = "You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it." +
 "If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.",
         Ritual = true
@@ -4974,10 +4975,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: Touch",
-        Components = "Components: S, M (a lead-based ink worth at least 10 gp, which the spell consumes)",
-        Duration = "Duration: 10 days",
+        CastingTime = "1 minute",
+        Range = "Touch",
+        Components = "S, M (a lead-based ink worth at least 10 gp, which the spell consumes)",
+        Duration = "10 days",
         Description = "You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration." +
 "To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know." +
 "Should the spell be dispelled, the original script and the illusion both disappear." +
@@ -4990,10 +4991,10 @@ namespace Books.Player_Handbook
         Level = 9,
         Class = "",
         School = "Abjuration",
-        CastingTime = "Casting Time: 1 minute",
-        Range = "Range: 30 feet",
-        Components = "Components: V, S, M (a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500 gp per Hit Die of the target)",
-        Duration = "Duration: Until dispelled",
+        CastingTime = "1 minute",
+        Range = "30 feet",
+        Components = "V, S, M (a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500 gp per Hit Die of the target)",
+        Duration = "Until dispelled",
         Description = "You create a magical restraint to hold a creature that you can see within range. The target must succeed on a Wisdom saving throw or be bound by the spell; if it succeeds, it is immune to this spell if you cast it again. While affected by this spell, the creature doesn’t need to breathe, eat, or drink, and it doesn’t age. Divination spells can’t locate or perceive the target." +
 "When you cast the spell, you choose one of the following forms of imprisonment." +
 "Burial. The target is entombed far beneath the earth in a sphere of magical force that is just large enough to contain the target. Nothing can pass through the sphere, nor can any creature teleport or use planar travel to get into or out of it." +
@@ -5016,10 +5017,10 @@ namespace Books.Player_Handbook
         Level = 8,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 150 feet",
-        Components = "Components: V, S",
-        Duration = "Duration: Concentration, up to 1 minute",
+        CastingTime = "1 action",
+        Range = "150 feet",
+        Components = "V, S",
+        Duration = "Concentration, up to 1 minute",
         Description = "A swirling cloud of smoke shot through with white-hot embers appears in a 20-foot-radius sphere centered on a point within range. The cloud spreads around corners and is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it." +
 "When the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 10d8 fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there." +
 "The cloud moves 10 feet directly away from you in a direction that you choose at the start of each of your turns.",
@@ -5031,10 +5032,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Necromancy",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S",
+        Duration = "Instantaneous",
         Description = "Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage." +
 "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.",
         Ritual = false
@@ -5045,10 +5046,10 @@ namespace Books.Player_Handbook
         Level = 5,
         Class = "",
         School = "Conjuration",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 300 feet",
-        Components = "Components: V, S, M (a few grains of sugar, some kernels of grain, and a smear of fat)",
-        Duration = "Duration: Concentration, up to 10 minutes",
+        CastingTime = "1 action",
+        Range = "300 feet",
+        Components = "V, S, M (a few grains of sugar, some kernels of grain, and a smear of fat)",
+        Duration = "Concentration, up to 10 minutes",
         Description = "Swarming, biting locusts fill a 20-foot-radius sphere centered on a point you choose within range. The sphere spreads around corners. The sphere remains for the duration, and its area is lightly obscured. The sphere’s area is difficult terrain." +
 "When the area appears, each creature in it must make a Constitution saving throw. A creature takes 4d10 piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell’s area for the first time on a turn or ends its turn there." +
 "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.",
@@ -5060,10 +5061,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Illusion",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (an eyelash encased in gum arabic)",
-        Duration = "Duration: Concentration, up to 1 hour",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (an eyelash encased in gum arabic)",
+        Duration = "Concentration, up to 1 hour",
         Description = "A creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target’s person. The spell ends for a target that attacks or casts a spell." +
 "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
         Ritual = false
@@ -5077,10 +5078,10 @@ namespace Books.Player_Handbook
         Level = 1,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: Touch",
-        Components = "Components: V, S, M (a grasshopper’s hind leg)",
-        Duration = "Duration: 1 minute",
+        CastingTime = "1 action",
+        Range = "Touch",
+        Components = "V, S, M (a grasshopper’s hind leg)",
+        Duration = "1 minute",
         Description = "You touch a creature. The creature’s jump distance is tripled until the spell ends.",
         Ritual = false
       },
@@ -5093,10 +5094,10 @@ namespace Books.Player_Handbook
         Level = 2,
         Class = "",
         School = "Transmutation",
-        CastingTime = "Casting Time: 1 action",
-        Range = "Range: 60 feet",
-        Components = "Components: V",
-        Duration = "Duration: Instantaneous",
+        CastingTime = "1 action",
+        Range = "60 feet",
+        Components = "V",
+        Duration = "Instantaneous",
         Description = "Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access." +
 "A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked." +
 "If you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally." +

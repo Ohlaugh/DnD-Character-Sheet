@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace DnD_Character_Sheet
 {
@@ -67,8 +68,10 @@ namespace DnD_Character_Sheet
     private ObservableCollection<Feature> m_Features = new();
     private ObservableCollection<Item> m_Items = new();
     private ObservableCollection<Weapon> m_Weapons = new();
+    private ObservableCollection<Weapon> m_Weapons_Equip = new();
     private ObservableCollection<Armor> m_Armors = new();
-    private ObservableCollection<CombatAction> m_Actions = new();
+    private ObservableCollection<CombatAction> m_CombatActions = new();
+    private ObservableCollection<Spell> m_Spells = new();
 
 
 
@@ -414,6 +417,58 @@ namespace DnD_Character_Sheet
         }
       }
     }
+    [XmlIgnore]
+    public string Spell_Modifier
+    {
+      get
+      {
+        Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+        if (type != null)
+        {
+          object? instance = Activator.CreateInstance(type);
+          if (instance != null)
+          {
+            return ((Interfaces.ICharacterClass)instance).Spell_Modifier;
+          }
+        }
+        return "-";
+      }
+    }
+    [XmlIgnore]
+    public string Spell_Attack
+    {
+      get
+      {
+        Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+        if (type != null)
+        {
+          object? instance = Activator.CreateInstance(type);
+          if (instance != null)
+          {
+            return ((Interfaces.ICharacterClass)instance).Spell_Attack;
+          }
+        }
+        return "-";
+      }
+    }
+    [XmlIgnore]
+    public string Spell_Save
+    {
+      get
+      {
+        Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+        if (type != null)
+        {
+          object? instance = Activator.CreateInstance(type);
+          if (instance != null)
+          {
+            return ((Interfaces.ICharacterClass)instance).Spell_Save;
+          }
+        }
+        return "-";
+      }
+    }
+
     public string PersonalityTraits
     {
       get { return m_PersonalityTraits; }
@@ -724,11 +779,63 @@ namespace DnD_Character_Sheet
       {
         if (value != m_Weapons)
         {
+          foreach (Weapon weapon in m_Weapons)
+          {
+            weapon.PropertyChanged -= Weapon_PropertyChanged;
+          }
           m_Weapons = value;
           NotifyPropertyChanged();
+          Weapons_Equip = m_Weapons;
+          foreach (Weapon weapon in m_Weapons)
+          {
+            weapon.PropertyChanged += Weapon_PropertyChanged;
+          }
         }
       }
     }
+
+    private void Weapon_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+      if (e.PropertyName == "Equipped")
+      {
+        Weapons_Equip = m_Weapons;
+      }
+    }
+
+    [XmlIgnore]
+    public ObservableCollection<Weapon> Weapons_Equip
+    {
+      get
+      {
+        ObservableCollection<Weapon> collection = new ObservableCollection<Weapon>();
+        foreach (var weapon in Weapons.Where(weapon => weapon.Equipped))
+        {
+          collection.Add(weapon);
+        }
+
+
+        // Always add Unarmed Strike Last
+        string[] splitAtr = Library.MainCharacterInfo.Attributes.StrengthModifier.Split();
+        int damage = Convert.ToInt32(splitAtr[1]);
+        if (splitAtr[0] == "-")
+        {
+          damage = damage * -1;
+        }
+        damage += 1;
+        collection.Add(new Weapon()
+        {
+          Name = "Unarmed Strike",
+          Damage = damage.ToString() + " bludgeoning",
+        });
+
+        return collection;
+      }
+      private set
+      {
+        NotifyPropertyChanged();
+      }
+    }
+
     public ObservableCollection<Armor> Armors
     {
       get { return m_Armors; }
@@ -742,15 +849,92 @@ namespace DnD_Character_Sheet
         }
       }
     }
-    public ObservableCollection<CombatAction> Actions
+    public ObservableCollection<CombatAction> CombatActions
     {
-      get { return m_Actions; }
+      get { return m_CombatActions; }
 
       set
       {
-        if (value != m_Actions)
+        if (value != m_CombatActions)
         {
-          m_Actions = value;
+          m_CombatActions = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    [XmlIgnore]
+    public ObservableCollection<CombatAction> Actions
+    {
+      get
+      {
+        ObservableCollection<CombatAction> collection = new ObservableCollection<CombatAction>();
+        foreach (CombatAction action in CombatActions)
+        {
+          if (!action.Bonus && !action.Reaction && !action.OtherActionType)
+          {
+            collection.Add(action);
+          }
+        }
+        return collection;
+      }
+    }
+    [XmlIgnore]
+    public ObservableCollection<CombatAction> BonusActions
+    {
+      get
+      {
+        ObservableCollection<CombatAction> collection = new ObservableCollection<CombatAction>();
+        foreach (CombatAction action in CombatActions)
+        {
+          if (action.Bonus)
+          {
+            collection.Add(action);
+          }
+        }
+        return collection;
+      }
+    }
+    [XmlIgnore]
+    public ObservableCollection<CombatAction> Reactions
+    {
+      get
+      {
+        ObservableCollection<CombatAction> collection = new ObservableCollection<CombatAction>();
+        foreach (CombatAction action in CombatActions)
+        {
+          if (action.Reaction)
+          {
+            collection.Add(action);
+          }
+        }
+        return collection;
+      }
+    }
+    [XmlIgnore]
+    public ObservableCollection<CombatAction> OtherActions
+    {
+      get
+      {
+        ObservableCollection<CombatAction> collection = new ObservableCollection<CombatAction>();
+        foreach (CombatAction action in CombatActions)
+        {
+          if (action.OtherActionType)
+          {
+            collection.Add(action);
+          }
+        }
+        return collection;
+      }
+    }
+    public ObservableCollection<Spell> Spells
+    {
+      get { return m_Spells; }
+
+      set
+      {
+        if (value != m_Spells)
+        {
+          m_Spells = value;
           NotifyPropertyChanged();
         }
       }
@@ -758,11 +942,18 @@ namespace DnD_Character_Sheet
 
     #endregion Public Members
 
+    public void SubscribeEvents()
+    {
+      foreach (Weapon weapon in m_Weapons)
+      {
+        weapon.PropertyChanged += Weapon_PropertyChanged;
+      }
+    }
 
     public void AddWeapon(Weapon weapon)
     {
       bool exists = false;
-      foreach (Weapon curWep in m_Weapons.Where(current => current.Name == weapon.Name))
+      foreach (Weapon curWep in Weapons.Where(current => current.Name == weapon.Name))
       {
         curWep.Quantity += weapon.Quantity;
         exists = true;
@@ -771,14 +962,15 @@ namespace DnD_Character_Sheet
 
       if (!exists)
       {
-        m_Weapons.Add(weapon);
+        Weapons.Add(weapon);
+        Weapons.Last().PropertyChanged += Weapon_PropertyChanged;
       }
     }
 
     public void AddArmor(Armor armor)
     {
       bool exists = false;
-      foreach (Armor curArmor in m_Armors.Where(current => current.Name == armor.Name))
+      foreach (Armor curArmor in Armors.Where(current => current.Name == armor.Name))
       {
         curArmor.Quantity += armor.Quantity;
         exists = true;
@@ -787,14 +979,14 @@ namespace DnD_Character_Sheet
 
       if (!exists)
       {
-        m_Armors.Add(armor);
+        Armors.Add(armor);
       }
     }
 
     public void AddItem(Item item)
     {
       bool exists = false;
-      foreach (Item curItem in m_Items.Where(current => current.Name == item.Name))
+      foreach (Item curItem in Items.Where(current => current.Name == item.Name))
       {
         curItem.Quantity += item.Quantity;
         exists = true;
@@ -803,7 +995,7 @@ namespace DnD_Character_Sheet
 
       if (!exists)
       {
-        m_Items.Add(item);
+        Items.Add(item);
       }
     }
 
@@ -811,20 +1003,22 @@ namespace DnD_Character_Sheet
     {
       bool quantityOut = false;
       int weaponIndex = -1;
-      foreach (Weapon curWep in m_Weapons.Where(current => current.Name == weapon.Name))
+      foreach (Weapon curWep in Weapons.Where(current => current.Name == weapon.Name))
       {
-        weaponIndex = m_Weapons.IndexOf(curWep);
+        weaponIndex = Weapons.IndexOf(curWep);
         curWep.Quantity -= weapon.Quantity;
         if (curWep.Quantity <= 0)
         {
           quantityOut = true;
+          curWep.Equipped = false;
         }
         break;
       }
 
       if (quantityOut)
       {
-        m_Weapons.RemoveAt(weaponIndex);
+        Weapons[weaponIndex].PropertyChanged -= Weapon_PropertyChanged;
+        Weapons.RemoveAt(weaponIndex);
       }
     }
 
@@ -832,9 +1026,9 @@ namespace DnD_Character_Sheet
     {
       bool quantityOut = false;
       int armorIndex = -1;
-      foreach (Armor curArmor in m_Armors.Where(current => current.Name == armor.Name))
+      foreach (Armor curArmor in Armors.Where(current => current.Name == armor.Name))
       {
-        armorIndex = m_Armors.IndexOf(curArmor);
+        armorIndex = Armors.IndexOf(curArmor);
         curArmor.Quantity -= armor.Quantity;
         if (curArmor.Quantity <= 0)
         {
@@ -845,7 +1039,7 @@ namespace DnD_Character_Sheet
 
       if (quantityOut)
       {
-        m_Armors.RemoveAt(armorIndex);
+        Armors.RemoveAt(armorIndex);
       }
     }
 
@@ -853,9 +1047,9 @@ namespace DnD_Character_Sheet
     {
       bool quantityOut = false;
       int itemIndex = -1;
-      foreach (Item curItem in m_Items.Where(current => current.Name == item.Name))
+      foreach (Item curItem in Items.Where(current => current.Name == item.Name))
       {
-        itemIndex = m_Items.IndexOf(curItem);
+        itemIndex = Items.IndexOf(curItem);
         curItem.Quantity -= item.Quantity;
         if (curItem.Quantity <= 0)
         {
@@ -866,7 +1060,7 @@ namespace DnD_Character_Sheet
 
       if (quantityOut)
       {
-        m_Items.RemoveAt(itemIndex);
+        Items.RemoveAt(itemIndex);
       }
     }
 

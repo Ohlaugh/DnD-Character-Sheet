@@ -8,6 +8,8 @@ namespace Interfaces.HelperClasses
     #region Private Members
 
     private string m_Damage = string.Empty;
+    private string m_HitMod = string.Empty;
+    private string m_DamageMod = string.Empty;
     private List<string> m_Properties = new List<string>();
 
     #endregion Private Members
@@ -24,6 +26,34 @@ namespace Interfaces.HelperClasses
         if (value != m_Damage)
         {
           m_Damage = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    [XmlAttribute]
+    public string HitMod
+    {
+      get { return m_HitMod; }
+
+      set
+      {
+        if (value != m_HitMod)
+        {
+          m_HitMod = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
+    [XmlAttribute]
+    public string DamageMod
+    {
+      get { return m_DamageMod; }
+
+      set
+      {
+        if (value != m_DamageMod)
+        {
+          m_DamageMod = value;
           NotifyPropertyChanged();
         }
       }

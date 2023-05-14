@@ -12,7 +12,7 @@ namespace DnD_Character_Sheet.HelperClasses
     /// <param name="proficient">Is this Skill proficient</param>
     /// <param name="currentModifier">Current Modifier of Skill</param>
     /// <returns>Updated Modifier</returns>
-    public static string Bonus(bool proficient, string currentModifier)
+    public static string Bonus(bool proficient, string currentModifier, int baseStat = 0)
     {
       string[] splitMod = currentModifier.Split(' ');
       string sign = splitMod[0];
@@ -21,6 +21,8 @@ namespace DnD_Character_Sheet.HelperClasses
       {
         bonus *= -1;
       }
+      bonus += baseStat;
+
       if (proficient)
       {
         bonus += LIB.MainCharacterInfo.ProficiencyBonus;

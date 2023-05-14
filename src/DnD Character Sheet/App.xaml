@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:DnD_Character_Sheet2"
              StartupUri="CharacterSheet.xaml">
     <Application.Resources>
-         
-    </Application.Resources>
+    <Style TargetType="{x:Type Border}">
+      <Setter Property="CornerRadius"
+              Value="5" />
+    </Style>
+  </Application.Resources>
 </Application>

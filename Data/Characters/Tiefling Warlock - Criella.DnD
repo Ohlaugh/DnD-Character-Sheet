@@ -2,8 +2,8 @@
 <MainCharacterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CharacterName>Criella</CharacterName>
   <Class>Warlock</Class>
-  <SubClass>Hexblade, Pact of the Blade</SubClass>
-  <Level>1</Level>
+  <SubClass>Hexblade</SubClass>
+  <Level>3</Level>
   <Background>Hermit</Background>
   <PlayerName>Chase</PlayerName>
   <Race>Tiefling</Race>
@@ -17,28 +17,44 @@
   <SkinColor>Pinkish Red</SkinColor>
   <HairColor>Bright Purple</HairColor>
   <Inspiration>false</Inspiration>
-  <ArmorClass>12</ArmorClass>
+  <ArmorClass>11</ArmorClass>
   <Initiative>0</Initiative>
   <Speed>30</Speed>
-  <HP_Max>10</HP_Max>
-  <HP_Current>10</HP_Current>
+  <HP_Max>24</HP_Max>
+  <HP_Current>24</HP_Current>
   <HP_Temp>0</HP_Temp>
   <HitDice>d8</HitDice>
-  <HitDiceRem>1</HitDiceRem>
-  <HitDiceTotal>1</HitDiceTotal>
+  <HitDiceRem>3</HitDiceRem>
+  <HitDiceTotal>3</HitDiceTotal>
   <PersonalityTraits>I’ve been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.</PersonalityTraits>
   <Ideals>Inquiry and curiosity are the pillars of progress. Solitude and contemplation are paths toward mystical or magical power.</Ideals>
   <Bonds>I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them.</Bonds>
   <Flaws>I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell.</Flaws>
   <CarryingWeight>114.5</CarryingWeight>
   <Backstory>
-    You lived in a small town just outside a major city where your parents were farmers. The towns people merely tolerated your family’s existence, being Tielfings they did not treat you with any kindness. Your parents did their best to pay no attention to the others in the town and mostly kept to themselves. You and your family had been called many things, most of which you did not understand but knew that the words were hurtful. Your mother would read to you every night to help you sleep, and you still remember her gentle voice as if she was there speaking to you.
-    This was your life for six years, but everything changed during a particularly harsh harvest the largest farm in the towns crops had withered and died the week before harvest. Angry and looking for answers, they towns people started to head toward your home. Your mother hid you behind a secret door where she kept hers and your fathers’ diary. You heard lots of angry words and then suddenly your mother screamed out on horror. They towns people took your parents to the middle of town and you were left inside. You waited and waited but your parents did not return. You left your hiding spot and ventured out into the town, you heard a large commotion within the center of town, so you head towards it. Within the center of a large mob are your parents, their hands are bound and everyone around them is yelling a word, “kill” you did not fully understand this word until later, but it still haunts your dreams. The local sheriff showed up with a large sword, he made a spectacle of the whole thing and without warning you watch this man swing the blade over his shoulder and free your parents head from their shoulders. You cry out from where you were hiding behind the crowd, some nearby townspeople hear you and shout to the others that they found the “demon spawn”. You run as quickly as you could back to your hiding spot and hope they never find you. You pray that this is all a horrible nightmare and that there is something someone can do to fix it. The commotion in your house grows silent as you hear a voice whisper to you, it’s a deep and evil sounding voice that tells you there is something you can do to “help”. The voice tells you to pray to a greater lord, The Raven Queen and he would be able to help. Unknowing of this lord you decide he must be able to bring your parents back. As you pray the voice answers back, he is willing to help you, all you must do is sign your name in blood. A piece of paper appears before you and you sign your name the best you can. The Raven Queen thanks you and suddenly you feel a mystical presence around you, you are filled with anger and the urge to kill all of those that have wronged you and your family. Suddenly the hidden door is pulled open and it’s the sheriff. Thinking of what he did to your parents your vision turns red as you put your hands out to keep him away, the sheriff is then engulfed with flames. He cries out “The demon child, kill the demon child!”. The flames cannot be extinguished no matter what the towns people do. As more people come for you scream out and are surrounded by mystical flames, your vision goes completely dark and all you can hear are screams of the people in your town.
-    You wake to find the charred bodies of the townspeople, you angrily cry out to The Raven Queen and he tells you, “Gather what you can carry mortal, head into the woods to a hidden cabin. Your training has just begone, young warlock.” All sense of joy and happiness have been replaced by anger and hatred, and you are compelled to obey. You gather the books from your hiding spot and a few things from around the house and flee into the woods. You find a small cabin hidden within the deeps of the woods, far from civilization. You do as The Raven Queen commands and begin your training. This is now your life, and for the next eight years you do as The Raven Queen commands and live within the wilds, never speaking and always obeying. Until your 14th birthday, when The Raven Queen says you have completed your training and tells you to go forth and spread his name with your newfound powers. On this day he presents you with a gift, a twisted tree branch made of obsidian imbued with his power. You carry it with you always as you realize it not only helps you cast new spells but makes your spells more powerful.
-    Finally feeling a sense of freedom, you decide to stay in the woods and live on your own and continue your training. During this time of “freedom” you finally get to go through your parent’s diaries and you learn about the demon lords they worshiped. Your mother was a worshiper of Malcanthet, the Queen of Succubi to alter her form to seduce a man she liked (your father). Within your mother’s diary you find a unique single gold piece that seems to have some sort of magical power. Your father was not able to select his own lord to worship but was instead forced to worship The Raven Queen. With this knowledge comes the realization of why The Raven Queen spoke to you all those years ago. You find that your mothers worship of Malcanthet passed on her seductive features to you, so you cover yourself with a hooded black cloak, to not only hide your features from others but to hide your identity as a Tiefling.
-    You stay hidden in the woods for another three years, during this time you learn how to use the plants around you as medicine and potions becoming proficient in herbalism. After many years you decide it is time to venture back into society in order to greater strengthen your powers.
+    Servant of Malcanthet, Queen of the Succubi
+    Criella did not wish for the life she leads. She was born on a farm in the Duuhdaran Plains, to a mother and father so deeply in love. Her family and their demonic heritage were merely tolerated by the other villagers, but they were mostly left to themselves and it was a peaceful life.
+
+    That peaceful life came to a violent end when the village was beset by a blight on the crops, mere days before the harvest. Looking for an outlet for their anger and disappointment, the villagers came upon Criella's family home. She was ordered to hide in a crawl space while her parents talked with the villagers. There was shouting and arguing until finally there was a commotion and the house fell silent. Criella left her hiding place and followed the tracks to the town center where a jeering crowd had gathered. Criella craned her neck hoping, and dreading, to see her parents. Indeed, they were at the center of the crowd, on their knees, heads on chopping blocks. Her father whispered things to her mother, who was crying and begging mercy from the un-hearing crowd. The executioner's blade fell on her father's neck first followed shortly by her mother.
+
+    Criella cried out for her parents, alerting only the rage-filled villagers who began to chase her as she ran home back to her hiding place. As the executioner and the villagers searched the house, she heard them talk about how the gods demand the blood of the guilty to bring the harvest back.
+    Just as hope began to fade and the mob began to descend upon her sanctuary, a whisper came to Criella, "I can help you, little one."
+    A surge of anger shot through Criella as she burst from her hiding place with hands of flame, scorching all those who sought to harm her. As the rest of the mob comes to investigate the chaos, Criella's vision fades as fire engulfs her surroundings.
+
+    When she awakes, Criella finds the horrid scene of a burned village and its ill-fated residents. She finds in her possession a diary written in her mother's hand and a dark obsidian staff rammed into the ground.
+    "Take the staff and anything you can carry, mortal, flee this place."
+
+    She ran. Into the Duuhdaran wilderness and, following the voice's guidance, stumbled upon an abandoned cabin. It is here that the true nature of the voice is made known. It is the voice of Malcanthet, Queen of the Succubi, whom your mother called her patron. Criella is told to train in her gifted powers so she may better serve the Queen of the Succubi.
+
+    After years of training in the wilderness, Criella learned the nature of her mother's relationship with the Queen as well as practical skills in herbalism and nature survival
+
+    NOTES:
+    Criella has been so traumatized and removed from society for so long that she harbors an anxiety when it comes to interacting with other people. She has a paranoia, partially because of Malcanthet planting those thoughts, partially because of the things she has seen people do that has impacted her life so greatly.
+
+
+    In the wake of the destruction she left at the village, there were people who were not active participants in the execution of Criella's parents. These innocents were not spared by Criella's rage. The memories of the atrocities that Criella committed are buried deep within her memories, guarded closely by The Queen. These memories are used to shame Criella and break her will when she tries to fight back against the Queen.
   </Backstory>
-  <Organizations />
+  <Organizations>Militia of Palan</Organizations>
   <Allies />
   <Enemies />
   <Notes>
@@ -47,20 +63,7 @@
     A scroll case stuffed full of notes from your studies or prayers,
     a winter blanket,
     a set of common clothes,
-    a herbalism kit
-
-
-
-    Spells:
-    0:
-    Thaumaturgy
-    Eldritch Blast
-    True Strike
-
-    1:
-    Shield
-    Unseen Servant
-  </Notes>
+    a herbalism kit</Notes>
   <ProficiencyBonus>2</ProficiencyBonus>
   <Money>
     <Copper>0</Copper>
@@ -140,7 +143,10 @@
     <string>Infernal</string>
     <string>Elvish</string>
   </Proficient_Languages>
-  <Proficient_Armor />
+  <Proficient_Armor>
+    <string>Medium Armor</string>
+    <string>Shield</string>
+  </Proficient_Armor>
   <Proficient_Weapon>
     <string>Simple Weapons</string>
     <string>Martial Weapons</string>
@@ -153,11 +159,11 @@
     <string>Books.Player_Handbook.PlayerHandbook, Books, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</string>
   </Books>
   <Features>
-    <Feature Name="Darkvision" Description="Thanks to your infernal heritage, you have superior vision in dark and dim conditions. &#xD;&#xA;    You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. &#xD;&#xA;    You can't discern color in darkness, only shades of gray." />
+    <Feature Name="Darkvision" Description="Thanks to your infernal heritage, you have superior vision in dark and dim conditions. &#xD;&#xA;   You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. &#xD;&#xA;   You can't discern color in darkness, only shades of gray." />
     <Feature Name="Hellish Resistance" Description="You have resistance to fire damage." />
-    <Feature Name="Infernal Legacy" Description="You know the thaumaturgy cantrip. &#xD;&#xA;    When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. &#xD;&#xA;    When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when oyu finish a long rest. &#xD;&#xA;    Charisma is your spellcasting ability for these spells." />
-    <Feature Name="Hexblade's Curse" Description="Starting at 1st level, you gain the ability to place a baleful curse on someone. &#xD;&#xA;  - As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. &#xD;&#xA;  - The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits: &#xD;&#xA;&#x9;- You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.&#xD;&#xA;&#x9;- Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 29 on the d20.&#xD;&#xA;&#x9;- If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (min of 1 hp).&#xD;&#xA;  &#xD;&#xA;&#x9;You can't use this feature again until you finish a short or long rest." />
-    <Feature Name="Hex Warrior" Description="At 1st level, you acquire the training necessary to effectively arm yourself for battle. &#xD;&#xA;  - You gain proficiency with medium armor, shields, and martial weapons.&#xD;&#xA;   &#xD;&#xA;&#x9;The influence of your patron also allows you to mystically channel your will through a particular weapon:&#xD;&#xA;  - Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. &#xD;&#xA;  - When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. &#xD;&#xA;  &#xD;&#xA;  This benefit lasts until you finish a long rest. &#xD;&#xA;  If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type." />
+    <Feature Name="Infernal Legacy" Description="You know the thaumaturgy cantrip. &#xD;&#xA;   When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. &#xD;&#xA;   When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when oyu finish a long rest. &#xD;&#xA;   Charisma is your spellcasting ability for these spells." />
+    <Feature Name="Hexblade's Curse" Description="Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits: &#xD;&#xA;- You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.&#xD;&#xA;- Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 29 on the d20.&#xD;&#xA;- If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point).&#xD;&#xA;&#xD;&#xA;You can't use this feature again until you finish a short or long rest." />
+    <Feature Name="Hex Warrior" Description="At 1st level, you acquire the training necessary to effectively arm yourself for battle. You gain proficiency with medium armor, shields, and martial weapons.&#xD;&#xA;   The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type." />
   </Features>
   <Items>
     <Item Equipped="false" Name="Crossbow bolts" Style="Ammunition" Cost="1 gp" Weight="1.5" Description="Crossbow bolts are used with a weapon that has the ammunition property to make a ranged attack. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon). At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield." Quantity="20" />
@@ -172,36 +178,42 @@
     <Item Equipped="false" Name="Rope, Hempen (50 feet)" Style="Adventuring Gear" Cost="1 gp" Weight="10" Description="Rope, has 2 hit points and can be burst with a DC 17 Strength check." Quantity="1" />
   </Items>
   <Weapons>
-    <Weapon Equipped="false" Name="Handaxe" Style="Simple Melee Weapon" Cost="5 gp" Weight="2" Description="" Quantity="1" Damage="1d6 slashing">
+    <Weapon Equipped="false" Name="Handaxe" Style="Simple Melee Weapon" Cost="5 gp" Weight="2" Description="" Quantity="1" Damage="1d6 slashing" HitMod="" DamageMod="">
       <Properties>
         <string>Light</string>
         <string>Thrown (range 20/60)</string>
       </Properties>
     </Weapon>
-    <Weapon Equipped="true" Name="Quarterstaff" Style="Simple Melee Weapon" Cost="2 sp" Weight="4" Description="" Quantity="1" Damage="1d6 bludgeoning">
+    <Weapon Equipped="false" Name="Quarterstaff" Style="Simple Melee Weapon" Cost="2 sp" Weight="4" Description="" Quantity="1" Damage="1d6 bludgeoning" HitMod="" DamageMod="">
       <Properties>
         <string>Versatile 1d8</string>
       </Properties>
     </Weapon>
-    <Weapon Equipped="false" Name="Crossbow, Light" Style="Simple Ranged Weapon" Cost="25 sp" Weight="5" Description="" Quantity="1" Damage="1d8 piercing">
+    <Weapon Equipped="false" Name="Crossbow, Light" Style="Simple Ranged Weapon" Cost="25 sp" Weight="5" Description="" Quantity="1" Damage="1d8 piercing" HitMod="" DamageMod="">
       <Properties>
         <string>Ammunition (range 80/320)</string>
         <string>Loading</string>
         <string>Two-Handed</string>
       </Properties>
     </Weapon>
-    <Weapon Equipped="false" Name="Dagger" Style="Simple Melee Weapon" Cost="2 gp" Weight="1" Description="" Quantity="2" Damage="1d4 piercing">
+    <Weapon Equipped="false" Name="Dagger" Style="Simple Melee Weapon" Cost="2 gp" Weight="1" Description="" Quantity="2" Damage="1d4 piercing" HitMod="" DamageMod="">
       <Properties>
         <string>Finesse</string>
         <string>Light</string>
         <string>Thrown (range 20/60)</string>
       </Properties>
     </Weapon>
+    <Weapon Equipped="true" Name="Greatsword" Style="Martial Melee Weapon" Cost="50 gp" Weight="6" Description="" Quantity="1" Damage="2d6 slashing" HitMod="" DamageMod="">
+      <Properties>
+        <string>Heavy</string>
+        <string>Two-Handed</string>
+      </Properties>
+    </Weapon>
   </Weapons>
   <Armors>
     <Armor Equipped="true" Name="Leather" Style="Light Armor" Cost="10 gp" Weight="10" Description="" Quantity="1" ArmorClass="11 + Dex" StrengthReq="0" Disadvantage="false" />
   </Armors>
-  <Actions>
+  <CombatActions>
     <CombatAction Name="Attack" Bonus="false" Reaction="false" OtherActionType="false" Source="Basic Rules" Description="The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.&#xD;&#xA; With this action, you make one melee or ranged attack.&#xD;&#xA; Certain features, such as the Extra Attack feature of the fighter, allow you to make more than one attack with this action." />
     <CombatAction Name="Cast a Spell" Bonus="false" Reaction="false" OtherActionType="false" Source="Basic Rules" Description="Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a casting time, which specifies whether the caster must use an action, a reaction, minutes, or even hours to cast the spell. Casting a spell is, therefore, not neccessarily an action. Most spells do have casting time of 1 action, to cast such a spell." />
     <CombatAction Name="Dash" Bonus="false" Reaction="false" OtherActionType="false" Source="Basic Rules" Description="When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.&#xD;&#xA; Any increase or decrease to your speed changesd this additional movement by the same amount. If your speed of 30 feet is reduced to 15 feet, for instance, you can move up to 30 feet this turn if you dash." />
@@ -219,5 +231,13 @@
     <CombatAction Name="Two-Weapon Fighting" Bonus="true" Reaction="false" OtherActionType="false" Source="Basic Rules" Description="When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a different light melee weapon that you're holding in the other hand. You don't add your ability modifier to the damage of the bonus attack, unless that modifier is negative.&#xD;&#xA; If either weapon has the thrown property, you can throw the weapon, instead of making a melee attack with it." />
     <CombatAction Name="Opportunity Attack" Bonus="false" Reaction="true" OtherActionType="false" Source="Basic Rules" Description="You can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature. The attack occurs right before the creature leaves your reach" />
     <CombatAction Name="Interact with an Object" Bonus="false" Reaction="false" OtherActionType="true" Source="Basic Rules" Description="Here are a few examples of the sorts of thing you can do in tandem with your movement and action:&#xD;&#xA;- draw or sheathe a sword&#xD;&#xA;- open or close a door&#xD;&#xA;- withdraw a potion from your backpack&#xD;&#xA;- pick up a dropped axe&#xD;&#xA;- take a bauble from a table&#xD;&#xA;- remove a ring from your finger&#xD;&#xA;- stuff some food into your mouth&#xD;&#xA;- plant a banner in the ground&#xD;&#xA;- fish a few coins from your belt pouch&#xD;&#xA;- drink all the ale in a flagon&#xD;&#xA;- throw a lever or a switch&#xD;&#xA;- pull a torch from a sconce&#xD;&#xA;- take a book from a shelf you can reach&#xD;&#xA;- extinguish a small flame&#xD;&#xA;- don a mask&#xD;&#xA;- pull the hood of your cloak up and over your head&#xD;&#xA;- put your ear to a door&#xD;&#xA;- kick a small stone&#xD;&#xA;- turn a key in a lock&#xD;&#xA;- tap the floor with a 10-foot pole&#xD;&#xA;- hand an item to another character" />
-  </Actions>
+    <CombatAction Name="Baleful Curse" Bonus="true" Reaction="false" OtherActionType="false" Source="Feature|Hexblade's Curse" Description="Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits: &#xD;&#xA;- You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.&#xD;&#xA;- Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 29 on the d20.&#xD;&#xA;- If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point).&#xD;&#xA;&#xD;&#xA;You can't use this feature again until you finish a short or long rest." />
+  </CombatActions>
+  <Spells>
+    <Spell Name="Eldritch Blast" Level="0" Class="" School="Evocation" CastingTime="1 action" Range="120 feet" Components="V, S" Duration="Instantaneous" Description="A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam." Ritual="false" />
+    <Spell Name="Thaumaturgy" Level="0" Class="Cleric" School="Transmutation" CastingTime="1 action" Range="30 feet" Components="V" Duration="Up to 1 minute" Description="You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range: Your voice booms up to three times as loud as normal for 1 minute. You cause flames to flicker, brighten, dim, or change color for 1 minute. You cause harmless tremors in the ground for 1 minute. You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers. You instantaneously cause an unlocked door or window to fly open or slam shut. You alter the appearance of your eyes for 1 minute. If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action." Ritual="false" />
+    <Spell Name="True Strike" Level="0" Class="Bard,Sorcerer,Warlock,Wizard" School="Divination" CastingTime="1 action" Range="30 feet" Components="S" Duration="Concentration, Up to 1 minute" Description="You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target’s defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn’t ended." Ritual="false" />
+    <Spell Name="Shield" Level="1" Class="Sorcerer,Wizard" School="Abjuration" CastingTime="1 reaction" Range="self" Components="V, S" Duration="1 round" Description="An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile." Ritual="false" />
+    <Spell Name="Unseen Servant" Level="1" Class="Bard,Warlock,Wizard" School="Conjuration" CastingTime="1 action" Range="60 feet" Components="V, S, M (A piece of string and a bit of wood)" Duration="1 hour" Description="This spell creates an invisible, mindless, shapeless force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can’t attack. If it drops to 0 hit points, the spell ends. Once on each of your turns as a bonus action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command. If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends." Ritual="true" />
+  </Spells>
 </MainCharacterInfo>
