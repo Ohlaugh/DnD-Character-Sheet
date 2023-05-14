@@ -1,7 +1,6 @@
-﻿using DnD_Character_Sheet.HelperClasses;
-using LC = DnD_Character_Sheet.Constants;
+﻿using LC = DnD_Character_Sheet.Constants;
 
-namespace DnD_Character_Sheet.Classes
+namespace DnD_Character_Sheet.HelperClasses
 {
   public class Attributes : NotifyProperty
   {

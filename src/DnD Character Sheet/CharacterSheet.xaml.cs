@@ -20,6 +20,33 @@ namespace DnD_Character_Sheet
       InitializeComponent();
     }
 
+    #region Menu Buttons
+
+    private void Load_Button_Click(object sender, RoutedEventArgs e)
+    {
+      OpenFileDialog fileDialog = new OpenFileDialog();
+      fileDialog.Filter = Constants.FileFilter;
+      fileDialog.RestoreDirectory = false;
+      bool? result = fileDialog.ShowDialog();
+
+      if (result == true)
+      {
+        Library.ClearLibrary();
+
+        XmlSerializer serializer = new(typeof(MainCharacterInfo));
+        using XmlReader reader = XmlReader.Create(fileDialog.FileName);
+        if (serializer.Deserialize(reader) is MainCharacterInfo mainCharacterInfo)
+        {
+          if (Library.AddCharacter(mainCharacterInfo))
+          {
+            Library.MainCharacterInfo.Initialize();
+            PopulateCharacterSheet();
+            Library.MainCharacterInfo.SubscribeEvents();
+          }
+        }
+      }
+    }
+
     private void PopulateCharacterSheet()
     {
       DataContext = Library.MainCharacterInfo;
@@ -33,28 +60,6 @@ namespace DnD_Character_Sheet
       TextBlock_ProfAndLang.Text = profAndLangText;
 
       StackPanel_CharacterSheet.Visibility = Visibility.Visible;
-    }
-
-    private void Load_Button_Click(object sender, RoutedEventArgs e)
-    {
-      OpenFileDialog fileDialog = new OpenFileDialog();
-      fileDialog.Filter = Constants.FileFilter;
-      fileDialog.RestoreDirectory = false;
-      bool? result = fileDialog.ShowDialog();
-
-      if (result == true)
-      {
-        XmlSerializer serializer = new(typeof(MainCharacterInfo));
-        using XmlReader reader = XmlReader.Create(fileDialog.FileName);
-        if (serializer.Deserialize(reader) is MainCharacterInfo mainCharacterInfo)
-        {
-          if (Library.AddCharacter(mainCharacterInfo))
-          {
-            PopulateCharacterSheet();
-            Library.MainCharacterInfo.SubscribeEvents();
-          }
-        }
-      }
     }
 
     private void Save_Button_Click(object sender, RoutedEventArgs e)
@@ -78,9 +83,13 @@ namespace DnD_Character_Sheet
 
     private void Test_Button_Click(object sender, RoutedEventArgs e)
     {
-      Library.MainCharacterInfo.Spells.Add(Library.SpellLibrary[0]);
+      //Library.MainCharacterInfo.Spells.Add(Library.SpellLibrary[0]);
+      Library.MainCharacterInfo.ProficiencyBonus = 7;
     }
 
+    #endregion Menu Buttons
+
+    #region Buy / Sell
 
     private void BuySell(string type, bool buy)
     {
@@ -114,11 +123,43 @@ namespace DnD_Character_Sheet
     }
     private void Add_Spells_Button_Click(object sender, RoutedEventArgs e)
     {
-      //BuySell(nameof(Item), true);
+      BuySell(nameof(Spell), true);
     }
     private void Remove_Spells_Button_Click(object sender, RoutedEventArgs e)
     {
-      //BuySell(nameof(Item), false);
+      BuySell(nameof(Spell), false);
+    }
+
+    #endregion Buy / Sell
+
+    #region Help Menu
+
+    private void UpdateHelpMenu(string headerName, string blockText)
+    {
+      if (headerName == GroupBox_HelpMenu.Header)
+      {
+        HideHelp();
+      }
+      else
+      {
+        TextBlock_HelpMenu.Text = blockText;
+        GroupBox_HelpMenu.Header = headerName;
+        StackPanel_HelpMenu.Visibility = Visibility.Visible;
+        StackPanel_Help_Separator.Visibility = Visibility.Visible;
+      }
+    }
+
+    private void Button_HelpMenu_Click(object sender, RoutedEventArgs e)
+    {
+      HideHelp();
+    }
+
+    private void HideHelp()
+    {
+      TextBlock_HelpMenu.Text = string.Empty;
+      GroupBox_HelpMenu.Header = string.Empty;
+      StackPanel_HelpMenu.Visibility = Visibility.Collapsed;
+      StackPanel_Help_Separator.Visibility = Visibility.Collapsed;
     }
 
     private void Action_Label_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -149,6 +190,7 @@ namespace DnD_Character_Sheet
         UpdateHelpMenu(actionName, description);
       }
     }
+
     private void Feature_Label_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
       string featureName = (string)((Label)sender).Content;
@@ -165,38 +207,6 @@ namespace DnD_Character_Sheet
       {
         UpdateHelpMenu(featureName, description);
       }
-    }
-
-
-
-
-
-    private void UpdateHelpMenu(string headerName, string blockText)
-    {
-      if (headerName == GroupBox_HelpMenu.Header)
-      {
-        HideHelp();
-      }
-      else
-      {
-        TextBlock_HelpMenu.Text = blockText;
-        GroupBox_HelpMenu.Header = headerName;
-        StackPanel_HelpMenu.Visibility = Visibility.Visible;
-        StackPanel_Help_Separator.Visibility = Visibility.Visible;
-      }
-    }
-
-    private void Button_HelpMenu_Click(object sender, RoutedEventArgs e)
-    {
-      HideHelp();
-    }
-
-    private void HideHelp()
-    {
-      TextBlock_HelpMenu.Text = string.Empty;
-      GroupBox_HelpMenu.Header = string.Empty;
-      StackPanel_HelpMenu.Visibility = Visibility.Collapsed;
-      StackPanel_Help_Separator.Visibility = Visibility.Collapsed;
     }
 
     private void DataGrid_Spells_0_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -260,5 +270,7 @@ namespace DnD_Character_Sheet
         HideHelp();
       }
     }
+
+    #endregion Help Menu
   }
 }

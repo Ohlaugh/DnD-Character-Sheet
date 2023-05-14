@@ -16,15 +16,20 @@ namespace DnD_Character_Sheet.Classes
     {
       get
       {
-        return Calculations.Bonus(true, Library.MainCharacterInfo.Attributes.CharismaModifier);
+        return Calculations.Modifier(true, Library.MainCharacterInfo.Attributes.CharismaModifier);
       }
     }
     public string Spell_Save
     {
       get
       {
-        return Calculations.Bonus(true, Library.MainCharacterInfo.Attributes.CharismaModifier, 8).Split()[1];
+        return Calculations.Modifier(true, Library.MainCharacterInfo.Attributes.CharismaModifier, 8).Split()[1];
       }
+    }
+
+    public void LevelUp()
+    {
+
     }
 
   }

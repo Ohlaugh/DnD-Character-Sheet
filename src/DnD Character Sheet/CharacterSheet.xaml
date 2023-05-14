@@ -594,15 +594,15 @@
                       <StackPanel Orientation="Horizontal"
                                   HorizontalAlignment="Center">
                         <GroupBox Header="Modifier">
-                          <Label Content="{Binding Spell_Modifier}"
+                          <Label Content="{Binding Spell_Modifier, Mode=OneWay}"
                                  HorizontalAlignment="Center" />
                         </GroupBox>
                         <GroupBox Header="Spell Attack">
-                          <Label Content="{Binding Spell_Attack}"
+                          <Label Content="{Binding Spell_Attack, Mode=OneWay}"
                                  HorizontalAlignment="Center" />
                         </GroupBox>
                         <GroupBox Header="Save DC">
-                          <Label Content="{Binding Spell_Save}"
+                          <Label Content="{Binding Spell_Save, Mode=OneWay}"
                                  HorizontalAlignment="Center" />
                         </GroupBox>
                       </StackPanel>

@@ -7,42 +7,38 @@ namespace DnD_Character_Sheet.HelperClasses
   public class Calculations
   {
     /// <summary>
-    /// This method calculates the characters Proficiency Bonus for skills
+    /// This method calculates the characters Default Skill / Saving Throw Modifier
     /// </summary>
     /// <param name="proficient">Is this Skill proficient</param>
-    /// <param name="currentModifier">Current Modifier of Skill</param>
-    /// <returns>Updated Modifier</returns>
-    public static string Bonus(bool proficient, string currentModifier, int baseStat = 0)
+    /// <param name="attributeModifer">Current Attribute Modifier of Skill</param>
+    /// <param name="baseStat">Base value to start at when calculating modifier</param>
+    /// <returns>Modifier</returns>
+    public static string Modifier(bool proficient, string attributeModifer, int baseStat = 0)
     {
-      string[] splitMod = currentModifier.Split(' ');
-      string sign = splitMod[0];
-      int bonus = int.Parse(splitMod[1]);
-      if (sign == "-")
-      {
-        bonus *= -1;
-      }
-      bonus += baseStat;
-
+      string newModifier = attributeModifer;
       if (proficient)
       {
+        string[] splitMod = attributeModifer.Split(' ');
+        string sign = splitMod[0];
+        int bonus = int.Parse(splitMod[1]);
+        if (sign == "-")
+        {
+          bonus *= -1;
+        }
         bonus += LIB.MainCharacterInfo.ProficiencyBonus;
-      }
-      else
-      {
-        bonus -= LIB.MainCharacterInfo.ProficiencyBonus;
-      }
 
-      if (bonus >= 0)
-      {
-        sign = "+ ";
+        if (bonus >= 0)
+        {
+          sign = "+ ";
+        }
+        else
+        {
+          sign = "- ";
+          bonus *= -1;
+        }
+        newModifier = sign + bonus;
       }
-      else
-      {
-        sign = "- ";
-        bonus *= -1;
-      }
-
-      return sign + bonus;
+      return newModifier;
     }
 
     /// <summary>

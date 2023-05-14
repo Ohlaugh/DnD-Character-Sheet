@@ -191,6 +191,60 @@
           </DataGridTextColumn>
         </DataGrid.Columns>
       </DataGrid>
+      <!--Equipment-->
+      <DataGrid Name="DataGrid_Spells"
+                AutoGenerateColumns="False"
+                CanUserAddRows="false"
+                CellStyle="{StaticResource Body_Content_DataGrid_Centering}"
+                HeadersVisibility="Column"
+                HorizontalAlignment="Left"
+                VerticalScrollBarVisibility="Auto"
+                Visibility="Collapsed"
+                MaxHeight="800">
+        <DataGrid.Columns>
+          <DataGridTemplateColumn Header="Purchase">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <CheckBox IsChecked="{Binding Path=BuySell, UpdateSourceTrigger=PropertyChanged}"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Type"
+                              Binding="{Binding Style, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Name"
+                              Binding="{Binding Name, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTemplateColumn Header="Quantity">
+            <DataGridTemplateColumn.CellTemplate>
+              <DataTemplate>
+                <TextBox Text="{Binding Path=Quantity, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource DataGrid_TextBox}" />
+              </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+          </DataGridTemplateColumn>
+          <DataGridTextColumn Header="Cost"
+                              Binding="{Binding Cost, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Weight"
+                              Binding="{Binding Weight, Mode = OneWay}"
+                              IsReadOnly="True" />
+          <DataGridTextColumn Header="Description"
+                              Binding="{Binding Description, Mode = OneWay}"
+                              IsReadOnly="True">
+            <DataGridTextColumn.ElementStyle>
+              <Style>
+                <Setter Property="TextBlock.TextWrapping"
+                        Value="Wrap" />
+                <Setter Property="TextBlock.MaxWidth"
+                        Value="400" />
+              </Style>
+            </DataGridTextColumn.ElementStyle>
+          </DataGridTextColumn>
+        </DataGrid.Columns>
+      </DataGrid>
     </StackPanel>
   </StackPanel>
 </Window>

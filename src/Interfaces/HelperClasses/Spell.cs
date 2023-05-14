@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace Interfaces.HelperClasses
 {
-  public class Spell : INotifyPropertyChanged
+  public class Spell : INotifyPropertyChanged, ICloneable
   {
     #region Private Members
 
@@ -175,5 +175,28 @@ namespace Interfaces.HelperClasses
     }
 
     #endregion IPropertyChanged
+
+    #region ICloneable
+
+    public object Clone()
+    {
+      var clonedItem = new Spell()
+      {
+        Name = Name,
+        Level = Level,
+        Class = Class,
+        School = School,
+        CastingTime = CastingTime,
+        Range = Range,
+        Components = Components,
+        Duration = Duration,
+        Description = Description,
+        Ritual = Ritual
+      };
+
+      return clonedItem;
+    }
+
+    #endregion ICloneable
   }
 }

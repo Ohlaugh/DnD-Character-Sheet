@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using LC = DnD_Character_Sheet.Constants;
 using LIB = DnD_Character_Sheet.Library;
 
-namespace DnD_Character_Sheet.Classes
+namespace DnD_Character_Sheet.HelperClasses
 {
   public class Money : INotifyPropertyChanged
   {

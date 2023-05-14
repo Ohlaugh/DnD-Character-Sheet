@@ -1,4 +1,4 @@
-﻿using DnD_Character_Sheet.Classes;
+﻿using DnD_Character_Sheet.HelperClasses;
 using Interfaces.HelperClasses;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +49,7 @@ namespace DnD_Character_Sheet
 
         DataGrid_Armor.Visibility = Visibility.Visible;
       }
-      else
+      else if (m_Type == nameof(Item))
       {
         List<Item> itemSource = m_Buy ?
           Library.ItemLibrary.ConvertAll(item => (Item)item.Clone()) :
@@ -60,6 +60,21 @@ namespace DnD_Character_Sheet
         DataGrid_Equipment.Columns[0].Header = actionHeader;
 
         DataGrid_Equipment.Visibility = Visibility.Visible;
+      }
+      else if (m_Type == nameof(Spell))
+      {
+        actionHeader = m_Buy ? "Learn" : "Unlearn";
+        Button_Action.Content = actionHeader;
+
+        List<Spell> itemSource = m_Buy ?
+          Library.SpellLibrary.ConvertAll(spell => (Spell)spell.Clone()) :
+          Library.MainCharacterInfo.Spells.ToList().ConvertAll(spell => (Spell)spell.Clone());
+
+        m_CurrentGrid = DataGrid_Spells;
+        DataGrid_Spells.ItemsSource = itemSource;
+        DataGrid_Spells.Columns[0].Header = actionHeader;
+
+        DataGrid_Spells.Visibility = Visibility.Visible;
       }
     }
 

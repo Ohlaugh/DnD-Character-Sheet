@@ -87,55 +87,31 @@
     <CharismaModifier>+ 3</CharismaModifier>
   </Attributes>
   <Skills>
-    <Acrobatics_Modifier>+ 0</Acrobatics_Modifier>
     <Acrobatics_Proficient>false</Acrobatics_Proficient>
-    <AnimalHandling_Modifier>+ 1</AnimalHandling_Modifier>
     <AnimalHandling_Proficient>false</AnimalHandling_Proficient>
-    <Arcana_Modifier>+ 3</Arcana_Modifier>
     <Arcana_Proficient>true</Arcana_Proficient>
-    <Athletics_Modifier>- 1</Athletics_Modifier>
     <Athletics_Proficient>false</Athletics_Proficient>
-    <Deception_Modifier>+ 3</Deception_Modifier>
     <Deception_Proficient>false</Deception_Proficient>
-    <History_Modifier>+ 1</History_Modifier>
     <History_Proficient>false</History_Proficient>
-    <Insight_Modifier>+ 1</Insight_Modifier>
     <Insight_Proficient>false</Insight_Proficient>
-    <Intimidation_Modifier>+ 5</Intimidation_Modifier>
     <Intimidation_Proficient>true</Intimidation_Proficient>
-    <Investigation_Modifier>+ 1</Investigation_Modifier>
     <Investigation_Proficient>false</Investigation_Proficient>
-    <Medicine_Modifier>+ 3</Medicine_Modifier>
     <Medicine_Proficient>true</Medicine_Proficient>
-    <Nature_Modifier>+ 1</Nature_Modifier>
     <Nature_Proficient>false</Nature_Proficient>
-    <Perception_Modifier>+ 1</Perception_Modifier>
     <Perception_Proficient>false</Perception_Proficient>
-    <Performance_Modifier>+ 3</Performance_Modifier>
     <Performance_Proficient>false</Performance_Proficient>
-    <Persuassion_Modifier>+ 3</Persuassion_Modifier>
     <Persuassion_Proficient>false</Persuassion_Proficient>
-    <Religion_Modifier>+ 3</Religion_Modifier>
     <Religion_Proficient>true</Religion_Proficient>
-    <SlightOfHand_Modifier>+ 0</SlightOfHand_Modifier>
     <SlightOfHand_Proficient>false</SlightOfHand_Proficient>
-    <Stealth_Modifier>+ 0</Stealth_Modifier>
     <Stealth_Proficient>false</Stealth_Proficient>
-    <Survival_Modifier>+ 1</Survival_Modifier>
     <Survival_Proficient>false</Survival_Proficient>
   </Skills>
   <SavingThrows>
-    <StrengthSave_Modifier>- 1</StrengthSave_Modifier>
     <StrengthSave_Proficient>false</StrengthSave_Proficient>
-    <DexteritySave_Modifier>+ 0</DexteritySave_Modifier>
     <DexteritySave_Proficient>false</DexteritySave_Proficient>
-    <ConstitutionSave_Modifier>+ 2</ConstitutionSave_Modifier>
     <ConstitutionSave_Proficient>false</ConstitutionSave_Proficient>
-    <IntelligenceSave_Modifier>+ 1</IntelligenceSave_Modifier>
     <IntelligenceSave_Proficient>false</IntelligenceSave_Proficient>
-    <WisdomSave_Modifier>+ 3</WisdomSave_Modifier>
     <WisdomSave_Proficient>true</WisdomSave_Proficient>
-    <CharismaSave_Modifier>+ 5</CharismaSave_Modifier>
     <CharismaSave_Proficient>true</CharismaSave_Proficient>
   </SavingThrows>
   <Proficient_Languages>
@@ -161,7 +137,7 @@
   <Features>
     <Feature Name="Darkvision" Description="Thanks to your infernal heritage, you have superior vision in dark and dim conditions. &#xD;&#xA;   You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. &#xD;&#xA;   You can't discern color in darkness, only shades of gray." />
     <Feature Name="Hellish Resistance" Description="You have resistance to fire damage." />
-    <Feature Name="Infernal Legacy" Description="You know the thaumaturgy cantrip. &#xD;&#xA;   When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. &#xD;&#xA;   When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when oyu finish a long rest. &#xD;&#xA;   Charisma is your spellcasting ability for these spells." />
+    <Feature Name="Infernal Legacy" Description="You know the thaumaturgy cantrip. &#xD;&#xA;   When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. &#xD;&#xA;   When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. &#xD;&#xA;   Charisma is your spellcasting ability for these spells." />
     <Feature Name="Hexblade's Curse" Description="Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits: &#xD;&#xA;- You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.&#xD;&#xA;- Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 29 on the d20.&#xD;&#xA;- If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point).&#xD;&#xA;&#xD;&#xA;You can't use this feature again until you finish a short or long rest." />
     <Feature Name="Hex Warrior" Description="At 1st level, you acquire the training necessary to effectively arm yourself for battle. You gain proficiency with medium armor, shields, and martial weapons.&#xD;&#xA;   The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type." />
   </Features>

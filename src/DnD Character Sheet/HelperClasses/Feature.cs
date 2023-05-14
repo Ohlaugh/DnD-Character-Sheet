@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace DnD_Character_Sheet.Classes
+namespace DnD_Character_Sheet.HelperClasses
 {
   public class Feature
   {

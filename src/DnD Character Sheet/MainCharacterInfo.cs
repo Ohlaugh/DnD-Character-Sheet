@@ -1,10 +1,11 @@
 ﻿using DnD_Character_Sheet.Classes;
 using DnD_Character_Sheet.HelperClasses;
+using Interfaces;
 using Interfaces.HelperClasses;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Xml.Serialization;
 
 namespace DnD_Character_Sheet
@@ -12,6 +13,8 @@ namespace DnD_Character_Sheet
   public class MainCharacterInfo : NotifyProperty
   {
     #region Private Members
+
+    private ICharacterClass m_CharacterClass = null;
 
     private string m_CharacterName = string.Empty;
     private string m_Class = string.Empty;
@@ -126,8 +129,17 @@ namespace DnD_Character_Sheet
       {
         if (value != m_Level)
         {
+          for (int levelUps = m_Level; levelUps < value; levelUps++)
+          {
+            if (m_CharacterClass != null)
+            {
+              m_CharacterClass.LevelUp();
+            }
+          }
           m_Level = value;
           NotifyPropertyChanged();
+
+
         }
       }
     }
@@ -422,15 +434,20 @@ namespace DnD_Character_Sheet
     {
       get
       {
-        Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
-        if (type != null)
+        //Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+        //if (type != null)
+        //{
+        //  object? instance = Activator.CreateInstance(type);
+        //  if (instance != null)
+        //  {
+        //    return ((Interfaces.ICharacterClass)instance).Spell_Modifier;
+        //  }
+        //}
+        if (m_CharacterClass != null)
         {
-          object? instance = Activator.CreateInstance(type);
-          if (instance != null)
-          {
-            return ((Interfaces.ICharacterClass)instance).Spell_Modifier;
-          }
+          return m_CharacterClass.Spell_Modifier;
         }
+
         return "-";
       }
     }
@@ -439,14 +456,18 @@ namespace DnD_Character_Sheet
     {
       get
       {
-        Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
-        if (type != null)
+        //Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+        //if (type != null)
+        //{
+        //  object? instance = Activator.CreateInstance(type);
+        //  if (instance != null)
+        //  {
+        //    return ((Interfaces.ICharacterClass)instance).Spell_Attack;
+        //  }
+        //}
+        if (m_CharacterClass != null)
         {
-          object? instance = Activator.CreateInstance(type);
-          if (instance != null)
-          {
-            return ((Interfaces.ICharacterClass)instance).Spell_Attack;
-          }
+          return m_CharacterClass.Spell_Attack;
         }
         return "-";
       }
@@ -456,14 +477,18 @@ namespace DnD_Character_Sheet
     {
       get
       {
-        Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
-        if (type != null)
+        //Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+        //if (type != null)
+        //{
+        //  object? instance = Activator.CreateInstance(type);
+        //  if (instance != null)
+        //  {
+        //    return ((Interfaces.ICharacterClass)instance).Spell_Save;
+        //  }
+        //}
+        if (m_CharacterClass != null)
         {
-          object? instance = Activator.CreateInstance(type);
-          if (instance != null)
-          {
-            return ((Interfaces.ICharacterClass)instance).Spell_Save;
-          }
+          return m_CharacterClass.Spell_Save;
         }
         return "-";
       }
@@ -609,6 +634,8 @@ namespace DnD_Character_Sheet
         {
           m_ProficiencyBonus = value;
           NotifyPropertyChanged();
+          Refresh();
+          //Skills.Refresh();
         }
       }
     }
@@ -942,11 +969,40 @@ namespace DnD_Character_Sheet
 
     #endregion Public Members
 
+    public void Initialize()
+    {
+      Type? type = Type.GetType("DnD_Character_Sheet.Classes." + Class);
+      if (type != null)
+      {
+        object? instance = Activator.CreateInstance(type);
+        if (instance != null)
+        {
+          m_CharacterClass = ((ICharacterClass)instance);
+        }
+      }
+    }
+
     public void SubscribeEvents()
     {
       foreach (Weapon weapon in m_Weapons)
       {
         weapon.PropertyChanged += Weapon_PropertyChanged;
+      }
+    }
+
+    public void Refresh()
+    {
+      foreach (PropertyInfo propertyInfo in GetType().GetProperties())
+      {
+        try
+        {
+          ((IRefresh)Activator.CreateInstance(propertyInfo.PropertyType)).Refresh();
+        }
+        catch
+        {
+          // Do nothing
+        }
+        NotifyPropertyChanged(propertyInfo.Name);
       }
     }
 
@@ -1113,44 +1169,6 @@ namespace DnD_Character_Sheet
           break;
       }
       //_ProficiencyBonus = bonus;
-    }
-
-    public List<Tuple<string, bool>> GetSkills()
-    {
-      return new List<Tuple<string, bool>>
-            {
-                new Tuple<string, bool>(Skills.Acrobatics_Modifier+" Acrobatics", Skills.Acrobatics_Proficient),
-                new Tuple<string, bool>(Skills.AnimalHandling_Modifier+" Animal Handling", Skills.AnimalHandling_Proficient),
-                new Tuple<string, bool>(Skills.Arcana_Modifier+" Arcana", Skills.Arcana_Proficient),
-                new Tuple<string, bool>(Skills.Athletics_Modifier+" Athletics", Skills.Athletics_Proficient),
-                new Tuple<string, bool>(Skills.Deception_Modifier+" Deception", Skills.Deception_Proficient),
-                new Tuple<string, bool>(Skills.History_Modifier+" History", Skills.History_Proficient),
-                new Tuple<string, bool>(Skills.Insight_Modifier+" Insight", Skills.Insight_Proficient),
-                new Tuple<string, bool>(Skills.Intimidation_Modifier+" Intimidation", Skills.Intimidation_Proficient),
-                new Tuple<string, bool>(Skills.Investigation_Modifier+" Investigation", Skills.Investigation_Proficient),
-                new Tuple<string, bool>(Skills.Medicine_Modifier+" Medicine", Skills.Medicine_Proficient),
-                new Tuple<string, bool>(Skills.Nature_Modifier+" Nature", Skills.Nature_Proficient),
-                new Tuple<string, bool>(Skills.Perception_Modifier+" Perception", Skills.Perception_Proficient),
-                new Tuple<string, bool>(Skills.Performance_Modifier+" Performance", Skills.Performance_Proficient),
-                new Tuple<string, bool>(Skills.Persuassion_Modifier+" Persuassion", Skills.Persuassion_Proficient),
-                new Tuple<string, bool>(Skills.Religion_Modifier+" Religion", Skills.Religion_Proficient),
-                new Tuple<string, bool>(Skills.SlightOfHand_Modifier+" Slight of Hand", Skills.SlightOfHand_Proficient),
-                new Tuple<string, bool>(Skills.Stealth_Modifier+" Stealth", Skills.Stealth_Proficient),
-                new Tuple<string, bool>(Skills.Survival_Modifier+" Survival", Skills.Survival_Proficient)
-            };
-    }
-
-    public List<Tuple<string, bool>> GetSaves()
-    {
-      return new List<Tuple<string, bool>>
-            {
-                new Tuple<string, bool>(SavingThrows.StrengthSave_Modifier+" Strength", SavingThrows.StrengthSave_Proficient),
-                new Tuple<string, bool>(SavingThrows.DexteritySave_Modifier+" Dexterity",SavingThrows.DexteritySave_Proficient),
-                new Tuple<string, bool>(SavingThrows.ConstitutionSave_Modifier+" Constitution",SavingThrows.ConstitutionSave_Proficient),
-                new Tuple<string, bool>(SavingThrows.IntelligenceSave_Modifier+" Intelligence",SavingThrows.IntelligenceSave_Proficient),
-                new Tuple<string, bool>(SavingThrows.WisdomSave_Modifier+" Wisdom",SavingThrows.WisdomSave_Proficient),
-                new Tuple<string, bool>(SavingThrows.CharismaSave_Modifier+" Charisma",SavingThrows.CharismaSave_Proficient)
-            };
     }
   }
 

@@ -123,7 +123,6 @@ namespace DnD_Character_Sheet
       bool characterLoaded = false;
       try
       {
-        ClearLibrary();
         m_MainCharacterInfo = mainCharacter;
 
         foreach (string assemblyName in MainCharacterInfo.Books)
@@ -299,8 +298,9 @@ namespace DnD_Character_Sheet
     /// This method clears all Libraries
     /// USE ONLY WHEN NEW CHARACTER IS LOADED/CREATED
     /// </summary>
-    private static void ClearLibrary()
+    public static void ClearLibrary()
     {
+      m_MainCharacterInfo = new MainCharacterInfo();
       m_RaceLibrary.Clear();
       m_ClassLibrary.Clear();
       m_ArmorLibrary.Clear();
