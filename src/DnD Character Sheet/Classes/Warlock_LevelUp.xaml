@@ -1,0 +1,129 @@
+﻿<Window x:Class="DnD_Character_Sheet.Classes.Warlock_LevelUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD_Character_Sheet.Classes"
+        mc:Ignorable="d"
+        Title="Warlock LevelUp"
+        SizeToContent="WidthAndHeight">
+  <StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="60"
+                     Text="Proficiency Bonus"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding ProfBonus}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="50"
+                     Text="Features"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding Features}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="50"
+                     Text="Cantrips Known"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding CantripsKnown}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="40"
+                     Text="Spells Known"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding SpellsKnown}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="40"
+                     Text="Spell Slots"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding SpellSlots}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="40"
+                     Text="Slot Level"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding SpellSlotLevel}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+      <GroupBox HorizontalAlignment="Left">
+        <GroupBox.Header>
+          <TextBlock TextWrapping="Wrap"
+                     Width="65"
+                     Text="Invocations Known"
+                     TextAlignment="Center" />
+        </GroupBox.Header>
+        <Label Content="{Binding InvocationsKnown}"
+               HorizontalAlignment="Center" />
+      </GroupBox>
+    </StackPanel>
+    <GroupBox x:Name="GroupBox_Cantrips"
+              Header="Add/Clear Cantrips"
+              HorizontalAlignment="Left">
+      <StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <Button Content="Add Cantrips"
+                  Margin="5"
+                  Click="Add_Cantrips_Button_Click" />
+          <Button Content="Clear Cantrips"
+                  Margin="5"
+                  Click="Clear_Cantrips_Button_Click" />
+        </StackPanel>
+        <Label Name="NewCantrips" />
+      </StackPanel>
+    </GroupBox>
+    <GroupBox x:Name="GroupBox_Spells"
+              Header="Add/Clear Spells"
+              HorizontalAlignment="Left">
+      <StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <Button Content="Add Spells"
+                  Margin="5"
+                  Click="Add_Spells_Button_Click" />
+          <Button Content="Clear Spells"
+                  Margin="5"
+                  Click="Clear_Spells_Button_Click" />
+        </StackPanel>
+        <Label Name="NewSpells" />
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Name="GroupBox_Invocations"
+              Header="Add/Clear Invocations"
+              HorizontalAlignment="Left">
+      <StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <Button Content="Add Invocations"
+                  Margin="5"
+                  Click="Add_Invocations_Button_Click" />
+          <Button Content="Clear Invocations"
+                  Margin="5"
+                  Click="Clear_Invocations_Button_Click" />
+        </StackPanel>
+        <Label Name="NewInvocations" />
+      </StackPanel>
+    </GroupBox>
+  </StackPanel>
+</Window>

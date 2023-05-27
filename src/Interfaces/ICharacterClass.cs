@@ -6,6 +6,8 @@
     string Spell_Attack { get; }
     string Spell_Save { get; }
 
-    void LevelUp();
+    void LevelUp(int newLevel);
+
+    void Decorate();
   }
 }

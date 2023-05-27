@@ -16,6 +16,11 @@ namespace DnD_Character_Sheet
     private static MainCharacterInfo m_MainCharacterInfo = new MainCharacterInfo();
 
     /// <summary>
+    /// This Holds all information on the current character
+    /// </summary>
+    private static CharacterSheet m_CharacterSheet = new CharacterSheet();
+
+    /// <summary>
     /// This dictionary holds all information on each race
     /// Key: Race
     /// Value: New List<string>
@@ -59,6 +64,8 @@ namespace DnD_Character_Sheet
     #endregion Private Members
 
     #region Public Members
+
+    public static CharacterSheet CharacterSheet { get { return m_CharacterSheet; } }
 
     /// <summary>
     /// This Holds all information on the current character
@@ -118,12 +125,13 @@ namespace DnD_Character_Sheet
     /// This method will add the loaded character into the main Library
     /// </summary>
     /// <param name="mainCharacter">Serialized Main Character Info</param>
-    public static bool AddCharacter(MainCharacterInfo mainCharacter)
+    public static bool LoadCharacter(MainCharacterInfo mainCharacter, CharacterSheet characterSheet)
     {
       bool characterLoaded = false;
       try
       {
         m_MainCharacterInfo = mainCharacter;
+        m_CharacterSheet = characterSheet;
 
         foreach (string assemblyName in MainCharacterInfo.Books)
         {

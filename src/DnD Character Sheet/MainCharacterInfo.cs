@@ -1,5 +1,4 @@
-﻿using DnD_Character_Sheet.Classes;
-using DnD_Character_Sheet.HelperClasses;
+﻿using DnD_Character_Sheet.HelperClasses;
 using Interfaces;
 using Interfaces.HelperClasses;
 using System;
@@ -75,6 +74,7 @@ namespace DnD_Character_Sheet
     private ObservableCollection<Armor> m_Armors = new();
     private ObservableCollection<CombatAction> m_CombatActions = new();
     private ObservableCollection<Spell> m_Spells = new();
+    private ObservableCollection<Feature> m_Evocations = new();
 
 
 
@@ -129,17 +129,16 @@ namespace DnD_Character_Sheet
       {
         if (value != m_Level)
         {
-          for (int levelUps = m_Level; levelUps < value; levelUps++)
+          for (int newLevel = m_Level; newLevel < value; newLevel++)
           {
             if (m_CharacterClass != null)
             {
-              m_CharacterClass.LevelUp();
+              m_CharacterClass.LevelUp(newLevel);
             }
           }
           m_Level = value;
           NotifyPropertyChanged();
-
-
+          SetProfBonus();
         }
       }
     }
@@ -966,6 +965,19 @@ namespace DnD_Character_Sheet
         }
       }
     }
+    public ObservableCollection<Feature> Evocations
+    {
+      get { return m_Evocations; }
+
+      set
+      {
+        if (value != m_Evocations)
+        {
+          m_Evocations = value;
+          NotifyPropertyChanged();
+        }
+      }
+    }
 
     #endregion Public Members
 
@@ -978,6 +990,7 @@ namespace DnD_Character_Sheet
         if (instance != null)
         {
           m_CharacterClass = ((ICharacterClass)instance);
+          m_CharacterClass.Decorate();
         }
       }
     }
@@ -1168,7 +1181,7 @@ namespace DnD_Character_Sheet
         default:
           break;
       }
-      //_ProficiencyBonus = bonus;
+      ProficiencyBonus = bonus;
     }
   }
 

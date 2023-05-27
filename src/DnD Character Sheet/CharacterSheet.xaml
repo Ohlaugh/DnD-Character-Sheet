@@ -822,22 +822,41 @@
                     </ScrollViewer>
                   </TabItem>
                   <TabItem Header="Features and Traits">
-                    <ItemsControl ItemsSource="{Binding Features}">
-                      <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                          <Grid>
-                            <Grid.ColumnDefinitions>
-                              <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Orientation="Horizontal">
-                              <Label Content="{Binding Name}"
-                                     MouseLeftButtonDown="Feature_Label_MouseLeftButtonDown" />
-                            </StackPanel>
-                          </Grid>
-                        </DataTemplate>
-                      </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-
+                    <StackPanel Name="StackPanel_Features"
+                                Orientation="Horizontal">
+                      <ItemsControl ItemsSource="{Binding Features}">
+                        <ItemsControl.ItemTemplate>
+                          <DataTemplate>
+                            <Grid>
+                              <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                              </Grid.ColumnDefinitions>
+                              <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Name}"
+                                       MouseLeftButtonDown="Feature_Label_MouseLeftButtonDown" />
+                              </StackPanel>
+                            </Grid>
+                          </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                      </ItemsControl>
+                      <ItemsControl Name="ItemsControl_EldritchInvocations"
+                                    ItemsSource="{Binding Evocations}"
+                                    Visibility="Collapsed">
+                        <ItemsControl.ItemTemplate>
+                          <DataTemplate>
+                            <Grid>
+                              <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                              </Grid.ColumnDefinitions>
+                              <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Name}"
+                                       MouseLeftButtonDown="Evocations_Label_MouseLeftButtonDown" />
+                              </StackPanel>
+                            </Grid>
+                          </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                      </ItemsControl>
+                    </StackPanel>
                   </TabItem>
                   <TabItem Header="Description">
                     <StackPanel>

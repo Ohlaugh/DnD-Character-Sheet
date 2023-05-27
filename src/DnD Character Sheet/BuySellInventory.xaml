@@ -191,7 +191,7 @@
           </DataGridTextColumn>
         </DataGrid.Columns>
       </DataGrid>
-      <!--Equipment-->
+      <!--Spells-->
       <DataGrid Name="DataGrid_Spells"
                 AutoGenerateColumns="False"
                 CanUserAddRows="false"
